@@ -49,3 +49,21 @@ begin
 	--	end if;
 	--end process;
 end arch;
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity modulator is
+	port (
+		clk,ld_a,ld_s,ld_d,ld_r		: in std_logic;
+		inwave						: in std_logic_vector(11 downto 0);
+		indata						: in std_logic_vector(9 downto 0);
+		attack,decay,sustain,release: out std_logic_vector(9 downto 0);
+		outwave						: out std_logic_vector(11 downto 0) );
+end modulator;
+architecture arch of modulator is
+	
+begin
+	index <= 0;
+end arch;

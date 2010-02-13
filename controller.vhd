@@ -53,11 +53,11 @@ begin
 		if clk'event and clk='1' and playing = '0' then
 			playing <='1';
 			case btn_vec is
-				when btn_11 or btn_12 =>
+				when btn_11  => --or btn_12
 					p_str_1 <= '1';
-				when btn_21 or btn_22 =>
+				when btn_21 => -- or btn_22
 					p_str_2 <= '1';
-				when btn_31 or btn_32 =>
+				when btn_31 => --  or btn_32
 					p_str_3 <= '1';
 				when btns_11_12 =>
 					p_ch_11 <= '1';
@@ -67,21 +67,21 @@ begin
 					p_ch_13 <= '1';
 				when btns_21_22 =>
 					p_ch_21 <= '1';
-				when btns_21_12 =>
-					p_ch_22 <= '1';				
-				when btns_21_32 =>
-					p_ch_23 <= '1';		
+				--when btns_21_12 =>
+				--	p_ch_22 <= '1';				
+				--when btns_21_32 =>
+				--	p_ch_23 <= '1';		
 				when btns_31_32 =>
 					p_ch_31 <= '1';		
-				when btns_31_22 =>
-					p_ch_32 <= '1';	
-				when btns_31_12 =>
-					p_ch_33 <= '1';
+				--when btns_31_22 =>
+				--	p_ch_32 <= '1';	
+				--when btns_31_12 =>
+				--	p_ch_33 <= '1';
 				when others =>
 					playing <= '0';
 			end case;
 		end if;
 	end process;
-	process(str_1, str_2, str_3, btn_vec)
+	--process(str_1, str_2, str_3, btn_vec)
 		
 end arch;
