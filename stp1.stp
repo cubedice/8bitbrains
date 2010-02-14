@@ -1,0 +1,186 @@
+<session jtag_chain="USB-Blaster [USB-0]" jtag_device="@1: EP2C8 (0x020B20DD)" sof_file="" top_level_entity="s2p">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" log="USE_GLOBAL_TEMP" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <single attribute="lock mode" value="36110"/>
+    <multi attribute="window position" size="9" value="1072,557,398,124,0,50,124,0,1"/>
+  </global_info>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
+    <position_info>
+      <single attribute="active tab" value="0"/>
+      <single attribute="data vertical scroll position" value="0"/>
+      <single attribute="data horizontal scroll position" value="0"/>
+      <single attribute="zoom level numerator" value="1"/>
+      <single attribute="zoom level denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="130944"/>
+      <single attribute="zoom offset denominator" value="1"/>
+    </position_info>
+    <signal_set global_temp="1" name="signal_set: 2010/02/13 19:26:59  #0">
+      <clock name="clk" polarity="posedge" tap_mode="classic"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="128" trigger_in_enable="no" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire name="cs" tap_mode="classic" type="output pin"/>
+          <wire name="data_in[0]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[1]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[2]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[3]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[4]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[5]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[6]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[7]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[8]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[9]" tap_mode="classic" type="input pin"/>
+          <wire name="ioclk" tap_mode="classic" type="output pin"/>
+          <wire name="s1[0]" tap_mode="classic" type="output pin"/>
+          <wire name="s1[1]" tap_mode="classic" type="output pin"/>
+          <wire name="s1[2]" tap_mode="classic" type="output pin"/>
+          <wire name="s1[3]" tap_mode="classic" type="output pin"/>
+          <wire name="s1[4]" tap_mode="classic" type="output pin"/>
+          <wire name="s1[5]" tap_mode="classic" type="output pin"/>
+          <wire name="s1[6]" tap_mode="classic" type="output pin"/>
+          <wire name="s1[7]" tap_mode="classic" type="output pin"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire name="cs" tap_mode="classic" type="output pin"/>
+          <wire name="data_in[0]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[1]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[2]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[3]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[4]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[5]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[6]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[7]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[8]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[9]" tap_mode="classic" type="input pin"/>
+          <wire name="ioclk" tap_mode="classic" type="output pin"/>
+          <wire name="s1[0]" tap_mode="classic" type="output pin"/>
+          <wire name="s1[1]" tap_mode="classic" type="output pin"/>
+          <wire name="s1[2]" tap_mode="classic" type="output pin"/>
+          <wire name="s1[3]" tap_mode="classic" type="output pin"/>
+          <wire name="s1[4]" tap_mode="classic" type="output pin"/>
+          <wire name="s1[5]" tap_mode="classic" type="output pin"/>
+          <wire name="s1[6]" tap_mode="classic" type="output pin"/>
+          <wire name="s1[7]" tap_mode="classic" type="output pin"/>
+        </data_input_vec>
+        <storage_qualifier_input_vec>
+          <wire name="cs" tap_mode="classic" type="output pin"/>
+          <wire name="data_in[0]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[1]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[2]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[3]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[4]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[5]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[6]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[7]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[8]" tap_mode="classic" type="input pin"/>
+          <wire name="data_in[9]" tap_mode="classic" type="input pin"/>
+          <wire name="ioclk" tap_mode="classic" type="output pin"/>
+          <wire name="s1[0]" tap_mode="classic" type="output pin"/>
+          <wire name="s1[1]" tap_mode="classic" type="output pin"/>
+          <wire name="s1[2]" tap_mode="classic" type="output pin"/>
+          <wire name="s1[3]" tap_mode="classic" type="output pin"/>
+          <wire name="s1[4]" tap_mode="classic" type="output pin"/>
+          <wire name="s1[5]" tap_mode="classic" type="output pin"/>
+          <wire name="s1[6]" tap_mode="classic" type="output pin"/>
+          <wire name="s1[7]" tap_mode="classic" type="output pin"/>
+        </storage_qualifier_input_vec>
+      </signal_vec>
+      <presentation>
+        <data_view>
+          <bus is_signal_inverted="no" link="all" name="s1" order="lsb_to_msb" radix="hex" state="collapse" type="output pin">
+            <net is_signal_inverted="no" name="s1[0]"/>
+            <net is_signal_inverted="no" name="s1[1]"/>
+            <net is_signal_inverted="no" name="s1[2]"/>
+            <net is_signal_inverted="no" name="s1[3]"/>
+            <net is_signal_inverted="no" name="s1[4]"/>
+            <net is_signal_inverted="no" name="s1[5]"/>
+            <net is_signal_inverted="no" name="s1[6]"/>
+            <net is_signal_inverted="no" name="s1[7]"/>
+          </bus>
+          <net is_signal_inverted="no" name="cs"/>
+          <bus is_signal_inverted="no" link="all" name="data_in" order="lsb_to_msb" radix="hex" state="collapse" type="input pin">
+            <net is_signal_inverted="no" name="data_in[0]"/>
+            <net is_signal_inverted="no" name="data_in[1]"/>
+            <net is_signal_inverted="no" name="data_in[2]"/>
+            <net is_signal_inverted="no" name="data_in[3]"/>
+            <net is_signal_inverted="no" name="data_in[4]"/>
+            <net is_signal_inverted="no" name="data_in[5]"/>
+            <net is_signal_inverted="no" name="data_in[6]"/>
+            <net is_signal_inverted="no" name="data_in[7]"/>
+            <net is_signal_inverted="no" name="data_in[8]"/>
+            <net is_signal_inverted="no" name="data_in[9]"/>
+          </bus>
+          <net is_signal_inverted="no" name="ioclk"/>
+        </data_view>
+        <setup_view>
+          <bus is_signal_inverted="no" link="all" name="s1" order="lsb_to_msb" radix="hex" state="collapse" type="output pin">
+            <net is_signal_inverted="no" name="s1[0]"/>
+            <net is_signal_inverted="no" name="s1[1]"/>
+            <net is_signal_inverted="no" name="s1[2]"/>
+            <net is_signal_inverted="no" name="s1[3]"/>
+            <net is_signal_inverted="no" name="s1[4]"/>
+            <net is_signal_inverted="no" name="s1[5]"/>
+            <net is_signal_inverted="no" name="s1[6]"/>
+            <net is_signal_inverted="no" name="s1[7]"/>
+          </bus>
+          <net is_signal_inverted="no" name="cs"/>
+          <bus is_signal_inverted="no" link="all" name="data_in" order="lsb_to_msb" radix="hex" state="collapse" type="input pin">
+            <net is_signal_inverted="no" name="data_in[0]"/>
+            <net is_signal_inverted="no" name="data_in[1]"/>
+            <net is_signal_inverted="no" name="data_in[2]"/>
+            <net is_signal_inverted="no" name="data_in[3]"/>
+            <net is_signal_inverted="no" name="data_in[4]"/>
+            <net is_signal_inverted="no" name="data_in[5]"/>
+            <net is_signal_inverted="no" name="data_in[6]"/>
+            <net is_signal_inverted="no" name="data_in[7]"/>
+            <net is_signal_inverted="no" name="data_in[8]"/>
+            <net is_signal_inverted="no" name="data_in[9]"/>
+          </bus>
+          <net is_signal_inverted="no" name="ioclk"/>
+        </setup_view>
+      </presentation>
+      <trigger CRC="7B7A3C17" attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2010/02/13 19:26:59  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="1" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
+        <power_up_trigger position="pre" storage_qualifier_disabled="no" trigger_in="dont_care" trigger_out="active high"/>
+        <events use_custom_flow_control="no">
+          <level enabled="yes" name="condition1" type="basic">'cs' == rising edge
+            <power_up enabled="yes">
+            </power_up>
+            <op_node/>
+          </level>
+        </events>
+        <storage_qualifier_events>
+          <transitional>00000000000000000000
+            <pwr_up_transitional>00000000000000000000
+            </pwr_up_transitional>
+          </transitional>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+        </storage_qualifier_events>
+        <log>
+          <data global_temp="1" name="log: 2010/02/13 19:40:18  #0" power_up_mode="false" sample_depth="127" trigger_position="16">0111111101100100000001111111011001000000011111110110010000000111111101100100000001111111011001000000011111110110010000000111111101100100000001111111011101000000011111110111010000000111111101110100000001111111011101000000011111110111010000000111111101110100000001111111011001000000011111110110010000000111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000111111110110010000001111111101100100000011111111011001000000</data>
+          <extradata>1111111111111111T111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</extradata>
+        </log>
+      </trigger>
+    </signal_set>
+  </instance>
+  <mnemonics/>
+  <static_plugin_mnemonics/>
+</session>

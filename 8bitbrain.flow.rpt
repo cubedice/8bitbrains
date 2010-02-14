@@ -1,0 +1,148 @@
+Flow report for 8bitbrain
+Sat Feb 13 19:51:47 2010
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Flow Summary                                                                      ;
++------------------------------------+----------------------------------------------+
+; Flow Status                        ; Successful - Sat Feb 13 19:51:47 2010        ;
+; Quartus II Version                 ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
+; Revision Name                      ; 8bitbrain                                    ;
+; Top-level Entity Name              ; s2p                                          ;
+; Family                             ; Cyclone II                                   ;
+; Device                             ; EP2C8T144C8                                  ;
+; Timing Models                      ; Final                                        ;
+; Met timing requirements            ; No                                           ;
+; Total logic elements               ; 733 / 8,256 ( 9 % )                          ;
+;     Total combinational functions  ; 422 / 8,256 ( 5 % )                          ;
+;     Dedicated logic registers      ; 594 / 8,256 ( 7 % )                          ;
+; Total registers                    ; 594                                          ;
+; Total pins                         ; 38 / 85 ( 45 % )                             ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 2,560 / 165,888 ( 2 % )                      ;
+; Embedded Multiplier 9-bit elements ; 0 / 36 ( 0 % )                               ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                                ;
++------------------------------------+----------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 02/13/2010 19:51:27 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; 8bitbrain           ;
++-------------------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                           ;
++------------------------------------+------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
+; Assignment Name                    ; Value                                                                                                ; Default Value ; Entity Name ; Section Id       ;
++------------------------------------+------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
+; COMPILER_SIGNATURE_ID              ; 151176630078.126610868702616                                                                         ; --            ; --          ; --               ;
+; ENABLE_SIGNALTAP                   ; On                                                                                                   ; --            ; --          ; --               ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                                                                                                   ; --            ; --          ; --               ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                                                                                                    ; --            ; --          ; --               ;
+; MISC_FILE                          ; c:/workspace/8bitbrain/8bitbrain.dpf                                                                 ; --            ; --          ; --               ;
+; PARTITION_COLOR                    ; 16764057                                                                                             ; --            ; s2p         ; Top              ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                                                                                               ; --            ; s2p         ; Top              ;
+; SEARCH_PATH                        ; c:\workspace\lab2/                                                                                   ; --            ; --          ; --               ;
+; SLD_NODE_CREATOR_ID                ; 110                                                                                                  ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_ENTITY_NAME               ; sld_signaltap                                                                                        ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_DATA_BITS=20                                                                                     ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_TRIGGER_BITS=20                                                                                  ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_NODE_INFO=805334528                                                                              ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_POWER_UP_TRIGGER=0                                                                               ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_INVERSION_MASK=000000000000000000000000000000000000000000000000000000000000000000000000000000000 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_INVERSION_MASK_LENGTH=81                                                                         ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0                                                        ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_SEGMENT_SIZE=128                                                                                 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_ATTRIBUTE_MEM_MODE=OFF                                                                           ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_STATE_FLOW_USE_GENERATED=0                                                                       ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_STATE_BITS=11                                                                                    ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_BUFFER_FULL_STOP=1                                                                               ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_CURRENT_RESOURCE_WIDTH=1                                                                         ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_NODE_CRC_LOWORD=15383                                                                            ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_NODE_CRC_HIWORD=31610                                                                            ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_TRIGGER_LEVEL=1                                                                                  ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_SAMPLE_DEPTH=128                                                                                 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_TRIGGER_IN_ENABLED=0                                                                             ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_ADVANCED_TRIGGER_ENTITY=basic,1,                                                                 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_TRIGGER_LEVEL_PIPELINE=1                                                                         ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_ENABLE_ADVANCED_TRIGGER=0                                                                        ; --            ; --          ; auto_signaltap_0 ;
+; TOP_LEVEL_ENTITY                   ; s2p                                                                                                  ; 8bitbrain     ; --          ; --               ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                                                                  ; --            ; --          ; eda_blast_fpga   ;
+; USE_SIGNALTAP_FILE                 ; stp1.stp                                                                                             ; --            ; --          ; --               ;
++------------------------------------+------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis    ; 00:00:08     ; 1.0                     ; 207 MB              ; 00:00:07                           ;
+; Fitter                  ; 00:00:05     ; 1.0                     ; 188 MB              ; 00:00:05                           ;
+; Assembler               ; 00:00:01     ; 1.0                     ; 166 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 129 MB              ; 00:00:01                           ;
+; Total                   ; 00:00:15     ; --                      ; --                  ; 00:00:14                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                       ;
++-------------------------+------------------+------------+------------+----------------+
+; Module Name             ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++-------------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis    ; ----------       ; Windows XP ; 5.1        ; i686           ;
+; Fitter                  ; ----------       ; Windows XP ; 5.1        ; i686           ;
+; Assembler               ; ----------       ; Windows XP ; 5.1        ; i686           ;
+; Classic Timing Analyzer ; ----------       ; Windows XP ; 5.1        ; i686           ;
++-------------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off 8bitbrain -c 8bitbrain
+quartus_fit --read_settings_files=off --write_settings_files=off 8bitbrain -c 8bitbrain
+quartus_asm --read_settings_files=off --write_settings_files=off 8bitbrain -c 8bitbrain
+quartus_tan --read_settings_files=off --write_settings_files=off 8bitbrain -c 8bitbrain --timing_analysis_only
+
+
+
