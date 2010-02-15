@@ -23,11 +23,11 @@ applicable agreement for further details.
 VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 {
 	ZOOM{
-		ZBEGIN = 17059846;
-		ZEND = 20215012;
+		ZBEGIN = 211404;
+		ZEND = 499629;
 		NUMERATOR = 1255;
-		DENOMINATOR = 3155166;
-		TOP_INDEX = 23;
+		DENOMINATOR = 436336;
+		TOP_INDEX = 0;
 	}
 	CLOCK{
 		PERIOD = 10000;
@@ -38,15 +38,15 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		INTERVAL_TYPE = HALF_GRID;
 	}
 	LINE{
-		SIGNAL = "clk";
+		SIGNAL = "count";
 		INDEX = 0;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "cs";
+		SIGNAL = "count[17]";
 		INDEX = 1;
 		FORMAT = E;
 		SCALE = 1;
@@ -54,15 +54,15 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "data_in";
+		SIGNAL = "count[16]";
 		INDEX = 2;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "data_in[9]";
+		SIGNAL = "count[15]";
 		INDEX = 3;
 		FORMAT = E;
 		SCALE = 1;
@@ -70,7 +70,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "data_in[8]";
+		SIGNAL = "count[14]";
 		INDEX = 4;
 		FORMAT = E;
 		SCALE = 1;
@@ -78,7 +78,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "data_in[7]";
+		SIGNAL = "count[13]";
 		INDEX = 5;
 		FORMAT = E;
 		SCALE = 1;
@@ -86,7 +86,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "data_in[6]";
+		SIGNAL = "count[12]";
 		INDEX = 6;
 		FORMAT = E;
 		SCALE = 1;
@@ -94,7 +94,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "data_in[5]";
+		SIGNAL = "count[11]";
 		INDEX = 7;
 		FORMAT = E;
 		SCALE = 1;
@@ -102,7 +102,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "data_in[4]";
+		SIGNAL = "count[10]";
 		INDEX = 8;
 		FORMAT = E;
 		SCALE = 1;
@@ -110,7 +110,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "data_in[3]";
+		SIGNAL = "count[9]";
 		INDEX = 9;
 		FORMAT = E;
 		SCALE = 1;
@@ -118,7 +118,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "data_in[2]";
+		SIGNAL = "count[8]";
 		INDEX = 10;
 		FORMAT = E;
 		SCALE = 1;
@@ -126,7 +126,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "data_in[1]";
+		SIGNAL = "count[7]";
 		INDEX = 11;
 		FORMAT = E;
 		SCALE = 1;
@@ -134,7 +134,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "data_in[0]";
+		SIGNAL = "count[6]";
 		INDEX = 12;
 		FORMAT = E;
 		SCALE = 1;
@@ -142,7 +142,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ioclk";
+		SIGNAL = "count[5]";
 		INDEX = 13;
 		FORMAT = E;
 		SCALE = 1;
@@ -150,15 +150,15 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s1";
+		SIGNAL = "count[4]";
 		INDEX = 14;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s1[7]";
+		SIGNAL = "count[3]";
 		INDEX = 15;
 		FORMAT = E;
 		SCALE = 1;
@@ -166,7 +166,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s1[6]";
+		SIGNAL = "count[2]";
 		INDEX = 16;
 		FORMAT = E;
 		SCALE = 1;
@@ -174,7 +174,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s1[5]";
+		SIGNAL = "count[1]";
 		INDEX = 17;
 		FORMAT = E;
 		SCALE = 1;
@@ -182,7 +182,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s1[4]";
+		SIGNAL = "count[0]";
 		INDEX = 18;
 		FORMAT = E;
 		SCALE = 1;
@@ -190,15 +190,15 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s1[3]";
+		SIGNAL = "freq";
 		INDEX = 19;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s1[2]";
+		SIGNAL = "freq[12]";
 		INDEX = 20;
 		FORMAT = E;
 		SCALE = 1;
@@ -206,7 +206,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s1[1]";
+		SIGNAL = "freq[11]";
 		INDEX = 21;
 		FORMAT = E;
 		SCALE = 1;
@@ -214,7 +214,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s1[0]";
+		SIGNAL = "freq[10]";
 		INDEX = 22;
 		FORMAT = E;
 		SCALE = 1;
@@ -222,15 +222,15 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s2";
+		SIGNAL = "freq[9]";
 		INDEX = 23;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s2[7]";
+		SIGNAL = "freq[8]";
 		INDEX = 24;
 		FORMAT = E;
 		SCALE = 1;
@@ -238,7 +238,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s2[6]";
+		SIGNAL = "freq[7]";
 		INDEX = 25;
 		FORMAT = E;
 		SCALE = 1;
@@ -246,7 +246,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s2[5]";
+		SIGNAL = "freq[6]";
 		INDEX = 26;
 		FORMAT = E;
 		SCALE = 1;
@@ -254,7 +254,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s2[4]";
+		SIGNAL = "freq[5]";
 		INDEX = 27;
 		FORMAT = E;
 		SCALE = 1;
@@ -262,7 +262,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s2[3]";
+		SIGNAL = "freq[4]";
 		INDEX = 28;
 		FORMAT = E;
 		SCALE = 1;
@@ -270,7 +270,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s2[2]";
+		SIGNAL = "freq[3]";
 		INDEX = 29;
 		FORMAT = E;
 		SCALE = 1;
@@ -278,7 +278,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s2[1]";
+		SIGNAL = "freq[2]";
 		INDEX = 30;
 		FORMAT = E;
 		SCALE = 1;
@@ -286,7 +286,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s2[0]";
+		SIGNAL = "freq[1]";
 		INDEX = 31;
 		FORMAT = E;
 		SCALE = 1;
@@ -294,23 +294,23 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s3";
+		SIGNAL = "freq[0]";
 		INDEX = 32;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "s3[7]";
-		INDEX = 33;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s3[6]";
+		SIGNAL = "count_end";
+		INDEX = 33;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count_end[17]";
 		INDEX = 34;
 		FORMAT = E;
 		SCALE = 1;
@@ -318,7 +318,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s3[5]";
+		SIGNAL = "count_end[16]";
 		INDEX = 35;
 		FORMAT = E;
 		SCALE = 1;
@@ -326,7 +326,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s3[4]";
+		SIGNAL = "count_end[15]";
 		INDEX = 36;
 		FORMAT = E;
 		SCALE = 1;
@@ -334,7 +334,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s3[3]";
+		SIGNAL = "count_end[14]";
 		INDEX = 37;
 		FORMAT = E;
 		SCALE = 1;
@@ -342,7 +342,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s3[2]";
+		SIGNAL = "count_end[13]";
 		INDEX = 38;
 		FORMAT = E;
 		SCALE = 1;
@@ -350,7 +350,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s3[1]";
+		SIGNAL = "count_end[12]";
 		INDEX = 39;
 		FORMAT = E;
 		SCALE = 1;
@@ -358,7 +358,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "s3[0]";
+		SIGNAL = "count_end[11]";
 		INDEX = 40;
 		FORMAT = E;
 		SCALE = 1;
@@ -366,15 +366,15 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "tmp_data[7]";
+		SIGNAL = "count_end[10]";
 		INDEX = 41;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "tmp_data[7][7]";
+		SIGNAL = "count_end[9]";
 		INDEX = 42;
 		FORMAT = E;
 		SCALE = 1;
@@ -382,7 +382,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "tmp_data[7][6]";
+		SIGNAL = "count_end[8]";
 		INDEX = 43;
 		FORMAT = E;
 		SCALE = 1;
@@ -390,7 +390,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "tmp_data[7][5]";
+		SIGNAL = "count_end[7]";
 		INDEX = 44;
 		FORMAT = E;
 		SCALE = 1;
@@ -398,7 +398,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "tmp_data[7][4]";
+		SIGNAL = "count_end[6]";
 		INDEX = 45;
 		FORMAT = E;
 		SCALE = 1;
@@ -406,7 +406,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "tmp_data[7][3]";
+		SIGNAL = "count_end[5]";
 		INDEX = 46;
 		FORMAT = E;
 		SCALE = 1;
@@ -414,7 +414,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "tmp_data[7][2]";
+		SIGNAL = "count_end[4]";
 		INDEX = 47;
 		FORMAT = E;
 		SCALE = 1;
@@ -422,7 +422,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "tmp_data[7][1]";
+		SIGNAL = "count_end[3]";
 		INDEX = 48;
 		FORMAT = E;
 		SCALE = 1;
@@ -430,7 +430,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "tmp_data[7][0]";
+		SIGNAL = "count_end[2]";
 		INDEX = 49;
 		FORMAT = E;
 		SCALE = 1;
@@ -438,15 +438,15 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "tmp_data[8]";
+		SIGNAL = "count_end[1]";
 		INDEX = 50;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "tmp_data[8][7]";
+		SIGNAL = "count_end[0]";
 		INDEX = 51;
 		FORMAT = E;
 		SCALE = 1;
@@ -454,7 +454,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "tmp_data[8][6]";
+		SIGNAL = "clk";
 		INDEX = 52;
 		FORMAT = E;
 		SCALE = 1;
@@ -462,15 +462,15 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "tmp_data[8][5]";
+		SIGNAL = "addr";
 		INDEX = 53;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "tmp_data[8][4]";
+		SIGNAL = "addr[6]";
 		INDEX = 54;
 		FORMAT = E;
 		SCALE = 1;
@@ -478,7 +478,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "tmp_data[8][3]";
+		SIGNAL = "addr[5]";
 		INDEX = 55;
 		FORMAT = E;
 		SCALE = 1;
@@ -486,7 +486,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "tmp_data[8][2]";
+		SIGNAL = "addr[4]";
 		INDEX = 56;
 		FORMAT = E;
 		SCALE = 1;
@@ -494,7 +494,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "tmp_data[8][1]";
+		SIGNAL = "addr[3]";
 		INDEX = 57;
 		FORMAT = E;
 		SCALE = 1;
@@ -502,7 +502,7 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "tmp_data[8][0]";
+		SIGNAL = "addr[2]";
 		INDEX = 58;
 		FORMAT = E;
 		SCALE = 1;
@@ -510,15 +510,15 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "tmp_data[9]";
+		SIGNAL = "addr[1]";
 		INDEX = 59;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "tmp_data[9][7]";
+		SIGNAL = "addr[0]";
 		INDEX = 60;
 		FORMAT = E;
 		SCALE = 1;
@@ -526,192 +526,515 @@ VECTOR("c:/workspace/8bitbrain/db/8bitbrain.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "tmp_data[9][6]";
+		SIGNAL = "altera_reserved_tdo";
 		INDEX = 61;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
-	LINE{
-		SIGNAL = "tmp_data[9][5]";
-		INDEX = 62;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
+}
+
+VECTOR("C:/workspace/8bitbrain/addrgentest.vwf")
+{
+	ZOOM{
+		ZBEGIN = 0;
+		ZEND = 1000000;
+		NUMERATOR = 1075;
+		DENOMINATOR = 1000000;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 39729;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
 	}
 	LINE{
-		SIGNAL = "tmp_data[9][4]";
-		INDEX = 63;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "tmp_data[9][3]";
-		INDEX = 64;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "tmp_data[9][2]";
-		INDEX = 65;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "tmp_data[9][1]";
-		INDEX = 66;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "tmp_data[9][0]";
-		INDEX = 67;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "cs_cnt";
-		INDEX = 68;
+		SIGNAL = "count";
+		INDEX = 0;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "cs_cnt[9]";
-		INDEX = 69;
+		SIGNAL = "count[17]";
+		INDEX = 1;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "cs_cnt[8]";
-		INDEX = 70;
+		SIGNAL = "count[16]";
+		INDEX = 2;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "cs_cnt[7]";
-		INDEX = 71;
+		SIGNAL = "count[15]";
+		INDEX = 3;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "cs_cnt[6]";
-		INDEX = 72;
+		SIGNAL = "count[14]";
+		INDEX = 4;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "cs_cnt[5]";
-		INDEX = 73;
+		SIGNAL = "count[13]";
+		INDEX = 5;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "cs_cnt[4]";
-		INDEX = 74;
+		SIGNAL = "count[12]";
+		INDEX = 6;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "cs_cnt[3]";
-		INDEX = 75;
+		SIGNAL = "count[11]";
+		INDEX = 7;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "cs_cnt[2]";
-		INDEX = 76;
+		SIGNAL = "count[10]";
+		INDEX = 8;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "cs_cnt[1]";
-		INDEX = 77;
+		SIGNAL = "count[9]";
+		INDEX = 9;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "cs_cnt[0]";
-		INDEX = 78;
+		SIGNAL = "count[8]";
+		INDEX = 10;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "io_en";
-		INDEX = 79;
+		SIGNAL = "count[7]";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count[6]";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count[5]";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count[4]";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count[3]";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count[2]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count[1]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count[0]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "freq";
+		INDEX = 19;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "io_en[3]";
-		INDEX = 80;
+		SIGNAL = "freq[12]";
+		INDEX = 20;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "io_en[2]";
-		INDEX = 81;
+		SIGNAL = "freq[11]";
+		INDEX = 21;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "io_en[1]";
-		INDEX = 82;
+		SIGNAL = "freq[10]";
+		INDEX = 22;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "io_en[0]";
-		INDEX = 83;
+		SIGNAL = "freq[9]";
+		INDEX = 23;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "altera_reserved_tdo";
-		INDEX = 84;
+		SIGNAL = "freq[8]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "freq[7]";
+		INDEX = 25;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "freq[6]";
+		INDEX = 26;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "freq[5]";
+		INDEX = 27;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "freq[4]";
+		INDEX = 28;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "freq[3]";
+		INDEX = 29;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "freq[2]";
+		INDEX = 30;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "freq[1]";
+		INDEX = 31;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "freq[0]";
+		INDEX = 32;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count_end";
+		INDEX = 33;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count_end[17]";
+		INDEX = 34;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count_end[16]";
+		INDEX = 35;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count_end[15]";
+		INDEX = 36;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count_end[14]";
+		INDEX = 37;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count_end[13]";
+		INDEX = 38;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count_end[12]";
+		INDEX = 39;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count_end[11]";
+		INDEX = 40;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count_end[10]";
+		INDEX = 41;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count_end[9]";
+		INDEX = 42;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count_end[8]";
+		INDEX = 43;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count_end[7]";
+		INDEX = 44;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count_end[6]";
+		INDEX = 45;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count_end[5]";
+		INDEX = 46;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count_end[4]";
+		INDEX = 47;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count_end[3]";
+		INDEX = 48;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count_end[2]";
+		INDEX = 49;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count_end[1]";
+		INDEX = 50;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "count_end[0]";
+		INDEX = 51;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 52;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr";
+		INDEX = 53;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[6]";
+		INDEX = 54;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[5]";
+		INDEX = 55;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[4]";
+		INDEX = 56;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[3]";
+		INDEX = 57;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[2]";
+		INDEX = 58;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[1]";
+		INDEX = 59;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "addr[0]";
+		INDEX = 60;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;

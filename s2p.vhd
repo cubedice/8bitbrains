@@ -4,7 +4,7 @@ use ieee.std_logic_unsigned.all;
 
 entity s2p is
 	port (
-		clk,start							: in std_logic;
+		clk							: in std_logic;
 		data_in 								: in std_logic_vector(9 downto 0);
 		cs, ioclk 						: out std_logic;
 		s1,s2,s3		: out std_logic_vector(7 downto 0) ); --b11,b12,b21,b22,b31,b32,bd,
