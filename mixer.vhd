@@ -10,4 +10,5 @@ end mixer;
 architecture arch of mixer is
 	
 begin
+	waveout <= wave1in;
 end arch;

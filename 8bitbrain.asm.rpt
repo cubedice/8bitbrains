@@ -1,5 +1,5 @@
 Assembler report for 8bitbrain
-Mon Feb 15 00:05:13 2010
+Tue Feb 16 17:41:35 2010
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -10,9 +10,8 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: c:/workspace/8bitbrain/8bitbrain.sof
-  6. Assembler Device Options: c:/workspace/8bitbrain/8bitbrain.pof
-  7. Assembler Messages
+  5. Assembler Device Options: c:/workspace/8bitbrain/8bitbrain_time_limited.sof
+  6. Assembler Messages
 
 
 
@@ -38,9 +37,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Feb 15 00:05:12 2010 ;
+; Assembler Status      ; Successful - Tue Feb 16 17:41:35 2010 ;
 ; Revision Name         ; 8bitbrain                             ;
-; Top-level Entity Name ; addrgen                               ;
+; Top-level Entity Name ; 8bitbrain                             ;
 ; Family                ; Cyclone II                            ;
 ; Device                ; EP2C8T144C8                           ;
 +-----------------------+---------------------------------------+
@@ -76,37 +75,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+--------------------------------------+
-; Assembler Generated Files            ;
-+--------------------------------------+
-; File Name                            ;
-+--------------------------------------+
-; c:/workspace/8bitbrain/8bitbrain.sof ;
-; c:/workspace/8bitbrain/8bitbrain.pof ;
-+--------------------------------------+
++---------------------------------------------------+
+; Assembler Generated Files                         ;
++---------------------------------------------------+
+; File Name                                         ;
++---------------------------------------------------+
+; c:/workspace/8bitbrain/8bitbrain_time_limited.sof ;
++---------------------------------------------------+
 
 
-+----------------------------------------------------------------+
-; Assembler Device Options: c:/workspace/8bitbrain/8bitbrain.sof ;
-+----------------+-----------------------------------------------+
-; Option         ; Setting                                       ;
-+----------------+-----------------------------------------------+
-; Device         ; EP2C8T144C8                                   ;
-; JTAG usercode  ; 0xFFFFFFFF                                    ;
-; Checksum       ; 0x00158A54                                    ;
-+----------------+-----------------------------------------------+
-
-
-+----------------------------------------------------------------+
-; Assembler Device Options: c:/workspace/8bitbrain/8bitbrain.pof ;
-+--------------------+-------------------------------------------+
-; Option             ; Setting                                   ;
-+--------------------+-------------------------------------------+
-; Device             ; EPCS4                                     ;
-; JTAG usercode      ; 0x00000000                                ;
-; Checksum           ; 0x06E1F9A8                                ;
-; Compression Ratio  ; 2                                         ;
-+--------------------+-------------------------------------------+
++-----------------------------------------------------------------------------+
+; Assembler Device Options: c:/workspace/8bitbrain/8bitbrain_time_limited.sof ;
++----------------+------------------------------------------------------------+
+; Option         ; Setting                                                    ;
++----------------+------------------------------------------------------------+
+; Device         ; EP2C8T144C8                                                ;
+; JTAG usercode  ; 0xFFFFFFFF                                                 ;
+; Checksum       ; 0x00131D64                                                 ;
++----------------+------------------------------------------------------------+
 
 
 +--------------------+
@@ -115,14 +101,16 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon Feb 15 00:05:11 2010
+    Info: Processing started: Tue Feb 16 17:41:33 2010
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off 8bitbrain -c 8bitbrain
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
+Info: Design contains a time-limited core -- only a single, time-limited programming file can be generated
+Warning: Can't convert time-limited SOF into POF, HEX File, TTF, or RBF
 Info: The Active Serial/Parallel mode CONF_DONE pin error check is disabled
-Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 167 megabytes
-    Info: Processing ended: Mon Feb 15 00:05:13 2010
+Info: Quartus II Assembler was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 168 megabytes
+    Info: Processing ended: Tue Feb 16 17:41:35 2010
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

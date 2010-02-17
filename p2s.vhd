@@ -13,7 +13,7 @@ signal i_ioclk : std_logic;
 signal io_clk_cnt : integer range 0 to 1;
 signal io_en: std_logic;
 signal cs_cnt : integer range 0 to 1;
-signal data is std_logic_vector(11 downto 0); 
+signal data : std_logic_vector(11 downto 0); 
 
 begin
 	-- cs and io_en timing process
@@ -22,7 +22,7 @@ begin
 	begin
 		if clk'event and clk = '1' then
 			if io_en = '1' then
-				ioclk <= not ioclk;
+				--ioclk <= not ioclk;
 				i_ioclk <= not i_ioclk;
 			end if;
 		end if;

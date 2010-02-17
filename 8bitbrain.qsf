@@ -38,12 +38,11 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C8T144C8
-set_global_assignment -name TOP_LEVEL_ENTITY addrgen
+set_global_assignment -name TOP_LEVEL_ENTITY 8bitbrain
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:58:48  JANUARY 29, 2010"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.0 SP2"
 set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
-set_global_assignment -name SEARCH_PATH "c:\\workspace\\lab2/"
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ENABLE_SIGNALTAP ON
@@ -119,19 +118,23 @@ set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE addrgentest.vwf
+set_global_assignment -name SEARCH_PATH "c:\\workspace\\lab2/"
+set_global_assignment -name SEARCH_PATH .
+set_global_assignment -name SEARCH_PATH "fir_compiler-library"
 set_global_assignment -name VHDL_FILE controller.vhd
 set_global_assignment -name BDF_FILE 8bitbrain.bdf
 set_global_assignment -name VHDL_FILE s2p.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE s2ptest.vwf
 set_global_assignment -name SIGNALTAP_FILE stp1.stp
 set_global_assignment -name QIP_FILE altsyncram0.qip
-set_global_assignment -name VHDL_FILE filter.vhd
 set_global_assignment -name VHDL_FILE mixer.vhd
 set_global_assignment -name VHDL_FILE p2s.vhd
 set_global_assignment -name VHDL_FILE addrgen.vhd
 set_global_assignment -name VHDL_FILE modulator.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE addrgentest.vwf
 set_global_assignment -name QIP_FILE lpm_divide0.qip
+set_global_assignment -name QIP_FILE filter2.qip
+set_global_assignment -name BDF_FILE filter.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"

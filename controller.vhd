@@ -22,69 +22,169 @@ end controller;
 architecture arch of controller is
 --p_str_1, p_str_2, p_str_3, p_ch_11, p_ch_12, p_ch_13	: out std_logic;
 --		p_ch_21, p_ch_22, p_ch_31, p_ch_32						: out std_logic 
-		
+--signal state 
 signal curbtns   : std_logic_vector(6 downto 0);
-constant btn_11 	: std_logic_vector (6 DOWNTO 0):= "1000000";
-constant btn_12 	: std_logic_vector (6 DOWNTO 0):= "0100000";
-constant btn_21 	: std_logic_vector (6 DOWNTO 0):= "0010000";
-constant btn_22 	: std_logic_vector (6 DOWNTO 0):= "0001000";
-constant btn_31 	: std_logic_vector (6 DOWNTO 0):= "0000100";
-constant btn_32 	: std_logic_vector (6 DOWNTO 0):= "0000010";
-constant btn_drm 	: std_logic_vector (6 DOWNTO 0):= "0000001";
-constant btns_11_12	: std_logic_vector (6 DOWNTO 0):= "1100000";
-constant btns_11_21 : std_logic_vector (6 DOWNTO 0):= "1010000";
-constant btns_11_22	: std_logic_vector (6 DOWNTO 0):= "1001000";
-constant btns_11_31	: std_logic_vector (6 DOWNTO 0):= "1000100";
-constant btns_11_32 : std_logic_vector (6 DOWNTO 0):= "1000010";
-constant btns_11_drm: std_logic_vector (6 DOWNTO 0):= "1000001";
-constant btns_12_21 : std_logic_vector (6 DOWNTO 0):= "0110000";
-constant btns_12_22	: std_logic_vector (6 DOWNTO 0):= "0101000";
-constant btns_12_31	: std_logic_vector (6 DOWNTO 0):= "0100100";
-constant btns_12_32 : std_logic_vector (6 DOWNTO 0):= "0100010";
-constant btns_12_drm: std_logic_vector (6 DOWNTO 0):= "0100001";
-constant btns_21_22	: std_logic_vector (6 DOWNTO 0):= "0011000";
-constant btns_21_31	: std_logic_vector (6 DOWNTO 0):= "0010100";
-constant btns_21_32 : std_logic_vector (6 DOWNTO 0):= "0010010";
-constant btns_21_drm: std_logic_vector (6 DOWNTO 0):= "0010001";
-constant btns_22_31	: std_logic_vector (6 DOWNTO 0):= "0001100";
-constant btns_22_32 : std_logic_vector (6 DOWNTO 0):= "0001010";
-constant btns_22_drm: std_logic_vector (6 DOWNTO 0):= "0001001";
-constant btns_31_32 : std_logic_vector (6 DOWNTO 0):= "0000110";
-constant btns_31_drm: std_logic_vector (6 DOWNTO 0):= "0000101";
-constant btns_32_drm: std_logic_vector (6 DOWNTO 0):= "0000011";
+signal trig_vec,diff_vec  : std_logic_vector(6 downto 0);
+signal play_vec : std_logic_vector(5 downto 0) := "000000";
 begin
 	process(btn_vec, clk)
 	begin
 		if clk'event and clk='1' then
 			if btn_vec /= curbtns then
-				case btn_vec is
-					when btn_11  => --or btn_12
-						--p_str_1 <= '1';
-					when btn_21 => -- or btn_22
-						--p_str_2 <= '1';
-					when btn_31 => --  or btn_32
-						--p_str_3 <= '1';
-					when btns_11_12 =>
-						--p_ch_11 <= '1';
-					when btns_11_22 =>
-						--p_ch_12 <= '1';
-					when btns_11_32 =>
-						--p_ch_13 <= '1';
-					when btns_21_22 =>
-						--p_ch_21 <= '1';
-					--when btns_21_12 =>
-					--	p_ch_22 <= '1';				
-					--when btns_21_32 =>
-					--	p_ch_23 <= '1';		
-					when btns_31_32 =>
-						--p_ch_31 <= '1';		
-					--when btns_31_22 =>
-					--	p_ch_32 <= '1';	
-					--when btns_31_12 =>
-					--	p_ch_33 <= '1';
-					when others =>
-						--playing <= '0';
-				end case;
+				diff_vec <= curbtns xor btn_vec;
+				if play_vec(5 downto 3) = "000" then
+					-- has "alternate" string button been triggered?
+					if play_vec(2) = '1' and ((trig_vec(6) = '1' and btn_vec(5) = '1') or (trig_vec(5) = '1' and btn_vec(6) = '1')) then
+						trig_vec(6) <= not trig_vec(6);
+						trig_vec(5) <= not trig_vec(5);
+						-- TODO: blip gate for wave1
+					end if;
+					if play_vec(1) = '1' and ((trig_vec(4) = '1' and btn_vec(3) = '1') or (trig_vec(3) = '1' and btn_vec(4) = '1')) then
+						trig_vec(4) <= not trig_vec(4);
+						trig_vec(3) <= not trig_vec(3);
+						-- TODO: blip gate for wave2
+					end if;
+					if play_vec(0) = '1' and ((trig_vec(2) = '1' and btn_vec(1) = '1') or (trig_vec(1) = '1' and btn_vec(2) = '1')) then
+						trig_vec(2) <= not trig_vec(2);
+						trig_vec(1) <= not trig_vec(1);
+						-- TODO: blip gate for wave3
+					end if;
+					
+					-- has trigger been released?
+					if play_vec(2) = '1' and ((trig_vec(6) = '1' and btn_vec(6) = '0') or (trig_vec(5) = '1' and btn_ven(5) = '0')) then
+						trig_vec(6) <= '0';
+						trig_vec(5) <= '0';
+						play_vec(2) <= '0';
+					end if;
+					if play_vec(1) = '1' and ((trig_vec(4) = '1' and btn_vec(4) = '0') or (trig_vec(3) = '1' and btn_ven(3) = '0')) then
+						trig_vec(4) <= '0';
+						trig_vec(3) <= '0';
+						play_vec(1) <= '0';
+					end if;
+					if play_vec(0) = '1' and ((trig_vec(2) = '1' and btn_vec(2) = '0') or (trig_vec(1) = '1' and btn_ven(1) = '0')) then
+						trig_vec(2) <= '0';
+						trig_vec(1) <= '0';
+						play_vec(0) <= '0';
+					end if;
+				-- chord 1(1|2|3)?
+				elsif play_vec(5) = '1' then
+					if btn_vec(6) = '1' then
+						if btn_vec(5) = '1' then
+							-- TODO: recalc waves for chord11
+							
+							trig_vec(4 downto 0) <= "00000";
+							trig_vec(5) <= '1';
+						elsif btn_vec(3) = '1' then
+							-- TODO: recalc waves for chord12
+							
+							trig_vec(5 downto 4) <= "00";
+							trig_vec(2 downto 0) <= "000";
+							trig_vec(3) <= '1';
+						elsif btn_vec(1) = '1' then
+							-- TODO: recalc waves for chord13
+							
+							trig_vec(5 downto 2) <= "0000";
+							trig_vec(0) <= '0';
+							trig_vec(1) <= '1';
+						end if;
+					else
+						play_vec(5) <= '0';
+					end if;
+				elsif play_vec(4) = '1' then
+					if btn_vec(4) = '1' then
+						if btn_vec(3) = '1' then
+							-- TODO: recalc waves for chord21
+							trig_vec(5 downto 4) <= "00";
+							trig_vec(2 downto 0) <= "000";
+							trig_vec(3) <= '1';
+						elsif btn_vec(5) = '1' then
+							-- TODO: recalc waves for chord22
+							
+							trig_vec(4 downto 0) <= "00000";
+							trig_vec(5) <= '1';
+						elsif btn_vec(1) = '1' then
+							-- TODO: recalc waves for chord23
+							
+							trig_vec(5 downto 2) <= "0000";
+							trig_vec(0) <= '0';
+							trig_vec(1) <= '1';
+						end if;
+					else
+						play_vec(4) <= '0';
+					end if;
+				elsif play_vec(3) = '1' then
+					if btn_vec(2) = '1' then
+						if btn_vec(1) = '1' then							
+							-- TODO: recalc waves for chord31
+							trig_vec(5 downto 2) <= "0000";
+							trig_vec(0) <= '0';
+							trig_vec(1) <= '1';
+						elsif btn_vec(5) = '1' then
+							-- TODO: recalc waves for chord32							
+							trig_vec(4 downto 0) <= "00000";
+							trig_vec(5) <= '1';
+						elsif btn_vec(3) = '1' then
+							-- TODO: recalc waves for chord33
+							trig_vec(5 downto 4) <= "00";
+							trig_vec(2 downto 0) <= "000";
+							trig_vec(3) <= '1';
+						end if;
+					else
+						play_vec(3) <= '0';
+					end if;
+				end if;
+				if play_vec(5 downto 3) = "000" then
+					if diff_vec(6) = '1' and diff_vec(5) = '1' then
+						-- TODO: recalc waves for chord11
+						trig_vec <= "1100000";
+						play_vec(5) <= '1';
+					elsif diff_vec(6) = '1' and diff_vec(3) = '1' then
+						-- TODO: recalc waves for chord12
+						trig_vec <= "1001000";
+						play_vec(5) <= '1';
+					elsif diff_vec(6) = '1' and diff_vec(1) = '1' then
+						-- TODO: recalc waves for chord13
+						trig_vec <= "100010";
+						play_vec(5) <= '1';
+					elsif diff_vec(4) = '1' and diff_vec(3) = '1' then
+						-- TODO: recalc waves for chord21
+						trig_vec <= "0011000";
+						play_vec(4) <= '1';
+					elsif diff_vec(4) = '1' and diff_vec(5) = '1' then
+						-- TODO: recalc waves for chord22
+						trig_vec <= "011000";
+						play_vec(4) <= '1';
+					elsif diff_vec(4) = '1' and diff_vec(1) = '1' then
+						-- TODO: recalc waves for chord23
+						trig_vec <= "0010010";
+						play_vec(4) <= '1';
+					elsif diff_vec(2) = '1' and diff_vec(1) = '1' then
+						-- TODO: recalc waves for chord31
+						trig_vec <= "0000110";
+						play_vec(3) <= '1';
+					elsif diff_vec(2) = '1' and diff_vec(5) = '1' then
+						-- TODO: recalc waves for chord32
+						trig_vec <= "0100100";
+						play_vec(3) <= '1';
+					elsif diff_vec(2) = '1' and diff_vec(3) = '1' then
+						-- TODO: recalc waves for chord33
+						trig_vec <= "0001100";
+						play_vec(3) <= '1';
+					elsif (diff_vec(6) = '1' or diff_vec(5) = '1') and play_vec(2) = '0'  then
+						trig_vec(6) <= diff_vec(6);
+						trig_vec(5) <= diff_vec(5);
+						play_vec(2) <= '1';
+					elsif (diff_vec(4) = '1' or diff_vec(3) = '1') and play_vec(1) = '0'  then
+						trig_vec(4) <= diff_vec(4);
+						trig_vec(3) <= diff_vec(3);
+						play_vec(1) <= '1';
+					elsif (diff_vec(2) = '1' or diff_vec(1) = '1') and play_vec(0) = '0'  then
+						trig_vec(2) <= diff_vec(2);
+						trig_vec(1) <= diff_vec(1);
+						play_vec(0) <= '1';
+					end if;
+				end if;
+				curbtns <= btn_vec;
 			end if;
 		end if;
 	end process;

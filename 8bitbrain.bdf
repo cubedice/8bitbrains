@@ -168,7 +168,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1680 144 1856 160)
+	(rect 1832 144 2008 160)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "pin_name14" (rect 90 0 149 12)(font "Arial" ))
 	(pt 0 8)
@@ -184,7 +184,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1680 128 1856 144)
+	(rect 1832 128 2008 144)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "pin_name15" (rect 90 0 149 12)(font "Arial" ))
 	(pt 0 8)
@@ -200,7 +200,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1680 160 1856 176)
+	(rect 1832 160 2008 176)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "pin_name16" (rect 90 0 149 12)(font "Arial" ))
 	(pt 0 8)
@@ -428,7 +428,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1520 104 1680 200)
+	(rect 1584 88 1744 184)
 	(text "p2s" (rect 5 0 22 12)(font "Arial" ))
 	(text "inst5" (rect 8 80 31 92)(font "Arial" ))
 	(port
@@ -468,56 +468,6 @@ applicable agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 144 80)(line_width 1))
-	)
-)
-(symbol
-	(rect 1280 120 1472 248)
-	(text "filter" (rect 5 0 27 12)(font "Arial" ))
-	(text "inst4" (rect 8 112 31 124)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "wavein[11..0]" (rect 0 0 66 12)(font "Arial" ))
-		(text "wavein[11..0]" (rect 21 27 87 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "q[7..0]" (rect 0 0 31 12)(font "Arial" ))
-		(text "q[7..0]" (rect 21 43 52 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "freq[11..0]" (rect 0 0 51 12)(font "Arial" ))
-		(text "freq[11..0]" (rect 21 59 72 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "q_ld" (rect 0 0 20 12)(font "Arial" ))
-		(text "q_ld" (rect 21 75 41 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 1))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "freq_ld" (rect 0 0 34 12)(font "Arial" ))
-		(text "freq_ld" (rect 21 91 55 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 1))
-	)
-	(port
-		(pt 192 32)
-		(output)
-		(text "waveout[11..0]" (rect 0 0 73 12)(font "Arial" ))
-		(text "waveout[11..0]" (rect 98 27 171 39)(font "Arial" ))
-		(line (pt 192 32)(pt 176 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 176 112)(line_width 1))
 	)
 )
 (symbol
@@ -753,6 +703,35 @@ applicable agreement for further details.
 		(rectangle (rect 16 16 224 272)(line_width 1))
 	)
 )
+(symbol
+	(rect 1304 104 1536 200)
+	(text "filter" (rect 5 0 29 14)(font "Arial" (font_size 8)))
+	(text "inst4" (rect 8 80 31 92)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 15 14)(font "Arial" (font_size 8)))
+		(text "clk" (rect 21 27 36 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "wave_in[11..0]" (rect 0 0 84 14)(font "Arial" (font_size 8)))
+		(text "wave_in[11..0]" (rect 21 43 105 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 232 32)
+		(output)
+		(text "wave_out[11..0]" (rect 0 0 93 14)(font "Arial" (font_size 8)))
+		(text "wave_out[11..0]" (rect 118 27 211 41)(font "Arial" (font_size 8)))
+		(line (pt 232 32)(pt 216 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 216 80)(line_width 1))
+	)
+)
 (connector
 	(pt 704 232)
 	(pt 720 232)
@@ -836,11 +815,6 @@ applicable agreement for further details.
 	(pt 464 232)
 )
 (connector
-	(text "clk" (rect 1488 120 1502 132)(font "Arial" ))
-	(pt 1480 136)
-	(pt 1520 136)
-)
-(connector
 	(pt 168 232)
 	(pt 200 232)
 	(bus)
@@ -874,21 +848,6 @@ applicable agreement for further details.
 	(text "f_ld" (rect 448 216 466 228)(font "Arial" ))
 	(pt 440 232)
 	(pt 456 232)
-)
-(connector
-	(pt 1520 152)
-	(pt 1472 152)
-	(bus)
-)
-(connector
-	(text "q_ld" (rect 1272 184 1292 196)(font "Arial" ))
-	(pt 1280 200)
-	(pt 1264 200)
-)
-(connector
-	(text "f_ld" (rect 1264 200 1282 212)(font "Arial" ))
-	(pt 1280 216)
-	(pt 1256 216)
 )
 (connector
 	(text "VASDR_sel[2..0]" (rect 448 136 531 148)(font "Arial" ))
@@ -975,11 +934,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1280 152)
-	(pt 1248 152)
-	(bus)
-)
-(connector
 	(pt 1008 152)
 	(pt 1048 152)
 	(bus)
@@ -1004,12 +958,6 @@ applicable agreement for further details.
 	(text "q[7..0]" (rect 448 104 479 116)(font "Arial" ))
 	(pt 440 120)
 	(pt 480 120)
-	(bus)
-)
-(connector
-	(text "q[7..0]" (rect 1256 152 1287 164)(font "Arial" ))
-	(pt 1280 168)
-	(pt 1248 168)
 	(bus)
 )
 (connector
@@ -1059,8 +1007,58 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "ffreq[11..0]" (rect 1256 168 1312 180)(font "Arial" ))
-	(pt 1280 184)
-	(pt 1248 184)
+	(pt 1304 152)
+	(pt 1248 152)
+	(bus)
+)
+(connector
+	(text "clk" (rect 1272 120 1286 132)(font "Arial" ))
+	(pt 1304 136)
+	(pt 1264 136)
+)
+(connector
+	(pt 1824 136)
+	(pt 1824 120)
+)
+(connector
+	(pt 1832 136)
+	(pt 1824 136)
+)
+(connector
+	(pt 1824 120)
+	(pt 1744 120)
+)
+(connector
+	(pt 1816 152)
+	(pt 1816 136)
+)
+(connector
+	(pt 1832 152)
+	(pt 1816 152)
+)
+(connector
+	(pt 1816 136)
+	(pt 1744 136)
+)
+(connector
+	(pt 1808 168)
+	(pt 1808 152)
+)
+(connector
+	(pt 1832 168)
+	(pt 1808 168)
+)
+(connector
+	(pt 1808 152)
+	(pt 1744 152)
+)
+(connector
+	(text "clk" (rect 1552 104 1566 116)(font "Arial" ))
+	(pt 1544 120)
+	(pt 1584 120)
+)
+(connector
+	(pt 1584 136)
+	(pt 1536 136)
 	(bus)
 )
