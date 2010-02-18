@@ -12,6 +12,6 @@ entity modulator is
 		wave1,wave2,wave3				: out std_logic_vector(11 downto 0) );
 end modulator;
 architecture arch of modulator is
-	
 begin
+	wave1 <= Wave1in;
 end arch;

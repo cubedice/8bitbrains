@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 5.969 ns
-From           : data_in[7]
-To             : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|acq_trigger_in_reg[8]
+Actual Time    : 9.425 ns
+From           : btn_vec[6]
+To             : controller:inst|play_vec[2]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 7.975 ns
-From           : s2p:inst|ioclk
-To             : pin_name13
+Actual Time    : 14.990 ns
+From           : controller:inst|gate1
+To             : gate1
 From Clock     : clk
 To Clock       : --
 Failed Paths   : 0
@@ -35,18 +35,18 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 2.482 ns
-From           : altera_internal_jtag~TDIUTAP
-To             : pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|FNUJ6967
+Actual Time    : 4.614 ns
+From           : reset
+To             : controller:inst|gate1
 From Clock     : --
-To Clock       : altera_internal_jtag~CLKDRUSER
+To Clock       : clk
 Failed Paths   : 0
 
 Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 90.33 MHz ( period = 11.070 ns )
-From           : sld_hub:sld_hub_inst|virtual_ir_scan_reg
+Actual Time    : 96.81 MHz ( period = 10.330 ns )
+From           : sld_hub:sld_hub_inst|irf_reg[1][4]
 To             : sld_hub:sld_hub_inst|tdo
 From Clock     : altera_internal_jtag~TCKUTAP
 To Clock       : altera_internal_jtag~TCKUTAP
@@ -55,32 +55,22 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : Restricted to 163.03 MHz ( period = 6.134 ns )
-From           : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_bps3:auto_generated|ram_block1a0~porta_datain_reg19
-To             : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_bps3:auto_generated|ram_block1a19~porta_memory_reg0
+Actual Time    : 162.60 MHz ( period = 6.150 ns )
+From           : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|counter[4]
+To             : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|last_buffer_write_address_sig[1]
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0
 
-Type           : Clock Setup: 'altera_internal_jtag~CLKDRUSER'
-Slack          : N/A
+Type           : Clock Hold: 'clk'
+Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
-Actual Time    : 309.02 MHz ( period = 3.236 ns )
-From           : pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|VELJ8121:JDCF0099|AJQN5180[2]
-To             : pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|VELJ8121:JDCF0099|DJFL8584[0]
-From Clock     : altera_internal_jtag~CLKDRUSER
-To Clock       : altera_internal_jtag~CLKDRUSER
-Failed Paths   : 0
-
-Type           : Clock Setup: 'altera_internal_jtag~UPDATEUSER'
-Slack          : N/A
-Required Time  : None
-Actual Time    : Restricted to 402.58 MHz ( period = 2.484 ns )
-From           : pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|XWDE0671[2]
-To             : pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|XWDE0671[0]
-From Clock     : altera_internal_jtag~UPDATEUSER
-To Clock       : altera_internal_jtag~UPDATEUSER
-Failed Paths   : 0
+Actual Time    : N/A
+From           : controller:inst|prev_play_vec[2]
+To             : controller:inst|freq1[5]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 35
 
 Type           : Total number of failed paths
 Slack          : 
@@ -90,7 +80,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 0
+Failed Paths   : 35
 
 --------------------------------------------------------------------------------------
 

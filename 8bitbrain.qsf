@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C8T144C8
-set_global_assignment -name TOP_LEVEL_ENTITY 8bitbrain
+set_global_assignment -name TOP_LEVEL_ENTITY controllertest
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:58:48  JANUARY 29, 2010"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.0 SP2"
@@ -49,10 +49,7 @@ set_global_assignment -name ENABLE_SIGNALTAP ON
 set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
 set_global_assignment -name MISC_FILE "c:/workspace/8bitbrain/8bitbrain.dpf"
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
-set_location_assignment PIN_3 -to ioclk
-set_location_assignment PIN_141 -to data_in[7]
 set_location_assignment PIN_17 -to clk
-set_location_assignment PIN_71 -to cs
 set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
 set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to clk -section_id auto_signaltap_0
@@ -117,10 +114,6 @@ set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLE
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE addrgentest.vwf
-set_global_assignment -name SEARCH_PATH "c:\\workspace\\lab2/"
-set_global_assignment -name SEARCH_PATH .
-set_global_assignment -name SEARCH_PATH "fir_compiler-library"
 set_global_assignment -name VHDL_FILE controller.vhd
 set_global_assignment -name BDF_FILE 8bitbrain.bdf
 set_global_assignment -name VHDL_FILE s2p.vhd
@@ -135,8 +128,52 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE addrgentest.vwf
 set_global_assignment -name QIP_FILE lpm_divide0.qip
 set_global_assignment -name QIP_FILE filter2.qip
 set_global_assignment -name BDF_FILE filter.bdf
+set_global_assignment -name VHDL_FILE brain_pkg.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE 8bitbraintest.vwf
+set_global_assignment -name SEARCH_PATH "c:\\workspace\\lab2/"
+set_global_assignment -name SEARCH_PATH .
+set_global_assignment -name SEARCH_PATH "fir_compiler-library"
+set_global_assignment -name BDF_FILE controllertest.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE controllertest.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE controllertest.vwf
+set_location_assignment PIN_96 -to freq1[7]
+set_location_assignment PIN_101 -to str_1[0]
+set_location_assignment PIN_120 -to str_1[6]
+set_location_assignment PIN_94 -to btn_vec[4]
+set_location_assignment PIN_67 -to freq1[2]
+set_location_assignment PIN_10 -to altera_reserved_tdo
+set_location_assignment PIN_86 -to freq1[5]
+set_location_assignment PIN_76 -to ~LVDS54p/nCEO~
+set_location_assignment PIN_12 -to altera_reserved_tck
+set_location_assignment PIN_92 -to freq1[8]
+set_location_assignment PIN_134 -to freq1[11]
+set_location_assignment PIN_103 -to str_1[1]
+set_location_assignment PIN_121 -to str_1[4]
+set_location_assignment PIN_104 -to str_1[7]
+set_location_assignment PIN_70 -to btn_vec[2]
+set_location_assignment PIN_97 -to freq1[0]
+set_location_assignment PIN_93 -to btn_vec[5]
+set_location_assignment PIN_119 -to freq1[3]
+set_location_assignment PIN_112 -to freq1[6]
+set_location_assignment PIN_2 -to ~nCSO~
+set_location_assignment PIN_11 -to altera_reserved_tms
+set_location_assignment PIN_126 -to freq1[9]
+set_location_assignment PIN_48 -to freq1[12]
+set_location_assignment PIN_100 -to str_1[2]
+set_location_assignment PIN_115 -to str_1[5]
+set_location_assignment PIN_114 -to btn_vec[0]
+set_location_assignment PIN_99 -to btn_vec[3]
+set_location_assignment PIN_118 -to freq1[1]
+set_location_assignment PIN_113 -to btn_vec[6]
+set_location_assignment PIN_7 -to freq1[4]
+set_location_assignment PIN_13 -to altera_reserved_tdi
+set_location_assignment PIN_1 -to ~ASDO~
+set_location_assignment PIN_45 -to freq1[10]
+set_location_assignment PIN_122 -to str_1[3]
+set_location_assignment PIN_65 -to btn_vec[1]
+set_location_assignment PIN_69 -to gate1

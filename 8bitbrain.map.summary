@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Tue Feb 16 17:41:20 2010
+Analysis & Synthesis Status : Successful - Thu Feb 18 18:43:05 2010
 Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
 Revision Name : 8bitbrain
-Top-level Entity Name : 8bitbrain
+Top-level Entity Name : controllertest
 Family : Cyclone II
-Total logic elements : 860
-    Total combinational functions : 559
-    Dedicated logic registers : 635
-Total registers : 635
+Total logic elements : 801
+    Total combinational functions : 492
+    Dedicated logic registers : 550
+Total registers : 550
 Total pins : 31
 Total virtual pins : 0
 Total memory bits : 2,560

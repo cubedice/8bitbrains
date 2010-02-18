@@ -127,20 +127,20 @@ END SYN;
 -- Retrieval info:      <PRIVATE name = "clocks_to_compute" value="2"  type="INTEGER"  enable="0" />
 -- Retrieval info:      <PRIVATE name = "number_of_serial_units" value="2"  type="INTEGER"  enable="0" />
 -- Retrieval info:      <PRIVATE name = "data_storage" value="Logic Cells"  type="STRING"  enable="1" />
--- Retrieval info:      <PRIVATE name = "coefficient_storage" value="M4K"  type="STRING"  enable="1" />
+-- Retrieval info:      <PRIVATE name = "coefficient_storage" value="Logic Cells"  type="STRING"  enable="1" />
 -- Retrieval info:      <PRIVATE name = "multiplier_storage" value="Logic Cells"  type="STRING"  enable="0" />
 -- Retrieval info:      <PRIVATE name = "force_non_symmetric_structure" value="0"  type="BOOLEAN"  enable="0" />
--- Retrieval info:      <PRIVATE name = "coefficients_reload" value="0"  type="BOOLEAN"  enable="1" />
+-- Retrieval info:      <PRIVATE name = "coefficients_reload" value="0"  type="BOOLEAN"  enable="0" />
 -- Retrieval info:      <PRIVATE name = "coefficients_reload_sgl_clock" value="0"  type="BOOLEAN"  enable="1" />
--- Retrieval info:      <PRIVATE name = "max_clocks_to_compute" value="4"  type="INTEGER"  enable="1" />
+-- Retrieval info:      <PRIVATE name = "max_clocks_to_compute" value="1"  type="INTEGER"  enable="1" />
 -- Retrieval info:      <PRIVATE name = "set_1" value="Low Pass Set, Floating, Band Pass, Hamming, 37, 4000.0, 400.0, 1000.0, 0, 0.00134666, 0.0031765, 0.00125562, -0.00301233, -0.00251476, 2.89101E-4, -0.0078158, -0.017567, 2.24669E-5, 0.0303455, 0.0234662, -0.00156248, 0.0239803, 0.05316, -0.0417755, -0.194268, -0.14715, 0.130333, 0.300047, 0.130333, -0.14715, -0.194268, -0.0417755, 0.05316, 0.0239803, -0.00156248, 0.0234662, 0.0303455, 2.24669E-5, -0.017567, -0.0078158, 2.89101E-4, -0.00251476, -0.00301233, 0.00125562, 0.0031765, 0.00134666"  type="STRING"  enable="1" />
 -- Retrieval info:      <PRIVATE name = "number_of_sets" value="1"  type="INTEGER"  enable="1" />
 -- Retrieval info:      <PRIVATE name = "output_full_bit_width" value="27"  type="INTEGER"  enable="1" />
 -- Retrieval info:      <PRIVATE name = "output_full_bits_right_of_binary_point" value="22"  type="INTEGER"  enable="1" />
--- Retrieval info:      <PRIVATE name = "coefficient_reload_bit_width" value="11"  type="INTEGER"  enable="1" />
--- Retrieval info:      <PRIVATE name = "logic_cell" value="1201"  type="INTEGER"  enable="1" />
+-- Retrieval info:      <PRIVATE name = "coefficient_reload_bit_width" value="15"  type="INTEGER"  enable="1" />
+-- Retrieval info:      <PRIVATE name = "logic_cell" value="1995"  type="INTEGER"  enable="1" />
 -- Retrieval info:      <PRIVATE name = "m512" value="0"  type="INTEGER"  enable="1" />
--- Retrieval info:      <PRIVATE name = "m4k" value="39"  type="INTEGER"  enable="1" />
+-- Retrieval info:      <PRIVATE name = "m4k" value="0"  type="INTEGER"  enable="1" />
 -- Retrieval info:      <PRIVATE name = "m144k" value="0"  type="INTEGER"  enable="1" />
 -- Retrieval info:      <PRIVATE name = "m9k" value="0"  type="INTEGER"  enable="1" />
 -- Retrieval info:      <PRIVATE name = "mlab" value="0"  type="INTEGER"  enable="1" />
@@ -149,7 +149,7 @@ END SYN;
 -- Retrieval info:      <PRIVATE name = "input_clock_period" value="1"  type="INTEGER"  enable="1" />
 -- Retrieval info:      <PRIVATE name = "output_clock_period" value="1"  type="INTEGER"  enable="1" />
 -- Retrieval info:      <PRIVATE name = "throughput" value="1"  type="INTEGER"  enable="1" />
--- Retrieval info:      <PRIVATE name = "memory_units" value="3"  type="INTEGER"  enable="1" />
+-- Retrieval info:      <PRIVATE name = "memory_units" value="0"  type="INTEGER"  enable="1" />
 -- Retrieval info:     </NAMESPACE>
 -- Retrieval info:     <NAMESPACE name = "simgen_enable">
 -- Retrieval info:      <PRIVATE name = "matlab_enable" value="1"  type="BOOLEAN"  enable="1" />
