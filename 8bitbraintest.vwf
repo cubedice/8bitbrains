@@ -24,9 +24,21 @@ HEADER
 {
 	VERSION = 1;
 	TIME_UNIT = ns;
+	PRINT_OPTIONS = "Print_options_version 6\
+range_start 0ps\
+range_end 1.0ms\
+width 1\
+names_percentage 25\
+comments 1\
+grid_lines 1\
+time_bars 1\
+name_every_page 0\
+expand_groups 0\
+print_all 1\
+print_row_height 100";
 	DATA_OFFSET = 0.0;
 	DATA_DURATION = 1000000.0;
-	SIMULATION_TIME = 0.0;
+	SIMULATION_TIME = 1000000.0;
 	GRID_PHASE = 0.0;
 	GRID_PERIOD = 10.0;
 	GRID_DUTY_CYCLE = 50;
@@ -482,12 +494,213 @@ SIGNAL("freq1[0]")
 	PARENT = "freq1";
 }
 
+SIGNAL("reset")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("freq1[12]~result")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("freq1[11]~result")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("freq1[10]~result")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("freq1[9]~result")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("freq1[8]~result")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("freq1[7]~result")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("freq1[6]~result")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("freq1[5]~result")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("freq1[4]~result")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("freq1[3]~result")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("freq1[2]~result")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("freq1[1]~result")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("freq1[0]~result")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("pin_name12")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("pin_name13")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("pin_name14")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("pin_name15")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("pin_name16")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("altera_reserved_tdo")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 TRANSITION_LIST("btn_vec[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000000.0;
+		LEVEL 0 FOR 266240.0;
+		LEVEL 1 FOR 733760.0;
 	}
 }
 
@@ -566,7 +779,7 @@ TRANSITION_LIST("outwave[11]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000000.0;
+		LEVEL 0 FOR 1000000.0;
 	}
 }
 
@@ -575,7 +788,7 @@ TRANSITION_LIST("outwave[10]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000000.0;
+		LEVEL 0 FOR 1000000.0;
 	}
 }
 
@@ -584,7 +797,7 @@ TRANSITION_LIST("outwave[9]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000000.0;
+		LEVEL 0 FOR 1000000.0;
 	}
 }
 
@@ -593,7 +806,7 @@ TRANSITION_LIST("outwave[8]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000000.0;
+		LEVEL 0 FOR 1000000.0;
 	}
 }
 
@@ -602,7 +815,7 @@ TRANSITION_LIST("outwave[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000000.0;
+		LEVEL 0 FOR 1000000.0;
 	}
 }
 
@@ -611,7 +824,7 @@ TRANSITION_LIST("outwave[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000000.0;
+		LEVEL 0 FOR 1000000.0;
 	}
 }
 
@@ -620,7 +833,7 @@ TRANSITION_LIST("outwave[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000000.0;
+		LEVEL 0 FOR 1000000.0;
 	}
 }
 
@@ -629,7 +842,7 @@ TRANSITION_LIST("outwave[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000000.0;
+		LEVEL 0 FOR 1000000.0;
 	}
 }
 
@@ -638,7 +851,7 @@ TRANSITION_LIST("outwave[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000000.0;
+		LEVEL 0 FOR 1000000.0;
 	}
 }
 
@@ -647,7 +860,7 @@ TRANSITION_LIST("outwave[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000000.0;
+		LEVEL 0 FOR 1000000.0;
 	}
 }
 
@@ -656,7 +869,7 @@ TRANSITION_LIST("outwave[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000000.0;
+		LEVEL 0 FOR 1000000.0;
 	}
 }
 
@@ -665,7 +878,7 @@ TRANSITION_LIST("outwave[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000000.0;
+		LEVEL 0 FOR 1000000.0;
 	}
 }
 
@@ -855,6 +1068,302 @@ TRANSITION_LIST("freq1[0]")
 	{
 		REPEAT = 1;
 		LEVEL Z FOR 1000000.0;
+	}
+}
+
+TRANSITION_LIST("reset")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 10240.0;
+		LEVEL 1 FOR 51200.0;
+		LEVEL 0 FOR 938560.0;
+	}
+}
+
+TRANSITION_LIST("freq1[12]~result")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000000.0;
+	}
+}
+
+TRANSITION_LIST("freq1[11]~result")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000000.0;
+	}
+}
+
+TRANSITION_LIST("freq1[10]~result")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000000.0;
+	}
+}
+
+TRANSITION_LIST("freq1[9]~result")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000000.0;
+	}
+}
+
+TRANSITION_LIST("freq1[8]~result")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000000.0;
+	}
+}
+
+TRANSITION_LIST("freq1[7]~result")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000000.0;
+	}
+}
+
+TRANSITION_LIST("freq1[6]~result")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 266275.483;
+		LEVEL 1 FOR 733724.517;
+	}
+}
+
+TRANSITION_LIST("freq1[5]~result")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 266275.368;
+		LEVEL 1 FOR 733724.632;
+	}
+}
+
+TRANSITION_LIST("freq1[4]~result")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000000.0;
+	}
+}
+
+TRANSITION_LIST("freq1[3]~result")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 266275.129;
+		LEVEL 1 FOR 733724.871;
+	}
+}
+
+TRANSITION_LIST("freq1[2]~result")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000000.0;
+	}
+}
+
+TRANSITION_LIST("freq1[1]~result")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000000.0;
+	}
+}
+
+TRANSITION_LIST("freq1[0]~result")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000000.0;
+	}
+}
+
+TRANSITION_LIST("pin_name12")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 27.151;
+		NODE
+		{
+			REPEAT = 44;
+			LEVEL 1 FOR 17039.88;
+			LEVEL 0 FOR 5521.08;
+		}
+		LEVEL 1 FOR 7290.609;
+	}
+}
+
+TRANSITION_LIST("pin_name13")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 503.817;
+		NODE
+		{
+			REPEAT = 8;
+			LEVEL 1 FOR 238.32;
+			LEVEL 0 FOR 278.04;
+		}
+		LEVEL 1 FOR 238.32;
+		LEVEL 0 FOR 13623.96;
+		NODE
+		{
+			REPEAT = 2;
+			NODE
+			{
+				REPEAT = 8;
+				LEVEL 1 FOR 238.32;
+				LEVEL 0 FOR 278.04;
+			}
+			LEVEL 1 FOR 238.32;
+			LEVEL 0 FOR 18708.12;
+			NODE
+			{
+				REPEAT = 4;
+				NODE
+				{
+					REPEAT = 8;
+					LEVEL 1 FOR 238.32;
+					LEVEL 0 FOR 278.04;
+				}
+				LEVEL 1 FOR 238.32;
+				LEVEL 0 FOR 18072.6;
+			}
+		}
+		NODE
+		{
+			REPEAT = 2;
+			NODE
+			{
+				REPEAT = 8;
+				LEVEL 1 FOR 238.32;
+				LEVEL 0 FOR 278.04;
+			}
+			LEVEL 1 FOR 238.32;
+			LEVEL 0 FOR 18072.6;
+			NODE
+			{
+				REPEAT = 2;
+				NODE
+				{
+					REPEAT = 8;
+					LEVEL 1 FOR 238.32;
+					LEVEL 0 FOR 278.04;
+				}
+				LEVEL 1 FOR 238.32;
+				LEVEL 0 FOR 18708.12;
+				NODE
+				{
+					REPEAT = 4;
+					NODE
+					{
+						REPEAT = 8;
+						LEVEL 1 FOR 238.32;
+						LEVEL 0 FOR 278.04;
+					}
+					LEVEL 1 FOR 238.32;
+					LEVEL 0 FOR 18072.6;
+				}
+			}
+			NODE
+			{
+				REPEAT = 8;
+				LEVEL 1 FOR 238.32;
+				LEVEL 0 FOR 278.04;
+			}
+			LEVEL 1 FOR 238.32;
+			LEVEL 0 FOR 18708.12;
+			NODE
+			{
+				REPEAT = 4;
+				NODE
+				{
+					REPEAT = 8;
+					LEVEL 1 FOR 238.32;
+					LEVEL 0 FOR 278.04;
+				}
+				LEVEL 1 FOR 238.32;
+				LEVEL 0 FOR 18072.6;
+			}
+		}
+		NODE
+		{
+			REPEAT = 8;
+			LEVEL 1 FOR 238.32;
+			LEVEL 0 FOR 278.04;
+		}
+		LEVEL 1 FOR 238.32;
+		LEVEL 0 FOR 18072.6;
+		NODE
+		{
+			REPEAT = 8;
+			LEVEL 1 FOR 238.32;
+			LEVEL 0 FOR 278.04;
+		}
+		LEVEL 1 FOR 238.32;
+		LEVEL 0 FOR 7052.263;
+	}
+}
+
+TRANSITION_LIST("pin_name14")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000000.0;
+	}
+}
+
+TRANSITION_LIST("pin_name15")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000000.0;
+	}
+}
+
+TRANSITION_LIST("pin_name16")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000000.0;
+	}
+}
+
+TRANSITION_LIST("altera_reserved_tdo")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000000.0;
 	}
 }
 
@@ -1305,6 +1814,186 @@ DISPLAY_LINE
 	TREE_INDEX = 44;
 	TREE_LEVEL = 1;
 	PARENT = 31;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "reset";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 45;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "freq1[12]~result";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 46;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "freq1[11]~result";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 47;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "freq1[10]~result";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 48;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "freq1[9]~result";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 49;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "freq1[8]~result";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 50;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "freq1[7]~result";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 51;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "freq1[6]~result";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 52;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "freq1[5]~result";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 53;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "freq1[4]~result";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 54;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "freq1[3]~result";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 55;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "freq1[2]~result";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 56;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "freq1[1]~result";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 57;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "freq1[0]~result";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 58;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pin_name12";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 59;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pin_name13";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 60;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pin_name14";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 61;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pin_name15";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 62;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pin_name16";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 63;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "altera_reserved_tdo";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 64;
+	TREE_LEVEL = 0;
 }
 
 TIME_BAR

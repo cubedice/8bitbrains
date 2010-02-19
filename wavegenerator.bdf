@@ -149,7 +149,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 328 136 584 248)
+	(rect 344 136 600 248)
 	(text "altsyncram0" (rect 93 1 176 17)(font "Arial" (font_size 10)))
 	(text "inst3" (rect 8 96 31 108)(font "Arial" ))
 	(port
@@ -403,16 +403,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 304 168)
-	(pt 328 168)
-	(bus)
-)
-(connector
-	(pt 616 168)
-	(pt 584 168)
-	(bus)
-)
-(connector
 	(pt 104 168)
 	(pt 104 160)
 )
@@ -430,4 +420,29 @@ applicable agreement for further details.
 	(text "clk" (rect 112 432 126 444)(font "Arial" ))
 	(pt 152 448)
 	(pt 104 448)
+)
+(connector
+	(pt 616 168)
+	(pt 600 168)
+	(bus)
+)
+(connector
+	(pt 304 168)
+	(pt 344 168)
+	(bus)
+)
+(connector
+	(text "clk" (rect 320 208 334 220)(font "Arial" ))
+	(pt 344 224)
+	(pt 312 224)
+)
+(connector
+	(text "clk" (rect 320 344 334 356)(font "Arial" ))
+	(pt 336 360)
+	(pt 312 360)
+)
+(connector
+	(text "clk" (rect 320 488 334 500)(font "Arial" ))
+	(pt 328 504)
+	(pt 312 504)
 )

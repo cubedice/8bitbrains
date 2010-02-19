@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
 
 package brain_pkg is
 	function frequency( str_val,strnum : std_logic_vector; mode : std_logic ) return std_logic_vector;
@@ -12,49 +13,49 @@ package body brain_pkg is
 		
 		if strnum = "01" and mode = '0' then
 			if str_val < "00010010" then
-				freq := "0000001010010";
+				freq := CONV_STD_LOGIC_VECTOR(82,13);
 			elsif str_val < "00100010" then
-				freq := "0000001010111";				
+				freq := CONV_STD_LOGIC_VECTOR(87,13);			
 			elsif str_val < "00110010" then
-				freq := "0000001011100";				
+				freq := CONV_STD_LOGIC_VECTOR(92,13);			
 			elsif str_val < "01000001" then
-				freq := "0000001100010";				
+				freq := CONV_STD_LOGIC_VECTOR(98,13);				
 			elsif str_val < "01001111" then
-				freq := "0000001101000";				
+				freq := CONV_STD_LOGIC_VECTOR(104,13);				
 			elsif str_val < "01011100" then
-				freq := "0000001101110";				
+				freq := CONV_STD_LOGIC_VECTOR(110,13);				
 			elsif str_val < "01101010" then
-				freq := "0000001110101";				
+				freq := CONV_STD_LOGIC_VECTOR(117,13);				
 			elsif str_val < "01110101" then
-				freq := "0000001111011";				
+				freq := CONV_STD_LOGIC_VECTOR(123,13);				
 			elsif str_val < "10000000" then
-				freq := "0000010000011";				
+				freq := CONV_STD_LOGIC_VECTOR(131,13);				
 			elsif str_val < "10001100" then
-				freq := "0000010001011";				
+				freq := CONV_STD_LOGIC_VECTOR(139,13);				
 			elsif str_val < "10010110" then
-				freq := "0000010010011";				
+				freq := CONV_STD_LOGIC_VECTOR(147,13);				
 			elsif str_val < "10100000" then
-				freq := "0000010011100";				
+				freq := CONV_STD_LOGIC_VECTOR(156,13);			
 			elsif str_val < "10101010" then
-				freq := "0000010100101";				
+				freq := CONV_STD_LOGIC_VECTOR(165,13);			
 			elsif str_val < "10110010" then
-				freq := "0000010101111";				
+				freq := CONV_STD_LOGIC_VECTOR(175,13);			
 			elsif str_val < "10110111" then
-				freq := "0000010111001";				
+				freq := CONV_STD_LOGIC_VECTOR(185,13);				
 			elsif str_val < "11000100" then
-				freq := "0000011000100";				
+				freq := CONV_STD_LOGIC_VECTOR(196,13);				
 			elsif str_val < "11001011" then
-				freq := "0000011010000";				
+				freq := CONV_STD_LOGIC_VECTOR(208,13);		
 			elsif str_val < "11010010" then
-				freq := "0000011011100";				
+				freq := CONV_STD_LOGIC_VECTOR(220,13);				
 			elsif str_val < "11010111" then
-				freq := "0000011101001";				
+				freq := CONV_STD_LOGIC_VECTOR(233,13);				
 			elsif str_val < "11011110" then
-				freq := "0000011110111";				
+				freq := CONV_STD_LOGIC_VECTOR(247,13);				
 			elsif str_val < "11100101" then
-				freq := "0000100000110";
+				freq := CONV_STD_LOGIC_VECTOR(262,13);
 			else
-				freq := "0000100010101";
+				freq := CONV_STD_LOGIC_VECTOR(277,13);
 			end if;
 		end if;
 		return freq;

@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 9.425 ns
-From           : btn_vec[6]
-To             : controller:inst|play_vec[2]
+Actual Time    : 9.720 ns
+From           : btn_vec[1]
+To             : controller:inst1|play_vec[2]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 14.990 ns
-From           : controller:inst|gate1
-To             : gate1
+Actual Time    : 12.748 ns
+From           : p2s:inst5|data_out
+To             : p2s_dout
 From Clock     : clk
 To Clock       : --
 Failed Paths   : 0
@@ -35,42 +35,42 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 4.614 ns
-From           : reset
-To             : controller:inst|gate1
+Actual Time    : 2.049 ns
+From           : altera_internal_jtag~TDIUTAP
+To             : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|lpm_shiftreg:trigger_condition_deserialize|dffs[59]
 From Clock     : --
-To Clock       : clk
-Failed Paths   : 0
-
-Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
-Slack          : N/A
-Required Time  : None
-Actual Time    : 96.81 MHz ( period = 10.330 ns )
-From           : sld_hub:sld_hub_inst|irf_reg[1][4]
-To             : sld_hub:sld_hub_inst|tdo
-From Clock     : altera_internal_jtag~TCKUTAP
 To Clock       : altera_internal_jtag~TCKUTAP
 Failed Paths   : 0
 
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 162.60 MHz ( period = 6.150 ns )
-From           : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|counter[4]
-To             : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|last_buffer_write_address_sig[1]
+Actual Time    : 22.24 MHz ( period = 44.970 ns )
+From           : wavegenerator:inst6|addrgen:inst|lpm_divide0:div1|lpm_divide:lpm_divide_component|lpm_divide_gft:auto_generated|sign_div_unsign_q8i:divider|alt_u_div_8nf:divider|DFFDenominator[1]
+To             : wavegenerator:inst6|addrgen:inst|addr[6]
 From Clock     : clk
 To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 95.99 MHz ( period = 10.418 ns )
+From           : sld_hub:sld_hub_inst|irf_reg[1][5]
+To             : sld_hub:sld_hub_inst|tdo
+From Clock     : altera_internal_jtag~TCKUTAP
+To Clock       : altera_internal_jtag~TCKUTAP
 Failed Paths   : 0
 
 Type           : Clock Hold: 'clk'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : controller:inst|prev_play_vec[2]
-To             : controller:inst|freq1[5]
+From           : s2p:inst|io_en[2]
+To             : s2p:inst|tmp_data[7][7]
 From Clock     : clk
 To Clock       : clk
-Failed Paths   : 35
+Failed Paths   : 97
 
 Type           : Total number of failed paths
 Slack          : 
@@ -80,7 +80,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 35
+Failed Paths   : 97
 
 --------------------------------------------------------------------------------------
 

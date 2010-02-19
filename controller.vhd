@@ -7,11 +7,12 @@ use work.brain_pkg.all;
 
 entity controller is
 	port (
-		clk	,reset													: in std_logic;
+		clk														: in std_logic;
 		str_1, str_2, str_3, VASDRin							: in std_logic_vector(7 downto 0);
 		btn_vec													: in std_logic_vector(6 downto 0); -- btn_11, btn_12 ... btn_drm
 		edit_select_rot,edit_change_rot, waveform_rot 			: in std_logic_vector(1 downto 0);
 		wave_bank_rot 											: in std_logic_vector(1 downto 0);
+		reset													: in std_logic;
 		VASDRld													: out std_logic;
 		VASDRout,q												: out std_logic_vector(7 downto 0);
 		voice_sel, VASDR_sel									: out std_logic_vector(2 downto 0);

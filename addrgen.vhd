@@ -34,7 +34,7 @@ begin
 		if clk'event and clk = '1' then
 			if freq /= (freq'range => '0') then
 				count <= count + 1;
-				if count = count_end then
+				if count >= count_end then
 					count <= (count'range => '0');
 					tmp_addr <= tmp_addr + 1;
 					addr <= tmp_addr;
