@@ -1,34 +1,78 @@
 <session jtag_chain="USB-Blaster [USB-0]" jtag_device="@1: EP2C8 (0x020B20DD)" sof_file="" top_level_entity="8bitbrain">
   <display_tree gui_logging_enabled="0">
-    <display_branch instance="auto_signaltap_0" log="USE_GLOBAL_TEMP" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+    <display_branch instance="auto_signaltap_0" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
   </display_tree>
   <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
     <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
     <position_info>
-      <single attribute="active tab" value="0"/>
+      <single attribute="active tab" value="1"/>
       <single attribute="data horizontal scroll position" value="0"/>
       <single attribute="data vertical scroll position" value="0"/>
       <single attribute="zoom level denominator" value="1"/>
       <single attribute="zoom level numerator" value="1"/>
       <single attribute="zoom offset denominator" value="1"/>
       <single attribute="zoom offset numerator" value="130945"/>
+      <single attribute="setup vertical scroll position" value="2"/>
+      <single attribute="setup horizontal scroll position" value="0"/>
     </position_info>
-    <signal_set global_temp="1" name="signal_set: 2010/02/18 23:23:26  #0">
+    <signal_set global_temp="1" name="signal_set: 2010/02/20 17:44:42  #0">
       <clock name="clk" polarity="posedge" tap_mode="classic"/>
       <config ram_type="M4K" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="128" trigger_in_enable="no" trigger_out_enable="no"/>
       <top_entity/>
       <signal_vec>
         <trigger_input_vec>
-          <wire name="data_in[0]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[1]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[2]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[3]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[4]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[5]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[6]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[7]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[8]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[9]" tap_mode="classic" type="input pin"/>
+          <wire name="controller:inst1|btn_vec[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|btn_vec[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|btn_vec[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|btn_vec[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|btn_vec[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|btn_vec[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|btn_vec[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|curbtns[0]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|curbtns[1]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|curbtns[2]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|curbtns[3]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|curbtns[4]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|curbtns[5]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|curbtns[6]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|diff_btn_vec[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_btn_vec[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_btn_vec[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_btn_vec[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_btn_vec[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_btn_vec[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_btn_vec[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|play_vec[0]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|play_vec[1]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|play_vec[2]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|play_vec[3]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|play_vec[4]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|play_vec[5]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|prev_play_vec[0]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|prev_play_vec[1]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|prev_play_vec[2]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|prev_play_vec[3]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|prev_play_vec[4]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|prev_play_vec[5]" tap_mode="classic" type="register"/>
+          <wire name="freq1[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[9]" tap_mode="classic" type="combinatorial"/>
           <wire name="s2p:inst|s1[0]" tap_mode="classic" type="combinatorial"/>
           <wire name="s2p:inst|s1[1]" tap_mode="classic" type="combinatorial"/>
           <wire name="s2p:inst|s1[2]" tap_mode="classic" type="combinatorial"/>
@@ -39,18 +83,78 @@
           <wire name="s2p:inst|s1[7]" tap_mode="classic" type="combinatorial"/>
           <wire name="s2p_cs" tap_mode="classic" type="output pin"/>
           <wire name="s2p_ioclk" tap_mode="classic" type="output pin"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[9]" tap_mode="classic" type="combinatorial"/>
         </trigger_input_vec>
         <data_input_vec>
-          <wire name="data_in[0]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[1]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[2]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[3]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[4]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[5]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[6]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[7]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[8]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[9]" tap_mode="classic" type="input pin"/>
+          <wire name="controller:inst1|btn_vec[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|btn_vec[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|btn_vec[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|btn_vec[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|btn_vec[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|btn_vec[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|btn_vec[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|curbtns[0]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|curbtns[1]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|curbtns[2]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|curbtns[3]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|curbtns[4]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|curbtns[5]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|curbtns[6]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|diff_btn_vec[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_btn_vec[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_btn_vec[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_btn_vec[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_btn_vec[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_btn_vec[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_btn_vec[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|play_vec[0]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|play_vec[1]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|play_vec[2]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|play_vec[3]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|play_vec[4]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|play_vec[5]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|prev_play_vec[0]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|prev_play_vec[1]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|prev_play_vec[2]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|prev_play_vec[3]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|prev_play_vec[4]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|prev_play_vec[5]" tap_mode="classic" type="register"/>
+          <wire name="freq1[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[9]" tap_mode="classic" type="combinatorial"/>
           <wire name="s2p:inst|s1[0]" tap_mode="classic" type="combinatorial"/>
           <wire name="s2p:inst|s1[1]" tap_mode="classic" type="combinatorial"/>
           <wire name="s2p:inst|s1[2]" tap_mode="classic" type="combinatorial"/>
@@ -61,18 +165,78 @@
           <wire name="s2p:inst|s1[7]" tap_mode="classic" type="combinatorial"/>
           <wire name="s2p_cs" tap_mode="classic" type="output pin"/>
           <wire name="s2p_ioclk" tap_mode="classic" type="output pin"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[9]" tap_mode="classic" type="combinatorial"/>
         </data_input_vec>
         <storage_qualifier_input_vec>
-          <wire name="data_in[0]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[1]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[2]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[3]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[4]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[5]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[6]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[7]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[8]" tap_mode="classic" type="input pin"/>
-          <wire name="data_in[9]" tap_mode="classic" type="input pin"/>
+          <wire name="controller:inst1|btn_vec[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|btn_vec[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|btn_vec[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|btn_vec[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|btn_vec[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|btn_vec[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|btn_vec[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|curbtns[0]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|curbtns[1]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|curbtns[2]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|curbtns[3]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|curbtns[4]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|curbtns[5]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|curbtns[6]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|diff_btn_vec[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_btn_vec[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_btn_vec[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_btn_vec[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_btn_vec[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_btn_vec[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_btn_vec[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|play_vec[0]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|play_vec[1]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|play_vec[2]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|play_vec[3]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|play_vec[4]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|play_vec[5]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|prev_play_vec[0]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|prev_play_vec[1]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|prev_play_vec[2]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|prev_play_vec[3]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|prev_play_vec[4]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|prev_play_vec[5]" tap_mode="classic" type="register"/>
+          <wire name="freq1[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="freq1[9]" tap_mode="classic" type="combinatorial"/>
           <wire name="s2p:inst|s1[0]" tap_mode="classic" type="combinatorial"/>
           <wire name="s2p:inst|s1[1]" tap_mode="classic" type="combinatorial"/>
           <wire name="s2p:inst|s1[2]" tap_mode="classic" type="combinatorial"/>
@@ -83,22 +247,28 @@
           <wire name="s2p:inst|s1[7]" tap_mode="classic" type="combinatorial"/>
           <wire name="s2p_cs" tap_mode="classic" type="output pin"/>
           <wire name="s2p_ioclk" tap_mode="classic" type="output pin"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegenerator:inst6|addrgen:inst|count_end[9]" tap_mode="classic" type="combinatorial"/>
         </storage_qualifier_input_vec>
       </signal_vec>
       <presentation>
         <data_view>
-          <bus is_signal_inverted="no" link="all" name="data_in" order="lsb_to_msb" radix="hex" state="collapse" type="input pin">
-            <net is_signal_inverted="no" name="data_in[0]"/>
-            <net is_signal_inverted="no" name="data_in[1]"/>
-            <net is_signal_inverted="no" name="data_in[2]"/>
-            <net is_signal_inverted="no" name="data_in[3]"/>
-            <net is_signal_inverted="no" name="data_in[4]"/>
-            <net is_signal_inverted="no" name="data_in[5]"/>
-            <net is_signal_inverted="no" name="data_in[6]"/>
-            <net is_signal_inverted="no" name="data_in[7]"/>
-            <net is_signal_inverted="no" name="data_in[8]"/>
-            <net is_signal_inverted="no" name="data_in[9]"/>
-          </bus>
           <net is_signal_inverted="no" name="s2p_cs"/>
           <net is_signal_inverted="no" name="s2p_ioclk"/>
           <bus is_signal_inverted="no" link="all" name="s2p:inst|s1" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
@@ -110,21 +280,95 @@
             <net is_signal_inverted="no" name="s2p:inst|s1[5]"/>
             <net is_signal_inverted="no" name="s2p:inst|s1[6]"/>
             <net is_signal_inverted="no" name="s2p:inst|s1[7]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="freq1" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="freq1[0]"/>
+            <net is_signal_inverted="no" name="freq1[1]"/>
+            <net is_signal_inverted="no" name="freq1[2]"/>
+            <net is_signal_inverted="no" name="freq1[3]"/>
+            <net is_signal_inverted="no" name="freq1[4]"/>
+            <net is_signal_inverted="no" name="freq1[5]"/>
+            <net is_signal_inverted="no" name="freq1[6]"/>
+            <net is_signal_inverted="no" name="freq1[7]"/>
+            <net is_signal_inverted="no" name="freq1[8]"/>
+            <net is_signal_inverted="no" name="freq1[9]"/>
+            <net is_signal_inverted="no" name="freq1[10]"/>
+            <net is_signal_inverted="no" name="freq1[11]"/>
+            <net is_signal_inverted="no" name="freq1[12]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="wavegenerator:inst6|addrgen:inst|count_end" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[0]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[1]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[2]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[3]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[4]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[5]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[6]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[7]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[8]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[9]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[10]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[11]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[12]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[13]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[14]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[15]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[16]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[17]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="controller:inst1|diff_play_vec" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[0]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[1]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[2]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[3]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[4]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[5]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="controller:inst1|play_vec" order="lsb_to_msb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="controller:inst1|play_vec[0]"/>
+            <net is_signal_inverted="no" name="controller:inst1|play_vec[1]"/>
+            <net is_signal_inverted="no" name="controller:inst1|play_vec[2]"/>
+            <net is_signal_inverted="no" name="controller:inst1|play_vec[3]"/>
+            <net is_signal_inverted="no" name="controller:inst1|play_vec[4]"/>
+            <net is_signal_inverted="no" name="controller:inst1|play_vec[5]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="controller:inst1|prev_play_vec" order="lsb_to_msb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="controller:inst1|prev_play_vec[0]"/>
+            <net is_signal_inverted="no" name="controller:inst1|prev_play_vec[1]"/>
+            <net is_signal_inverted="no" name="controller:inst1|prev_play_vec[2]"/>
+            <net is_signal_inverted="no" name="controller:inst1|prev_play_vec[3]"/>
+            <net is_signal_inverted="no" name="controller:inst1|prev_play_vec[4]"/>
+            <net is_signal_inverted="no" name="controller:inst1|prev_play_vec[5]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="controller:inst1|btn_vec" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="controller:inst1|btn_vec[0]"/>
+            <net is_signal_inverted="no" name="controller:inst1|btn_vec[1]"/>
+            <net is_signal_inverted="no" name="controller:inst1|btn_vec[2]"/>
+            <net is_signal_inverted="no" name="controller:inst1|btn_vec[3]"/>
+            <net is_signal_inverted="no" name="controller:inst1|btn_vec[4]"/>
+            <net is_signal_inverted="no" name="controller:inst1|btn_vec[5]"/>
+            <net is_signal_inverted="no" name="controller:inst1|btn_vec[6]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="controller:inst1|diff_btn_vec" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="controller:inst1|diff_btn_vec[0]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_btn_vec[1]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_btn_vec[2]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_btn_vec[3]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_btn_vec[4]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_btn_vec[5]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_btn_vec[6]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="controller:inst1|curbtns" order="lsb_to_msb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="controller:inst1|curbtns[0]"/>
+            <net is_signal_inverted="no" name="controller:inst1|curbtns[1]"/>
+            <net is_signal_inverted="no" name="controller:inst1|curbtns[2]"/>
+            <net is_signal_inverted="no" name="controller:inst1|curbtns[3]"/>
+            <net is_signal_inverted="no" name="controller:inst1|curbtns[4]"/>
+            <net is_signal_inverted="no" name="controller:inst1|curbtns[5]"/>
+            <net is_signal_inverted="no" name="controller:inst1|curbtns[6]"/>
           </bus>
         </data_view>
         <setup_view>
-          <bus is_signal_inverted="no" link="all" name="data_in" order="lsb_to_msb" radix="hex" state="collapse" type="input pin">
-            <net is_signal_inverted="no" name="data_in[0]"/>
-            <net is_signal_inverted="no" name="data_in[1]"/>
-            <net is_signal_inverted="no" name="data_in[2]"/>
-            <net is_signal_inverted="no" name="data_in[3]"/>
-            <net is_signal_inverted="no" name="data_in[4]"/>
-            <net is_signal_inverted="no" name="data_in[5]"/>
-            <net is_signal_inverted="no" name="data_in[6]"/>
-            <net is_signal_inverted="no" name="data_in[7]"/>
-            <net is_signal_inverted="no" name="data_in[8]"/>
-            <net is_signal_inverted="no" name="data_in[9]"/>
-          </bus>
           <net is_signal_inverted="no" name="s2p_cs"/>
           <net is_signal_inverted="no" name="s2p_ioclk"/>
           <bus is_signal_inverted="no" link="all" name="s2p:inst|s1" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
@@ -137,20 +381,106 @@
             <net is_signal_inverted="no" name="s2p:inst|s1[6]"/>
             <net is_signal_inverted="no" name="s2p:inst|s1[7]"/>
           </bus>
+          <bus is_signal_inverted="no" link="all" name="freq1" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="freq1[0]"/>
+            <net is_signal_inverted="no" name="freq1[1]"/>
+            <net is_signal_inverted="no" name="freq1[2]"/>
+            <net is_signal_inverted="no" name="freq1[3]"/>
+            <net is_signal_inverted="no" name="freq1[4]"/>
+            <net is_signal_inverted="no" name="freq1[5]"/>
+            <net is_signal_inverted="no" name="freq1[6]"/>
+            <net is_signal_inverted="no" name="freq1[7]"/>
+            <net is_signal_inverted="no" name="freq1[8]"/>
+            <net is_signal_inverted="no" name="freq1[9]"/>
+            <net is_signal_inverted="no" name="freq1[10]"/>
+            <net is_signal_inverted="no" name="freq1[11]"/>
+            <net is_signal_inverted="no" name="freq1[12]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="wavegenerator:inst6|addrgen:inst|count_end" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[0]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[1]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[2]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[3]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[4]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[5]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[6]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[7]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[8]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[9]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[10]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[11]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[12]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[13]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[14]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[15]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[16]"/>
+            <net is_signal_inverted="no" name="wavegenerator:inst6|addrgen:inst|count_end[17]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="controller:inst1|diff_play_vec" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[0]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[1]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[2]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[3]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[4]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[5]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="controller:inst1|play_vec" order="lsb_to_msb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="controller:inst1|play_vec[0]"/>
+            <net is_signal_inverted="no" name="controller:inst1|play_vec[1]"/>
+            <net is_signal_inverted="no" name="controller:inst1|play_vec[2]"/>
+            <net is_signal_inverted="no" name="controller:inst1|play_vec[3]"/>
+            <net is_signal_inverted="no" name="controller:inst1|play_vec[4]"/>
+            <net is_signal_inverted="no" name="controller:inst1|play_vec[5]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="controller:inst1|prev_play_vec" order="lsb_to_msb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="controller:inst1|prev_play_vec[0]"/>
+            <net is_signal_inverted="no" name="controller:inst1|prev_play_vec[1]"/>
+            <net is_signal_inverted="no" name="controller:inst1|prev_play_vec[2]"/>
+            <net is_signal_inverted="no" name="controller:inst1|prev_play_vec[3]"/>
+            <net is_signal_inverted="no" name="controller:inst1|prev_play_vec[4]"/>
+            <net is_signal_inverted="no" name="controller:inst1|prev_play_vec[5]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="controller:inst1|btn_vec" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="controller:inst1|btn_vec[0]"/>
+            <net is_signal_inverted="no" name="controller:inst1|btn_vec[1]"/>
+            <net is_signal_inverted="no" name="controller:inst1|btn_vec[2]"/>
+            <net is_signal_inverted="no" name="controller:inst1|btn_vec[3]"/>
+            <net is_signal_inverted="no" name="controller:inst1|btn_vec[4]"/>
+            <net is_signal_inverted="no" name="controller:inst1|btn_vec[5]"/>
+            <net is_signal_inverted="no" name="controller:inst1|btn_vec[6]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="controller:inst1|diff_btn_vec" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="controller:inst1|diff_btn_vec[0]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_btn_vec[1]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_btn_vec[2]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_btn_vec[3]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_btn_vec[4]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_btn_vec[5]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_btn_vec[6]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="controller:inst1|curbtns" order="lsb_to_msb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="controller:inst1|curbtns[0]"/>
+            <net is_signal_inverted="no" name="controller:inst1|curbtns[1]"/>
+            <net is_signal_inverted="no" name="controller:inst1|curbtns[2]"/>
+            <net is_signal_inverted="no" name="controller:inst1|curbtns[3]"/>
+            <net is_signal_inverted="no" name="controller:inst1|curbtns[4]"/>
+            <net is_signal_inverted="no" name="controller:inst1|curbtns[5]"/>
+            <net is_signal_inverted="no" name="controller:inst1|curbtns[6]"/>
+          </bus>
         </setup_view>
       </presentation>
-      <trigger CRC="7B7AC445" attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2010/02/18 23:23:26  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="1" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
+      <trigger attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2010/02/20 17:44:42  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="1" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
         <power_up_trigger position="pre" storage_qualifier_disabled="no" trigger_in="dont_care" trigger_out="active high"/>
         <events use_custom_flow_control="no">
-          <level enabled="yes" name="condition1" type="basic">'s2p_cs' == falling edge
+          <level enabled="yes" name="condition1" type="basic">'s2p_cs' == rising edge
             <power_up enabled="yes">
             </power_up>
             <op_node/>
           </level>
         </events>
         <storage_qualifier_events>
-          <transitional>00000000000000000000
-            <pwr_up_transitional>00000000000000000000
+          <transitional>00000000000000000000000000000000000000000000000000000000000000000000000000000000
+            <pwr_up_transitional>00000000000000000000000000000000000000000000000000000000000000000000000000000000
             </pwr_up_transitional>
           </transitional>
           <storage_qualifier_level type="basic">
@@ -169,10 +499,6 @@
             <op_node/>
           </storage_qualifier_level>
         </storage_qualifier_events>
-        <log>
-          <data global_temp="1" name="log: 2010/02/18 23:37:58  #0" power_up_mode="false" sample_depth="128" trigger_position="16">1111111111000000001011111111110000000010111111111100000000101111111111000000001011111111110000000010111111111100000000101111111111000000001011111111110000000010111111111100000000101111111111000000001011111111110000000010111111111100000000101111111111000000001011111111110000000010111111111100000000101111111111000000001011111111110000000000111111111100000000001111111111000000000011111111110000000000111111111100000000001111111111000000000011111111110000000000111111111100000000001111111111000000000011111111110000000000111111111100000000001111111111000000000011111111110000000000111111101100000000001111111011000000000011111110110000000000111111101100000000001111111011000000000011111110110000000000111111101100000000001111111011000000000011111110110000000000111111101100000000001111111011000000000011111110110000000000111111101100000000001111111011000000000011111110110000000000111111101100000000001111111011000000000011111110110000000000111111101100000000001111111011000000000011111110110000000000111111101100000000001111111011000000000011111110110000000000111111101100000000001111111011000000000011111110110000000000111111101100000000001111111011000000000011111110110000000001111111101100000000011111111011000000000111111110110000000001111111101100000000011111111011000000000111111110110000000000111111101100000000001111111011000000000011111110110000000000111111101100000000001111111011000000000011111110110000000000111111101100000000011111111011000000000111111110110000000001111111101100000000011111111011000000000111111110110000000001111111101100000000001111111011000000000011111110110000000000111111101100000000001111111011000000000011111110110000000000111111101100000000001111111011000000000111111110110000000001111111101100000000011111111011000000000111111110110000000001111111101100000000011111111011000000000011111110110000000000111111101100000000001111111011000000000011111110110000000000111111101100000000001111111011000000000011111110110000000001111111101100000000011111111011000000000111111110110000000001111111101100000000011111111011000000000111111110110000000000111111101100000000001111111011000000000011111110110000000000111111101100000000001111111011000000000011111110110000000000111111101100000000011111111011000000000111111110110000000001111111101100000000011111111011000000000111111110110000000001111111101100000000001111111011000000000011111111110000000000111111111100000000001111111111000000000011111111110000000000111111111100000000001111111111000000000111111111110000000001111111111100000000011111111111000000000111111111110000000001</data>
-          <extradata>1111111111111111T111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</extradata>
-        </log>
       </trigger>
     </signal_set>
   </instance>
@@ -181,7 +507,7 @@
   <global_info>
     <single attribute="active instance" value="0"/>
     <single attribute="lock mode" value="36110"/>
-    <multi attribute="column width" size="23" value="34,34,141,74,68,70,88,88,98,98,88,88,110,101,101,101,101,101,101,101,101,107,78"/>
-    <multi attribute="window position" size="9" value="1072,557,398,124,0,50,124,0,1"/>
+    <multi attribute="column width" size="23" value="34,34,236,74,68,70,88,88,98,98,88,88,110,101,101,101,101,101,101,101,101,107,78"/>
+    <multi attribute="window position" size="9" value="1224,581,398,124,356,50,87,0,1"/>
   </global_info>
 </session>

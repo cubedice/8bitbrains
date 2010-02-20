@@ -25,8 +25,7 @@ architecture arch of controller is
 signal 		chord2offset, chord3offset 									: integer range 1 to 44;
 signal 		curbtns   													: std_logic_vector(6 downto 0);
 signal 		prev_trig_vec,trig_vec,diff_trig_vec,diff_btn_vec	  		: std_logic_vector(6 downto 0);
-signal	 	prev_play_vec,play_vec,diff_play_vec 						: std_logic_vector(5 downto 0) := "000000";
-signal 		trig_clk													: std_logic;
+signal	 	prev_play_vec,play_vec,diff_play_vec 						: std_logic_vector(5 downto 0);
 constant 	string1														: std_logic_vector (1 DOWNTO 0):= "01";
 constant 	guitarmode													: std_logic:= '0';
 
@@ -75,59 +74,113 @@ begin
 	
 	
 	-- button press detection
-	process(clk,btn_vec,reset)
+	process(clk,reset,btn_vec)
 	begin
+		if btn_vec /= curbtns then
+			diff_btn_vec <= curbtns xor btn_vec;
+		end if;
 		
-		
-		diff_btn_vec <= curbtns xor btn_vec;
 		if reset = '1' then
 			curbtns <= "0000000";
-			play_vec <= "000000";
-			
+			play_vec <= "000000";			
 			prev_play_vec <= "000000";
-		elsif clk'event and clk='1' then
+		elsif clk'event and clk = '1' then
 			-- which buttons have changed?
 			
 			if diff_btn_vec /= "0000000" then
 				
 				
-				
 				-- we were not playing a chord
 				if play_vec(5 downto 3) = "000" then
 				
-					-- has "alternate" string button been triggered?
-					if playstr1 = '1' and ((trig11 = '1' and btn12 = '1') or (trig12 = '1' and btn11 = '1')) then
-						trig11 <= not trig11;
-						trig12 <= not trig12;
-						-- TODO: blip gate for wave1
-					end if;
-					if playstr2 = '1' and ((trig21 = '1' and btn22 = '1') or (trig22 = '1' and btn21 = '1')) then
-						trig21 <= not trig21;
-						trig22 <= not trig22;
-						-- TODO: blip gate for wave2
-					end if;
-					if playstr3 = '1' and ((trig31 = '1' and btn32 = '1') or (trig32 = '1' and btn31 = '1')) then
-						trig32 <= not trig32;
-						trig31 <= not trig31;
-						-- TODO: blip gate for wave3
-					end if;
+					-- are we playing anything now?
 					
-					-- has trigger been released?
-					if ((diffbtn11 = '1' and btn11 = '0') or (diffbtn12 = '1' and btn12 = '0')) and playstr1 = '1' then
-						trig11 <= '0';
-						trig12 <= '0';
-						playstr1 <= '0';
+					-- chord 1 ?
+					if diffbtn11 = '1' and diffbtn12 = '1' and btn11 = '1' and btn12 = '1' then  --chord 11
+						trig_vec <= "1100000";
+						playch1 <= '1';
+					elsif diffbtn11 = '1' and diffbtn22 = '1' and btn11 = '1' and btn22 = '1' then --chord 12
+						trig_vec <= "1001000";
+						playch1 <= '1';
+					elsif diffbtn11 = '1' and diffbtn32 = '1' and btn11 = '1' and btn32 = '1' then --chord 13
+						trig_vec <= "1000010";
+						playch1 <= '1';
+						
+					-- chord 2 ?
+					elsif diffbtn21 = '1' and diffbtn22 = '1' and btn21 = '1' and btn22 = '1' then --chord 21
+						trig_vec <= "0011000";
+						playch2 <= '1';
+					elsif diffbtn21 = '1' and diffbtn32 = '1' and btn21 = '1' and btn32 = '1' then --chord 22
+						trig_vec <= "0110000";
+						playch2 <= '1';
+					elsif diffbtn21 = '1' and diffbtn12 = '1' and btn21 = '1' and btn12 = '1' then --chord 23
+						trig_vec <= "0010010";
+						playch2 <= '1';
+						
+					-- chord 3 ?
+					elsif diffbtn31 = '1' and diffbtn32 = '1' and btn31 = '1' and btn32 = '1' then --chord 31
+						trig_vec <= "0000110";
+						playch3 <= '1';
+					elsif diffbtn31 = '1' and diffbtn12 = '1' and btn31 = '1' and btn12 = '1' then --chord 32
+						trig_vec <= "0100100";
+						playch3 <= '1';
+					elsif diffbtn31 = '1' and diffbtn22 = '1' and btn31 = '1' and btn22 = '1' then --chord 33
+						trig_vec <= "0001100";
+						playch3 <= '1';
+					
+					else
+
+						if ((diffbtn11 = '1' and btn11 = '1') or (diffbtn12 = '1' and btn12 = '1')) and playstr1 = '0' then -- string 1
+							-- NOTE: this should work since if both btnX1 and btnX2 were pressed, it should have bee caught in the 
+							-- chord elsifs
+							trig11 <= btn11;
+							trig12 <= btn12;
+							playstr1 <= '1';
+						elsif ((diffbtn11 = '1' and btn11 = '0') or (diffbtn12 = '1' and btn12 = '0')) and playstr1 = '1' then
+							trig11 <= '0';
+							trig12 <= '0';
+							playstr1 <= '0';
+						end if;
+						
+						if ((diffbtn21 = '1' and btn21 = '1') or (diffbtn22 = '1' and btn22 = '1')) and playstr2 = '0' then -- string 2
+							trig21 <= btn21;
+							trig22 <= btn22;
+							playstr2 <= '1';
+						elsif ((diffbtn21 = '1' and btn21 = '0') or (diffbtn22 = '1' and btn22 = '0')) and playstr2 = '1' then
+							trig21 <= '0';
+							trig22 <= '0';
+							playstr2 <= '0';
+						end if;
+						
+						if ((diffbtn31 = '1' and btn31 = '1') or (diffbtn32 = '1' and btn32 = '1')) and playstr3 = '0' then -- string 3
+							trig31 <= btn31;
+							trig32 <= btn32;
+							playstr3 <= '1';
+						elsif ((diffbtn31 = '1' and btn31 = '0') or (diffbtn32 = '1' and btn32 = '0')) and playstr3 = '1' then
+							trig31 <= '0';
+							trig32 <= '0';
+							playstr3 <= '0';
+						end if;
 					end if;
-					if ((diffbtn21 = '1' and btn21 = '0') or (diffbtn22 = '1' and btn22 = '0')) and playstr2 = '1' then
-						trig21 <= '0';
-						trig22 <= '0';
-						playstr2 <= '0';
-					end if;
-					if ((diffbtn31 = '1' and btn31 = '0') or (diffbtn32 = '1' and btn32 = '0')) and playstr3 = '1' then
-						trig31 <= '0';
-						trig32 <= '0';
-						playstr3 <= '0';
-					end if;					
+				
+				
+					-- has "alternate" string button been triggered?
+					--if playstr1 = '1' and ((trig11 = '1' and btn12 = '1') or (trig12 = '1' and btn11 = '1')) then
+					--	trig11 <= not trig11;
+					--	trig12 <= not trig12;
+						-- TODO: blip gate for wave1
+					--end if;
+					--if playstr2 = '1' and ((trig21 = '1' and btn22 = '1') or (trig22 = '1' and btn21 = '1')) then
+					--	trig21 <= not trig21;
+					--	trig22 <= not trig22;
+						-- TODO: blip gate for wave2
+					--end if;
+					--if playstr3 = '1' and ((trig31 = '1' and btn32 = '1') or (trig32 = '1' and btn31 = '1')) then
+					--	trig32 <= not trig32;
+					--	trig31 <= not trig31;
+						-- TODO: blip gate for wave3
+					--end if;
+								
 					
 				-- we were playing a chord
 				elsif playch1 = '1' then
@@ -193,91 +246,29 @@ begin
 					end if;
 				end if;
 				
-				-- so, if we weren't playing a chord...
-				if play_vec(5 downto 3) = "000" then
-				
-					-- are we playing anything now?
-					
-					-- chord 1 ?
-					if diffbtn11 = '1' and diffbtn12 = '1' and btn11 = '1' and btn12 = '1' then  --chord 11
-						trig_vec <= "1100000";
-						playch1 <= '1';
-					elsif diffbtn11 = '1' and diffbtn22 = '1' and btn11 = '1' and btn22 = '1' then --chord 12
-						trig_vec <= "1001000";
-						playch1 <= '1';
-					elsif diffbtn11 = '1' and diffbtn32 = '1' and btn11 = '1' and btn32 = '1' then --chord 13
-						trig_vec <= "1000010";
-						playch1 <= '1';
-						
-					-- chord 2 ?
-					elsif diffbtn21 = '1' and diffbtn22 = '1' and btn21 = '1' and btn22 = '1' then --chord 21
-						trig_vec <= "0011000";
-						playch2 <= '1';
-					elsif diffbtn21 = '1' and diffbtn32 = '1' and btn21 = '1' and btn32 = '1' then --chord 22
-						trig_vec <= "0110000";
-						playch2 <= '1';
-					elsif diffbtn21 = '1' and diffbtn12 = '1' and btn21 = '1' and btn12 = '1' then --chord 23
-						trig_vec <= "0010010";
-						playch2 <= '1';
-						
-					-- chord 3 ?
-					elsif diffbtn31 = '1' and diffbtn32 = '1' and btn31 = '1' and btn32 = '1' then --chord 31
-						trig_vec <= "0000110";
-						playch3 <= '1';
-					elsif diffbtn31 = '1' and diffbtn12 = '1' and btn31 = '1' and btn12 = '1' then --chord 32
-						trig_vec <= "0100100";
-						playch3 <= '1';
-					elsif diffbtn31 = '1' and diffbtn22 = '1' and btn31 = '1' and btn22 = '1' then --chord 33
-						trig_vec <= "0001100";
-						playch3 <= '1';
-					
-					else
-
-						if ((diffbtn11 = '1' and btn11 = '1') or (diffbtn12 = '1' and btn12 = '1')) and playstr1 = '0' then -- string 1
-							-- NOTE: this should work since if both btnX1 and btnX2 were pressed, it should have bee caught in the 
-							-- chord elsifs
-							trig11 <= btn11;
-							trig12 <= btn12;
-							playstr1 <= '1';
-						end if;
-						
-						if ((diffbtn21 = '1' and btn21 = '1') or (diffbtn22 = '1' and btn22 = '1')) and playstr2 = '0' then -- string 2
-							trig21 <= btn21;
-							trig22 <= btn22;
-							playstr2 <= '1';
-						end if;
-						
-						if ((diffbtn31 = '1' and btn31 = '1') or (diffbtn32 = '1' and btn32 = '1')) and playstr3 = '0' then -- string 3
-							trig31 <= btn31;
-							trig32 <= btn32;
-							playstr3 <= '1';
-						end if;
-					end if;
-				end if;
 				prev_play_vec <= play_vec;
 				prev_trig_vec <= trig_vec;
 				curbtns <= btn_vec;
-				trig_clk <= '1';
-			else
-				trig_clk <= '0';
 			end if;
 		end if;		
 	end process;
 	
 	-- gate control, pitch determining
-	process(trig_clk,str_1,str_2,str_3,reset)
+	process(clk,reset,play_vec,trig_vec)
 	begin
-		-- which chords/string play events have changed?
-		diff_play_vec <= play_vec xor prev_play_vec;
-		-- which note triggers (buttons that currently impact note playing) have changed?
-		diff_trig_vec <= trig_vec xor prev_trig_vec;
+		if play_vec /= prev_play_vec then
+			-- which chords/string play events have changed?
+			diff_play_vec <= play_vec xor prev_play_vec;
+		end if;
+		if trig_vec /= prev_trig_vec then
+			-- which note triggers (buttons that currently impact note playing) have changed?
+			diff_trig_vec <= trig_vec xor prev_trig_vec;
+		end if;
 		
 		if reset = '1' then
 			diff_play_vec <= "000000";
 			freq1 <= "0000000000000";
-		elsif trig_clk'event and trig_clk = '1' then
-			
-			
+		elsif clk'event and clk = '1' then
 			
 			-- will we start playing a chord?
 			if diffplaych1 = '1' and playch1 = '1' then  -- now playing chord 1
@@ -340,7 +331,6 @@ begin
 				gate3 <= '0';
 				freq3 <= (freq3'range => '0');
 			end if;
-			
-		end if;
+		end if;		
 	end process;
 end arch;

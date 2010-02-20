@@ -39,7 +39,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -232 160 -64 176)
+	(rect -504 176 -336 192)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "btn_vec[6..0]" (rect 5 0 71 12)(font "Arial" ))
 	(pt 168 8)
@@ -52,7 +52,7 @@ applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8)(line_width 1))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect -48 176 8 280))
+	(annotation_block (location)(rect -384 224 -328 328))
 )
 (pin
 	(input)
@@ -150,7 +150,7 @@ applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8)(line_width 1))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect -56 336 -8 352))
+	(annotation_block (location)(rect -152 272 -104 288))
 )
 (pin
 	(output)
@@ -758,7 +758,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 48 152 96 184)
+	(rect -312 168 -264 200)
 	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
 	(text "inst7" (rect 3 21 26 33)(font "Arial" ))
 	(port
@@ -806,6 +806,41 @@ applicable agreement for further details.
 		(line (pt 13 25)(pt 31 16)(line_width 1))
 		(circle (rect 31 12 39 20)(line_width 1))
 	)
+)
+(symbol
+	(rect -240 136 -80 232)
+	(text "btn_reg" (rect 5 0 41 12)(font "Arial" ))
+	(text "inst4" (rect 8 80 31 92)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "btns[6..0]" (rect 0 0 47 12)(font "Arial" ))
+		(text "btns[6..0]" (rect 21 43 68 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "btn_reg[6..0]" (rect 0 0 62 12)(font "Arial" ))
+		(text "btn_reg[6..0]" (rect 77 27 139 39)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32)(line_width 3))
+	)
+	(parameter
+		"N"
+		"4"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 144 80)(line_width 1))
+	)
+	(annotation_block (parameter)(rect -160 184 -96 216))
 )
 (connector
 	(text "VASDRtoM[7..0]" (rect 448 88 529 100)(font "Arial" ))
@@ -1189,16 +1224,6 @@ applicable agreement for further details.
 	(pt 1832 152)
 )
 (connector
-	(pt 200 168)
-	(pt 96 168)
-	(bus)
-)
-(connector
-	(pt 48 168)
-	(pt -64 168)
-	(bus)
-)
-(connector
 	(pt -104 248)
 	(pt -8 248)
 )
@@ -1211,4 +1236,24 @@ applicable agreement for further details.
 	(pt 800 208)
 	(pt 720 208)
 	(bus)
+)
+(connector
+	(pt -80 168)
+	(pt 200 168)
+	(bus)
+)
+(connector
+	(pt -312 184)
+	(pt -336 184)
+	(bus)
+)
+(connector
+	(pt -264 184)
+	(pt -240 184)
+	(bus)
+)
+(connector
+	(text "clk" (rect -296 152 -282 164)(font "Arial" ))
+	(pt -240 168)
+	(pt -304 168)
 )

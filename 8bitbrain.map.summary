@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Fri Feb 19 00:46:52 2010
+Analysis & Synthesis Status : Successful - Sat Feb 20 18:01:23 2010
 Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
 Revision Name : 8bitbrain
 Top-level Entity Name : 8bitbrain
 Family : Cyclone II
-Total logic elements : 1,261
-    Total combinational functions : 942
-    Dedicated logic registers : 660
-Total registers : 660
+Total logic elements : 2,094
+    Total combinational functions : 1,189
+    Dedicated logic registers : 1,396
+Total registers : 1396
 Total pins : 33
 Total virtual pins : 0
-Total memory bits : 4,096
+Total memory bits : 11,776
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0
