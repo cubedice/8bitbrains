@@ -1,18 +1,24 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="8bitbrain">
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux" CBX_FILE_NAME="mux_aoc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:\adv_point_3_and_more:advance_pointer_counter" CBX_FILE_NAME="cntr_2ci.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegenerator:inst6|addrgen:inst7|lpm_divide0:div1|lpm_divide:lpm_divide_component" CBX_FILE_NAME="lpm_divide_gft.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegenerator:inst6|altsyncram0:inst3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_pra1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder" CBX_FILE_NAME="decode_rqf.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:status_read_pointer_counter" CBX_FILE_NAME="cntr_gui.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegenerator:inst6|addrgen:inst|lpm_divide0:div1|lpm_divide:lpm_divide_component" CBX_FILE_NAME="lpm_divide_gft.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegenerator:inst6|altsyncram0:inst4|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_pra1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:read_pointer_counter" CBX_FILE_NAME="cntr_02j.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegenerator:inst6|altsyncram0:inst5|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_pra1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram" CBX_FILE_NAME="altsyncram_nps3.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:status_advance_pointer_counter" CBX_FILE_NAME="cntr_sbi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegenerator:inst6|altsyncram0:inst4|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_u1b1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|mixer:inst2|mixeradd:add1|parallel_add:parallel_add_component" CBX_FILE_NAME="par_add_mqe.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|mixer:inst2|mixermult:mult1|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_3bn.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|mixer:inst2|mixersub:sub1|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_pmh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:read_pointer_counter" CBX_FILE_NAME="cntr_32j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegenerator:inst6|altsyncram0:inst5|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_u1b1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|mixer:inst2|mixeradd:add2|parallel_add:parallel_add_component" CBX_FILE_NAME="par_add_mqe.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|mixer:inst2|mixermult:mult2|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_3bn.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|mixer:inst2|mixersub:sub2|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_pmh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram" CBX_FILE_NAME="altsyncram_2qs3.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:status_advance_pointer_counter" CBX_FILE_NAME="cntr_vbi.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegenerator:inst6|addrgen:inst6|lpm_divide0:div1|lpm_divide:lpm_divide_component" CBX_FILE_NAME="lpm_divide_gft.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux" CBX_FILE_NAME="mux_doc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:\adv_point_3_and_more:advance_pointer_counter" CBX_FILE_NAME="cntr_9ci.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegenerator:inst6|addrgen:inst7|lpm_divide0:div1|lpm_divide:lpm_divide_component" CBX_FILE_NAME="lpm_divide_gft.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegenerator:inst6|altsyncram0:inst3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_u1b1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

@@ -24,7 +24,7 @@ applicable agreement for further details.
 	(input)
 	(rect -128 56 40 72)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "clk" (rect 5 0 19 12)(font "Arial" ))
+	(text "clk" (rect 9 0 23 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12)(line_width 1))
@@ -40,7 +40,7 @@ applicable agreement for further details.
 	(input)
 	(rect -112 176 56 192)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "freq1[12..0]" (rect 5 0 62 12)(font "Arial" ))
+	(text "freq1[12..0]" (rect 9 0 66 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12)(line_width 1))
@@ -56,7 +56,7 @@ applicable agreement for further details.
 	(input)
 	(rect -56 312 112 328)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "freq2[12..0]" (rect 5 0 62 12)(font "Arial" ))
+	(text "freq2[12..0]" (rect 9 0 66 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12)(line_width 1))
@@ -72,7 +72,7 @@ applicable agreement for further details.
 	(input)
 	(rect -48 456 120 472)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "freq3[12..0]" (rect 5 0 62 12)(font "Arial" ))
+	(text "freq3[12..0]" (rect 9 0 66 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12)(line_width 1))
@@ -88,7 +88,7 @@ applicable agreement for further details.
 	(input)
 	(rect 16 536 184 552)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "voice_sel[2..0]" (rect 5 0 78 12)(font "Arial" ))
+	(text "voice_sel[2..0]" (rect 9 0 82 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12)(line_width 1))

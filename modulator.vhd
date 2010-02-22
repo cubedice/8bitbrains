@@ -14,4 +14,6 @@ end modulator;
 architecture arch of modulator is
 begin
 	wave1 <= Wave1in;
+	wave2 <= Wave2in;
+	wave3 <= Wave3in;
 end arch;

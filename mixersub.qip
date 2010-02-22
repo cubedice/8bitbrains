@@ -1,0 +1,6 @@
+set_global_assignment -name IP_TOOL_NAME "LPM_ADD_SUB"
+set_global_assignment -name IP_TOOL_VERSION "9.0"
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "mixersub.vhd"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "mixersub.bsf"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "mixersub.inc"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "mixersub.cmp"]
