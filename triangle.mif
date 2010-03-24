@@ -1,43 +1,54 @@
-DEPTH = 128; % Memory depth and width are required %
-% DEPTH is the number of addresses %
+-- Copyright (C) 1991-2009 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
 
-WIDTH = 12; % WIDTH is the number of bits of data per word %
-% DEPTH and WIDTH should be entered as decimal numbers %
+-- Quartus II generated Memory Initialization File (.mif)
 
-ADDRESS_RADIX = DEC; % Address and value radixes are required %
-DATA_RADIX = BIN; % Enter BIN, DEC, HEX, OCT, or UNS; unless %
-% otherwise specified, radixes = HEX %
--- Specify values for addresses, which can be single address or range
-CONTENT
-BEGIN
-	[0..4]:     000100010001;
-	[5..8]:     001000100010;
-        [9..12]:    001100110011;
-	[13..16]:   010001000100;
-	[17..20]:   010101010101;
-	[21..24]:   011001100110;
-	[25..28]:   011101110111;
-	[29..32]:   100010001000;
-	[33..36]:   100110011001;
-	[37..40]:   101010101010;
-	[41..44]:   101110111011;
-	[45..48]:   110011001100;
-	[49..52]:   110111011101;
-	[53..56]:   111011101110;
-	[57..64]:   111111111111;
-	[65..68]:   111011101110;
-	[69..72]:   110111011101;
-	[73..76]:   110011001100;
-        [77..80]:   101110111011;
-	[81..84]:   101010101010;
-	[85..88]:   100110011001;
-	[89..92]:   100010001000;
-	[93..96]:   011101110111;
-	[97..100]:  011001100110;
-	[101..104]: 010101010101;
-	[105..108]: 010001000100;
-	[109..112]: 001100110011;
-	[113..116]: 001000100010;
-	[117..120]: 000100010001;
-	[121..127]: 000000000000;
+WIDTH=12;
+DEPTH=128;
+
+ADDRESS_RADIX=DEC;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	[0..4]  :   000100010001;
+	[5..8]  :   001000100010;
+	[9..12]  :   001100110011;
+	[13..16]  :   010001000100;
+	[17..20]  :   010101010101;
+	[21..24]  :   011001100110;
+	[25..28]  :   011101110111;
+	[29..32]  :   100010001000;
+	[33..36]  :   100110011001;
+	[37..40]  :   101010101010;
+	[41..44]  :   101110111011;
+	[45..48]  :   110011001100;
+	[49..52]  :   110111011101;
+	[53..56]  :   111011101000;
+	[57..64]  :   111111110000;
+	[65..68]  :   111011101000;
+	[69..72]  :   110111011101;
+	[73..76]  :   110011001100;
+	[77..80]  :   101110111011;
+	[81..84]  :   101010101010;
+	[85..88]  :   100110011001;
+	[89..92]  :   100010001000;
+	[93..96]  :   011101110111;
+	[97..100]  :   011001100110;
+	[101..104]  :   010101010101;
+	[105..108]  :   010001000100;
+	[109..112]  :   001100110011;
+	[113..116]  :   001000100010;
+	[117..120]  :   000100010001;
+	[121..127]  :   000000000000;
 END;

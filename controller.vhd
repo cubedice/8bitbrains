@@ -12,20 +12,26 @@ entity controller is
 		btn_vec													: in std_logic_vector(6 downto 0); -- btn_11, btn_12 ... btn_drm
 		edit_select_rot,edit_change_rot, waveform_rot 			: in std_logic_vector(1 downto 0);
 		wave_bank_rot 											: in std_logic_vector(1 downto 0);
-		reset													: in std_logic;
+		reset,arp_mode_in										: in std_logic;
 		VASDRld													: out std_logic;
 		VASDRout,q												: out std_logic_vector(7 downto 0);
 		voice_sel, VASDR_sel									: out std_logic_vector(2 downto 0);
 		gate1,gate2,gate3,q_ld,filtfreq_ld						: out std_logic;
 		freq1,freq2,freq3										: out std_logic_vector(12 downto 0);
-		filter_freq												: out std_logic_vector(11 downto 0)
+		filter_freq												: out std_logic_vector(11 downto 0);
+		arp_mode												: out std_logic;
+		arp_style												: out std_logic_vector(2 downto 0);
+		octave_out												: out std_logic_vector(1 downto 0);
+		pb1														: out std_logic
 		);	
 end controller;
 architecture arch of controller is
 signal 		ch1offset2,ch1offset3,ch2offset2,ch2offset3, ch3offset2,ch3offset3	: integer range 0 to 44;
 signal		prev_str_1, prev_str_2, prev_str_3									: std_logic_vector(7 downto 0);
+signal 		octave																: integer range 1 to 3;
 signal		p_bend_1, p_bend_2, p_bend_3										: std_logic;
 signal		gateblip1,gateblip2,gateblip3										: std_logic;
+signal 		arpmode																: std_logic;
 signal 		curbtns   															: std_logic_vector(6 downto 0);
 signal 		prev_trig_vec,trig_vec,diff_trig_vec,diff_btn_vec	  				: std_logic_vector(6 downto 0);
 signal	 	prev_play_vec,play_vec,diff_play_vec 								: std_logic_vector(5 downto 0);
@@ -35,6 +41,8 @@ constant 	STRING3																: std_logic_vector (1 DOWNTO 0):= "11";
 constant 	GUITARMODE															: integer:= 2;
 constant	BASSMODE															: integer:= 1;
 constant	HIGHMODE															: integer:= 3;
+
+
 
 	-- button aliases
 alias btn11 is btn_vec(6);
@@ -86,7 +94,29 @@ alias diffplaystr3 is diff_play_vec(0);
 	
 
 begin
+	arp_style <= play_vec(5 downto 3);
 	
+	octave <= GUITARMODE;
+	octave_out <= std_logic_vector( to_unsigned(octave, 2) );
+	-- TODO octave control
+	--process
+	
+	-- TODO remove this
+	pb1 <= p_bend_1;
+	
+	-- rotary encoder control
+	process( arp_mode_in,clk )
+	begin
+		if clk'event and clk = '1' then
+			if arp_mode_in = '1' then
+				arp_mode <= '1';
+				arpmode <= '1';
+			else
+				arp_mode <= '0';
+				arpmode <= '0';
+			end if;
+		end if;
+	end process;
 	
 	-- button press detection
 	process(clk,reset,btn_vec)
@@ -99,8 +129,8 @@ begin
 			curbtns <= "0000000";
 			play_vec <= "000000";			
 			prev_play_vec <= "000000";
-			ch1offset2 <= 0;
-			ch1offset3 <= 7;
+			ch1offset2 <= 4;
+			ch1offset3 <= 10;
 		elsif clk'event and clk = '1' then
 				
 			-- we were not playing a chord
@@ -283,56 +313,243 @@ begin
 		elsif clk'event and clk = '1' then
 			
 			-- pitch bend/hammeron/pulloff ?
-			if diff_trig_vec = "000000X" and diff_play_vec = "000000" and play_vec /= "000000" then
-			
-				--		elsif diffplaystr1 = '0'then
-							-- hammer/pull ?
-				--			if p_bend_1 = '0' and frequency(str_1,string1,guitarmode) /= freq1 then
-								
-							
-							-- pitch bend?
-				--				else
-								p_bend_1 <= '1';
-				--				freq1
-							
-				--			elsif
-			
+			if diff_trig_vec(6 downto 1) = "000000" and diff_play_vec = "000000" and play_vec /= "000000" then
+				--TODO why arent we getting here?
+				--freq1 <= "0001100000000";
+				if not( p_bend_1 = '1' or p_bend_2 = '1' or p_bend_3 = '1' ) then
+				-- hammer/pull ?
+					if playch1 = '1' or playstr1 = '1' then 
+						if abs( to_integer( unsigned(str_1) ) - to_integer( unsigned(prev_str_1) ) ) > 7  then
+							prev_str_1 <= str_1;
+							freq1 <= frequency(str_1,STRING1,octave);
+							if playch1 = '1' then 
+								if trig12 = '1' then
+									if ch1offset2 /= 0 then						
+										freq2 <= chordfrequency(str_1,STRING1,octave,ch1offset2);
+									end if;
+									if ch1offset3 /=0 then
+										freq3 <= chordfrequency(str_1,STRING1,octave,ch1offset3);
+									end if;
+								end if;
+								if trig22 = '1' then
+									if ch2offset2 /= 0 then						
+										freq2 <= chordfrequency(str_1,STRING1,octave,ch2offset2);
+									end if;
+									if ch2offset3 /=0 then
+										freq3 <= chordfrequency(str_1,STRING1,octave,ch2offset3);
+									end if;
+								end if;
+								if trig32 = '1' then
+									if ch3offset2 /= 0 then						
+										freq2 <= chordfrequency(str_1,STRING1,octave,ch3offset2);
+									end if;
+									if ch3offset3 /=0 then
+										freq3 <= chordfrequency(str_1,STRING1,octave,ch3offset3);
+									end if;
+								end if;
+							end if;
+						-- pitch bend
+						elsif abs( to_integer( unsigned(str_1) ) - to_integer( unsigned(prev_str_1) ) ) > 2 then
+							p_bend_1 <= '1';
+						end if;
+					end if;
+					if playch2 = '1' or playstr2 = '1' then 
+						if abs( to_integer( unsigned(str_2) ) - to_integer( unsigned(prev_str_2) ) ) > 7  then
+							prev_str_2 <= str_2;
+							freq1 <= frequency(str_2,STRING2,octave);
+							if playch2 = '1' then 
+								if trig22 = '1' then
+									if ch1offset2 /= 0 then						
+										freq2 <= chordfrequency(str_2,STRING2,octave,ch1offset2);
+									end if;
+									if ch1offset3 /=0 then
+										freq3 <= chordfrequency(str_2,STRING2,octave,ch1offset3);
+									end if;
+								end if;
+								if trig32 = '1' then
+									if ch2offset2 /= 0 then						
+										freq2 <= chordfrequency(str_2,STRING2,octave,ch2offset2);
+									end if;
+									if ch2offset3 /=0 then
+										freq3 <= chordfrequency(str_2,STRING2,octave,ch2offset3);
+									end if;
+								end if;
+								if trig12 = '1' then
+									if ch3offset2 /= 0 then						
+										freq2 <= chordfrequency(str_2,STRING2,octave,ch3offset2);
+									end if;
+									if ch3offset3 /=0 then
+										freq3 <= chordfrequency(str_2,STRING2,octave,ch3offset3);
+									end if;
+								end if;
+							end if;						
+						-- pitch bend
+						elsif abs( to_integer( unsigned(str_2) ) - to_integer( unsigned(prev_str_2) ) ) > 2 then
+							p_bend_2 <= '1';
+						end if;
+					end if;
+					if playch3 = '1' or playstr3 = '1' then 
+						if abs( to_integer( unsigned(str_3) ) - to_integer( unsigned(prev_str_3) ) ) > 7  then
+							prev_str_3 <= str_3;
+							freq1 <= frequency(str_3,STRING3,octave);
+							if playch3 = '1' then 
+								if trig32 = '1' then
+									if ch1offset2 /= 0 then						
+										freq2 <= chordfrequency(str_3,STRING3,octave,ch1offset2);
+									end if;
+									if ch1offset3 /=0 then
+										freq3 <= chordfrequency(str_3,STRING3,octave,ch1offset3);
+									end if;
+								end if;
+								if trig12 = '1' then
+									if ch2offset2 /= 0 then						
+										freq2 <= chordfrequency(str_3,STRING3,octave,ch2offset2);
+									end if;
+									if ch2offset3 /=0 then
+										freq3 <= chordfrequency(str_3,STRING3,octave,ch2offset3);
+									end if;
+								end if;
+								if trig22 = '1' then
+									if ch3offset2 /= 0 then						
+										freq2 <= chordfrequency(str_3,STRING3,octave,ch3offset2);
+									end if;
+									if ch3offset3 /=0 then
+										freq3 <= chordfrequency(str_3,STRING3,octave,ch3offset3);
+									end if;
+								end if;
+							end if;									
+						-- pitch bend
+						elsif abs( to_integer( unsigned(str_3) ) - to_integer( unsigned(prev_str_3) ) ) > 2 then
+							p_bend_3 <= '1';
+						end if;
+					end if;
+				end if;
+
+				
+				if p_bend_1 = '1' then
+					-- how far to bend?
+					if (to_integer( unsigned(str_1) ) - to_integer( unsigned(prev_str_1) )) > 5 then  
+						freq1 <= frequency(prev_str_1,string1,guitarmode) + "0000000001111";
+					elsif (to_integer( unsigned(str_1) ) - to_integer( unsigned(prev_str_1) )) < -5 then  
+						freq1 <= frequency(prev_str_1,string1,guitarmode) - "0000000001111";
+					end if;
+				end if;
 			-- start/stop a note ?	
 			else
-			
+				p_bend_1 <= '0';
+				p_bend_2 <= '0';
+				p_bend_3 <= '0';
+				
 				-- playing a chord?
 				if playch1 = '1' then 
 					-- lock in str1
 					--if diff_trig_vec /= "000000X" then
+					if trig11 = '1' then 
 						freq1 <= frequency(str_1,string1,guitarmode);
 						if trig12 = '1' then
 							if ch1offset2 /= 0 then						
-								freq2 <= chordfrequency(str_1,STRING1,GUITARMODE,ch1offset2);
+								freq2 <= chordfrequency(str_1,STRING1,octave,ch1offset2);
 							end if;
 							if ch1offset3 /=0 then
-								freq3 <= chordfrequency(str_1,STRING1,GUITARMODE,ch1offset3);
+								freq3 <= chordfrequency(str_1,STRING1,octave,ch1offset3);
 							end if;
 						end if;
-					--end if;
-					if diffplaych1 = '1' then
-						gate1 <= '1';
-						gate2 <= '1';
-						gate3 <= '1';
-					end if;				
+						if trig22 = '1' then
+							if ch2offset2 /= 0 then						
+								freq2 <= chordfrequency(str_1,STRING1,octave,ch2offset2);
+							end if;
+							if ch2offset3 /=0 then
+								freq3 <= chordfrequency(str_1,STRING1,octave,ch2offset3);
+							end if;
+						end if;
+						if trig32 = '1' then
+							if ch3offset2 /= 0 then						
+								freq2 <= chordfrequency(str_1,STRING1,octave,ch3offset2);
+							end if;
+							if ch3offset3 /=0 then
+								freq3 <= chordfrequency(str_1,STRING1,octave,ch3offset3);
+							end if;
+						end if;
+						if diffplaych1 = '1' and arpmode = '0' then
+							gate1 <= '1';
+							gate2 <= '1';
+							gate3 <= '1';
+						elsif diffplaych1 = '1' and arpmode = '1' then
+							gate1 <= '1';
+						end if;
+					end if;	
 				elsif playch2 = '1' then -- playing chord 2
 					-- lock in str2
-					if diffplaych2 = '1' then
-						gate1 <= '1';
-						gate2 <= '1';
-						gate3 <= '1';
-					end if;
+					if trig21 = '1' then
+						freq1 <= frequency(str_2,string1,guitarmode);
+						if trig22 = '1' then
+							if ch1offset2 /= 0 then						
+								freq2 <= chordfrequency(str_2,STRING1,octave,ch1offset2);
+							end if;
+							if ch1offset3 /=0 then
+								freq3 <= chordfrequency(str_2,STRING1,octave,ch1offset3);
+							end if;
+						end if;
+						if trig32 = '1' then
+							if ch2offset2 /= 0 then						
+								freq2 <= chordfrequency(str_2,STRING1,octave,ch2offset2);
+							end if;
+							if ch2offset3 /=0 then
+								freq3 <= chordfrequency(str_2,STRING1,octave,ch2offset3);
+							end if;
+						end if;
+						if trig12 = '1' then
+							if ch3offset2 /= 0 then						
+								freq2 <= chordfrequency(str_2,STRING1,octave,ch3offset2);
+							end if;
+							if ch3offset3 /=0 then
+								freq3 <= chordfrequency(str_2,STRING1,octave,ch3offset3);
+							end if;
+						end if;
+						if diffplaych2 = '1' and arpmode = '0' then
+							gate1 <= '1';
+							gate2 <= '1';
+							gate3 <= '1';
+						elsif diffplaych2 = '1' and arpmode = '1' then
+							gate1 <= '1';
+						end if;
+					end if;	
 				elsif playch3 = '1' then -- playing chord 3
 					-- lock in str3
-					if diffplaych3 = '1' then
-						gate1 <= '1';
-						gate2 <= '1';
-						gate3 <= '1';
-					end if;
+					if trig31 = '1' then
+						freq1 <= frequency(str_3,string1,guitarmode);
+						if trig32 = '1' then
+							if ch1offset2 /= 0 then						
+								freq2 <= chordfrequency(str_3,STRING1,octave,ch1offset2);
+							end if;
+							if ch1offset3 /=0 then
+								freq3 <= chordfrequency(str_3,STRING1,octave,ch1offset3);
+							end if;
+						end if;
+						if trig12 = '1' then
+							if ch2offset2 /= 0 then						
+								freq2 <= chordfrequency(str_3,STRING1,octave,ch2offset2);
+							end if;
+							if ch2offset3 /=0 then
+								freq3 <= chordfrequency(str_3,STRING1,octave,ch2offset3);
+							end if;
+						end if;
+						if trig22 = '1' then
+							if ch3offset2 /= 0 then						
+								freq2 <= chordfrequency(str_3,STRING1,octave,ch3offset2);
+							end if;
+							if ch3offset3 /=0 then
+								freq3 <= chordfrequency(str_3,STRING1,octave,ch3offset3);
+							end if;
+						end if;
+						if diffplaych3 = '1' and arpmode = '0' then
+							gate1 <= '1';
+							gate2 <= '1';
+							gate3 <= '1';
+						elsif diffplaych3 = '1' and arpmode = '1' then
+							gate1 <= '1';
+						end if;
+					end if;	
 				else -- we aren't playing a chord
 				
 					-- playing str 1 ?
@@ -399,9 +616,6 @@ begin
 					gate1 <= '0';
 					gate2 <= '0';
 					gate3 <= '0';
-					freq1 <= (freq1'range => '0');
-					freq2 <= (freq1'range => '0');
-					freq3 <= (freq1'range => '0');
 				elsif diffplaych2 = '1' and playch2 = '0' then
 					gate1 <= '0';
 					gate2 <= '0';
@@ -413,15 +627,12 @@ begin
 				end if;
 				if diffplaystr1 = '1' and playstr1 = '0' then
 					gate1 <= '0';
-					freq1 <= (freq1'range => '0');
 				end if;
 				if diffplaystr2 = '1' and playstr2 = '0' then
 					gate2 <= '0';
-					freq2 <= (freq2'range => '0');
 				end if;
 				if diffplaystr3 = '1' and playstr3 = '0' then
 					gate3 <= '0';
-					freq3 <= (freq3'range => '0');
 				end if;
 			end if;
 		end if;		

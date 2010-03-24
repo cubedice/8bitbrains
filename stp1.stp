@@ -6,334 +6,100 @@
     <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
     <position_info>
       <single attribute="active tab" value="0"/>
-      <single attribute="data horizontal scroll position" value="122"/>
-      <single attribute="data vertical scroll position" value="3"/>
+      <single attribute="data horizontal scroll position" value="106"/>
+      <single attribute="data vertical scroll position" value="0"/>
       <single attribute="setup horizontal scroll position" value="0"/>
-      <single attribute="setup vertical scroll position" value="3"/>
+      <single attribute="setup vertical scroll position" value="0"/>
       <single attribute="zoom level denominator" value="1"/>
-      <single attribute="zoom level numerator" value="8"/>
-      <single attribute="zoom offset denominator" value="8"/>
-      <single attribute="zoom offset numerator" value="130945"/>
+      <single attribute="zoom level numerator" value="4"/>
+      <single attribute="zoom offset denominator" value="4"/>
+      <single attribute="zoom offset numerator" value="130817"/>
     </position_info>
-    <signal_set global_temp="1" name="signal_set: 2010/02/21 18:49:54  #0">
+    <signal_set global_temp="1" name="signal_set: 2010/03/24 00:34:41  #0">
       <clock name="clk" polarity="posedge" tap_mode="classic"/>
       <config ram_type="M4K" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="256" trigger_in_enable="no" trigger_out_enable="no"/>
       <top_entity/>
       <signal_vec>
         <trigger_input_vec>
-          <wire name="controller:inst1|btn_vec[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|btn_vec[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|btn_vec[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|btn_vec[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|btn_vec[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|btn_vec[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|btn_vec[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|curbtns[0]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|curbtns[1]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|curbtns[2]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|curbtns[3]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|curbtns[4]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|curbtns[5]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|curbtns[6]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|freq2[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[10]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[11]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[12]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[8]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[9]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[10]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[11]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[12]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[8]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_trig_vec[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_trig_vec[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_trig_vec[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_trig_vec[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_trig_vec[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_trig_vec[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|pb1" tap_mode="classic" type="combinatorial"/>
           <wire name="controller:inst1|play_vec[0]" tap_mode="classic" type="register"/>
           <wire name="controller:inst1|play_vec[1]" tap_mode="classic" type="register"/>
           <wire name="controller:inst1|play_vec[2]" tap_mode="classic" type="register"/>
           <wire name="controller:inst1|play_vec[3]" tap_mode="classic" type="register"/>
           <wire name="controller:inst1|play_vec[4]" tap_mode="classic" type="register"/>
           <wire name="controller:inst1|play_vec[5]" tap_mode="classic" type="register"/>
-          <wire name="freq1[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[10]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[11]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[12]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[8]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[9]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[10]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[11]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[8]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[9]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[10]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[11]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[8]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[9]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p_cs" tap_mode="classic" type="output pin"/>
-          <wire name="s2p_ioclk" tap_mode="classic" type="output pin"/>
         </trigger_input_vec>
         <data_input_vec>
-          <wire name="controller:inst1|btn_vec[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|btn_vec[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|btn_vec[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|btn_vec[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|btn_vec[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|btn_vec[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|btn_vec[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|curbtns[0]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|curbtns[1]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|curbtns[2]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|curbtns[3]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|curbtns[4]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|curbtns[5]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|curbtns[6]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|freq2[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[10]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[11]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[12]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[8]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[9]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[10]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[11]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[12]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[8]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_trig_vec[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_trig_vec[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_trig_vec[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_trig_vec[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_trig_vec[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_trig_vec[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|pb1" tap_mode="classic" type="combinatorial"/>
           <wire name="controller:inst1|play_vec[0]" tap_mode="classic" type="register"/>
           <wire name="controller:inst1|play_vec[1]" tap_mode="classic" type="register"/>
           <wire name="controller:inst1|play_vec[2]" tap_mode="classic" type="register"/>
           <wire name="controller:inst1|play_vec[3]" tap_mode="classic" type="register"/>
           <wire name="controller:inst1|play_vec[4]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|play_vec[5]" tap_mode="classic" type="register"/>
-          <wire name="freq1[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[10]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[11]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[12]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[8]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[9]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[10]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[11]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[8]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[9]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[10]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[11]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[8]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[9]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p_cs" tap_mode="classic" type="output pin"/>
-          <wire name="s2p_ioclk" tap_mode="classic" type="output pin"/>
         </data_input_vec>
         <storage_qualifier_input_vec>
-          <wire name="controller:inst1|btn_vec[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|btn_vec[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|btn_vec[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|btn_vec[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|btn_vec[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|btn_vec[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|btn_vec[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|curbtns[0]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|curbtns[1]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|curbtns[2]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|curbtns[3]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|curbtns[4]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|curbtns[5]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|curbtns[6]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|freq2[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[10]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[11]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[12]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[8]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq2[9]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[10]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[11]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[12]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[8]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|freq3[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_play_vec[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_trig_vec[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_trig_vec[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_trig_vec[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_trig_vec[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_trig_vec[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|diff_trig_vec[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|pb1" tap_mode="classic" type="combinatorial"/>
           <wire name="controller:inst1|play_vec[0]" tap_mode="classic" type="register"/>
           <wire name="controller:inst1|play_vec[1]" tap_mode="classic" type="register"/>
           <wire name="controller:inst1|play_vec[2]" tap_mode="classic" type="register"/>
           <wire name="controller:inst1|play_vec[3]" tap_mode="classic" type="register"/>
           <wire name="controller:inst1|play_vec[4]" tap_mode="classic" type="register"/>
           <wire name="controller:inst1|play_vec[5]" tap_mode="classic" type="register"/>
-          <wire name="freq1[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[10]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[11]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[12]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[8]" tap_mode="classic" type="combinatorial"/>
-          <wire name="freq1[9]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[10]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[11]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[8]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave2in[9]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[10]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[11]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[8]" tap_mode="classic" type="combinatorial"/>
-          <wire name="mixer:inst2|wave3in[9]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p:inst|s1[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="s2p_cs" tap_mode="classic" type="output pin"/>
-          <wire name="s2p_ioclk" tap_mode="classic" type="output pin"/>
         </storage_qualifier_input_vec>
       </signal_vec>
       <presentation>
         <data_view>
-          <net is_signal_inverted="no" name="s2p_cs"/>
-          <net is_signal_inverted="no" name="s2p_ioclk"/>
-          <bus is_signal_inverted="no" link="all" name="s2p:inst|s1" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="s2p:inst|s1[0]"/>
-            <net is_signal_inverted="no" name="s2p:inst|s1[1]"/>
-            <net is_signal_inverted="no" name="s2p:inst|s1[2]"/>
-            <net is_signal_inverted="no" name="s2p:inst|s1[3]"/>
-            <net is_signal_inverted="no" name="s2p:inst|s1[4]"/>
-            <net is_signal_inverted="no" name="s2p:inst|s1[5]"/>
-            <net is_signal_inverted="no" name="s2p:inst|s1[6]"/>
-            <net is_signal_inverted="no" name="s2p:inst|s1[7]"/>
+          <bus is_signal_inverted="no" link="all" name="controller:inst1|diff_play_vec" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[0]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[1]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[2]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[3]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[4]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[5]"/>
           </bus>
-          <bus is_signal_inverted="no" link="all" name="freq1" order="lsb_to_msb" radix="unsigned_dec" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="freq1[0]"/>
-            <net is_signal_inverted="no" name="freq1[1]"/>
-            <net is_signal_inverted="no" name="freq1[2]"/>
-            <net is_signal_inverted="no" name="freq1[3]"/>
-            <net is_signal_inverted="no" name="freq1[4]"/>
-            <net is_signal_inverted="no" name="freq1[5]"/>
-            <net is_signal_inverted="no" name="freq1[6]"/>
-            <net is_signal_inverted="no" name="freq1[7]"/>
-            <net is_signal_inverted="no" name="freq1[8]"/>
-            <net is_signal_inverted="no" name="freq1[9]"/>
-            <net is_signal_inverted="no" name="freq1[10]"/>
-            <net is_signal_inverted="no" name="freq1[11]"/>
-            <net is_signal_inverted="no" name="freq1[12]"/>
+          <bus is_signal_inverted="no" link="all" name="controller:inst1|diff_trig_vec" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[1]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[2]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[3]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[4]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[5]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[6]"/>
           </bus>
           <bus is_signal_inverted="no" link="all" name="controller:inst1|play_vec" order="lsb_to_msb" radix="hex" state="collapse" type="register">
             <net is_signal_inverted="no" name="controller:inst1|play_vec[0]"/>
@@ -341,97 +107,25 @@
             <net is_signal_inverted="no" name="controller:inst1|play_vec[2]"/>
             <net is_signal_inverted="no" name="controller:inst1|play_vec[3]"/>
             <net is_signal_inverted="no" name="controller:inst1|play_vec[4]"/>
-            <net is_signal_inverted="no" name="controller:inst1|play_vec[5]"/>
           </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst1|btn_vec" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst1|btn_vec[0]"/>
-            <net is_signal_inverted="no" name="controller:inst1|btn_vec[1]"/>
-            <net is_signal_inverted="no" name="controller:inst1|btn_vec[2]"/>
-            <net is_signal_inverted="no" name="controller:inst1|btn_vec[3]"/>
-            <net is_signal_inverted="no" name="controller:inst1|btn_vec[4]"/>
-            <net is_signal_inverted="no" name="controller:inst1|btn_vec[5]"/>
-            <net is_signal_inverted="no" name="controller:inst1|btn_vec[6]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst1|curbtns" order="lsb_to_msb" radix="hex" state="collapse" type="register">
-            <net is_signal_inverted="no" name="controller:inst1|curbtns[0]"/>
-            <net is_signal_inverted="no" name="controller:inst1|curbtns[1]"/>
-            <net is_signal_inverted="no" name="controller:inst1|curbtns[2]"/>
-            <net is_signal_inverted="no" name="controller:inst1|curbtns[3]"/>
-            <net is_signal_inverted="no" name="controller:inst1|curbtns[4]"/>
-            <net is_signal_inverted="no" name="controller:inst1|curbtns[5]"/>
-            <net is_signal_inverted="no" name="controller:inst1|curbtns[6]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="mixer:inst2|wave2in" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[0]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[1]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[2]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[3]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[4]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[5]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[6]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[7]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[8]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[9]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[10]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[11]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="mixer:inst2|wave3in" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[0]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[1]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[2]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[3]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[4]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[5]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[6]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[7]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[8]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[9]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[10]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[11]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst1|freq2" order="lsb_to_msb" radix="unsigned_dec" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst1|freq2[0]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[1]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[2]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[3]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[4]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[5]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[6]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[7]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[8]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[9]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[10]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[11]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[12]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst1|freq3" order="lsb_to_msb" radix="unsigned_dec" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst1|freq3[0]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[1]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[2]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[3]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[4]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[5]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[6]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[7]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[8]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[9]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[10]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[11]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[12]"/>
-          </bus>
+          <net is_signal_inverted="no" name="controller:inst1|pb1"/>
         </data_view>
         <setup_view>
-          <net is_signal_inverted="no" name="s2p_cs"/>
-          <net is_signal_inverted="no" name="s2p_ioclk"/>
-          <bus is_signal_inverted="no" link="all" name="s2p:inst|s1" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="s2p:inst|s1[0]"/>
-            <net is_signal_inverted="no" name="s2p:inst|s1[1]"/>
-            <net is_signal_inverted="no" name="s2p:inst|s1[2]"/>
-            <net is_signal_inverted="no" name="s2p:inst|s1[3]"/>
-            <net is_signal_inverted="no" name="s2p:inst|s1[4]"/>
-            <net is_signal_inverted="no" name="s2p:inst|s1[5]"/>
-            <net is_signal_inverted="no" name="s2p:inst|s1[6]"/>
-            <net is_signal_inverted="no" name="s2p:inst|s1[7]"/>
+          <bus is_signal_inverted="no" link="all" name="controller:inst1|diff_play_vec" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[0]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[1]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[2]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[3]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[4]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[5]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="controller:inst1|diff_trig_vec" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[1]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[2]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[3]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[4]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[5]"/>
+            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[6]"/>
           </bus>
           <bus is_signal_inverted="no" link="all" name="controller:inst1|play_vec" order="lsb_to_msb" radix="hex" state="collapse" type="register">
             <net is_signal_inverted="no" name="controller:inst1|play_vec[0]"/>
@@ -441,103 +135,13 @@
             <net is_signal_inverted="no" name="controller:inst1|play_vec[4]"/>
             <net is_signal_inverted="no" name="controller:inst1|play_vec[5]"/>
           </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst1|btn_vec" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst1|btn_vec[0]"/>
-            <net is_signal_inverted="no" name="controller:inst1|btn_vec[1]"/>
-            <net is_signal_inverted="no" name="controller:inst1|btn_vec[2]"/>
-            <net is_signal_inverted="no" name="controller:inst1|btn_vec[3]"/>
-            <net is_signal_inverted="no" name="controller:inst1|btn_vec[4]"/>
-            <net is_signal_inverted="no" name="controller:inst1|btn_vec[5]"/>
-            <net is_signal_inverted="no" name="controller:inst1|btn_vec[6]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst1|curbtns" order="lsb_to_msb" radix="hex" state="collapse" type="register">
-            <net is_signal_inverted="no" name="controller:inst1|curbtns[0]"/>
-            <net is_signal_inverted="no" name="controller:inst1|curbtns[1]"/>
-            <net is_signal_inverted="no" name="controller:inst1|curbtns[2]"/>
-            <net is_signal_inverted="no" name="controller:inst1|curbtns[3]"/>
-            <net is_signal_inverted="no" name="controller:inst1|curbtns[4]"/>
-            <net is_signal_inverted="no" name="controller:inst1|curbtns[5]"/>
-            <net is_signal_inverted="no" name="controller:inst1|curbtns[6]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="mixer:inst2|wave2in" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[0]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[1]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[2]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[3]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[4]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[5]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[6]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[7]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[8]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[9]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[10]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave2in[11]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="mixer:inst2|wave3in" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[0]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[1]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[2]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[3]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[4]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[5]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[6]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[7]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[8]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[9]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[10]"/>
-            <net is_signal_inverted="no" name="mixer:inst2|wave3in[11]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="freq1" order="lsb_to_msb" radix="unsigned_dec" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="freq1[0]"/>
-            <net is_signal_inverted="no" name="freq1[1]"/>
-            <net is_signal_inverted="no" name="freq1[2]"/>
-            <net is_signal_inverted="no" name="freq1[3]"/>
-            <net is_signal_inverted="no" name="freq1[4]"/>
-            <net is_signal_inverted="no" name="freq1[5]"/>
-            <net is_signal_inverted="no" name="freq1[6]"/>
-            <net is_signal_inverted="no" name="freq1[7]"/>
-            <net is_signal_inverted="no" name="freq1[8]"/>
-            <net is_signal_inverted="no" name="freq1[9]"/>
-            <net is_signal_inverted="no" name="freq1[10]"/>
-            <net is_signal_inverted="no" name="freq1[11]"/>
-            <net is_signal_inverted="no" name="freq1[12]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst1|freq2" order="lsb_to_msb" radix="unsigned_dec" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst1|freq2[0]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[1]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[2]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[3]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[4]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[5]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[6]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[7]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[8]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[9]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[10]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[11]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq2[12]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst1|freq3" order="lsb_to_msb" radix="unsigned_dec" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst1|freq3[0]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[1]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[2]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[3]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[4]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[5]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[6]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[7]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[8]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[9]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[10]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[11]"/>
-            <net is_signal_inverted="no" name="controller:inst1|freq3[12]"/>
-          </bus>
+          <net is_signal_inverted="no" name="controller:inst1|pb1"/>
         </setup_view>
       </presentation>
-      <trigger CRC="66F83F47" attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2010/02/21 18:49:54  #1" position="center" power_up_trigger_mode="false" record_data_gap="true" segment_size="1" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
+      <trigger CRC="40EAB351" attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2010/03/24 00:34:58  #0" position="center" power_up_trigger_mode="false" record_data_gap="true" segment_size="1" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
         <power_up_trigger position="pre" storage_qualifier_disabled="no" trigger_in="dont_care" trigger_out="active high"/>
         <events use_custom_flow_control="no">
-          <level enabled="yes" name="condition1" type="basic">'controller:inst1|btn_vec[6]' == rising edge
+          <level enabled="yes" name="condition1" type="basic">'controller:inst1|pb1' == either edge
             <power_up enabled="yes">
             </power_up>
             <op_node>
@@ -555,8 +159,8 @@ trigger;]]>
           </custom_flow_control>
         </events>
         <storage_qualifier_events>
-          <transitional>000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-            <pwr_up_transitional>000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+          <transitional>0000000000000000000
+            <pwr_up_transitional>0000000000000000000
             </pwr_up_transitional>
           </transitional>
           <storage_qualifier_level type="basic">
@@ -576,7 +180,7 @@ trigger;]]>
           </storage_qualifier_level>
         </storage_qualifier_events>
         <log>
-          <data global_temp="1" name="log: 2010/02/21 18:51:52  #0" power_up_mode="false" sample_depth="255" trigger_position="-1">000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000000000000000000000000000000000000000000000000000000000000000000000001111111111110010000010000001100000110000011100100100000111010000000110001011110001111111111111111111111110100111010</data>
+          <data global_temp="1" name="log: 2010/03/24 00:50:33  #0" power_up_mode="false" sample_depth="255" trigger_position="-1">000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</data>
           <extradata>1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</extradata>
         </log>
       </trigger>
