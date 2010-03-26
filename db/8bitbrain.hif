@@ -13410,43 +13410,6 @@ dcde44eee59335c1e2fe75d574f9646
 
 # end
 # entity
-sequencer
-# storage
-db|8bitbrain.(31).cnf
-db|8bitbrain.(31).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-sequencer.vhd
-1d34bfa0d73986783b712a7461176821
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# include_file {
-brain_pkg.vhd
-56e815189c5f9ab8705ced4143225717
-}
-# hierarchies {
-sequencer:inst9
-}
-# lmf
-..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 altsyncram_en82
 # storage
 db|8bitbrain.(35).cnf
@@ -16705,18 +16668,18 @@ USR
 
 # end
 # entity
-controller
+sequencer
 # storage
-db|8bitbrain.(14).cnf
-db|8bitbrain.(14).cnf
+db|8bitbrain.(31).cnf
+db|8bitbrain.(31).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_insensitive
 # source_file
-controller.vhd
-71b2c2ebf295f0d9b2f15d88dac90e1
+sequencer.vhd
+1d34bfa0d73986783b712a7461176821
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -16730,7 +16693,44 @@ ON
 }
 # include_file {
 brain_pkg.vhd
-56e815189c5f9ab8705ced4143225717
+d7fbdf27bdbc5a32475161484f43765
+}
+# hierarchies {
+sequencer:inst9
+}
+# lmf
+..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+controller
+# storage
+db|8bitbrain.(14).cnf
+db|8bitbrain.(14).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+controller.vhd
+f9231a67c15abcf75b73381452f1c58
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+brain_pkg.vhd
+d7fbdf27bdbc5a32475161484f43765
 }
 # hierarchies {
 controller:inst1

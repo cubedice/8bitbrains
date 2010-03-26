@@ -131,6 +131,11 @@ begin
 			prev_play_vec <= "000000";
 			ch1offset2 <= 4;
 			ch1offset3 <= 10;
+			ch2offset2 <= 3;
+			ch2offset3 <= 7;
+			ch3offset2 <= 11;
+			ch3offset3 <= 16;
+			
 		elsif clk'event and clk = '1' then
 				
 			-- we were not playing a chord
@@ -484,26 +489,26 @@ begin
 						freq1 <= frequency(str_2,string1,guitarmode);
 						if trig22 = '1' then
 							if ch1offset2 /= 0 then						
-								freq2 <= chordfrequency(str_2,STRING1,octave,ch1offset2);
+								freq2 <= chordfrequency(str_2,STRING2,octave,ch1offset2);
 							end if;
 							if ch1offset3 /=0 then
-								freq3 <= chordfrequency(str_2,STRING1,octave,ch1offset3);
+								freq3 <= chordfrequency(str_2,STRING2,octave,ch1offset3);
 							end if;
 						end if;
 						if trig32 = '1' then
 							if ch2offset2 /= 0 then						
-								freq2 <= chordfrequency(str_2,STRING1,octave,ch2offset2);
+								freq2 <= chordfrequency(str_2,STRING2,octave,ch2offset2);
 							end if;
 							if ch2offset3 /=0 then
-								freq3 <= chordfrequency(str_2,STRING1,octave,ch2offset3);
+								freq3 <= chordfrequency(str_2,STRING2,octave,ch2offset3);
 							end if;
 						end if;
 						if trig12 = '1' then
 							if ch3offset2 /= 0 then						
-								freq2 <= chordfrequency(str_2,STRING1,octave,ch3offset2);
+								freq2 <= chordfrequency(str_2,STRING2,octave,ch3offset2);
 							end if;
 							if ch3offset3 /=0 then
-								freq3 <= chordfrequency(str_2,STRING1,octave,ch3offset3);
+								freq3 <= chordfrequency(str_2,STRING2,octave,ch3offset3);
 							end if;
 						end if;
 						if diffplaych2 = '1' and arpmode = '0' then
@@ -520,26 +525,26 @@ begin
 						freq1 <= frequency(str_3,string1,guitarmode);
 						if trig32 = '1' then
 							if ch1offset2 /= 0 then						
-								freq2 <= chordfrequency(str_3,STRING1,octave,ch1offset2);
+								freq2 <= chordfrequency(str_3,STRING3,octave,ch1offset2);
 							end if;
 							if ch1offset3 /=0 then
-								freq3 <= chordfrequency(str_3,STRING1,octave,ch1offset3);
+								freq3 <= chordfrequency(str_3,STRING3,octave,ch1offset3);
 							end if;
 						end if;
 						if trig12 = '1' then
 							if ch2offset2 /= 0 then						
-								freq2 <= chordfrequency(str_3,STRING1,octave,ch2offset2);
+								freq2 <= chordfrequency(str_3,STRING3,octave,ch2offset2);
 							end if;
 							if ch2offset3 /=0 then
-								freq3 <= chordfrequency(str_3,STRING1,octave,ch2offset3);
+								freq3 <= chordfrequency(str_3,STRING3,octave,ch2offset3);
 							end if;
 						end if;
 						if trig22 = '1' then
 							if ch3offset2 /= 0 then						
-								freq2 <= chordfrequency(str_3,STRING1,octave,ch3offset2);
+								freq2 <= chordfrequency(str_3,STRING3,octave,ch3offset2);
 							end if;
 							if ch3offset3 /=0 then
-								freq3 <= chordfrequency(str_3,STRING1,octave,ch3offset3);
+								freq3 <= chordfrequency(str_3,STRING3,octave,ch3offset3);
 							end if;
 						end if;
 						if diffplaych3 = '1' and arpmode = '0' then
@@ -561,12 +566,12 @@ begin
 						elsif gateblip1 = '1' then
 							-- blip string
 							gate1 <= '1';
-							freq1 <= frequency(str_1,string1,guitarmode);
+							freq1 <= frequency(str_1,STRING1,octave);
 							prev_str_1 <= str_1;
 							gateblip1 <= '0';
 						end if;	
 						if diffplaystr1 = '1' then 
-							freq1 <= frequency(str_1,string1,guitarmode);
+							freq1 <= frequency(str_1,STRING1,octave);
 							prev_str_1 <= str_1;
 							gate1 <= '1';
 						end if;
@@ -581,12 +586,14 @@ begin
 						elsif gateblip2 = '1' then
 							-- blip string
 							gate2 <= '1';
-							freq2 <= frequency(str_2,string2,guitarmode);
+							freq2 <= frequency(str_2,STRING2,octave);
 							prev_str_2 <= str_2;
 							gateblip2 <= '0';
 						end if;	
 						if diffplaystr2 = '1' then -- now playing str 2
 							-- lock in str2
+							freq2 <= frequency(str_2,STRING2,octave);
+							prev_str_2 <= str_2;
 							gate2 <= '1';
 						end if;
 					end if;
@@ -600,12 +607,14 @@ begin
 						elsif gateblip3 = '1' then
 							-- blip string
 							gate3 <= '1';
-							freq3 <= frequency(str_3,string3,guitarmode);
+							freq3 <= frequency(str_3,STRING3,octave);
 							prev_str_3 <= str_3;
 							gateblip3 <= '0';
 						end if;	
 						if diffplaystr3 = '1' then -- now playing str 3
 							-- lock in str3
+							freq3 <= frequency(str_3,STRING3,octave);
+							prev_str_3 <= str_3;
 							gate3 <= '1';
 						end if;
 					end if;

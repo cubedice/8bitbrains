@@ -1,5 +1,5 @@
 Flow report for 8bitbrain
-Wed Mar 24 01:01:43 2010
+Thu Mar 25 19:58:20 2010
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +------------------------------------+----------------------------------------------+
-; Flow Status                        ; Successful - Wed Mar 24 01:01:43 2010        ;
+; Flow Status                        ; Successful - Thu Mar 25 19:58:20 2010        ;
 ; Quartus II Version                 ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name                      ; 8bitbrain                                    ;
 ; Top-level Entity Name              ; 8bitbrain                                    ;
@@ -46,8 +46,8 @@ applicable agreement for further details.
 ; Device                             ; EP2C8T144C8                                  ;
 ; Timing Models                      ; Final                                        ;
 ; Met timing requirements            ; No                                           ;
-; Total logic elements               ; 7,023 / 8,256 ( 85 % )                       ;
-;     Total combinational functions  ; 6,683 / 8,256 ( 81 % )                       ;
+; Total logic elements               ; 8,002 / 8,256 ( 97 % )                       ;
+;     Total combinational functions  ; 7,660 / 8,256 ( 93 % )                       ;
 ;     Dedicated logic registers      ; 1,210 / 8,256 ( 15 % )                       ;
 ; Total registers                    ; 1210                                         ;
 ; Total pins                         ; 34 / 85 ( 40 % )                             ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/24/2010 00:59:48 ;
+; Start date & time ; 03/25/2010 19:55:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; 8bitbrain           ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ applicable agreement for further details.
 +------------------------------------+----------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                    ; Value                                                                                              ; Default Value ; Entity Name ; Section Id       ;
 +------------------------------------+----------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID              ; 151176630078.126940678703820                                                                       ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID              ; 151176630078.126956135402664                                                                       ; --            ; --          ; --               ;
 ; DISABLE_OCP_HW_EVAL                ; On                                                                                                 ; Off           ; --          ; --               ;
 ; ENABLE_SIGNALTAP                   ; On                                                                                                 ; --            ; --          ; --               ;
 ; IP_TOOL_NAME                       ; ALTSYNCRAM                                                                                         ; --            ; --          ; --               ;
@@ -159,11 +159,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:51     ; 1.0                     ; 234 MB              ; 00:00:48                           ;
-; Fitter                  ; 00:00:43     ; 1.0                     ; 210 MB              ; 00:00:41                           ;
-; Assembler               ; 00:00:02     ; 1.0                     ; 176 MB              ; 00:00:02                           ;
-; Classic Timing Analyzer ; 00:00:03     ; 1.0                     ; 167 MB              ; 00:00:02                           ;
-; Total                   ; 00:01:39     ; --                      ; --                  ; 00:01:33                           ;
+; Analysis & Synthesis    ; 00:01:14     ; 1.0                     ; 237 MB              ; 00:01:12                           ;
+; Fitter                  ; 00:00:46     ; 1.0                     ; 219 MB              ; 00:00:46                           ;
+; Assembler               ; 00:00:02     ; 1.0                     ; 177 MB              ; 00:00:02                           ;
+; Classic Timing Analyzer ; 00:00:03     ; 1.0                     ; 170 MB              ; 00:00:03                           ;
+; Total                   ; 00:02:05     ; --                      ; --                  ; 00:02:03                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

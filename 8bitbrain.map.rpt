@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 8bitbrain
-Wed Mar 24 01:00:44 2010
+Thu Mar 25 19:57:16 2010
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -119,13 +119,13 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar 24 01:00:44 2010        ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar 25 19:57:15 2010        ;
 ; Quartus II Version                 ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name                      ; 8bitbrain                                    ;
 ; Top-level Entity Name              ; 8bitbrain                                    ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 7,127                                        ;
-;     Total combinational functions  ; 6,657                                        ;
+; Total logic elements               ; 8,104                                        ;
+;     Total combinational functions  ; 7,634                                        ;
 ;     Dedicated logic registers      ; 1,210                                        ;
 ; Total registers                    ; 1210                                         ;
 ; Total pins                         ; 34                                           ;
@@ -324,17 +324,17 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 7,127 ;
+; Estimated Total logic elements              ; 8,104 ;
 ;                                             ;       ;
-; Total combinational functions               ; 6657  ;
+; Total combinational functions               ; 7634  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 2089  ;
-;     -- 3 input functions                    ; 2292  ;
-;     -- <=2 input functions                  ; 2276  ;
+;     -- 4 input functions                    ; 2898  ;
+;     -- 3 input functions                    ; 2409  ;
+;     -- <=2 input functions                  ; 2327  ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 4517  ;
-;     -- arithmetic mode                      ; 2140  ;
+;     -- normal mode                          ; 5423  ;
+;     -- arithmetic mode                      ; 2211  ;
 ;                                             ;       ;
 ; Total registers                             ; 1210  ;
 ;     -- Dedicated logic registers            ; 1210  ;
@@ -345,8 +345,8 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 22    ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 909   ;
-; Total fan-out                               ; 24127 ;
-; Average fan-out                             ; 3.02  ;
+; Total fan-out                               ; 27826 ;
+; Average fan-out                             ; 3.10  ;
 +---------------------------------------------+-------+
 
 
@@ -355,12 +355,12 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                      ; Library Name ;
 +------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |8bitbrain                                                                                           ; 6657 (4)          ; 1210 (6)     ; 16384       ; 22           ; 0       ; 11        ; 34   ; 0            ; |8bitbrain                                                                                                                                                                                                                                                                                               ; work         ;
+; |8bitbrain                                                                                           ; 7634 (4)          ; 1210 (6)     ; 16384       ; 22           ; 0       ; 11        ; 34   ; 0            ; |8bitbrain                                                                                                                                                                                                                                                                                               ; work         ;
 ;    |arp_mux:inst10|                                                                                  ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|arp_mux:inst10                                                                                                                                                                                                                                                                                ; work         ;
 ;       |lpm_mux:lpm_mux_component|                                                                    ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|arp_mux:inst10|lpm_mux:lpm_mux_component                                                                                                                                                                                                                                                      ; work         ;
 ;          |mux_j4e:auto_generated|                                                                    ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|arp_mux:inst10|lpm_mux:lpm_mux_component|mux_j4e:auto_generated                                                                                                                                                                                                                               ; work         ;
 ;    |btn_reg:inst4|                                                                                   ; 74 (74)           ; 90 (90)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|btn_reg:inst4                                                                                                                                                                                                                                                                                 ; work         ;
-;    |controller:inst1|                                                                                ; 940 (940)         ; 102 (102)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1                                                                                                                                                                                                                                                                              ; work         ;
+;    |controller:inst1|                                                                                ; 1916 (1916)       ; 102 (102)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1                                                                                                                                                                                                                                                                              ; work         ;
 ;    |mixer:inst2|                                                                                     ; 48 (0)            ; 0 (0)        ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |8bitbrain|mixer:inst2                                                                                                                                                                                                                                                                                   ; work         ;
 ;       |mixeradd:add1|                                                                                ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|mixer:inst2|mixeradd:add1                                                                                                                                                                                                                                                                     ; work         ;
 ;          |parallel_add:parallel_add_component|                                                       ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|mixer:inst2|mixeradd:add1|parallel_add:parallel_add_component                                                                                                                                                                                                                                 ; work         ;
@@ -437,7 +437,7 @@ applicable agreement for further details.
 ;          |mult_qt01:auto_generated|                                                                  ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |8bitbrain|modulator:inst3|lpm_mult:Mult8|mult_qt01:auto_generated                                                                                                                                                                                                                                       ; work         ;
 ;    |p2s:inst5|                                                                                       ; 28 (28)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|p2s:inst5                                                                                                                                                                                                                                                                                     ; work         ;
 ;    |s2p:inst|                                                                                        ; 54 (54)           ; 70 (70)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|s2p:inst                                                                                                                                                                                                                                                                                      ; work         ;
-;    |sequencer:inst9|                                                                                 ; 153 (98)          ; 73 (39)      ; 7168        ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|sequencer:inst9                                                                                                                                                                                                                                                                               ; work         ;
+;    |sequencer:inst9|                                                                                 ; 154 (99)          ; 73 (39)      ; 7168        ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|sequencer:inst9                                                                                                                                                                                                                                                                               ; work         ;
 ;       |altsyncram:Mux12_rtl_0|                                                                       ; 0 (0)             ; 0 (0)        ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|sequencer:inst9|altsyncram:Mux12_rtl_0                                                                                                                                                                                                                                                        ; work         ;
 ;          |altsyncram_1j01:auto_generated|                                                            ; 0 (0)             ; 0 (0)        ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|sequencer:inst9|altsyncram:Mux12_rtl_0|altsyncram_1j01:auto_generated                                                                                                                                                                                                                         ; work         ;
 ;       |maj7:sequence|                                                                                ; 55 (0)            ; 34 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|sequencer:inst9|maj7:sequence                                                                                                                                                                                                                                                                 ; work         ;
@@ -637,9 +637,8 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; wavegenerator:inst6|addrgen:inst7|tmp_addr[0]                                                                                                                                         ; Merged with wavegenerator:inst6|addrgen:inst7|addr[0]                                                                                                       ;
 ; wavegenerator:inst6|addrgen:inst6|tmp_addr[0]                                                                                                                                         ; Merged with wavegenerator:inst6|addrgen:inst6|addr[0]                                                                                                       ;
 ; wavegenerator:inst6|addrgen:inst|tmp_addr[0]                                                                                                                                          ; Merged with wavegenerator:inst6|addrgen:inst|addr[0]                                                                                                        ;
-; controller:inst1|freq1[11..12]                                                                                                                                                        ; Merged with controller:inst1|freq1[10]                                                                                                                      ;
-; btn_reg:inst4|cnt[0]                                                                                                                                                                  ; Merged with s2p:inst|cs_cnt[0]                                                                                                                              ;
 ; modulator:inst3|ctr_ctr[0]                                                                                                                                                            ; Merged with s2p:inst|cs_cnt[0]                                                                                                                              ;
+; btn_reg:inst4|cnt[0]                                                                                                                                                                  ; Merged with s2p:inst|cs_cnt[0]                                                                                                                              ;
 ; btn_reg:inst4|cnt[1]                                                                                                                                                                  ; Merged with modulator:inst3|ctr_ctr[1]                                                                                                                      ;
 ; btn_reg:inst4|cnt[2]                                                                                                                                                                  ; Merged with modulator:inst3|ctr_ctr[2]                                                                                                                      ;
 ; btn_reg:inst4|cnt[3]                                                                                                                                                                  ; Merged with modulator:inst3|ctr_ctr[3]                                                                                                                      ;
@@ -654,6 +653,8 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; btn_reg:inst4|cnt[12]                                                                                                                                                                 ; Merged with modulator:inst3|ctr_ctr[12]                                                                                                                     ;
 ; btn_reg:inst4|cnt[13]                                                                                                                                                                 ; Merged with modulator:inst3|ctr_ctr[13]                                                                                                                     ;
 ; btn_reg:inst4|cnt[14]                                                                                                                                                                 ; Merged with modulator:inst3|ctr_ctr[14]                                                                                                                     ;
+; controller:inst1|freq1[12]                                                                                                                                                            ; Merged with controller:inst1|freq1[11]                                                                                                                      ;
+; controller:inst1|freq1[11]                                                                                                                                                            ; Merged with controller:inst1|freq1[10]                                                                                                                      ;
 ; Total Number of Removed Registers = 50                                                                                                                                                ;                                                                                                                                                             ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|segment_shift_clk_ena                                                                                            ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|buffer_write_enable_delayed                                                ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[0]                                       ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[0] ;
@@ -683,10 +684,10 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Total registers                              ; 1210  ;
 ; Number of registers using Synchronous Clear  ; 128   ;
-; Number of registers using Synchronous Load   ; 105   ;
+; Number of registers using Synchronous Load   ; 114   ;
 ; Number of registers using Asynchronous Clear ; 326   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 638   ;
+; Number of registers using Clock Enable       ; 639   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -782,44 +783,43 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|sequencer:inst9|maj7:sequence|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[3]                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|sequencer:inst9|maj7:sequence|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[7]                                                ;
 ; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |8bitbrain|s2p:inst|cs_cnt[1]                                                                                                                                                                        ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|attack_ctr1[0]                                                                                                                                                            ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|attack_ctr2[1]                                                                                                                                                            ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|attack_ctr3[1]                                                                                                                                                            ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |8bitbrain|s2p:inst|io_clk_cnt[1]                                                                                                                                                                    ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |8bitbrain|s2p:inst|ioclk                                                                                                                                                                            ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|release_ctr1[6]                                                                                                                                                           ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|release_ctr2[7]                                                                                                                                                           ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|release_ctr3[1]                                                                                                                                                           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|attack_ctr1[6]                                                                                                                                                            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|attack_ctr2[3]                                                                                                                                                            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|attack_ctr3[6]                                                                                                                                                            ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |8bitbrain|s2p:inst|io_clk_cnt[2]                                                                                                                                                                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |8bitbrain|s2p:inst|i_ioclk                                                                                                                                                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|release_ctr1[0]                                                                                                                                                           ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|release_ctr2[0]                                                                                                                                                           ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|release_ctr3[0]                                                                                                                                                           ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|s2p:inst|io_en[1]                                                                                                                                                                         ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |8bitbrain|sequencer:inst9|maj7:sequence|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[1] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|decay_ctr1[4]                                                                                                                                                             ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|decay_ctr2[7]                                                                                                                                                             ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|decay_ctr3[5]                                                                                                                                                             ;
-; 8:1                ; 11 bits   ; 55 LEs        ; 44 LEs               ; 11 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|wave1[4]                                                                                                                                                                  ;
-; 8:1                ; 11 bits   ; 55 LEs        ; 44 LEs               ; 11 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|wave2[5]                                                                                                                                                                  ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |8bitbrain|sequencer:inst9|maj7:sequence|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|decay_ctr1[7]                                                                                                                                                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|decay_ctr2[0]                                                                                                                                                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|decay_ctr3[1]                                                                                                                                                             ;
+; 8:1                ; 11 bits   ; 55 LEs        ; 44 LEs               ; 11 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|wave1[10]                                                                                                                                                                 ;
+; 8:1                ; 11 bits   ; 55 LEs        ; 44 LEs               ; 11 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|wave2[8]                                                                                                                                                                  ;
 ; 8:1                ; 11 bits   ; 55 LEs        ; 44 LEs               ; 11 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|wave3[0]                                                                                                                                                                  ;
-; 24:1               ; 4 bits    ; 64 LEs        ; 36 LEs               ; 28 LEs                 ; Yes        ; |8bitbrain|sequencer:inst9|maj7:sequence|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[2]      ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |8bitbrain|controller:inst1|prev_str_2[2]                                                                                                                                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |8bitbrain|controller:inst1|prev_str_3[4]                                                                                                                                                            ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 0 LEs                ; 56 LEs                 ; Yes        ; |8bitbrain|controller:inst1|prev_str_1[6]                                                                                                                                                            ;
-; 18:1               ; 3 bits    ; 36 LEs        ; 3 LEs                ; 33 LEs                 ; Yes        ; |8bitbrain|controller:inst1|freq1[10]                                                                                                                                                                ;
-; 18:1               ; 10 bits   ; 120 LEs       ; 20 LEs               ; 100 LEs                ; Yes        ; |8bitbrain|controller:inst1|freq1[7]                                                                                                                                                                 ;
-; 16:1               ; 8 bits    ; 80 LEs        ; 16 LEs               ; 64 LEs                 ; Yes        ; |8bitbrain|controller:inst1|freq3[4]                                                                                                                                                                 ;
-; 17:1               ; 9 bits    ; 99 LEs        ; 18 LEs               ; 81 LEs                 ; Yes        ; |8bitbrain|controller:inst1|freq3[2]                                                                                                                                                                 ;
-; 17:1               ; 9 bits    ; 99 LEs        ; 18 LEs               ; 81 LEs                 ; Yes        ; |8bitbrain|controller:inst1|freq2[2]                                                                                                                                                                 ;
-; 27:1               ; 2 bits    ; 36 LEs        ; 20 LEs               ; 16 LEs                 ; Yes        ; |8bitbrain|controller:inst1|trig_vec[1]                                                                                                                                                              ;
-; 27:1               ; 2 bits    ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; Yes        ; |8bitbrain|controller:inst1|trig_vec[3]                                                                                                                                                              ;
-; 1:1                ; 26 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |8bitbrain|arp_mux:inst12|lpm_mux:lpm_mux_component|mux_j4e:auto_generated|result_node[7]                                                                                                            ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 2 LEs                ; 14 LEs                 ; No         ; |8bitbrain|controller:inst1|keyn~300                                                                                                                                                                 ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 2 LEs                ; 14 LEs                 ; No         ; |8bitbrain|controller:inst1|keyn~197                                                                                                                                                                 ;
+; 24:1               ; 4 bits    ; 64 LEs        ; 36 LEs               ; 28 LEs                 ; Yes        ; |8bitbrain|sequencer:inst9|maj7:sequence|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[1]      ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 0 LEs                ; 56 LEs                 ; Yes        ; |8bitbrain|controller:inst1|prev_str_1[0]                                                                                                                                                            ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 0 LEs                ; 56 LEs                 ; Yes        ; |8bitbrain|controller:inst1|prev_str_2[0]                                                                                                                                                            ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 0 LEs                ; 56 LEs                 ; Yes        ; |8bitbrain|controller:inst1|prev_str_3[7]                                                                                                                                                            ;
+; 18:1               ; 3 bits    ; 36 LEs        ; 6 LEs                ; 30 LEs                 ; Yes        ; |8bitbrain|controller:inst1|freq1[11]                                                                                                                                                                ;
+; 18:1               ; 10 bits   ; 120 LEs       ; 40 LEs               ; 80 LEs                 ; Yes        ; |8bitbrain|controller:inst1|freq1[9]                                                                                                                                                                 ;
+; 27:1               ; 2 bits    ; 36 LEs        ; 20 LEs               ; 16 LEs                 ; Yes        ; |8bitbrain|controller:inst1|trig_vec[2]                                                                                                                                                              ;
+; 27:1               ; 2 bits    ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; Yes        ; |8bitbrain|controller:inst1|trig_vec[4]                                                                                                                                                              ;
+; 29:1               ; 13 bits   ; 247 LEs       ; 78 LEs               ; 169 LEs                ; Yes        ; |8bitbrain|controller:inst1|freq2[6]                                                                                                                                                                 ;
+; 29:1               ; 13 bits   ; 247 LEs       ; 78 LEs               ; 169 LEs                ; Yes        ; |8bitbrain|controller:inst1|freq3[9]                                                                                                                                                                 ;
+; 1:1                ; 26 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |8bitbrain|arp_mux:inst12|lpm_mux:lpm_mux_component|mux_j4e:auto_generated|result_node[6]                                                                                                            ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 2 LEs                ; 14 LEs                 ; No         ; |8bitbrain|controller:inst1|keyn~202                                                                                                                                                                 ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 2 LEs                ; 14 LEs                 ; No         ; |8bitbrain|controller:inst1|keyn~301                                                                                                                                                                 ;
 ; 12:1               ; 2 bits    ; 16 LEs        ; 2 LEs                ; 14 LEs                 ; No         ; |8bitbrain|sequencer:inst9|keyn~74                                                                                                                                                                   ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 2 LEs                ; 14 LEs                 ; No         ; |8bitbrain|controller:inst1|keyn~98                                                                                                                                                                  ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |8bitbrain|controller:inst1|keyn~303                                                                                                                                                                 ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |8bitbrain|controller:inst1|keyn~200                                                                                                                                                                 ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 2 LEs                ; 14 LEs                 ; No         ; |8bitbrain|controller:inst1|keyn~105                                                                                                                                                                 ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |8bitbrain|controller:inst1|keyn~205                                                                                                                                                                 ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |8bitbrain|controller:inst1|keyn~304                                                                                                                                                                 ;
 ; 19:1               ; 2 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |8bitbrain|sequencer:inst9|keyn~77                                                                                                                                                                   ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |8bitbrain|controller:inst1|keyn~102                                                                                                                                                                 ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |8bitbrain|controller:inst1|keyn~107                                                                                                                                                                 ;
 ; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|counter[0]                                                                ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_rom_sr:crc_rom_sr|word_counter[0]                                                                                ;
 ; 12:1               ; 4 bits    ; 32 LEs        ; 28 LEs               ; 4 LEs                  ; Yes        ; |8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_rom_sr:crc_rom_sr|WORD_SR[1]                                                                                     ;
@@ -2617,10 +2617,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Name                              ; Type          ; Status    ; Partition Name ; Netlist Type Used ; Actual Connection                            ; Details ;
 +-----------------------------------+---------------+-----------+----------------+-------------------+----------------------------------------------+---------+
 ; clk                               ; pre-synthesis ; connected ; Top            ; post-synthesis    ; clk                                          ; N/A     ;
-; controller:inst1|diff_play_vec[0] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; controller:inst1|diff_play_vec[0]~6          ; N/A     ;
-; controller:inst1|diff_play_vec[0] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; controller:inst1|diff_play_vec[0]~6          ; N/A     ;
-; controller:inst1|diff_play_vec[1] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; controller:inst1|diff_play_vec[1]~7          ; N/A     ;
-; controller:inst1|diff_play_vec[1] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; controller:inst1|diff_play_vec[1]~7          ; N/A     ;
+; controller:inst1|diff_play_vec[0] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; controller:inst1|diff_play_vec[0]~6_wirecell ; N/A     ;
+; controller:inst1|diff_play_vec[0] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; controller:inst1|diff_play_vec[0]~6_wirecell ; N/A     ;
+; controller:inst1|diff_play_vec[1] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; controller:inst1|diff_play_vec[1]~7_wirecell ; N/A     ;
+; controller:inst1|diff_play_vec[1] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; controller:inst1|diff_play_vec[1]~7_wirecell ; N/A     ;
 ; controller:inst1|diff_play_vec[2] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; controller:inst1|diff_play_vec[2]~8_wirecell ; N/A     ;
 ; controller:inst1|diff_play_vec[2] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; controller:inst1|diff_play_vec[2]~8_wirecell ; N/A     ;
 ; controller:inst1|diff_play_vec[3] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; controller:inst1|diff_play_vec[3]~9          ; N/A     ;
@@ -2663,7 +2663,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Mar 24 00:59:46 2010
+    Info: Processing started: Thu Mar 25 19:55:54 2010
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 8bitbrain -c 8bitbrain
 Info: Found 2 design units, including 1 entities, in source file controller.vhd
     Info: Found design unit 1: controller-arch
@@ -2780,19 +2780,43 @@ Warning (10541): VHDL Signal Declaration warning at controller.vhd(18): used imp
 Warning (10541): VHDL Signal Declaration warning at controller.vhd(19): used implicit default value for signal "q_ld" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at controller.vhd(19): used implicit default value for signal "filtfreq_ld" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at controller.vhd(21): used implicit default value for signal "filter_freq" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at controller.vhd(29): used implicit default value for signal "ch2offset2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at controller.vhd(29): used implicit default value for signal "ch2offset3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at controller.vhd(29): used implicit default value for signal "ch3offset2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at controller.vhd(29): used implicit default value for signal "ch3offset3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10492): VHDL Process Statement warning at controller.vhd(124): signal "curbtns" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controller.vhd(125): signal "curbtns" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10631): VHDL Process Statement warning at controller.vhd(122): inferring latch(es) for signal or variable "diff_btn_vec", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at controller.vhd(122): inferring latch(es) for signal or variable "ch1offset2", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at controller.vhd(122): inferring latch(es) for signal or variable "ch1offset3", which holds its previous value in one or more paths through the process
-Warning (10492): VHDL Process Statement warning at controller.vhd(301): signal "play_vec" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controller.vhd(301): signal "prev_play_vec" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controller.vhd(303): signal "trig_vec" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controller.vhd(303): signal "prev_trig_vec" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at controller.vhd(122): inferring latch(es) for signal or variable "ch2offset2", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controller.vhd(122): inferring latch(es) for signal or variable "ch2offset3", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controller.vhd(122): inferring latch(es) for signal or variable "ch3offset2", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controller.vhd(122): inferring latch(es) for signal or variable "ch3offset3", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at controller.vhd(306): signal "play_vec" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controller.vhd(306): signal "prev_play_vec" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controller.vhd(308): signal "trig_vec" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controller.vhd(308): signal "prev_trig_vec" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (10041): Inferred latch for "ch3offset3[0]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch3offset3[1]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch3offset3[2]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch3offset3[3]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch3offset3[4]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch3offset3[5]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch3offset2[0]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch3offset2[1]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch3offset2[2]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch3offset2[3]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch3offset2[4]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch3offset2[5]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch2offset3[0]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch2offset3[1]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch2offset3[2]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch2offset3[3]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch2offset3[4]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch2offset3[5]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch2offset2[0]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch2offset2[1]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch2offset2[2]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch2offset2[3]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch2offset2[4]" at controller.vhd(122)
+Info (10041): Inferred latch for "ch2offset2[5]" at controller.vhd(122)
 Info (10041): Inferred latch for "ch1offset3[0]" at controller.vhd(122)
 Info (10041): Inferred latch for "ch1offset3[1]" at controller.vhd(122)
 Info (10041): Inferred latch for "ch1offset3[2]" at controller.vhd(122)
@@ -3075,16 +3099,16 @@ Warning: Design contains 15 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "wave_bank_rot[0]"
     Warning (15610): No output dependent on input pin "waveform_rot[1]"
     Warning (15610): No output dependent on input pin "waveform_rot[0]"
-Info: Implemented 7337 device resources after synthesis - the final resource count might be different
+Info: Implemented 8313 device resources after synthesis - the final resource count might be different
     Info: Implemented 31 input pins
     Info: Implemented 7 output pins
-    Info: Implemented 7202 logic cells
+    Info: Implemented 8178 logic cells
     Info: Implemented 74 RAM segments
     Info: Implemented 22 DSP elements
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 57 warnings
-    Info: Peak virtual memory: 234 megabytes
-    Info: Processing ended: Wed Mar 24 01:00:44 2010
-    Info: Elapsed time: 00:00:58
-    Info: Total CPU time (on all processors): 00:00:55
+    Info: Peak virtual memory: 237 megabytes
+    Info: Processing ended: Thu Mar 25 19:57:16 2010
+    Info: Elapsed time: 00:01:22
+    Info: Total CPU time (on all processors): 00:01:19
 
 

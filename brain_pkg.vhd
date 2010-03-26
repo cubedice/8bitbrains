@@ -265,6 +265,11 @@ package body brain_pkg is
 	function keynum ( str_val,strnum : std_logic_vector; octave : integer ) return integer is
 		variable keyn : integer range 1 to 88;
 	begin
+		if strnum = "10" then
+			return 5 + keynum( str_val, "01", octave );
+		elsif strnum = "11" then
+			return 10 + keynum( str_val, "01", octave );
+		end if;
 		if strnum = "01" then 
 			if octave = 1 then
 				if str_val < "00010010" then
