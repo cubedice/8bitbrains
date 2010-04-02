@@ -1,5 +1,5 @@
 Flow report for 8bitbrain
-Thu Mar 25 19:58:20 2010
+Fri Apr 02 01:14:44 2010
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +------------------------------------+----------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar 25 19:58:20 2010        ;
+; Flow Status                        ; Successful - Fri Apr 02 01:14:43 2010        ;
 ; Quartus II Version                 ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name                      ; 8bitbrain                                    ;
 ; Top-level Entity Name              ; 8bitbrain                                    ;
@@ -46,13 +46,13 @@ applicable agreement for further details.
 ; Device                             ; EP2C8T144C8                                  ;
 ; Timing Models                      ; Final                                        ;
 ; Met timing requirements            ; No                                           ;
-; Total logic elements               ; 8,002 / 8,256 ( 97 % )                       ;
-;     Total combinational functions  ; 7,660 / 8,256 ( 93 % )                       ;
-;     Dedicated logic registers      ; 1,210 / 8,256 ( 15 % )                       ;
-; Total registers                    ; 1210                                         ;
-; Total pins                         ; 34 / 85 ( 40 % )                             ;
+; Total logic elements               ; 6,209 / 8,256 ( 75 % )                       ;
+;     Total combinational functions  ; 6,060 / 8,256 ( 73 % )                       ;
+;     Dedicated logic registers      ; 806 / 8,256 ( 10 % )                         ;
+; Total registers                    ; 806                                          ;
+; Total pins                         ; 49 / 85 ( 58 % )                             ;
 ; Total virtual pins                 ; 0                                            ;
-; Total memory bits                  ; 16,384 / 165,888 ( 10 % )                    ;
+; Total memory bits                  ; 14,799 / 165,888 ( 9 % )                     ;
 ; Embedded Multiplier 9-bit elements ; 22 / 36 ( 61 % )                             ;
 ; Total PLLs                         ; 0 / 2 ( 0 % )                                ;
 +------------------------------------+----------------------------------------------+
@@ -63,95 +63,93 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/25/2010 19:55:55 ;
+; Start date & time ; 04/02/2010 01:13:13 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; 8bitbrain           ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                                                         ;
-+------------------------------------+----------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
-; Assignment Name                    ; Value                                                                                              ; Default Value ; Entity Name ; Section Id       ;
-+------------------------------------+----------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID              ; 151176630078.126956135402664                                                                       ; --            ; --          ; --               ;
-; DISABLE_OCP_HW_EVAL                ; On                                                                                                 ; Off           ; --          ; --               ;
-; ENABLE_SIGNALTAP                   ; On                                                                                                 ; --            ; --          ; --               ;
-; IP_TOOL_NAME                       ; ALTSYNCRAM                                                                                         ; --            ; --          ; --               ;
-; IP_TOOL_NAME                       ; LPM_DIVIDE                                                                                         ; --            ; --          ; --               ;
-; IP_TOOL_NAME                       ; PARALLEL_ADD                                                                                       ; --            ; --          ; --               ;
-; IP_TOOL_NAME                       ; LPM_MULT                                                                                           ; --            ; --          ; --               ;
-; IP_TOOL_NAME                       ; LPM_ADD_SUB                                                                                        ; --            ; --          ; --               ;
-; IP_TOOL_NAME                       ; LPM_MULT                                                                                           ; --            ; --          ; --               ;
-; IP_TOOL_NAME                       ; LPM_DIVIDE                                                                                         ; --            ; --          ; --               ;
-; IP_TOOL_NAME                       ; ALTSYNCRAM                                                                                         ; --            ; --          ; --               ;
-; IP_TOOL_NAME                       ; LPM_MUX                                                                                            ; --            ; --          ; --               ;
-; IP_TOOL_VERSION                    ; 9.0                                                                                                ; --            ; --          ; --               ;
-; IP_TOOL_VERSION                    ; 9.0                                                                                                ; --            ; --          ; --               ;
-; IP_TOOL_VERSION                    ; 9.0                                                                                                ; --            ; --          ; --               ;
-; IP_TOOL_VERSION                    ; 9.0                                                                                                ; --            ; --          ; --               ;
-; IP_TOOL_VERSION                    ; 9.0                                                                                                ; --            ; --          ; --               ;
-; IP_TOOL_VERSION                    ; 9.0                                                                                                ; --            ; --          ; --               ;
-; IP_TOOL_VERSION                    ; 9.0                                                                                                ; --            ; --          ; --               ;
-; IP_TOOL_VERSION                    ; 9.0                                                                                                ; --            ; --          ; --               ;
-; IP_TOOL_VERSION                    ; 9.0                                                                                                ; --            ; --          ; --               ;
-; MAX_CORE_JUNCTION_TEMP             ; 85                                                                                                 ; --            ; --          ; --               ;
-; MIN_CORE_JUNCTION_TEMP             ; 0                                                                                                  ; --            ; --          ; --               ;
-; MISC_FILE                          ; c:/workspace/8bitbrain/8bitbrain.dpf                                                               ; --            ; --          ; --               ;
-; MISC_FILE                          ; altsyncram0.tdf                                                                                    ; --            ; --          ; --               ;
-; MISC_FILE                          ; altsyncram0.bsf                                                                                    ; --            ; --          ; --               ;
-; MISC_FILE                          ; altsyncram0.cmp                                                                                    ; --            ; --          ; --               ;
-; MISC_FILE                          ; lpm_divide0.bsf                                                                                    ; --            ; --          ; --               ;
-; MISC_FILE                          ; lpm_divide0.inc                                                                                    ; --            ; --          ; --               ;
-; MISC_FILE                          ; lpm_divide0.cmp                                                                                    ; --            ; --          ; --               ;
-; MISC_FILE                          ; mixeradd.bsf                                                                                       ; --            ; --          ; --               ;
-; MISC_FILE                          ; mixeradd.inc                                                                                       ; --            ; --          ; --               ;
-; MISC_FILE                          ; mixeradd.cmp                                                                                       ; --            ; --          ; --               ;
-; MISC_FILE                          ; mixermult.bsf                                                                                      ; --            ; --          ; --               ;
-; MISC_FILE                          ; mixermult.inc                                                                                      ; --            ; --          ; --               ;
-; MISC_FILE                          ; mixermult.cmp                                                                                      ; --            ; --          ; --               ;
-; MISC_FILE                          ; mixersub.bsf                                                                                       ; --            ; --          ; --               ;
-; MISC_FILE                          ; mixersub.inc                                                                                       ; --            ; --          ; --               ;
-; MISC_FILE                          ; mixersub.cmp                                                                                       ; --            ; --          ; --               ;
-; MISC_FILE                          ; asdrmult.bsf                                                                                       ; --            ; --          ; --               ;
-; MISC_FILE                          ; asdrmult.cmp                                                                                       ; --            ; --          ; --               ;
-; MISC_FILE                          ; asdrdiv.bsf                                                                                        ; --            ; --          ; --               ;
-; MISC_FILE                          ; asdrdiv.cmp                                                                                        ; --            ; --          ; --               ;
-; MISC_FILE                          ; maj7.bsf                                                                                           ; --            ; --          ; --               ;
-; MISC_FILE                          ; maj7.cmp                                                                                           ; --            ; --          ; --               ;
-; MISC_FILE                          ; arp_mux.bsf                                                                                        ; --            ; --          ; --               ;
-; MISC_FILE                          ; arp_mux.cmp                                                                                        ; --            ; --          ; --               ;
-; PARTITION_COLOR                    ; 16764057                                                                                           ; --            ; --          ; Top              ;
-; PARTITION_NETLIST_TYPE             ; SOURCE                                                                                             ; --            ; --          ; Top              ;
-; POWER_BOARD_THERMAL_MODEL          ; None (CONSERVATIVE)                                                                                ; --            ; --          ; --               ;
-; POWER_PRESET_COOLING_SOLUTION      ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                                              ; --            ; --          ; --               ;
-; SEARCH_PATH                        ; .                                                                                                  ; --            ; --          ; --               ;
-; SLD_NODE_CREATOR_ID                ; 110                                                                                                ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_ENTITY_NAME               ; sld_signaltap                                                                                      ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_NODE_INFO=805334528                                                                            ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_POWER_UP_TRIGGER=0                                                                             ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0                                                      ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_ATTRIBUTE_MEM_MODE=OFF                                                                         ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_STATE_FLOW_USE_GENERATED=0                                                                     ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_STATE_BITS=11                                                                                  ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_BUFFER_FULL_STOP=1                                                                             ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_CURRENT_RESOURCE_WIDTH=1                                                                       ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_TRIGGER_LEVEL=1                                                                                ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_TRIGGER_IN_ENABLED=0                                                                           ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_ADVANCED_TRIGGER_ENTITY=basic,1,                                                               ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_TRIGGER_LEVEL_PIPELINE=1                                                                       ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_ENABLE_ADVANCED_TRIGGER=0                                                                      ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_SEGMENT_SIZE=256                                                                               ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_SAMPLE_DEPTH=256                                                                               ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_DATA_BITS=18                                                                                   ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_TRIGGER_BITS=19                                                                                ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_INVERSION_MASK=0000000000000000000000000000000000000000000000000000000000000000000000000000000 ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_INVERSION_MASK_LENGTH=79                                                                       ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_NODE_CRC_LOWORD=45905                                                                          ; --            ; --          ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT      ; SLD_NODE_CRC_HIWORD=16618                                                                          ; --            ; --          ; auto_signaltap_0 ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                                                                ; --            ; --          ; eda_blast_fpga   ;
-; USE_SIGNALTAP_FILE                 ; stp1.stp                                                                                           ; --            ; --          ; --               ;
-+------------------------------------+----------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                       ;
++-------------------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; Assignment Name                                 ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                           ; 151176630078.127018519202400          ; --            ; --          ; --             ;
+; CYCLONEII_OPTIMIZATION_TECHNIQUE                ; Area                                  ; Balanced      ; --          ; --             ;
+; DISABLE_OCP_HW_EVAL                             ; On                                    ; Off           ; --          ; --             ;
+; ENABLE_SIGNALTAP                                ; Off                                   ; --            ; --          ; --             ;
+; FITTER_EFFORT                                   ; Fast Fit                              ; Auto Fit      ; --          ; --             ;
+; IP_TOOL_NAME                                    ; ALTSYNCRAM                            ; --            ; --          ; --             ;
+; IP_TOOL_NAME                                    ; LPM_DIVIDE                            ; --            ; --          ; --             ;
+; IP_TOOL_NAME                                    ; PARALLEL_ADD                          ; --            ; --          ; --             ;
+; IP_TOOL_NAME                                    ; LPM_MULT                              ; --            ; --          ; --             ;
+; IP_TOOL_NAME                                    ; LPM_ADD_SUB                           ; --            ; --          ; --             ;
+; IP_TOOL_NAME                                    ; LPM_MULT                              ; --            ; --          ; --             ;
+; IP_TOOL_NAME                                    ; LPM_DIVIDE                            ; --            ; --          ; --             ;
+; IP_TOOL_NAME                                    ; ALTSYNCRAM                            ; --            ; --          ; --             ;
+; IP_TOOL_NAME                                    ; LPM_MUX                               ; --            ; --          ; --             ;
+; IP_TOOL_NAME                                    ; ALTSYNCRAM                            ; --            ; --          ; --             ;
+; IP_TOOL_NAME                                    ; LPM_ROM                               ; --            ; --          ; --             ;
+; IP_TOOL_NAME                                    ; LPM_ROM                               ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                                 ; 9.0                                   ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                                 ; 9.0                                   ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                                 ; 9.0                                   ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                                 ; 9.0                                   ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                                 ; 9.0                                   ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                                 ; 9.0                                   ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                                 ; 9.0                                   ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                                 ; 9.0                                   ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                                 ; 9.0                                   ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                                 ; 9.0                                   ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                                 ; 9.0                                   ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                                 ; 9.0                                   ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP                          ; 85                                    ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP                          ; 0                                     ; --            ; --          ; --             ;
+; MISC_FILE                                       ; c:/workspace/8bitbrain/8bitbrain.dpf  ; --            ; --          ; --             ;
+; MISC_FILE                                       ; altsyncram0.tdf                       ; --            ; --          ; --             ;
+; MISC_FILE                                       ; altsyncram0.bsf                       ; --            ; --          ; --             ;
+; MISC_FILE                                       ; altsyncram0.cmp                       ; --            ; --          ; --             ;
+; MISC_FILE                                       ; lpm_divide0.bsf                       ; --            ; --          ; --             ;
+; MISC_FILE                                       ; lpm_divide0.inc                       ; --            ; --          ; --             ;
+; MISC_FILE                                       ; lpm_divide0.cmp                       ; --            ; --          ; --             ;
+; MISC_FILE                                       ; mixeradd.bsf                          ; --            ; --          ; --             ;
+; MISC_FILE                                       ; mixeradd.inc                          ; --            ; --          ; --             ;
+; MISC_FILE                                       ; mixeradd.cmp                          ; --            ; --          ; --             ;
+; MISC_FILE                                       ; mixermult.bsf                         ; --            ; --          ; --             ;
+; MISC_FILE                                       ; mixermult.inc                         ; --            ; --          ; --             ;
+; MISC_FILE                                       ; mixermult.cmp                         ; --            ; --          ; --             ;
+; MISC_FILE                                       ; mixersub.bsf                          ; --            ; --          ; --             ;
+; MISC_FILE                                       ; mixersub.inc                          ; --            ; --          ; --             ;
+; MISC_FILE                                       ; mixersub.cmp                          ; --            ; --          ; --             ;
+; MISC_FILE                                       ; asdrmult.bsf                          ; --            ; --          ; --             ;
+; MISC_FILE                                       ; asdrmult.cmp                          ; --            ; --          ; --             ;
+; MISC_FILE                                       ; asdrdiv.bsf                           ; --            ; --          ; --             ;
+; MISC_FILE                                       ; asdrdiv.cmp                           ; --            ; --          ; --             ;
+; MISC_FILE                                       ; maj7.bsf                              ; --            ; --          ; --             ;
+; MISC_FILE                                       ; maj7.cmp                              ; --            ; --          ; --             ;
+; MISC_FILE                                       ; arp_mux.bsf                           ; --            ; --          ; --             ;
+; MISC_FILE                                       ; arp_mux.cmp                           ; --            ; --          ; --             ;
+; MISC_FILE                                       ; int_bank.bsf                          ; --            ; --          ; --             ;
+; MISC_FILE                                       ; int_bank.inc                          ; --            ; --          ; --             ;
+; MISC_FILE                                       ; int_bank.cmp                          ; --            ; --          ; --             ;
+; MISC_FILE                                       ; lpm_rom0.bsf                          ; --            ; --          ; --             ;
+; MISC_FILE                                       ; lpm_rom0.inc                          ; --            ; --          ; --             ;
+; MISC_FILE                                       ; lpm_rom0.cmp                          ; --            ; --          ; --             ;
+; MISC_FILE                                       ; keyrom.bsf                            ; --            ; --          ; --             ;
+; MISC_FILE                                       ; keyrom.inc                            ; --            ; --          ; --             ;
+; MISC_FILE                                       ; keyrom.cmp                            ; --            ; --          ; --             ;
+; PARTITION_COLOR                                 ; 16764057                              ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE                          ; SOURCE                                ; --            ; --          ; Top            ;
+; PHYSICAL_SYNTHESIS_COMBO_LOGIC                  ; On                                    ; Off           ; --          ; --             ;
+; PHYSICAL_SYNTHESIS_COMBO_LOGIC_FOR_AREA         ; On                                    ; Off           ; --          ; --             ;
+; PHYSICAL_SYNTHESIS_EFFORT                       ; Extra                                 ; Normal        ; --          ; --             ;
+; PHYSICAL_SYNTHESIS_MAP_LOGIC_TO_MEMORY_FOR_AREA ; On                                    ; Off           ; --          ; --             ;
+; POWER_BOARD_THERMAL_MODEL                       ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION                   ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
+; SEARCH_PATH                                     ; .                                     ; --            ; --          ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS              ; Off                                   ; --            ; --          ; eda_blast_fpga ;
+; USE_SIGNALTAP_FILE                              ; stp1.stp                              ; --            ; --          ; --             ;
++-------------------------------------------------+---------------------------------------+---------------+-------------+----------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
@@ -159,11 +157,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:01:14     ; 1.0                     ; 237 MB              ; 00:01:12                           ;
-; Fitter                  ; 00:00:46     ; 1.0                     ; 219 MB              ; 00:00:46                           ;
-; Assembler               ; 00:00:02     ; 1.0                     ; 177 MB              ; 00:00:02                           ;
-; Classic Timing Analyzer ; 00:00:03     ; 1.0                     ; 170 MB              ; 00:00:03                           ;
-; Total                   ; 00:02:05     ; --                      ; --                  ; 00:02:03                           ;
+; Analysis & Synthesis    ; 00:00:36     ; 1.0                     ; 221 MB              ; 00:00:35                           ;
+; Fitter                  ; 00:00:35     ; 1.0                     ; 209 MB              ; 00:00:34                           ;
+; Assembler               ; 00:00:02     ; 1.0                     ; 175 MB              ; 00:00:02                           ;
+; Classic Timing Analyzer ; 00:00:02     ; 1.0                     ; 158 MB              ; 00:00:02                           ;
+; Total                   ; 00:01:15     ; --                      ; --                  ; 00:01:13                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

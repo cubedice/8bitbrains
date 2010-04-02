@@ -84,7 +84,7 @@ BEGIN
 	lpm_divide_component : lpm_divide
 	GENERIC MAP (
 		lpm_drepresentation => "UNSIGNED",
-		lpm_hint => "MAXIMIZE_SPEED=6,LPM_REMAINDERPOSITIVE=TRUE",
+		lpm_hint => "MAXIMIZE_SPEED=5,LPM_REMAINDERPOSITIVE=TRUE",
 		lpm_nrepresentation => "UNSIGNED",
 		lpm_pipeline => 1,
 		lpm_type => "LPM_DIVIDE",
@@ -108,12 +108,12 @@ END SYN;
 -- ============================================================
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Cyclone II"
 -- Retrieval info: PRIVATE: PRIVATE_LPM_REMAINDERPOSITIVE STRING "TRUE"
--- Retrieval info: PRIVATE: PRIVATE_MAXIMIZE_SPEED NUMERIC "6"
+-- Retrieval info: PRIVATE: PRIVATE_MAXIMIZE_SPEED NUMERIC "5"
 -- Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
 -- Retrieval info: PRIVATE: USING_PIPELINE NUMERIC "1"
 -- Retrieval info: PRIVATE: VERSION_NUMBER NUMERIC "2"
 -- Retrieval info: CONSTANT: LPM_DREPRESENTATION STRING "UNSIGNED"
--- Retrieval info: CONSTANT: LPM_HINT STRING "MAXIMIZE_SPEED=6,LPM_REMAINDERPOSITIVE=TRUE"
+-- Retrieval info: CONSTANT: LPM_HINT STRING "MAXIMIZE_SPEED=5,LPM_REMAINDERPOSITIVE=TRUE"
 -- Retrieval info: CONSTANT: LPM_NREPRESENTATION STRING "UNSIGNED"
 -- Retrieval info: CONSTANT: LPM_PIPELINE NUMERIC "1"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_DIVIDE"

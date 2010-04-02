@@ -1,0 +1,113 @@
+-- Copyright (C) 1991-2009 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+
+-- Quartus II generated Memory Initialization File (.mif)
+
+WIDTH=13;
+DEPTH=89;
+
+ADDRESS_RADIX=DEC;
+DATA_RADIX=DEC;
+
+CONTENT BEGIN
+	0    :   00;
+	1    :   27;
+	2    :   29;
+	3    :   31;
+	4    :   33;
+	5    :   35;
+	6    :   37;
+	7    :   39;
+	8    :   41;
+	9    :   44;
+	10   :   46;
+	11   :   49;
+	12	 :	 52;
+	13	 :	 55;
+	14	 :	 58;
+	15	 :	 62;
+	16	 :	 65;
+	17	 :	 69;
+	18	 :	 73;
+	19	 :	 78;
+	20	 :	 82;
+	21	 :	 87;
+	22	 :	 92;
+	23	 :	 98;
+	24	 :	 104;
+	25	 :	 110;
+	26	 :	 117;
+	27	 :	 123;
+	28	 :	 131;
+	29	 :	 139;
+	30	 :	 147;
+	31	 :	 156;
+	32	 :	 165;
+	33	 :	 175;
+	34	 :	 185;
+	35	 :	 196;
+	36	 :	 208;
+	37	 :	 220;
+	38	 :	 233;
+	39	 :	 247;
+	40	 :	 262;
+	41	 :	 277;
+	42	 :	 284;
+	43	 :	 311;
+	44	 :	 330;
+	45	 :	 349;
+	46	 :	 370;
+	47	 :	 392;
+	48	 :	 415;
+	49	 :	 440;
+	50	 :	 466;
+	51	 :	 494;
+	52	 :	 523;
+	53	 :	 554;
+	54	 :	 587;
+	55	 :	 622;
+	56	 :	 659;
+	57	 :	 698;
+	58	 :	 740;
+	59	 :	 784;
+	60	 :	 831;
+	61	 :	 880;
+	62	 :	 932;
+	63	 :	 988;
+	64	 :	 1047;
+	65	 :	 1109;
+	66	 :	 1175;
+	67	 :	 1245;
+	68	 :	 1319;
+	69	 :	 1397;
+	70	 :	 1480;
+	71	 :	 1568;
+	72	 :	 1661;
+	73	 :	 1760;
+	74	 :	 1865;
+	75	 :	 1976;
+	76	 :	 2093;
+	77	 :	 2217;
+	78	 :	 2349;
+	79	 :	 2489;
+	80	 :	 2637;
+	81	 :	 2794;
+	82	 :	 2960;
+	83	 :	 3136;
+	84	 :	 3322;
+	85	 :	 3520;
+	86	 :	 3729;
+	87	 :	 3951;
+	88	 :	 4186;
+END;

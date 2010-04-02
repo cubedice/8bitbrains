@@ -76,7 +76,7 @@ BEGIN
 
 	lpm_mult_component : lpm_mult
 	GENERIC MAP (
-		lpm_hint => "MAXIMIZE_SPEED=5",
+		lpm_hint => "DEDICATED_MULTIPLIER_CIRCUITRY=YES,MAXIMIZE_SPEED=1",
 		lpm_representation => "UNSIGNED",
 		lpm_type => "LPM_MULT",
 		lpm_widtha => 12,
@@ -111,8 +111,8 @@ END SYN;
 -- Retrieval info: PRIVATE: WidthP NUMERIC "20"
 -- Retrieval info: PRIVATE: aclr NUMERIC "0"
 -- Retrieval info: PRIVATE: clken NUMERIC "0"
--- Retrieval info: PRIVATE: optimize NUMERIC "0"
--- Retrieval info: CONSTANT: LPM_HINT STRING "MAXIMIZE_SPEED=5"
+-- Retrieval info: PRIVATE: optimize NUMERIC "2"
+-- Retrieval info: CONSTANT: LPM_HINT STRING "DEDICATED_MULTIPLIER_CIRCUITRY=YES,MAXIMIZE_SPEED=1"
 -- Retrieval info: CONSTANT: LPM_REPRESENTATION STRING "UNSIGNED"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_MULT"
 -- Retrieval info: CONSTANT: LPM_WIDTHA NUMERIC "12"
