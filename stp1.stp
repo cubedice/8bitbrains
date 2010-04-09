@@ -6,161 +6,97 @@
     <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
     <position_info>
       <single attribute="active tab" value="0"/>
-      <single attribute="data horizontal scroll position" value="106"/>
+      <single attribute="data horizontal scroll position" value="8"/>
       <single attribute="data vertical scroll position" value="0"/>
-      <single attribute="setup horizontal scroll position" value="0"/>
+      <single attribute="zoom level denominator" value="8"/>
+      <single attribute="zoom level numerator" value="1"/>
+      <single attribute="zoom offset denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="1047560"/>
       <single attribute="setup vertical scroll position" value="0"/>
-      <single attribute="zoom level denominator" value="1"/>
-      <single attribute="zoom level numerator" value="4"/>
-      <single attribute="zoom offset denominator" value="4"/>
-      <single attribute="zoom offset numerator" value="130817"/>
+      <single attribute="setup horizontal scroll position" value="0"/>
     </position_info>
-    <signal_set global_temp="1" name="signal_set: 2010/03/24 00:34:41  #0">
-      <clock name="clk" polarity="posedge" tap_mode="classic"/>
-      <config ram_type="M4K" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="256" trigger_in_enable="no" trigger_out_enable="no"/>
+    <signal_set global_temp="1" name="signal_set: 2010/04/07 23:32:39  #0">
+      <clock name="clk" polarity="posedge" tap_mode="probeonly"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="1024" trigger_in_enable="no" trigger_out_enable="no"/>
       <top_entity/>
       <signal_vec>
         <trigger_input_vec>
-          <wire name="controller:inst1|diff_play_vec[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_play_vec[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_play_vec[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_play_vec[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_play_vec[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_play_vec[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_trig_vec[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_trig_vec[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_trig_vec[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_trig_vec[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_trig_vec[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_trig_vec[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|pb1" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|play_vec[0]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|play_vec[1]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|play_vec[2]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|play_vec[3]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|play_vec[4]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|play_vec[5]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|prev_wave_bank_rot[1]" tap_mode="classic" type="register"/>
+          <wire name="wr[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wr[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|save_bank_t[0]" tap_mode="probeonly" type="register"/>
+          <wire name="controller:inst1|save_bank_t[1]" tap_mode="probeonly" type="register"/>
+          <wire name="controller:inst1|save_bank_t[2]" tap_mode="probeonly" type="register"/>
+          <wire name="wave_bank_rot[0]" tap_mode="probeonly" type="input pin"/>
+          <wire name="wave_bank_rot[1]" tap_mode="probeonly" type="input pin"/>
         </trigger_input_vec>
         <data_input_vec>
-          <wire name="controller:inst1|diff_play_vec[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_play_vec[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_play_vec[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_play_vec[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_play_vec[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_play_vec[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_trig_vec[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_trig_vec[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_trig_vec[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_trig_vec[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_trig_vec[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_trig_vec[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|pb1" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|play_vec[0]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|play_vec[1]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|play_vec[2]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|play_vec[3]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|play_vec[4]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|prev_wave_bank_rot[1]" tap_mode="classic" type="register"/>
+          <wire name="wr[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wr[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|save_bank_t[0]" tap_mode="probeonly" type="register"/>
+          <wire name="controller:inst1|save_bank_t[1]" tap_mode="probeonly" type="register"/>
+          <wire name="controller:inst1|save_bank_t[2]" tap_mode="probeonly" type="register"/>
+          <wire name="wave_bank_rot[0]" tap_mode="probeonly" type="input pin"/>
+          <wire name="wave_bank_rot[1]" tap_mode="probeonly" type="input pin"/>
         </data_input_vec>
         <storage_qualifier_input_vec>
-          <wire name="controller:inst1|diff_play_vec[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_play_vec[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_play_vec[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_play_vec[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_play_vec[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_play_vec[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_trig_vec[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_trig_vec[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_trig_vec[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_trig_vec[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_trig_vec[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|diff_trig_vec[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|pb1" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst1|play_vec[0]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|play_vec[1]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|play_vec[2]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|play_vec[3]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|play_vec[4]" tap_mode="classic" type="register"/>
-          <wire name="controller:inst1|play_vec[5]" tap_mode="classic" type="register"/>
+          <wire name="controller:inst1|prev_wave_bank_rot[1]" tap_mode="classic" type="register"/>
+          <wire name="wr[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wr[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="controller:inst1|save_bank_t[0]" tap_mode="probeonly" type="register"/>
+          <wire name="controller:inst1|save_bank_t[1]" tap_mode="probeonly" type="register"/>
+          <wire name="controller:inst1|save_bank_t[2]" tap_mode="probeonly" type="register"/>
+          <wire name="wave_bank_rot[0]" tap_mode="probeonly" type="input pin"/>
+          <wire name="wave_bank_rot[1]" tap_mode="probeonly" type="input pin"/>
         </storage_qualifier_input_vec>
       </signal_vec>
       <presentation>
         <data_view>
-          <bus is_signal_inverted="no" link="all" name="controller:inst1|diff_play_vec" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[0]"/>
-            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[1]"/>
-            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[2]"/>
-            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[3]"/>
-            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[4]"/>
-            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[5]"/>
+          <net is_signal_inverted="no" name="wave_bank_rot[0]"/>
+          <net is_signal_inverted="no" name="wave_bank_rot[1]"/>
+          <bus is_signal_inverted="no" link="all" name="controller:inst1|save_bank_t" order="lsb_to_msb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="controller:inst1|save_bank_t[0]"/>
+            <net is_signal_inverted="no" name="controller:inst1|save_bank_t[1]"/>
+            <net is_signal_inverted="no" name="controller:inst1|save_bank_t[2]"/>
           </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst1|diff_trig_vec" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[1]"/>
-            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[2]"/>
-            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[3]"/>
-            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[4]"/>
-            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[5]"/>
-            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[6]"/>
+          <bus is_signal_inverted="no" link="all" name="controller:inst1|prev_wave_bank_rot" order="msb_to_lsb" radix="hex" state="expand" type="register">
+            <net is_signal_inverted="no" name="controller:inst1|prev_wave_bank_rot[1]"/>
           </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst1|play_vec" order="lsb_to_msb" radix="hex" state="collapse" type="register">
-            <net is_signal_inverted="no" name="controller:inst1|play_vec[0]"/>
-            <net is_signal_inverted="no" name="controller:inst1|play_vec[1]"/>
-            <net is_signal_inverted="no" name="controller:inst1|play_vec[2]"/>
-            <net is_signal_inverted="no" name="controller:inst1|play_vec[3]"/>
-            <net is_signal_inverted="no" name="controller:inst1|play_vec[4]"/>
+          <bus is_signal_inverted="no" link="all" name="wr" order="lsb_to_msb" radix="hex" state="expand" type="combinatorial">
+            <net is_signal_inverted="no" name="wr[0]"/>
+            <net is_signal_inverted="no" name="wr[1]"/>
           </bus>
-          <net is_signal_inverted="no" name="controller:inst1|pb1"/>
         </data_view>
         <setup_view>
-          <bus is_signal_inverted="no" link="all" name="controller:inst1|diff_play_vec" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[0]"/>
-            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[1]"/>
-            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[2]"/>
-            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[3]"/>
-            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[4]"/>
-            <net is_signal_inverted="no" name="controller:inst1|diff_play_vec[5]"/>
+          <net is_signal_inverted="no" name="wave_bank_rot[0]"/>
+          <net is_signal_inverted="no" name="wave_bank_rot[1]"/>
+          <bus is_signal_inverted="no" link="all" name="controller:inst1|save_bank_t" order="lsb_to_msb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="controller:inst1|save_bank_t[0]"/>
+            <net is_signal_inverted="no" name="controller:inst1|save_bank_t[1]"/>
+            <net is_signal_inverted="no" name="controller:inst1|save_bank_t[2]"/>
           </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst1|diff_trig_vec" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[1]"/>
-            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[2]"/>
-            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[3]"/>
-            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[4]"/>
-            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[5]"/>
-            <net is_signal_inverted="no" name="controller:inst1|diff_trig_vec[6]"/>
+          <bus is_signal_inverted="no" link="all" name="controller:inst1|prev_wave_bank_rot" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="controller:inst1|prev_wave_bank_rot[1]"/>
           </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst1|play_vec" order="lsb_to_msb" radix="hex" state="collapse" type="register">
-            <net is_signal_inverted="no" name="controller:inst1|play_vec[0]"/>
-            <net is_signal_inverted="no" name="controller:inst1|play_vec[1]"/>
-            <net is_signal_inverted="no" name="controller:inst1|play_vec[2]"/>
-            <net is_signal_inverted="no" name="controller:inst1|play_vec[3]"/>
-            <net is_signal_inverted="no" name="controller:inst1|play_vec[4]"/>
-            <net is_signal_inverted="no" name="controller:inst1|play_vec[5]"/>
+          <bus is_signal_inverted="no" link="all" name="wr" order="lsb_to_msb" radix="hex" state="expand" type="combinatorial">
+            <net is_signal_inverted="no" name="wr[0]"/>
+            <net is_signal_inverted="no" name="wr[1]"/>
           </bus>
-          <net is_signal_inverted="no" name="controller:inst1|pb1"/>
         </setup_view>
       </presentation>
-      <trigger CRC="40EAB351" attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2010/03/24 00:34:58  #0" position="center" power_up_trigger_mode="false" record_data_gap="true" segment_size="1" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
+      <trigger CRC="6B33693C" attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2010/04/07 23:32:39  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="1" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
         <power_up_trigger position="pre" storage_qualifier_disabled="no" trigger_in="dont_care" trigger_out="active high"/>
         <events use_custom_flow_control="no">
-          <level enabled="yes" name="condition1" type="basic">'controller:inst1|pb1' == either edge
+          <level enabled="yes" name="condition1" type="basic">'wr[0]' == either edge
             <power_up enabled="yes">
             </power_up>
-            <op_node>
-              <op_node left="347" top="80" type="Advanced Trigger Level Result"/>
-            </op_node>
+            <op_node/>
           </level>
-          <custom_flow_control>
-            <runtime_configurable comparison_operator="yes" counter_action="no" flag_action="no" logical_operator="yes" numerical_value="yes" state_transition="yes"/>
-            <flow_expression><![CDATA[state ST1:
-trigger;]]>
-            </flow_expression>
-            <power_up_flow_expression><![CDATA[state ST1:
-trigger;]]>
-            </power_up_flow_expression>
-          </custom_flow_control>
         </events>
         <storage_qualifier_events>
-          <transitional>0000000000000000000
-            <pwr_up_transitional>0000000000000000000
+          <transitional>00000000
+            <pwr_up_transitional>00000000
             </pwr_up_transitional>
           </transitional>
           <storage_qualifier_level type="basic">
@@ -180,8 +116,8 @@ trigger;]]>
           </storage_qualifier_level>
         </storage_qualifier_events>
         <log>
-          <data global_temp="1" name="log: 2010/03/24 00:50:33  #0" power_up_mode="false" sample_depth="255" trigger_position="-1">000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</data>
-          <extradata>1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</extradata>
+          <data global_temp="1" name="log: 2010/04/08 01:35:17  #0" power_up_mode="false" sample_depth="1023" trigger_position="-1">100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001</data>
+          <extradata>111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</extradata>
         </log>
       </trigger>
     </signal_set>
@@ -191,7 +127,6 @@ trigger;]]>
   <global_info>
     <single attribute="active instance" value="0"/>
     <single attribute="lock mode" value="36110"/>
-    <multi attribute="column width" size="23" value="34,34,275,74,68,70,88,88,98,98,88,88,110,101,101,101,101,101,101,101,101,107,78"/>
-    <multi attribute="window position" size="9" value="1072,557,398,124,0,50,87,0,1"/>
+    <multi attribute="window position" size="9" value="1440,806,398,124,0,50,124,0,0"/>
   </global_info>
 </session>

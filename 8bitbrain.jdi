@@ -26,21 +26,21 @@
         <port name="data_read[5]" source="controller:inst1|maj7:seq1|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|altsyncram_en82:altsyncram1|q_b[5]"/>
         <port name="data_read[6]" source="controller:inst1|maj7:seq1|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|altsyncram_en82:altsyncram1|q_b[6]"/>
         <port name="data_read[7]" source="controller:inst1|maj7:seq1|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|altsyncram_en82:altsyncram1|q_b[7]"/>
-        <port name="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_raw_tck" source="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_raw_tck"/>
-        <port name="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_tdi" source="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_tdi"/>
-        <port name="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_usr1" source="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_usr1"/>
-        <port name="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_jtag_state_cdr" source="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_jtag_state_cdr"/>
-        <port name="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_jtag_state_sdr" source="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_jtag_state_sdr"/>
-        <port name="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_jtag_state_e1dr" source="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_jtag_state_e1dr"/>
-        <port name="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_jtag_state_udr" source="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_jtag_state_udr"/>
-        <port name="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_jtag_state_uir" source="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_jtag_state_uir"/>
-        <port name="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_clr" source="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_clr"/>
-        <port name="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_ena" source="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_ena"/>
-        <port name="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_ir_in_0_" source="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_ir_in_0_"/>
-        <port name="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_ir_in_1_" source="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_ir_in_1_"/>
-        <port name="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_ir_in_2_" source="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_ir_in_2_"/>
-        <port name="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_ir_in_3_" source="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_ir_in_3_"/>
-        <port name="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_ir_in_4_" source="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_ir_in_4_"/>
+        <port name="raw_tck" source="altera_internal_jtag"/>
+        <port name="tdi" source="altera_internal_jtag"/>
+        <port name="usr1" source="sld_hub:sld_hub_inst|virtual_ir_scan_reg"/>
+        <port name="jtag_state_cdr" source="sld_hub:sld_hub_inst|sld_shadow_jsm:shadow_jsm|state[3]"/>
+        <port name="jtag_state_sdr" source="sld_hub:sld_hub_inst|sld_shadow_jsm:shadow_jsm|state[4]"/>
+        <port name="jtag_state_e1dr" source="sld_hub:sld_hub_inst|sld_shadow_jsm:shadow_jsm|state[5]"/>
+        <port name="jtag_state_udr" source="sld_hub:sld_hub_inst|sld_shadow_jsm:shadow_jsm|state[8]"/>
+        <port name="jtag_state_uir" source="sld_hub:sld_hub_inst|sld_shadow_jsm:shadow_jsm|state[15]"/>
+        <port name="clr" source="sld_hub:sld_hub_inst|node_clr~0"/>
+        <port name="ena" source="sld_hub:sld_hub_inst|node_ena[1]~reg0"/>
+        <port name="ir_in[0]" source="sld_hub:sld_hub_inst|irf_reg[1][0]"/>
+        <port name="ir_in[1]" source="sld_hub:sld_hub_inst|irf_reg[1][1]"/>
+        <port name="ir_in[2]" source="sld_hub:sld_hub_inst|irf_reg[1][2]"/>
+        <port name="ir_in[3]" source="sld_hub:sld_hub_inst|irf_reg[1][3]"/>
+        <port name="ir_in[4]" source="sld_hub:sld_hub_inst|irf_reg[1][4]"/>
       </inputs>
       <outputs>
         <port name="tck_usr"/>
@@ -60,12 +60,17 @@
         <port name="data_write[5]"/>
         <port name="data_write[6]"/>
         <port name="data_write[7]"/>
-        <port name="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_ir_out_0_"/>
-        <port name="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_ir_out_1_"/>
-        <port name="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_ir_out_2_"/>
-        <port name="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_ir_out_3_"/>
-        <port name="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_ir_out_4_"/>
-        <port name="jtag.bp.inst1_seq1_altsyncram_component_auto_generated_mgl_prim2_tdo"/>
+        <port name="ir_out[0]"/>
+        <port name="ir_out[0]"/>
+        <port name="ir_out[1]"/>
+        <port name="ir_out[1]"/>
+        <port name="ir_out[2]"/>
+        <port name="ir_out[2]"/>
+        <port name="ir_out[3]"/>
+        <port name="ir_out[3]"/>
+        <port name="ir_out[4]"/>
+        <port name="ir_out[4]"/>
+        <port name="tdo"/>
       </outputs>
     </node>
   </node_info>

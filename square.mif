@@ -11,5 +11,5 @@ DATA_RADIX = HEX; % Enter BIN, DEC, HEX, OCT, or UNS; unless %
 CONTENT
 BEGIN
 	[0..64]: 0; % Range--Every address from 0 to F = 3FFF %
-	[65..127] : FFF; % Single address--Address 6 = F %
+	[65..127] : EFF; % Single address--Address 6 = F %
 END;

@@ -9,12 +9,13 @@ entity addrgen is
 	port (
 		clk					: in std_logic;
 		freq 				: in std_logic_vector(12 downto 0);
-		addr				: out std_logic_vector(6 downto 0);
-		count_end			: buffer std_logic_vector(17 downto 0) );
+		addr				: out std_logic_vector(6 downto 0)
+		 );
 end addrgen;
 architecture arch of addrgen is
 	signal tmp_addr : std_logic_vector(6 downto 0);
 	signal count : std_logic_vector(17 downto 0);
+	signal count_end	: std_logic_vector(17 downto 0);
 	signal none : std_logic_vector(12 downto 0);
 	constant numer : std_logic_vector(17 downto 0) := "110000000001001000";
 	component lpm_divide0 is

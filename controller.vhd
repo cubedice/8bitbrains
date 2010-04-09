@@ -102,20 +102,19 @@ entity controller is
 		wave_bank_rot 									: in std_logic_vector(1 downto 0);
 		reset,arp_mode_in								: in std_logic;
 		save_to_bank									: in std_logic;
-		VASDRld											: out std_logic;
-		VASDRout,q										: out std_logic_vector(7 downto 0);
-		voice_sel, VASDR_sel							: out std_logic_vector(2 downto 0);
 		gate1o,gate2o,gate3o							: out std_logic;
 		freq1,freq2,freq3								: out std_logic_vector(12 downto 0);
 		arp_mode										: buffer std_logic;
 		arp_style										: out std_logic_vector(2 downto 0);
 		octave_out										: out std_logic_vector(1 downto 0);
 		save_bank										: out std_logic_vector(2 downto 0);
-		save_mode										: buffer std_logic
+		save_mode										: buffer std_logic;
+		param											: buffer std_logic_vector(5 downto 0);
+		modifier										: out std_logic_vector(1 downto 0)
 		);	
 end controller;
 architecture arch of controller is
-signal		gate1,gate2,gate3																: std_logic;
+signal		gate1,gate2,gate3, wait_cycle													: std_logic;
 signal		seq_offset1,seq_offset2,seq_offset3												: std_logic_vector(7 downto 0);
 signal		key1b,key1,key1bb,key2b,key2bb,key2,key3b,key3bb,key3,seq_index					: std_logic_vector(6 downto 0);
 signal 		freq1_i,freq2_i,freq3_i															: std_logic_vector(12 downto 0);
@@ -130,8 +129,8 @@ signal 		arpmode,arpmode_t,prev_arp_mode_in												: std_logic;
 signal 		curbtns   																		: std_logic_vector(6 downto 0);
 signal 		prev_trig_vec,trig_vec,diff_trig_vec,diff_btn_vec			  					: std_logic_vector(6 downto 0);
 signal	 	prev_play_vec,play_vec,diff_play_vec 											: std_logic_vector(5 downto 0);
-signal 		tempo_ctr, tempo_end															: integer range 0 to 10000000;
-signal		prev_wave_bank_rot																: std_logic_vector(1 downto 0);
+signal 		tempo_ctr, tempo_end, rot_ctr													: integer range 0 to 10000000;
+signal		prev_wave_bank_rot, prev_edit_sel_rot, prev_edit_change_rot						: std_logic_vector(1 downto 0);
 constant 	STRING1																			: std_logic_vector (1 DOWNTO 0):= "00";
 constant 	STRING2																			: std_logic_vector (1 DOWNTO 0):= "01";
 constant 	STRING3																			: std_logic_vector (1 DOWNTO 0):= "10";
@@ -308,37 +307,75 @@ begin
 			prev_save_bank_t <= "000";
 			arpmode <= '1';
 		elsif clk'event and clk = '1' then
+		
+			
 			if prev_wave_bank_rot(0) /= wave_bank_rot(0) then
-				if wave_bank_rot(1) = '1' then
-					save_bank_t <= save_bank_t + 1;
-				else
-					save_bank_t <= save_bank_t - 1;
-				end if;
-			elsif prev_wave_bank_rot(1) /= wave_bank_rot(1) then
 				if wave_bank_rot(0) = '1' then
-					save_bank_t <= save_bank_t - 1;
-				else
-					save_bank_t <= save_bank_t + 1;
+					if wave_bank_rot(1) = '1' then
+						save_bank_t <= save_bank_t + 1;
+					else
+						save_bank_t <= save_bank_t - 1;
+					end if;
 				end if;
 			end if;
 			prev_wave_bank_rot <= wave_bank_rot;
 			
 			
 			if prev_save_bank_t /= save_bank_t and save_mode = '0' then
-				octave <= octave_t;
-				ch1offset2 <= ch1offset2_t; 
-				ch1offset3 <= ch1offset3_t; 
-				ch2offset2 <= ch2offset2_t; 
-				ch2offset3 <= ch2offset3_t; 
-				ch3offset2 <= ch3offset2_t; 
-				ch3offset3 <= ch3offset3_t; 
-				arpmode <= arpmode_t;
+				if wait_cycle = '1' then
+					octave <= octave_t;
+					ch1offset2 <= ch1offset2_t; 
+					ch1offset3 <= ch1offset3_t; 
+					ch2offset2 <= ch2offset2_t; 
+					ch2offset3 <= ch2offset3_t; 
+					ch3offset2 <= ch3offset2_t; 
+					ch3offset3 <= ch3offset3_t; 
+					arpmode <= arpmode_t;
+					wait_cycle <= '0';
+					prev_save_bank_t <= save_bank_t;
+				else
+					wait_cycle <= '1';
+				end if;
 			end if;
+			
 			if arp_mode_in /= prev_arp_mode_in and arp_mode_in = '1' then
 				arpmode <= not arpmode;
 			end if;
 			prev_arp_mode_in <= arp_mode_in;
-			prev_save_bank_t <= save_bank_t;
+			
+			
+			
+			if prev_edit_sel_rot(0) /= edit_select_rot(0) then
+				if edit_select_rot(0) = '1' then
+					if edit_select_rot(1) = '1' then
+						if param >= "001111" then
+							param <= "000000";
+						else
+							param <= param + 1;
+						end if;
+					else
+						if param = "000000" then
+							param <= "001111";
+						else
+							param <= param - 1;
+						end if;
+					end if;
+				end if;
+			end if;
+			prev_edit_sel_rot <= edit_select_rot;
+			
+			if prev_edit_change_rot(0) /= edit_change_rot(0) then
+				if edit_change_rot(0) = '1' then
+					if edit_change_rot(1) = '1' then
+						modifier <= "11";
+					else
+						modifier <= "10";
+					end if;
+				end if;
+			else
+				modifier <= "00";
+			end if;
+			prev_edit_change_rot <= edit_change_rot;
 		end if;
 	end process;
 

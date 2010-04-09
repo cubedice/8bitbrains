@@ -36,6 +36,7 @@
 # -------------------------------------------------------------------------- #
 
 
+set_global_assignment -name INCREMENTAL_COMPILATION OFF
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C8T144C8
 set_global_assignment -name TOP_LEVEL_ENTITY 8bitbrain
@@ -73,13 +74,13 @@ set_global_assignment -name DISABLE_OCP_HW_EVAL ON
 set_global_assignment -name SEARCH_PATH .
 set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "AS INPUT TRI-STATED"
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE s2ptest.vwf
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE POST_FIT -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_location_assignment PIN_87 -to waveform_rot[0]
-set_location_assignment PIN_44 -to waveform_rot[1]
+set_location_assignment PIN_118 -to waveform_rot[0]
+set_location_assignment PIN_119 -to waveform_rot[1]
 set_location_assignment PIN_120 -to wave_bank_rot[0]
 set_location_assignment PIN_67 -to data_in[8]
 set_location_assignment PIN_121 -to wave_bank_rot[1]
@@ -88,12 +89,23 @@ set_global_assignment -name BDF_FILE 8bitbrain.bdf
 set_global_assignment -name VHDL_FILE s2p.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE s2ptest.vwf
 set_global_assignment -name QIP_FILE altsyncram0.qip
+set_global_assignment -name IP_TOOL_NAME ALTSYNCRAM -qip altsyncram0.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip altsyncram0.qip
+set_global_assignment -name MISC_FILE altsyncram0.tdf -qip altsyncram0.qip
+set_global_assignment -name MISC_FILE altsyncram0.bsf -qip altsyncram0.qip
+set_global_assignment -name MISC_FILE altsyncram0.cmp -qip altsyncram0.qip
 set_global_assignment -name VHDL_FILE mixer.vhd
 set_global_assignment -name VHDL_FILE p2s.vhd
 set_global_assignment -name VHDL_FILE addrgen.vhd
 set_global_assignment -name VHDL_FILE modulator.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE addrgentest.vwf
 set_global_assignment -name QIP_FILE lpm_divide0.qip
+set_global_assignment -name IP_TOOL_NAME LPM_DIVIDE -qip lpm_divide0.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip lpm_divide0.qip
+set_global_assignment -name VHDL_FILE lpm_divide0.vhd -qip lpm_divide0.qip
+set_global_assignment -name MISC_FILE lpm_divide0.bsf -qip lpm_divide0.qip
+set_global_assignment -name MISC_FILE lpm_divide0.inc -qip lpm_divide0.qip
+set_global_assignment -name MISC_FILE lpm_divide0.cmp -qip lpm_divide0.qip
 set_global_assignment -name VHDL_FILE brain_pkg.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE 8bitbraintest.vwf
 set_global_assignment -name BDF_FILE controllertest.bdf
@@ -102,13 +114,51 @@ set_global_assignment -name BDF_FILE p2stest.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE p2stest.vwf
 set_global_assignment -name VHDL_FILE btn_reg.vhd
 set_global_assignment -name QIP_FILE mixeradd.qip
+set_global_assignment -name IP_TOOL_NAME PARALLEL_ADD -qip mixeradd.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip mixeradd.qip
+set_global_assignment -name VHDL_FILE mixeradd.vhd -qip mixeradd.qip
+set_global_assignment -name MISC_FILE mixeradd.bsf -qip mixeradd.qip
+set_global_assignment -name MISC_FILE mixeradd.inc -qip mixeradd.qip
+set_global_assignment -name MISC_FILE mixeradd.cmp -qip mixeradd.qip
 set_global_assignment -name QIP_FILE mixermult.qip
+set_global_assignment -name IP_TOOL_NAME LPM_MULT -qip mixermult.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip mixermult.qip
+set_global_assignment -name VHDL_FILE mixermult.vhd -qip mixermult.qip
+set_global_assignment -name MISC_FILE mixermult.bsf -qip mixermult.qip
+set_global_assignment -name MISC_FILE mixermult.inc -qip mixermult.qip
+set_global_assignment -name MISC_FILE mixermult.cmp -qip mixermult.qip
 set_global_assignment -name QIP_FILE mixersub.qip
+set_global_assignment -name IP_TOOL_NAME LPM_ADD_SUB -qip mixersub.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip mixersub.qip
+set_global_assignment -name VHDL_FILE mixersub.vhd -qip mixersub.qip
+set_global_assignment -name MISC_FILE mixersub.bsf -qip mixersub.qip
+set_global_assignment -name MISC_FILE mixersub.inc -qip mixersub.qip
+set_global_assignment -name MISC_FILE mixersub.cmp -qip mixersub.qip
 set_global_assignment -name QIP_FILE asdrmult.qip
+set_global_assignment -name IP_TOOL_NAME LPM_MULT -qip asdrmult.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip asdrmult.qip
+set_global_assignment -name VHDL_FILE asdrmult.vhd -qip asdrmult.qip
+set_global_assignment -name MISC_FILE asdrmult.bsf -qip asdrmult.qip
+set_global_assignment -name MISC_FILE asdrmult.cmp -qip asdrmult.qip
 set_global_assignment -name QIP_FILE asdrdiv.qip
+set_global_assignment -name IP_TOOL_NAME LPM_DIVIDE -qip asdrdiv.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip asdrdiv.qip
+set_global_assignment -name VHDL_FILE asdrdiv.vhd -qip asdrdiv.qip
+set_global_assignment -name MISC_FILE asdrdiv.bsf -qip asdrdiv.qip
+set_global_assignment -name MISC_FILE asdrdiv.cmp -qip asdrdiv.qip
 set_global_assignment -name VHDL_FILE sequencer.vhd
 set_global_assignment -name QIP_FILE maj7.qip
+set_global_assignment -name IP_TOOL_NAME ALTSYNCRAM -qip maj7.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip maj7.qip
+set_global_assignment -name VHDL_FILE maj7.vhd -qip maj7.qip
+set_global_assignment -name MISC_FILE maj7.bsf -qip maj7.qip
+set_global_assignment -name MISC_FILE maj7.cmp -qip maj7.qip
 set_global_assignment -name QIP_FILE arp_mux.qip
+set_global_assignment -name IP_TOOL_NAME LPM_MUX -qip arp_mux.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip arp_mux.qip
+set_global_assignment -name VHDL_FILE arp_mux.vhd -qip arp_mux.qip
+set_global_assignment -name MISC_FILE arp_mux.bsf -qip arp_mux.qip
+set_global_assignment -name MISC_FILE arp_mux.cmp -qip arp_mux.qip
 set_location_assignment PIN_8 -to arpmodein
 set_location_assignment PIN_58 -to btn_vec[4]
 set_location_assignment PIN_57 -to btn_vec[3]
@@ -116,16 +166,33 @@ set_location_assignment PIN_55 -to btn_vec[2]
 set_location_assignment PIN_53 -to btn_vec[1]
 set_global_assignment -name VHDL_FILE ../lab7/lab7.vhd
 set_global_assignment -name VHDL_FILE ../lab2/decoderdisplay.vhd
-set_global_assignment -name OPTIMIZE_HOLD_TIMING "IO PATHS AND MINIMUM TPD PATHS"
 set_global_assignment -name FITTER_EFFORT "FAST FIT"
-set_global_assignment -name PHYSICAL_SYNTHESIS_EFFORT EXTRA
+set_global_assignment -name PHYSICAL_SYNTHESIS_EFFORT NORMAL
 set_global_assignment -name QIP_FILE int_bank.qip
+set_global_assignment -name IP_TOOL_NAME ALTSYNCRAM -qip int_bank.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip int_bank.qip
+set_global_assignment -name VHDL_FILE int_bank.vhd -qip int_bank.qip
+set_global_assignment -name MISC_FILE int_bank.bsf -qip int_bank.qip
+set_global_assignment -name MISC_FILE int_bank.inc -qip int_bank.qip
+set_global_assignment -name MISC_FILE int_bank.cmp -qip int_bank.qip
 set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC ON
 set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC_FOR_AREA ON
 set_global_assignment -name PHYSICAL_SYNTHESIS_MAP_LOGIC_TO_MEMORY_FOR_AREA ON
 set_global_assignment -name CYCLONEII_OPTIMIZATION_TECHNIQUE AREA
 set_global_assignment -name QIP_FILE lpm_rom0.qip
+set_global_assignment -name IP_TOOL_NAME LPM_ROM -qip lpm_rom0.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip lpm_rom0.qip
+set_global_assignment -name VHDL_FILE lpm_rom0.vhd -qip lpm_rom0.qip
+set_global_assignment -name MISC_FILE lpm_rom0.bsf -qip lpm_rom0.qip
+set_global_assignment -name MISC_FILE lpm_rom0.inc -qip lpm_rom0.qip
+set_global_assignment -name MISC_FILE lpm_rom0.cmp -qip lpm_rom0.qip
 set_global_assignment -name QIP_FILE keyrom.qip
+set_global_assignment -name IP_TOOL_NAME LPM_ROM -qip keyrom.qip
+set_global_assignment -name IP_TOOL_VERSION 9.0 -qip keyrom.qip
+set_global_assignment -name VHDL_FILE keyrom.vhd -qip keyrom.qip
+set_global_assignment -name MISC_FILE keyrom.bsf -qip keyrom.qip
+set_global_assignment -name MISC_FILE keyrom.inc -qip keyrom.qip
+set_global_assignment -name MISC_FILE keyrom.cmp -qip keyrom.qip
 set_location_assignment PIN_25 -to LDISPa
 set_location_assignment PIN_28 -to LDISPb
 set_location_assignment PIN_30 -to LDISPc
@@ -141,3 +208,21 @@ set_location_assignment PIN_132 -to RDISPe
 set_location_assignment PIN_133 -to RDISPf
 set_location_assignment PIN_134 -to RDISPg
 set_location_assignment PIN_7 -to save
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT -section_id Top
+
+set_global_assignment -name ENABLE_LOGIC_ANALYZER_INTERFACE OFF
+set_global_assignment -name VHDL_FILE wavegen.vhd
+set_global_assignment -name QIP_FILE square.qip
+set_global_assignment -name QIP_FILE triangle.qip
+set_global_assignment -name QIP_FILE bytebank.qip
+set_location_assignment PIN_115 -to edit_select_rot[1]
+set_location_assignment PIN_114 -to edit_select_rot[0]
+set_location_assignment PIN_113 -to edit_change_rot[1]
+set_location_assignment PIN_112 -to edit_change_rot[0]
+set_location_assignment PIN_99 -to LDISPg16
+set_location_assignment PIN_97 -to LDISPf15
+set_location_assignment PIN_96 -to LDISPe14
+set_location_assignment PIN_94 -to LDISPd13
+set_location_assignment PIN_93 -to LDISPc12
+set_location_assignment PIN_92 -to LDISPb11
+set_location_assignment PIN_87 -to LDISPa10
