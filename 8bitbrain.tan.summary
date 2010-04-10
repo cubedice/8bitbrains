@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 22.061 ns
+Actual Time    : 11.841 ns
 From           : reset
-To             : controller:inst1|key2[6]
+To             : controller:inst1|gate3
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -15,7 +15,7 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 18.809 ns
+Actual Time    : 17.752 ns
 From           : p2s:inst5|data_out
 To             : p2s_dout
 From Clock     : clk
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 3.976 ns
-From           : altera_internal_jtag~TMSUTAP
-To             : sld_hub:sld_hub_inst|sld_shadow_jsm:shadow_jsm|tms_cnt[0]
+Actual Time    : 3.209 ns
+From           : altera_internal_jtag
+To             : sld_hub:sld_hub_inst|tdo_bypass_reg
 From Clock     : --
 To Clock       : altera_internal_jtag~TCKUTAP
 Failed Paths   : 0
@@ -45,9 +45,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 11.39 MHz ( period = 87.802 ns )
-From           : wavegen:inst6|square:sq1|altsyncram:altsyncram_component|altsyncram_pra1:auto_generated|ram_block1a0~porta_address_reg6
-To             : modulator:inst3|wave1[9]
+Actual Time    : 11.69 MHz ( period = 85.515 ns )
+From           : wavegen:inst6|square:sq3|altsyncram:altsyncram_component|altsyncram_pra1:auto_generated|ram_block1a0~porta_address_reg6
+To             : modulator:inst3|wave3[0]
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0
@@ -55,8 +55,8 @@ Failed Paths   : 0
 Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 117.12 MHz ( period = 8.538 ns )
-From           : controller:inst1|maj7:seq1|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]
+Actual Time    : 127.26 MHz ( period = 7.858 ns )
+From           : sld_hub:sld_hub_inst|irf_reg[1][2]
 To             : sld_hub:sld_hub_inst|tdo
 From Clock     : altera_internal_jtag~TCKUTAP
 To Clock       : altera_internal_jtag~TCKUTAP
@@ -66,11 +66,11 @@ Type           : Clock Hold: 'clk'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : controller:inst1|curbtns[4]
-To             : controller:inst1|diff_btn_vec[4]
+From           : controller:inst1|curbtns[1]
+To             : controller:inst1|diff_btn_vec[1]
 From Clock     : clk
 To Clock       : clk
-Failed Paths   : 121
+Failed Paths   : 194
 
 Type           : Total number of failed paths
 Slack          : 
@@ -80,7 +80,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 121
+Failed Paths   : 194
 
 --------------------------------------------------------------------------------------
 

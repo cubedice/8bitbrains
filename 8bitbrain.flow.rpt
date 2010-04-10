@@ -1,5 +1,5 @@
 Flow report for 8bitbrain
-Fri Apr 09 00:17:20 2010
+Fri Apr 09 22:15:19 2010
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +------------------------------------+----------------------------------------------+
-; Flow Status                        ; Successful - Fri Apr 09 00:17:20 2010        ;
+; Flow Status                        ; Successful - Fri Apr 09 22:15:18 2010        ;
 ; Quartus II Version                 ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name                      ; 8bitbrain                                    ;
 ; Top-level Entity Name              ; 8bitbrain                                    ;
@@ -46,13 +46,13 @@ applicable agreement for further details.
 ; Device                             ; EP2C8T144C8                                  ;
 ; Timing Models                      ; Final                                        ;
 ; Met timing requirements            ; No                                           ;
-; Total logic elements               ; 5,600 / 8,256 ( 68 % )                       ;
-;     Total combinational functions  ; 5,450 / 8,256 ( 66 % )                       ;
-;     Dedicated logic registers      ; 858 / 8,256 ( 10 % )                         ;
-; Total registers                    ; 858                                          ;
+; Total logic elements               ; 5,377 / 8,256 ( 65 % )                       ;
+;     Total combinational functions  ; 5,233 / 8,256 ( 63 % )                       ;
+;     Dedicated logic registers      ; 818 / 8,256 ( 10 % )                         ;
+; Total registers                    ; 818                                          ;
 ; Total pins                         ; 58 / 85 ( 68 % )                             ;
 ; Total virtual pins                 ; 0                                            ;
-; Total memory bits                  ; 19,623 / 165,888 ( 12 % )                    ;
+; Total memory bits                  ; 21,671 / 165,888 ( 13 % )                    ;
 ; Embedded Multiplier 9-bit elements ; 22 / 36 ( 61 % )                             ;
 ; Total PLLs                         ; 0 / 2 ( 0 % )                                ;
 +------------------------------------+----------------------------------------------+
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/09/2010 00:15:59 ;
+; Start date & time ; 04/09/2010 22:14:16 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; 8bitbrain           ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ applicable agreement for further details.
 +-------------------------------------------------+---------------------------------------+------------------------------+-------------+----------------+
 ; Assignment Name                                 ; Value                                 ; Default Value                ; Entity Name ; Section Id     ;
 +-------------------------------------------------+---------------------------------------+------------------------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                           ; 151176630078.127078295903460          ; --                           ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                           ; 151176630078.127086205603444          ; --                           ; --          ; --             ;
 ; CYCLONEII_OPTIMIZATION_TECHNIQUE                ; Area                                  ; Balanced                     ; --          ; --             ;
 ; DISABLE_OCP_HW_EVAL                             ; On                                    ; Off                          ; --          ; --             ;
 ; ENABLE_LOGIC_ANALYZER_INTERFACE                 ; Off                                   ; --                           ; --          ; --             ;
@@ -96,6 +96,10 @@ applicable agreement for further details.
 ; IP_TOOL_NAME                                    ; ALTSYNCRAM                            ; --                           ; --          ; --             ;
 ; IP_TOOL_NAME                                    ; ALTSYNCRAM                            ; --                           ; --          ; --             ;
 ; IP_TOOL_NAME                                    ; ALTSYNCRAM                            ; --                           ; --          ; --             ;
+; IP_TOOL_NAME                                    ; LPM_ROM                               ; --                           ; --          ; --             ;
+; IP_TOOL_NAME                                    ; LPM_ROM                               ; --                           ; --          ; --             ;
+; IP_TOOL_VERSION                                 ; 9.0                                   ; --                           ; --          ; --             ;
+; IP_TOOL_VERSION                                 ; 9.0                                   ; --                           ; --          ; --             ;
 ; IP_TOOL_VERSION                                 ; 9.0                                   ; --                           ; --          ; --             ;
 ; IP_TOOL_VERSION                                 ; 9.0                                   ; --                           ; --          ; --             ;
 ; IP_TOOL_VERSION                                 ; 9.0                                   ; --                           ; --          ; --             ;
@@ -155,6 +159,12 @@ applicable agreement for further details.
 ; MISC_FILE                                       ; bytebank.bsf                          ; --                           ; --          ; --             ;
 ; MISC_FILE                                       ; bytebank.inc                          ; --                           ; --          ; --             ;
 ; MISC_FILE                                       ; bytebank.cmp                          ; --                           ; --          ; --             ;
+; MISC_FILE                                       ; pow.bsf                               ; --                           ; --          ; --             ;
+; MISC_FILE                                       ; pow.inc                               ; --                           ; --          ; --             ;
+; MISC_FILE                                       ; pow.cmp                               ; --                           ; --          ; --             ;
+; MISC_FILE                                       ; dom7.bsf                              ; --                           ; --          ; --             ;
+; MISC_FILE                                       ; dom7.inc                              ; --                           ; --          ; --             ;
+; MISC_FILE                                       ; dom7.cmp                              ; --                           ; --          ; --             ;
 ; PARTITION_COLOR                                 ; 16764057                              ; --                           ; --          ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL             ; PLACEMENT                             ; --                           ; --          ; Top            ;
 ; PARTITION_NETLIST_TYPE                          ; POST_FIT                              ; --                           ; --          ; Top            ;
@@ -174,11 +184,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:38     ; 1.0                     ; 221 MB              ; 00:00:36                           ;
-; Fitter                  ; 00:00:34     ; 1.0                     ; 204 MB              ; 00:00:32                           ;
+; Analysis & Synthesis    ; 00:00:30     ; 1.0                     ; 219 MB              ; 00:00:29                           ;
+; Fitter                  ; 00:00:23     ; 1.0                     ; 205 MB              ; 00:00:23                           ;
 ; Assembler               ; 00:00:02     ; 1.0                     ; 175 MB              ; 00:00:02                           ;
-; Classic Timing Analyzer ; 00:00:02     ; 1.0                     ; 158 MB              ; 00:00:02                           ;
-; Total                   ; 00:01:16     ; --                      ; --                  ; 00:01:12                           ;
+; Classic Timing Analyzer ; 00:00:02     ; 1.0                     ; 155 MB              ; 00:00:02                           ;
+; Total                   ; 00:00:57     ; --                      ; --                  ; 00:00:56                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

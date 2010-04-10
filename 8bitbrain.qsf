@@ -226,3 +226,7 @@ set_location_assignment PIN_94 -to LDISPd13
 set_location_assignment PIN_93 -to LDISPc12
 set_location_assignment PIN_92 -to LDISPb11
 set_location_assignment PIN_87 -to LDISPa10
+set_global_assignment -name MIF_FILE pow.mif
+set_global_assignment -name MIF_FILE dom7.mif
+set_global_assignment -name QIP_FILE pow.qip
+set_global_assignment -name QIP_FILE dom7.qip

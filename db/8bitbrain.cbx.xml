@@ -12,6 +12,8 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_mult:Mult3" CBX_FILE_NAME="mult_it01.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_bem.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_mult:Mult4" CBX_FILE_NAME="mult_pt01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|controller:inst1|dom7:seq2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_nd91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|controller:inst1|pow:seq3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_mc91.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_bem.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_mult:Mult5" CBX_FILE_NAME="mult_pt01.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_bem.tdf"/>

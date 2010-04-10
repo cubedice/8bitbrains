@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 8bitbrain
-Fri Apr 09 00:16:37 2010
+Fri Apr 09 22:14:46 2010
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -41,92 +41,96 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
  33. Source assignments for controller:inst1|controller_save_bank:sv_bnk|int_bank:mode_bank|altsyncram:altsyncram_component|altsyncram_sjc1:auto_generated
  34. Source assignments for controller:inst1|maj7:seq1|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|altsyncram_en82:altsyncram1
  35. Source assignments for controller:inst1|maj7:seq1|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr
- 36. Source assignments for wavegen:inst6|wavegen_save_bank:waveselect_bank|int_bank:mode_bank|altsyncram:altsyncram_component|altsyncram_sjc1:auto_generated
- 37. Source assignments for wavegen:inst6|addrgen:addr_gen1|lpm_divide0:div1|lpm_divide:lpm_divide_component|lpm_divide_bft:auto_generated|sign_div_unsign_p8i:divider|alt_u_div_7nf:divider
- 38. Source assignments for wavegen:inst6|addrgen:addr_gen2|lpm_divide0:div1|lpm_divide:lpm_divide_component|lpm_divide_bft:auto_generated|sign_div_unsign_p8i:divider|alt_u_div_7nf:divider
- 39. Source assignments for wavegen:inst6|addrgen:addr_gen3|lpm_divide0:div1|lpm_divide:lpm_divide_component|lpm_divide_bft:auto_generated|sign_div_unsign_p8i:divider|alt_u_div_7nf:divider
- 40. Source assignments for wavegen:inst6|triangle:tri1|altsyncram:altsyncram_component|altsyncram_mtc1:auto_generated
- 41. Source assignments for wavegen:inst6|triangle:tri2|altsyncram:altsyncram_component|altsyncram_mtc1:auto_generated
- 42. Source assignments for wavegen:inst6|triangle:tri3|altsyncram:altsyncram_component|altsyncram_mtc1:auto_generated
- 43. Source assignments for wavegen:inst6|square:sq1|altsyncram:altsyncram_component|altsyncram_pra1:auto_generated
- 44. Source assignments for wavegen:inst6|square:sq2|altsyncram:altsyncram_component|altsyncram_pra1:auto_generated
- 45. Source assignments for wavegen:inst6|square:sq3|altsyncram:altsyncram_component|altsyncram_pra1:auto_generated
- 46. Source assignments for sld_hub:sld_hub_inst
- 47. Source assignments for sld_hub:sld_hub_inst|sld_rom_sr:hub_info_reg
- 48. Parameter Settings for User Entity Instance: mixer:inst2|mixeradd:add1|parallel_add:parallel_add_component
- 49. Parameter Settings for User Entity Instance: mixer:inst2|mixermult:mult1|lpm_mult:lpm_mult_component
- 50. Parameter Settings for User Entity Instance: mixer:inst2|mixersub:sub1|lpm_add_sub:lpm_add_sub_component
- 51. Parameter Settings for User Entity Instance: mixer:inst2|mixeradd:add2|parallel_add:parallel_add_component
- 52. Parameter Settings for User Entity Instance: mixer:inst2|mixermult:mult2|lpm_mult:lpm_mult_component
- 53. Parameter Settings for User Entity Instance: mixer:inst2|mixersub:sub2|lpm_add_sub:lpm_add_sub_component
- 54. Parameter Settings for User Entity Instance: modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:volbank|altsyncram:altsyncram_component
- 55. Parameter Settings for User Entity Instance: modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:attbank|altsyncram:altsyncram_component
- 56. Parameter Settings for User Entity Instance: modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:decbank|altsyncram:altsyncram_component
- 57. Parameter Settings for User Entity Instance: modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:susbank|altsyncram:altsyncram_component
- 58. Parameter Settings for User Entity Instance: modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:relbank|altsyncram:altsyncram_component
- 59. Parameter Settings for User Entity Instance: controller:inst1|keyrom:kr1|altsyncram:altsyncram_component
- 60. Parameter Settings for User Entity Instance: controller:inst1|keyrom:kr2|altsyncram:altsyncram_component
- 61. Parameter Settings for User Entity Instance: controller:inst1|keyrom:kr3|altsyncram:altsyncram_component
- 62. Parameter Settings for User Entity Instance: controller:inst1|lpm_rom0:f1|altsyncram:altsyncram_component
- 63. Parameter Settings for User Entity Instance: controller:inst1|lpm_rom0:f2|altsyncram:altsyncram_component
- 64. Parameter Settings for User Entity Instance: controller:inst1|lpm_rom0:f3|altsyncram:altsyncram_component
- 65. Parameter Settings for User Entity Instance: controller:inst1|controller_save_bank:sv_bnk|int_bank:ch1_offset2_bank|altsyncram:altsyncram_component
- 66. Parameter Settings for User Entity Instance: controller:inst1|controller_save_bank:sv_bnk|int_bank:ch1_offset3_bank|altsyncram:altsyncram_component
- 67. Parameter Settings for User Entity Instance: controller:inst1|controller_save_bank:sv_bnk|int_bank:ch2_offset2_bank|altsyncram:altsyncram_component
- 68. Parameter Settings for User Entity Instance: controller:inst1|controller_save_bank:sv_bnk|int_bank:ch2_offset3_bank|altsyncram:altsyncram_component
- 69. Parameter Settings for User Entity Instance: controller:inst1|controller_save_bank:sv_bnk|int_bank:ch3_offset2_bank|altsyncram:altsyncram_component
- 70. Parameter Settings for User Entity Instance: controller:inst1|controller_save_bank:sv_bnk|int_bank:ch3_offset3_bank|altsyncram:altsyncram_component
- 71. Parameter Settings for User Entity Instance: controller:inst1|controller_save_bank:sv_bnk|int_bank:octave_bank|altsyncram:altsyncram_component
- 72. Parameter Settings for User Entity Instance: controller:inst1|controller_save_bank:sv_bnk|int_bank:mode_bank|altsyncram:altsyncram_component
- 73. Parameter Settings for User Entity Instance: controller:inst1|maj7:seq1|altsyncram:altsyncram_component
- 74. Parameter Settings for User Entity Instance: controller:inst1|maj7:seq1|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|sld_mod_ram_rom:mgl_prim2
- 75. Parameter Settings for User Entity Instance: debouncer:inst23
- 76. Parameter Settings for User Entity Instance: divider:inst24
- 77. Parameter Settings for User Entity Instance: debouncer:inst26
- 78. Parameter Settings for User Entity Instance: btn_reg:inst4
- 79. Parameter Settings for User Entity Instance: wavegen:inst6|wavegen_save_bank:waveselect_bank|int_bank:mode_bank|altsyncram:altsyncram_component
- 80. Parameter Settings for User Entity Instance: wavegen:inst6|addrgen:addr_gen1|lpm_divide0:div1|lpm_divide:lpm_divide_component
- 81. Parameter Settings for User Entity Instance: wavegen:inst6|addrgen:addr_gen2|lpm_divide0:div1|lpm_divide:lpm_divide_component
- 82. Parameter Settings for User Entity Instance: wavegen:inst6|addrgen:addr_gen3|lpm_divide0:div1|lpm_divide:lpm_divide_component
- 83. Parameter Settings for User Entity Instance: wavegen:inst6|triangle:tri1|altsyncram:altsyncram_component
- 84. Parameter Settings for User Entity Instance: wavegen:inst6|triangle:tri2|altsyncram:altsyncram_component
- 85. Parameter Settings for User Entity Instance: wavegen:inst6|triangle:tri3|altsyncram:altsyncram_component
- 86. Parameter Settings for User Entity Instance: wavegen:inst6|square:sq1|altsyncram:altsyncram_component
- 87. Parameter Settings for User Entity Instance: wavegen:inst6|square:sq2|altsyncram:altsyncram_component
- 88. Parameter Settings for User Entity Instance: wavegen:inst6|square:sq3|altsyncram:altsyncram_component
- 89. Parameter Settings for Inferred Entity Instance: sld_hub:sld_hub_inst
- 90. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_mult:Mult8
- 91. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_divide:Div8
- 92. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_mult:Mult6
- 93. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_divide:Div6
- 94. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_mult:Mult7
- 95. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_divide:Div7
- 96. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_mult:Mult2
- 97. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_divide:Div2
- 98. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_mult:Mult0
- 99. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_divide:Div0
-100. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_mult:Mult5
-101. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_divide:Div5
-102. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_mult:Mult3
-103. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_divide:Div3
-104. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_mult:Mult1
-105. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_divide:Div1
-106. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_mult:Mult4
-107. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_divide:Div4
-108. lpm_mult Parameter Settings by Entity Instance
-109. altsyncram Parameter Settings by Entity Instance
-110. Port Connectivity Checks: "wavegen:inst6|addrgen:addr_gen1|lpm_divide0:div1"
-111. Port Connectivity Checks: "wavegen:inst6|wavegen_save_bank:waveselect_bank|int_bank:mode_bank"
-112. Port Connectivity Checks: "wavegen:inst6|wavegen_save_bank:waveselect_bank"
-113. Port Connectivity Checks: "controller:inst1|controller_save_bank:sv_bnk|int_bank:mode_bank"
-114. Port Connectivity Checks: "controller:inst1|controller_save_bank:sv_bnk|int_bank:octave_bank"
-115. Port Connectivity Checks: "modulator:inst3|modulator_save_bank:md_sv_bnk"
-116. Port Connectivity Checks: "mixer:inst2|mixersub:sub2"
-117. Port Connectivity Checks: "mixer:inst2|mixermult:mult2"
-118. Port Connectivity Checks: "mixer:inst2|mixersub:sub1"
-119. Port Connectivity Checks: "mixer:inst2|mixermult:mult1"
-120. In-System Memory Content Editor Settings
-121. Analysis & Synthesis Messages
+ 36. Source assignments for controller:inst1|dom7:seq2|altsyncram:altsyncram_component|altsyncram_nd91:auto_generated
+ 37. Source assignments for controller:inst1|pow:seq3|altsyncram:altsyncram_component|altsyncram_mc91:auto_generated
+ 38. Source assignments for wavegen:inst6|wavegen_save_bank:waveselect_bank|int_bank:mode_bank|altsyncram:altsyncram_component|altsyncram_sjc1:auto_generated
+ 39. Source assignments for wavegen:inst6|addrgen:addr_gen1|lpm_divide0:div1|lpm_divide:lpm_divide_component|lpm_divide_bft:auto_generated|sign_div_unsign_p8i:divider|alt_u_div_7nf:divider
+ 40. Source assignments for wavegen:inst6|addrgen:addr_gen2|lpm_divide0:div1|lpm_divide:lpm_divide_component|lpm_divide_bft:auto_generated|sign_div_unsign_p8i:divider|alt_u_div_7nf:divider
+ 41. Source assignments for wavegen:inst6|addrgen:addr_gen3|lpm_divide0:div1|lpm_divide:lpm_divide_component|lpm_divide_bft:auto_generated|sign_div_unsign_p8i:divider|alt_u_div_7nf:divider
+ 42. Source assignments for wavegen:inst6|triangle:tri1|altsyncram:altsyncram_component|altsyncram_mtc1:auto_generated
+ 43. Source assignments for wavegen:inst6|triangle:tri2|altsyncram:altsyncram_component|altsyncram_mtc1:auto_generated
+ 44. Source assignments for wavegen:inst6|triangle:tri3|altsyncram:altsyncram_component|altsyncram_mtc1:auto_generated
+ 45. Source assignments for wavegen:inst6|square:sq1|altsyncram:altsyncram_component|altsyncram_pra1:auto_generated
+ 46. Source assignments for wavegen:inst6|square:sq2|altsyncram:altsyncram_component|altsyncram_pra1:auto_generated
+ 47. Source assignments for wavegen:inst6|square:sq3|altsyncram:altsyncram_component|altsyncram_pra1:auto_generated
+ 48. Source assignments for sld_hub:sld_hub_inst
+ 49. Source assignments for sld_hub:sld_hub_inst|sld_rom_sr:hub_info_reg
+ 50. Parameter Settings for User Entity Instance: mixer:inst2|mixeradd:add1|parallel_add:parallel_add_component
+ 51. Parameter Settings for User Entity Instance: mixer:inst2|mixermult:mult1|lpm_mult:lpm_mult_component
+ 52. Parameter Settings for User Entity Instance: mixer:inst2|mixersub:sub1|lpm_add_sub:lpm_add_sub_component
+ 53. Parameter Settings for User Entity Instance: mixer:inst2|mixeradd:add2|parallel_add:parallel_add_component
+ 54. Parameter Settings for User Entity Instance: mixer:inst2|mixermult:mult2|lpm_mult:lpm_mult_component
+ 55. Parameter Settings for User Entity Instance: mixer:inst2|mixersub:sub2|lpm_add_sub:lpm_add_sub_component
+ 56. Parameter Settings for User Entity Instance: modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:volbank|altsyncram:altsyncram_component
+ 57. Parameter Settings for User Entity Instance: modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:attbank|altsyncram:altsyncram_component
+ 58. Parameter Settings for User Entity Instance: modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:decbank|altsyncram:altsyncram_component
+ 59. Parameter Settings for User Entity Instance: modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:susbank|altsyncram:altsyncram_component
+ 60. Parameter Settings for User Entity Instance: modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:relbank|altsyncram:altsyncram_component
+ 61. Parameter Settings for User Entity Instance: controller:inst1|keyrom:kr1|altsyncram:altsyncram_component
+ 62. Parameter Settings for User Entity Instance: controller:inst1|keyrom:kr2|altsyncram:altsyncram_component
+ 63. Parameter Settings for User Entity Instance: controller:inst1|keyrom:kr3|altsyncram:altsyncram_component
+ 64. Parameter Settings for User Entity Instance: controller:inst1|lpm_rom0:f1|altsyncram:altsyncram_component
+ 65. Parameter Settings for User Entity Instance: controller:inst1|lpm_rom0:f2|altsyncram:altsyncram_component
+ 66. Parameter Settings for User Entity Instance: controller:inst1|lpm_rom0:f3|altsyncram:altsyncram_component
+ 67. Parameter Settings for User Entity Instance: controller:inst1|controller_save_bank:sv_bnk|int_bank:ch1_offset2_bank|altsyncram:altsyncram_component
+ 68. Parameter Settings for User Entity Instance: controller:inst1|controller_save_bank:sv_bnk|int_bank:ch1_offset3_bank|altsyncram:altsyncram_component
+ 69. Parameter Settings for User Entity Instance: controller:inst1|controller_save_bank:sv_bnk|int_bank:ch2_offset2_bank|altsyncram:altsyncram_component
+ 70. Parameter Settings for User Entity Instance: controller:inst1|controller_save_bank:sv_bnk|int_bank:ch2_offset3_bank|altsyncram:altsyncram_component
+ 71. Parameter Settings for User Entity Instance: controller:inst1|controller_save_bank:sv_bnk|int_bank:ch3_offset2_bank|altsyncram:altsyncram_component
+ 72. Parameter Settings for User Entity Instance: controller:inst1|controller_save_bank:sv_bnk|int_bank:ch3_offset3_bank|altsyncram:altsyncram_component
+ 73. Parameter Settings for User Entity Instance: controller:inst1|controller_save_bank:sv_bnk|int_bank:octave_bank|altsyncram:altsyncram_component
+ 74. Parameter Settings for User Entity Instance: controller:inst1|controller_save_bank:sv_bnk|int_bank:mode_bank|altsyncram:altsyncram_component
+ 75. Parameter Settings for User Entity Instance: controller:inst1|maj7:seq1|altsyncram:altsyncram_component
+ 76. Parameter Settings for User Entity Instance: controller:inst1|maj7:seq1|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|sld_mod_ram_rom:mgl_prim2
+ 77. Parameter Settings for User Entity Instance: controller:inst1|dom7:seq2|altsyncram:altsyncram_component
+ 78. Parameter Settings for User Entity Instance: controller:inst1|pow:seq3|altsyncram:altsyncram_component
+ 79. Parameter Settings for User Entity Instance: debouncer:inst23
+ 80. Parameter Settings for User Entity Instance: divider:inst24
+ 81. Parameter Settings for User Entity Instance: debouncer:inst26
+ 82. Parameter Settings for User Entity Instance: btn_reg:inst4
+ 83. Parameter Settings for User Entity Instance: wavegen:inst6|wavegen_save_bank:waveselect_bank|int_bank:mode_bank|altsyncram:altsyncram_component
+ 84. Parameter Settings for User Entity Instance: wavegen:inst6|addrgen:addr_gen1|lpm_divide0:div1|lpm_divide:lpm_divide_component
+ 85. Parameter Settings for User Entity Instance: wavegen:inst6|addrgen:addr_gen2|lpm_divide0:div1|lpm_divide:lpm_divide_component
+ 86. Parameter Settings for User Entity Instance: wavegen:inst6|addrgen:addr_gen3|lpm_divide0:div1|lpm_divide:lpm_divide_component
+ 87. Parameter Settings for User Entity Instance: wavegen:inst6|triangle:tri1|altsyncram:altsyncram_component
+ 88. Parameter Settings for User Entity Instance: wavegen:inst6|triangle:tri2|altsyncram:altsyncram_component
+ 89. Parameter Settings for User Entity Instance: wavegen:inst6|triangle:tri3|altsyncram:altsyncram_component
+ 90. Parameter Settings for User Entity Instance: wavegen:inst6|square:sq1|altsyncram:altsyncram_component
+ 91. Parameter Settings for User Entity Instance: wavegen:inst6|square:sq2|altsyncram:altsyncram_component
+ 92. Parameter Settings for User Entity Instance: wavegen:inst6|square:sq3|altsyncram:altsyncram_component
+ 93. Parameter Settings for Inferred Entity Instance: sld_hub:sld_hub_inst
+ 94. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_mult:Mult8
+ 95. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_divide:Div8
+ 96. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_mult:Mult6
+ 97. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_divide:Div6
+ 98. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_mult:Mult7
+ 99. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_divide:Div7
+100. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_mult:Mult2
+101. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_divide:Div2
+102. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_mult:Mult0
+103. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_divide:Div0
+104. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_mult:Mult5
+105. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_divide:Div5
+106. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_mult:Mult3
+107. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_divide:Div3
+108. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_mult:Mult1
+109. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_divide:Div1
+110. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_mult:Mult4
+111. Parameter Settings for Inferred Entity Instance: modulator:inst3|lpm_divide:Div4
+112. lpm_mult Parameter Settings by Entity Instance
+113. altsyncram Parameter Settings by Entity Instance
+114. Port Connectivity Checks: "wavegen:inst6|addrgen:addr_gen1|lpm_divide0:div1"
+115. Port Connectivity Checks: "wavegen:inst6|wavegen_save_bank:waveselect_bank|int_bank:mode_bank"
+116. Port Connectivity Checks: "wavegen:inst6|wavegen_save_bank:waveselect_bank"
+117. Port Connectivity Checks: "controller:inst1|controller_save_bank:sv_bnk|int_bank:mode_bank"
+118. Port Connectivity Checks: "controller:inst1|controller_save_bank:sv_bnk|int_bank:octave_bank"
+119. Port Connectivity Checks: "modulator:inst3|modulator_save_bank:md_sv_bnk"
+120. Port Connectivity Checks: "mixer:inst2|mixersub:sub2"
+121. Port Connectivity Checks: "mixer:inst2|mixermult:mult2"
+122. Port Connectivity Checks: "mixer:inst2|mixersub:sub1"
+123. Port Connectivity Checks: "mixer:inst2|mixermult:mult1"
+124. In-System Memory Content Editor Settings
+125. Analysis & Synthesis Messages
 
 
 
@@ -152,18 +156,18 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 09 00:16:37 2010        ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 09 22:14:46 2010        ;
 ; Quartus II Version                 ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name                      ; 8bitbrain                                    ;
 ; Top-level Entity Name              ; 8bitbrain                                    ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 5,715                                        ;
-;     Total combinational functions  ; 5,426                                        ;
-;     Dedicated logic registers      ; 884                                          ;
-; Total registers                    ; 884                                          ;
+; Total logic elements               ; 5,487                                        ;
+;     Total combinational functions  ; 5,209                                        ;
+;     Dedicated logic registers      ; 857                                          ;
+; Total registers                    ; 857                                          ;
 ; Total pins                         ; 58                                           ;
 ; Total virtual pins                 ; 0                                            ;
-; Total memory bits                  ; 19,623                                       ;
+; Total memory bits                  ; 21,671                                       ;
 ; Embedded Multiplier 9-bit elements ; 22                                           ;
 ; Total PLLs                         ; 0                                            ;
 +------------------------------------+----------------------------------------------+
@@ -272,6 +276,8 @@ applicable agreement for further details.
 ; square.vhd                       ; yes             ; User Wizard-Generated File         ; c:/workspace/8bitbrain/square.vhd                                       ;
 ; triangle.vhd                     ; yes             ; User Wizard-Generated File         ; c:/workspace/8bitbrain/triangle.vhd                                     ;
 ; bytebank.vhd                     ; yes             ; User Wizard-Generated File         ; c:/workspace/8bitbrain/bytebank.vhd                                     ;
+; pow.vhd                          ; yes             ; User Wizard-Generated File         ; c:/workspace/8bitbrain/pow.vhd                                          ;
+; dom7.vhd                         ; yes             ; User Wizard-Generated File         ; c:/workspace/8bitbrain/dom7.vhd                                         ;
 ; parallel_add.tdf                 ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/parallel_add.tdf        ;
 ; pcpa_add.inc                     ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/pcpa_add.inc            ;
 ; csa_add.inc                      ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/csa_add.inc             ;
@@ -306,6 +312,8 @@ applicable agreement for further details.
 ; db/altsyncram_en82.tdf           ; yes             ; Auto-Generated Megafunction        ; c:/workspace/8bitbrain/db/altsyncram_en82.tdf                           ;
 ; sld_mod_ram_rom.vhd              ; yes             ; Encrypted Megafunction             ; c:/altera/90sp2/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd     ;
 ; sld_rom_sr.vhd                   ; yes             ; Encrypted Megafunction             ; c:/altera/90sp2/quartus/libraries/megafunctions/sld_rom_sr.vhd          ;
+; db/altsyncram_nd91.tdf           ; yes             ; Auto-Generated Megafunction        ; c:/workspace/8bitbrain/db/altsyncram_nd91.tdf                           ;
+; db/altsyncram_mc91.tdf           ; yes             ; Auto-Generated Megafunction        ; c:/workspace/8bitbrain/db/altsyncram_mc91.tdf                           ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_divide.tdf          ;
 ; abs_divider.inc                  ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/abs_divider.inc         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/megafunctions/sign_div_unsign.inc     ;
@@ -330,29 +338,29 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 5,715 ;
+; Estimated Total logic elements              ; 5,487 ;
 ;                                             ;       ;
-; Total combinational functions               ; 5426  ;
+; Total combinational functions               ; 5209  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 1096  ;
-;     -- 3 input functions                    ; 3307  ;
-;     -- <=2 input functions                  ; 1023  ;
+;     -- 4 input functions                    ; 958   ;
+;     -- 3 input functions                    ; 3252  ;
+;     -- <=2 input functions                  ; 999   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 3194  ;
-;     -- arithmetic mode                      ; 2232  ;
+;     -- normal mode                          ; 3037  ;
+;     -- arithmetic mode                      ; 2172  ;
 ;                                             ;       ;
-; Total registers                             ; 884   ;
-;     -- Dedicated logic registers            ; 884   ;
+; Total registers                             ; 857   ;
+;     -- Dedicated logic registers            ; 857   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 58    ;
-; Total memory bits                           ; 19623 ;
+; Total memory bits                           ; 21671 ;
 ; Embedded Multiplier 9-bit elements          ; 22    ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 920   ;
-; Total fan-out                               ; 20506 ;
-; Average fan-out                             ; 3.11  ;
+; Maximum fan-out                             ; 909   ;
+; Total fan-out                               ; 19774 ;
+; Average fan-out                             ; 3.10  ;
 +---------------------------------------------+-------+
 
 
@@ -361,9 +369,9 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                               ; Library Name ;
 +------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |8bitbrain                                                             ; 5426 (2)          ; 884 (0)      ; 19623       ; 22           ; 0       ; 11        ; 58   ; 0            ; |8bitbrain                                                                                                                                                                        ; work         ;
+; |8bitbrain                                                             ; 5209 (2)          ; 857 (0)      ; 21671       ; 22           ; 0       ; 11        ; 58   ; 0            ; |8bitbrain                                                                                                                                                                        ; work         ;
 ;    |btn_reg:inst4|                                                     ; 89 (89)           ; 105 (105)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|btn_reg:inst4                                                                                                                                                          ; work         ;
-;    |controller:inst1|                                                  ; 761 (707)         ; 251 (214)    ; 10191       ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1                                                                                                                                                       ; work         ;
+;    |controller:inst1|                                                  ; 540 (486)         ; 224 (187)    ; 12239       ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1                                                                                                                                                       ; work         ;
 ;       |controller_save_bank:sv_bnk|                                    ; 2 (2)             ; 3 (3)        ; 320         ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1|controller_save_bank:sv_bnk                                                                                                                           ; work         ;
 ;          |int_bank:ch1_offset2_bank|                                   ; 0 (0)             ; 0 (0)        ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1|controller_save_bank:sv_bnk|int_bank:ch1_offset2_bank                                                                                                 ; work         ;
 ;             |altsyncram:altsyncram_component|                          ; 0 (0)             ; 0 (0)        ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1|controller_save_bank:sv_bnk|int_bank:ch1_offset2_bank|altsyncram:altsyncram_component                                                                 ; work         ;
@@ -389,6 +397,9 @@ applicable agreement for further details.
 ;          |int_bank:octave_bank|                                        ; 0 (0)             ; 0 (0)        ; 24          ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1|controller_save_bank:sv_bnk|int_bank:octave_bank                                                                                                      ; work         ;
 ;             |altsyncram:altsyncram_component|                          ; 0 (0)             ; 0 (0)        ; 24          ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1|controller_save_bank:sv_bnk|int_bank:octave_bank|altsyncram:altsyncram_component                                                                      ; work         ;
 ;                |altsyncram_sjc1:auto_generated|                        ; 0 (0)             ; 0 (0)        ; 24          ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1|controller_save_bank:sv_bnk|int_bank:octave_bank|altsyncram:altsyncram_component|altsyncram_sjc1:auto_generated                                       ; work         ;
+;       |dom7:seq2|                                                      ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1|dom7:seq2                                                                                                                                             ; work         ;
+;          |altsyncram:altsyncram_component|                             ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1|dom7:seq2|altsyncram:altsyncram_component                                                                                                             ; work         ;
+;             |altsyncram_nd91:auto_generated|                           ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1|dom7:seq2|altsyncram:altsyncram_component|altsyncram_nd91:auto_generated                                                                              ; work         ;
 ;       |keyrom:kr1|                                                     ; 0 (0)             ; 0 (0)        ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1|keyrom:kr1                                                                                                                                            ; work         ;
 ;          |altsyncram:altsyncram_component|                             ; 0 (0)             ; 0 (0)        ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1|keyrom:kr1|altsyncram:altsyncram_component                                                                                                            ; work         ;
 ;             |altsyncram_6k71:auto_generated|                           ; 0 (0)             ; 0 (0)        ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1|keyrom:kr1|altsyncram:altsyncram_component|altsyncram_6k71:auto_generated                                                                             ; work         ;
@@ -413,12 +424,15 @@ applicable agreement for further details.
 ;                |altsyncram_en82:altsyncram1|                           ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1|maj7:seq1|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|altsyncram_en82:altsyncram1                                                  ; work         ;
 ;                |sld_mod_ram_rom:mgl_prim2|                             ; 52 (33)           ; 34 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1|maj7:seq1|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                    ; work         ;
 ;                   |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr| ; 19 (19)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1|maj7:seq1|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr ; work         ;
+;       |pow:seq3|                                                       ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1|pow:seq3                                                                                                                                              ; work         ;
+;          |altsyncram:altsyncram_component|                             ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1|pow:seq3|altsyncram:altsyncram_component                                                                                                              ; work         ;
+;             |altsyncram_mc91:auto_generated|                           ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|controller:inst1|pow:seq3|altsyncram:altsyncram_component|altsyncram_mc91:auto_generated                                                                               ; work         ;
 ;    |debouncer:inst23|                                                  ; 5 (5)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|debouncer:inst23                                                                                                                                                       ; work         ;
 ;    |debouncer:inst26|                                                  ; 5 (5)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|debouncer:inst26                                                                                                                                                       ; work         ;
 ;    |decoderdisplay:inst27|                                             ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|decoderdisplay:inst27                                                                                                                                                  ; work         ;
 ;    |decoderdisplay:inst31|                                             ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|decoderdisplay:inst31                                                                                                                                                  ; work         ;
 ;    |divider:inst24|                                                    ; 13 (13)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|divider:inst24                                                                                                                                                         ; work         ;
-;    |mixer:inst2|                                                       ; 48 (0)            ; 0 (0)        ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |8bitbrain|mixer:inst2                                                                                                                                                            ; work         ;
+;    |mixer:inst2|                                                       ; 50 (2)            ; 0 (0)        ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |8bitbrain|mixer:inst2                                                                                                                                                            ; work         ;
 ;       |mixeradd:add1|                                                  ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|mixer:inst2|mixeradd:add1                                                                                                                                              ; work         ;
 ;          |parallel_add:parallel_add_component|                         ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|mixer:inst2|mixeradd:add1|parallel_add:parallel_add_component                                                                                                          ; work         ;
 ;             |par_add_mqe:auto_generated|                               ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|mixer:inst2|mixeradd:add1|parallel_add:parallel_add_component|par_add_mqe:auto_generated                                                                               ; work         ;
@@ -505,9 +519,9 @@ applicable agreement for further details.
 ;          |bytebank:relbank|                                            ; 0 (0)             ; 0 (0)        ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:relbank                                                                                                         ; work         ;
 ;             |altsyncram:altsyncram_component|                          ; 0 (0)             ; 0 (0)        ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:relbank|altsyncram:altsyncram_component                                                                         ; work         ;
 ;                |altsyncram_ujc1:auto_generated|                        ; 0 (0)             ; 0 (0)        ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:relbank|altsyncram:altsyncram_component|altsyncram_ujc1:auto_generated                                          ; work         ;
-;    |p2s:inst5|                                                         ; 28 (28)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|p2s:inst5                                                                                                                                                              ; work         ;
+;    |p2s:inst5|                                                         ; 29 (29)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|p2s:inst5                                                                                                                                                              ; work         ;
 ;    |s2p:inst|                                                          ; 50 (50)           ; 70 (70)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|s2p:inst                                                                                                                                                               ; work         ;
-;    |sld_hub:sld_hub_inst|                                              ; 90 (52)           ; 64 (36)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|sld_hub:sld_hub_inst                                                                                                                                                   ; work         ;
+;    |sld_hub:sld_hub_inst|                                              ; 91 (53)           ; 64 (36)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|sld_hub:sld_hub_inst                                                                                                                                                   ; work         ;
 ;       |sld_rom_sr:hub_info_reg|                                        ; 22 (22)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|sld_hub:sld_hub_inst|sld_rom_sr:hub_info_reg                                                                                                                           ; work         ;
 ;       |sld_shadow_jsm:shadow_jsm|                                      ; 16 (16)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|sld_hub:sld_hub_inst|sld_shadow_jsm:shadow_jsm                                                                                                                         ; work         ;
 ;    |wavegen:inst6|                                                     ; 1189 (45)         ; 195 (7)      ; 9240        ; 0            ; 0       ; 0         ; 0    ; 0            ; |8bitbrain|wavegen:inst6                                                                                                                                                          ; work         ;
@@ -568,6 +582,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; controller:inst1|controller_save_bank:sv_bnk|int_bank:ch3_offset3_bank|altsyncram:altsyncram_component|altsyncram_sjc1:auto_generated|ALTSYNCRAM ; M4K  ; Single Port    ; 8            ; 6            ; --           ; --           ; 48   ; None         ;
 ; controller:inst1|controller_save_bank:sv_bnk|int_bank:mode_bank|altsyncram:altsyncram_component|altsyncram_sjc1:auto_generated|ALTSYNCRAM        ; M4K  ; Single Port    ; 8            ; 6            ; --           ; --           ; 48   ; None         ;
 ; controller:inst1|controller_save_bank:sv_bnk|int_bank:octave_bank|altsyncram:altsyncram_component|altsyncram_sjc1:auto_generated|ALTSYNCRAM      ; M4K  ; Single Port    ; 8            ; 6            ; --           ; --           ; 48   ; None         ;
+; controller:inst1|dom7:seq2|altsyncram:altsyncram_component|altsyncram_nd91:auto_generated|ALTSYNCRAM                                             ; M4K  ; ROM            ; 128          ; 8            ; --           ; --           ; 1024 ; dom7.mif     ;
 ; controller:inst1|keyrom:kr1|altsyncram:altsyncram_component|altsyncram_6k71:auto_generated|ALTSYNCRAM                                            ; AUTO ; ROM            ; 256          ; 7            ; --           ; --           ; 1792 ; keys.mif     ;
 ; controller:inst1|keyrom:kr2|altsyncram:altsyncram_component|altsyncram_6k71:auto_generated|ALTSYNCRAM                                            ; AUTO ; ROM            ; 256          ; 7            ; --           ; --           ; 1792 ; keys.mif     ;
 ; controller:inst1|keyrom:kr3|altsyncram:altsyncram_component|altsyncram_6k71:auto_generated|ALTSYNCRAM                                            ; AUTO ; ROM            ; 256          ; 7            ; --           ; --           ; 1792 ; keys.mif     ;
@@ -575,6 +590,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; controller:inst1|lpm_rom0:f2|altsyncram:altsyncram_component|altsyncram_bj91:auto_generated|ALTSYNCRAM                                           ; M4K  ; ROM            ; 89           ; 13           ; --           ; --           ; 1157 ; notes.mif    ;
 ; controller:inst1|lpm_rom0:f3|altsyncram:altsyncram_component|altsyncram_bj91:auto_generated|ALTSYNCRAM                                           ; M4K  ; ROM            ; 89           ; 13           ; --           ; --           ; 1157 ; notes.mif    ;
 ; controller:inst1|maj7:seq1|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|altsyncram_en82:altsyncram1|ALTSYNCRAM                 ; AUTO ; True Dual Port ; 128          ; 8            ; 128          ; 8            ; 1024 ; maj7.mif     ;
+; controller:inst1|pow:seq3|altsyncram:altsyncram_component|altsyncram_mc91:auto_generated|ALTSYNCRAM                                              ; M4K  ; ROM            ; 128          ; 8            ; --           ; --           ; 1024 ; pow.mif      ;
 ; modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:attbank|altsyncram:altsyncram_component|altsyncram_ujc1:auto_generated|ALTSYNCRAM         ; M4K  ; Single Port    ; 8            ; 8            ; --           ; --           ; 64   ; None         ;
 ; modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:decbank|altsyncram:altsyncram_component|altsyncram_ujc1:auto_generated|ALTSYNCRAM         ; M4K  ; Single Port    ; 8            ; 8            ; --           ; --           ; 64   ; None         ;
 ; modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:relbank|altsyncram:altsyncram_component|altsyncram_ujc1:auto_generated|ALTSYNCRAM         ; M4K  ; Single Port    ; 8            ; 8            ; --           ; --           ; 64   ; None         ;
@@ -611,12 +627,12 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------------+-------------------------+------------------------+
 ; Latch Name                                         ; Latch Enable Signal     ; Free of Timing Hazards ;
 +----------------------------------------------------+-------------------------+------------------------+
-; controller:inst1|diff_btn_vec[6]                   ; controller:inst1|Equal4 ; yes                    ;
-; controller:inst1|diff_btn_vec[1]                   ; controller:inst1|Equal4 ; yes                    ;
-; controller:inst1|diff_btn_vec[5]                   ; controller:inst1|Equal4 ; yes                    ;
-; controller:inst1|diff_btn_vec[3]                   ; controller:inst1|Equal4 ; yes                    ;
-; controller:inst1|diff_btn_vec[4]                   ; controller:inst1|Equal4 ; yes                    ;
-; controller:inst1|diff_btn_vec[2]                   ; controller:inst1|Equal4 ; yes                    ;
+; controller:inst1|diff_btn_vec[6]                   ; controller:inst1|Equal6 ; yes                    ;
+; controller:inst1|diff_btn_vec[1]                   ; controller:inst1|Equal6 ; yes                    ;
+; controller:inst1|diff_btn_vec[3]                   ; controller:inst1|Equal6 ; yes                    ;
+; controller:inst1|diff_btn_vec[5]                   ; controller:inst1|Equal6 ; yes                    ;
+; controller:inst1|diff_btn_vec[4]                   ; controller:inst1|Equal6 ; yes                    ;
+; controller:inst1|diff_btn_vec[2]                   ; controller:inst1|Equal6 ; yes                    ;
 ; Number of user-specified and inferred latches = 6  ;                         ;                        ;
 +----------------------------------------------------+-------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -693,12 +709,12 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 884   ;
+; Total registers                              ; 857   ;
 ; Number of registers using Synchronous Clear  ; 188   ;
-; Number of registers using Synchronous Load   ; 117   ;
-; Number of registers using Asynchronous Clear ; 139   ;
+; Number of registers using Synchronous Load   ; 104   ;
+; Number of registers using Asynchronous Clear ; 136   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 504   ;
+; Number of registers using Clock Enable       ; 480   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -724,7 +740,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; modulator:inst3|attack[4]                                                                                                                                                           ; 53      ;
 ; modulator:inst3|attack[6]                                                                                                                                                           ; 64      ;
 ; modulator:inst3|attack[2]                                                                                                                                                           ; 60      ;
-; controller:inst1|arpmode                                                                                                                                                            ; 7       ;
+; controller:inst1|arpmode                                                                                                                                                            ; 8       ;
 ; wavegen:inst6|addrgen:addr_gen1|lpm_divide0:div1|lpm_divide:lpm_divide_component|lpm_divide_bft:auto_generated|sign_div_unsign_p8i:divider|alt_u_div_7nf:divider|DFFDenominator[9]  ; 9       ;
 ; wavegen:inst6|addrgen:addr_gen1|lpm_divide0:div1|lpm_divide:lpm_divide_component|lpm_divide_bft:auto_generated|sign_div_unsign_p8i:divider|alt_u_div_7nf:divider|DFFDenominator[8]  ; 9       ;
 ; wavegen:inst6|addrgen:addr_gen1|lpm_divide0:div1|lpm_divide:lpm_divide_component|lpm_divide_bft:auto_generated|sign_div_unsign_p8i:divider|alt_u_div_7nf:divider|DFFDenominator[7]  ; 9       ;
@@ -764,19 +780,19 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; wavegen:inst6|addrgen:addr_gen3|lpm_divide0:div1|lpm_divide:lpm_divide_component|lpm_divide_bft:auto_generated|sign_div_unsign_p8i:divider|alt_u_div_7nf:divider|DFFDenominator[12] ; 22      ;
 ; wavegen:inst6|addrgen:addr_gen3|lpm_divide0:div1|lpm_divide:lpm_divide_component|lpm_divide_bft:auto_generated|sign_div_unsign_p8i:divider|alt_u_div_7nf:divider|DFFDenominator[11] ; 10      ;
 ; wavegen:inst6|addrgen:addr_gen3|lpm_divide0:div1|lpm_divide:lpm_divide_component|lpm_divide_bft:auto_generated|sign_div_unsign_p8i:divider|alt_u_div_7nf:divider|DFFDenominator[10] ; 9       ;
-; controller:inst1|octave[0]                                                                                                                                                          ; 11      ;
-; controller:inst1|ch2offset2[0]                                                                                                                                                      ; 6       ;
-; controller:inst1|ch2offset2[1]                                                                                                                                                      ; 7       ;
-; controller:inst1|ch3offset2[0]                                                                                                                                                      ; 6       ;
+; controller:inst1|octave[0]                                                                                                                                                          ; 12      ;
+; controller:inst1|ch2offset2[0]                                                                                                                                                      ; 5       ;
+; controller:inst1|ch2offset2[1]                                                                                                                                                      ; 5       ;
+; controller:inst1|ch3offset2[0]                                                                                                                                                      ; 5       ;
 ; controller:inst1|ch3offset2[3]                                                                                                                                                      ; 3       ;
-; controller:inst1|ch3offset2[1]                                                                                                                                                      ; 8       ;
-; controller:inst1|ch1offset2[2]                                                                                                                                                      ; 4       ;
-; controller:inst1|ch2offset3[0]                                                                                                                                                      ; 7       ;
-; controller:inst1|ch2offset3[2]                                                                                                                                                      ; 6       ;
-; controller:inst1|ch2offset3[1]                                                                                                                                                      ; 10      ;
+; controller:inst1|ch3offset2[1]                                                                                                                                                      ; 4       ;
+; controller:inst1|ch1offset2[2]                                                                                                                                                      ; 3       ;
+; controller:inst1|ch2offset3[0]                                                                                                                                                      ; 5       ;
+; controller:inst1|ch2offset3[2]                                                                                                                                                      ; 3       ;
+; controller:inst1|ch2offset3[1]                                                                                                                                                      ; 5       ;
 ; controller:inst1|ch3offset3[4]                                                                                                                                                      ; 3       ;
+; controller:inst1|ch1offset3[1]                                                                                                                                                      ; 5       ;
 ; controller:inst1|ch1offset3[3]                                                                                                                                                      ; 3       ;
-; controller:inst1|ch1offset3[1]                                                                                                                                                      ; 9       ;
 ; Total number of inverted registers = 69                                                                                                                                             ;         ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
@@ -786,51 +802,46 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |8bitbrain|s2p:inst|cs_cnt[6]                                                                                                                                                                     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|controller:inst1|maj7:seq1|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[3]                                                ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |8bitbrain|controller:inst1|seq_index[1]                                                                                                                                                          ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |8bitbrain|controller:inst1|tempo_ctr[9]                                                                                                                                                          ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|attack_ctr1[6]                                                                                                                                                         ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|attack_ctr2[3]                                                                                                                                                         ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|attack_ctr3[3]                                                                                                                                                         ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |8bitbrain|s2p:inst|io_clk_cnt[1]                                                                                                                                                                 ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |8bitbrain|s2p:inst|ioclk                                                                                                                                                                         ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |8bitbrain|controller:inst1|param[2]                                                                                                                                                              ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |8bitbrain|s2p:inst|cs_cnt[1]                                                                                                                                                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|controller:inst1|maj7:seq1|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]                                                ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |8bitbrain|controller:inst1|tempo_ctr[18]                                                                                                                                                         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|attack_ctr1[7]                                                                                                                                                         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|attack_ctr2[7]                                                                                                                                                         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|attack_ctr3[6]                                                                                                                                                         ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |8bitbrain|s2p:inst|io_clk_cnt[2]                                                                                                                                                                 ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |8bitbrain|s2p:inst|i_ioclk                                                                                                                                                                       ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |8bitbrain|controller:inst1|param[3]                                                                                                                                                              ;
 ; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |8bitbrain|sld_hub:sld_hub_inst|irf_reg[1][3]                                                                                                                                                     ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |8bitbrain|wavegen:inst6|wave_sel[2]                                                                                                                                                              ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|release_ctr1[1]                                                                                                                                                        ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|release_ctr2[2]                                                                                                                                                        ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|release_ctr3[0]                                                                                                                                                        ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|release[5]                                                                                                                                                             ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|decay[5]                                                                                                                                                               ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|s2p:inst|io_en[1]                                                                                                                                                                      ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|decay_ctr1[7]                                                                                                                                                          ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|decay_ctr2[2]                                                                                                                                                          ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|decay_ctr3[3]                                                                                                                                                          ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |8bitbrain|sld_hub:sld_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0]                                                                                                                           ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |8bitbrain|controller:inst1|maj7:seq1|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0] ;
-; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |8bitbrain|controller:inst1|freq1[5]                                                                                                                                                              ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |8bitbrain|sld_hub:sld_hub_inst|irsr_reg[1]                                                                                                                                                       ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|release_ctr1[5]                                                                                                                                                        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|release_ctr2[7]                                                                                                                                                        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|release_ctr3[6]                                                                                                                                                        ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|release[7]                                                                                                                                                             ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|decay[6]                                                                                                                                                               ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |8bitbrain|s2p:inst|io_en[0]                                                                                                                                                                      ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|decay_ctr1[3]                                                                                                                                                          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|decay_ctr2[0]                                                                                                                                                          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|decay_ctr3[5]                                                                                                                                                          ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |8bitbrain|sld_hub:sld_hub_inst|sld_rom_sr:hub_info_reg|word_counter[4]                                                                                                                           ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |8bitbrain|controller:inst1|maj7:seq1|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[3] ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |8bitbrain|controller:inst1|seq_index[1]                                                                                                                                                          ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |8bitbrain|sld_hub:sld_hub_inst|irsr_reg[2]                                                                                                                                                       ;
 ; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |8bitbrain|sld_hub:sld_hub_inst|shadow_irf_reg[1][0]                                                                                                                                              ;
-; 8:1                ; 11 bits   ; 55 LEs        ; 44 LEs               ; 11 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|wave1[7]                                                                                                                                                               ;
-; 8:1                ; 11 bits   ; 55 LEs        ; 44 LEs               ; 11 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|wave2[0]                                                                                                                                                               ;
-; 8:1                ; 11 bits   ; 55 LEs        ; 44 LEs               ; 11 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|wave3[10]                                                                                                                                                              ;
-; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |8bitbrain|sld_hub:sld_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2]                                                                                                                                ;
+; 8:1                ; 11 bits   ; 55 LEs        ; 44 LEs               ; 11 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|wave1[4]                                                                                                                                                               ;
+; 8:1                ; 11 bits   ; 55 LEs        ; 44 LEs               ; 11 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|wave2[4]                                                                                                                                                               ;
+; 8:1                ; 11 bits   ; 55 LEs        ; 44 LEs               ; 11 LEs                 ; Yes        ; |8bitbrain|modulator:inst3|wave3[2]                                                                                                                                                               ;
+; 10:1               ; 7 bits    ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; Yes        ; |8bitbrain|controller:inst1|key1[0]                                                                                                                                                               ;
+; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |8bitbrain|sld_hub:sld_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[1]                                                                                                                                ;
 ; 24:1               ; 4 bits    ; 64 LEs        ; 36 LEs               ; 28 LEs                 ; Yes        ; |8bitbrain|controller:inst1|maj7:seq1|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]      ;
-; 12:1               ; 8 bits    ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |8bitbrain|controller:inst1|prev_str_1[0]                                                                                                                                                         ;
-; 12:1               ; 8 bits    ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |8bitbrain|controller:inst1|prev_str_2[7]                                                                                                                                                         ;
-; 12:1               ; 8 bits    ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |8bitbrain|controller:inst1|prev_str_3[7]                                                                                                                                                         ;
-; 17:1               ; 7 bits    ; 77 LEs        ; 14 LEs               ; 63 LEs                 ; Yes        ; |8bitbrain|controller:inst1|key1[4]                                                                                                                                                               ;
-; 27:1               ; 2 bits    ; 36 LEs        ; 20 LEs               ; 16 LEs                 ; Yes        ; |8bitbrain|controller:inst1|trig_vec[2]                                                                                                                                                           ;
-; 27:1               ; 2 bits    ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; Yes        ; |8bitbrain|controller:inst1|trig_vec[4]                                                                                                                                                           ;
-; 34:1               ; 7 bits    ; 154 LEs       ; 7 LEs                ; 147 LEs                ; Yes        ; |8bitbrain|controller:inst1|key2[6]                                                                                                                                                               ;
-; 32:1               ; 7 bits    ; 147 LEs       ; 7 LEs                ; 140 LEs                ; Yes        ; |8bitbrain|controller:inst1|key3[5]                                                                                                                                                               ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|attack[7]                                                                                                                                                              ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |8bitbrain|controller:inst1|Add13                                                                                                                                                                 ;
-; 8:1                ; 5 bits    ; 25 LEs        ; 10 LEs               ; 15 LEs                 ; No         ; |8bitbrain|controller:inst1|Add13                                                                                                                                                                 ;
-; 13:1               ; 5 bits    ; 40 LEs        ; 10 LEs               ; 30 LEs                 ; No         ; |8bitbrain|controller:inst1|Add14                                                                                                                                                                 ;
-; 12:1               ; 4 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; No         ; |8bitbrain|controller:inst1|Add13                                                                                                                                                                 ;
-; 15:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; No         ; |8bitbrain|controller:inst1|Add14                                                                                                                                                                 ;
+; 19:1               ; 7 bits    ; 84 LEs        ; 7 LEs                ; 77 LEs                 ; Yes        ; |8bitbrain|controller:inst1|key2[6]                                                                                                                                                               ;
+; 20:1               ; 7 bits    ; 91 LEs        ; 7 LEs                ; 84 LEs                 ; Yes        ; |8bitbrain|controller:inst1|key3[4]                                                                                                                                                               ;
+; 27:1               ; 2 bits    ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; Yes        ; |8bitbrain|controller:inst1|trig_vec[3]                                                                                                                                                           ;
+; 27:1               ; 2 bits    ; 36 LEs        ; 20 LEs               ; 16 LEs                 ; Yes        ; |8bitbrain|controller:inst1|trig_vec[1]                                                                                                                                                           ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |8bitbrain|modulator:inst3|attack[6]                                                                                                                                                              ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |8bitbrain|controller:inst1|Add15                                                                                                                                                                 ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |8bitbrain|controller:inst1|Add12                                                                                                                                                                 ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |8bitbrain|controller:inst1|Add15                                                                                                                                                                 ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |8bitbrain|controller:inst1|Add18                                                                                                                                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1021,6 +1032,24 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------+-------+------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; AUTO_ROM_RECOGNITION ; OFF   ; -    ; -                                                                                                                                                       ;
 +----------------------+-------+------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Source assignments for controller:inst1|dom7:seq2|altsyncram:altsyncram_component|altsyncram_nd91:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                 ;
++---------------------------------+--------------------+------+----------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                  ;
++---------------------------------+--------------------+------+----------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Source assignments for controller:inst1|pow:seq3|altsyncram:altsyncram_component|altsyncram_mc91:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                ;
++---------------------------------+--------------------+------+---------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                 ;
++---------------------------------+--------------------+------+---------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2562,6 +2591,124 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: controller:inst1|dom7:seq2|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+---------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                        ;
++------------------------------------+----------------------+---------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                     ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                              ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                     ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                     ;
+; WIDTH_A                            ; 8                    ; Signed Integer                              ;
+; WIDTHAD_A                          ; 7                    ; Signed Integer                              ;
+; NUMWORDS_A                         ; 128                  ; Signed Integer                              ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                     ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                     ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                     ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                     ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                     ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                     ;
+; WIDTH_B                            ; 1                    ; Untyped                                     ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                     ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                     ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                     ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                     ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                     ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                     ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                     ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                     ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                     ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                     ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                     ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                     ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                     ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                     ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                              ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                     ;
+; RAM_BLOCK_TYPE                     ; M4K                  ; Untyped                                     ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                     ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                     ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                     ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                     ;
+; INIT_FILE                          ; dom7.mif             ; Untyped                                     ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                     ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                     ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                     ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                     ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                     ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                     ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                     ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                     ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                     ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                     ;
+; CBXI_PARAMETER                     ; altsyncram_nd91      ; Untyped                                     ;
++------------------------------------+----------------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: controller:inst1|pow:seq3|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                       ;
++------------------------------------+----------------------+--------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                    ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                             ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                    ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                    ;
+; WIDTH_A                            ; 8                    ; Signed Integer                             ;
+; WIDTHAD_A                          ; 7                    ; Signed Integer                             ;
+; NUMWORDS_A                         ; 128                  ; Signed Integer                             ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                    ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                    ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                    ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                    ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                    ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                    ;
+; WIDTH_B                            ; 1                    ; Untyped                                    ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                    ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                    ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                    ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                    ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                    ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                    ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                    ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                    ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                    ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                    ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                    ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                    ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                    ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                    ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                             ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                    ;
+; RAM_BLOCK_TYPE                     ; M4K                  ; Untyped                                    ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                    ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                    ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                    ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                    ;
+; INIT_FILE                          ; pow.mif              ; Untyped                                    ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                    ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                    ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                    ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                    ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                    ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                    ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                    ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                    ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                    ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                    ;
+; CBXI_PARAMETER                     ; altsyncram_mc91      ; Untyped                                    ;
++------------------------------------+----------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: debouncer:inst23 ;
 +----------------+-------+--------------------------------------+
@@ -3762,7 +3909,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+--------------------------------------------------------------------------------------------------------+
 ; Name                                      ; Value                                                                                                  ;
 +-------------------------------------------+--------------------------------------------------------------------------------------------------------+
-; Number of entity instances                ; 27                                                                                                     ;
+; Number of entity instances                ; 29                                                                                                     ;
 ; Entity Instance                           ; modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:volbank|altsyncram:altsyncram_component         ;
 ;     -- OPERATION_MODE                     ; SINGLE_PORT                                                                                            ;
 ;     -- WIDTH_A                            ; 8                                                                                                      ;
@@ -3983,6 +4130,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                                           ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                                   ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                              ;
+; Entity Instance                           ; controller:inst1|dom7:seq2|altsyncram:altsyncram_component                                             ;
+;     -- OPERATION_MODE                     ; ROM                                                                                                    ;
+;     -- WIDTH_A                            ; 8                                                                                                      ;
+;     -- NUMWORDS_A                         ; 128                                                                                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                                           ;
+;     -- WIDTH_B                            ; 1                                                                                                      ;
+;     -- NUMWORDS_B                         ; 1                                                                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                                           ;
+;     -- RAM_BLOCK_TYPE                     ; M4K                                                                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                              ;
+; Entity Instance                           ; controller:inst1|pow:seq3|altsyncram:altsyncram_component                                              ;
+;     -- OPERATION_MODE                     ; ROM                                                                                                    ;
+;     -- WIDTH_A                            ; 8                                                                                                      ;
+;     -- NUMWORDS_A                         ; 128                                                                                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                                           ;
+;     -- WIDTH_B                            ; 1                                                                                                      ;
+;     -- NUMWORDS_B                         ; 1                                                                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                                           ;
+;     -- RAM_BLOCK_TYPE                     ; M4K                                                                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                              ;
 ; Entity Instance                           ; wavegen:inst6|wavegen_save_bank:waveselect_bank|int_bank:mode_bank|altsyncram:altsyncram_component     ;
 ;     -- OPERATION_MODE                     ; SINGLE_PORT                                                                                            ;
 ;     -- WIDTH_A                            ; 6                                                                                                      ;
@@ -4179,7 +4348,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Apr 09 00:15:59 2010
+    Info: Processing started: Fri Apr 09 22:14:16 2010
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 8bitbrain -c 8bitbrain
 Info: Found 4 design units, including 2 entities, in source file controller.vhd
     Info: Found design unit 1: controller_save_bank-arch
@@ -4295,6 +4464,12 @@ Info: Found 2 design units, including 1 entities, in source file triangle.vhd
 Info: Found 2 design units, including 1 entities, in source file bytebank.vhd
     Info: Found design unit 1: bytebank-SYN
     Info: Found entity 1: bytebank
+Info: Found 2 design units, including 1 entities, in source file pow.vhd
+    Info: Found design unit 1: pow-SYN
+    Info: Found entity 1: pow
+Info: Found 2 design units, including 1 entities, in source file dom7.vhd
+    Info: Found design unit 1: dom7-SYN
+    Info: Found entity 1: dom7
 Info: Elaborating entity "8bitbrain" for the top level hierarchy
 Info: Elaborating entity "s2p" for hierarchy "s2p:inst"
 Info: Elaborating entity "p2s" for hierarchy "p2s:inst5"
@@ -4371,46 +4546,52 @@ Info: Found 1 design units, including 1 entities, in source file db/altsyncram_u
 Info: Elaborating entity "altsyncram_ujc1" for hierarchy "modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:volbank|altsyncram:altsyncram_component|altsyncram_ujc1:auto_generated"
 Info: Elaborating entity "controller" for hierarchy "controller:inst1"
 Warning (10541): VHDL Signal Declaration warning at controller.vhd(108): used implicit default value for signal "arp_style" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10492): VHDL Process Statement warning at controller.vhd(273): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at controller.vhd(295): inferring latch(es) for signal or variable "tempo_end", which holds its previous value in one or more paths through the process
-Warning (10492): VHDL Process Statement warning at controller.vhd(387): signal "curbtns" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controller.vhd(388): signal "curbtns" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at controller.vhd(385): inferring latch(es) for signal or variable "diff_btn_vec", which holds its previous value in one or more paths through the process
-Warning (10492): VHDL Process Statement warning at controller.vhd(563): signal "play_vec" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controller.vhd(563): signal "prev_play_vec" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controller.vhd(565): signal "trig_vec" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controller.vhd(565): signal "prev_trig_vec" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10036): Verilog HDL or VHDL warning at controller.vhd(124): object "prev_str_1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at controller.vhd(124): object "prev_str_2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at controller.vhd(124): object "prev_str_3" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at controller.vhd(126): object "p_bend_1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at controller.vhd(126): object "p_bend_2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at controller.vhd(126): object "p_bend_3" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at controller.vhd(298): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at controller.vhd(330): inferring latch(es) for signal or variable "tempo_end", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at controller.vhd(422): signal "curbtns" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controller.vhd(423): signal "curbtns" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at controller.vhd(420): inferring latch(es) for signal or variable "diff_btn_vec", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at controller.vhd(598): signal "play_vec" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controller.vhd(598): signal "prev_play_vec" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controller.vhd(600): signal "trig_vec" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controller.vhd(600): signal "prev_trig_vec" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10034): Output port "arp_mode" at controller.vhd(107) has no driver
-Info (10041): Inferred latch for "diff_btn_vec[1]" at controller.vhd(385)
-Info (10041): Inferred latch for "diff_btn_vec[2]" at controller.vhd(385)
-Info (10041): Inferred latch for "diff_btn_vec[3]" at controller.vhd(385)
-Info (10041): Inferred latch for "diff_btn_vec[4]" at controller.vhd(385)
-Info (10041): Inferred latch for "diff_btn_vec[5]" at controller.vhd(385)
-Info (10041): Inferred latch for "diff_btn_vec[6]" at controller.vhd(385)
-Info (10041): Inferred latch for "tempo_end[0]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[1]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[2]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[3]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[4]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[5]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[6]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[7]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[8]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[9]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[10]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[11]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[12]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[13]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[14]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[15]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[16]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[17]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[18]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[19]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[20]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[21]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[22]" at controller.vhd(295)
-Info (10041): Inferred latch for "tempo_end[23]" at controller.vhd(295)
+Info (10041): Inferred latch for "diff_btn_vec[1]" at controller.vhd(420)
+Info (10041): Inferred latch for "diff_btn_vec[2]" at controller.vhd(420)
+Info (10041): Inferred latch for "diff_btn_vec[3]" at controller.vhd(420)
+Info (10041): Inferred latch for "diff_btn_vec[4]" at controller.vhd(420)
+Info (10041): Inferred latch for "diff_btn_vec[5]" at controller.vhd(420)
+Info (10041): Inferred latch for "diff_btn_vec[6]" at controller.vhd(420)
+Info (10041): Inferred latch for "tempo_end[0]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[1]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[2]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[3]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[4]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[5]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[6]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[7]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[8]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[9]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[10]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[11]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[12]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[13]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[14]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[15]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[16]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[17]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[18]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[19]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[20]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[21]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[22]" at controller.vhd(330)
+Info (10041): Inferred latch for "tempo_end[23]" at controller.vhd(330)
 Info: Elaborating entity "keyrom" for hierarchy "controller:inst1|keyrom:kr1"
 Info: Elaborating entity "altsyncram" for hierarchy "controller:inst1|keyrom:kr1|altsyncram:altsyncram_component"
 Info: Elaborated megafunction instantiation "controller:inst1|keyrom:kr1|altsyncram:altsyncram_component"
@@ -4510,6 +4691,48 @@ Info: Instantiated megafunction "controller:inst1|maj7:seq1|altsyncram:altsyncra
     Info: Parameter "WIDTH_WORD" = "8"
     Info: Parameter "WIDTHAD" = "7"
 Info: Elaborating entity "sld_rom_sr" for hierarchy "controller:inst1|maj7:seq1|altsyncram:altsyncram_component|altsyncram_pec1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr"
+Info: Elaborating entity "dom7" for hierarchy "controller:inst1|dom7:seq2"
+Info: Elaborating entity "altsyncram" for hierarchy "controller:inst1|dom7:seq2|altsyncram:altsyncram_component"
+Info: Elaborated megafunction instantiation "controller:inst1|dom7:seq2|altsyncram:altsyncram_component"
+Info: Instantiated megafunction "controller:inst1|dom7:seq2|altsyncram:altsyncram_component" with the following parameter:
+    Info: Parameter "clock_enable_input_a" = "BYPASS"
+    Info: Parameter "clock_enable_output_a" = "BYPASS"
+    Info: Parameter "init_file" = "dom7.mif"
+    Info: Parameter "intended_device_family" = "Cyclone II"
+    Info: Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info: Parameter "lpm_type" = "altsyncram"
+    Info: Parameter "numwords_a" = "128"
+    Info: Parameter "operation_mode" = "ROM"
+    Info: Parameter "outdata_aclr_a" = "NONE"
+    Info: Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info: Parameter "ram_block_type" = "M4K"
+    Info: Parameter "widthad_a" = "7"
+    Info: Parameter "width_a" = "8"
+    Info: Parameter "width_byteena_a" = "1"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_nd91.tdf
+    Info: Found entity 1: altsyncram_nd91
+Info: Elaborating entity "altsyncram_nd91" for hierarchy "controller:inst1|dom7:seq2|altsyncram:altsyncram_component|altsyncram_nd91:auto_generated"
+Info: Elaborating entity "pow" for hierarchy "controller:inst1|pow:seq3"
+Info: Elaborating entity "altsyncram" for hierarchy "controller:inst1|pow:seq3|altsyncram:altsyncram_component"
+Info: Elaborated megafunction instantiation "controller:inst1|pow:seq3|altsyncram:altsyncram_component"
+Info: Instantiated megafunction "controller:inst1|pow:seq3|altsyncram:altsyncram_component" with the following parameter:
+    Info: Parameter "clock_enable_input_a" = "BYPASS"
+    Info: Parameter "clock_enable_output_a" = "BYPASS"
+    Info: Parameter "init_file" = "pow.mif"
+    Info: Parameter "intended_device_family" = "Cyclone II"
+    Info: Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info: Parameter "lpm_type" = "altsyncram"
+    Info: Parameter "numwords_a" = "128"
+    Info: Parameter "operation_mode" = "ROM"
+    Info: Parameter "outdata_aclr_a" = "NONE"
+    Info: Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info: Parameter "ram_block_type" = "M4K"
+    Info: Parameter "widthad_a" = "7"
+    Info: Parameter "width_a" = "8"
+    Info: Parameter "width_byteena_a" = "1"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_mc91.tdf
+    Info: Found entity 1: altsyncram_mc91
+Info: Elaborating entity "altsyncram_mc91" for hierarchy "controller:inst1|pow:seq3|altsyncram:altsyncram_component|altsyncram_mc91:auto_generated"
 Info: Elaborating entity "debouncer" for hierarchy "debouncer:inst23"
 Info: Elaborating entity "divider" for hierarchy "divider:inst24"
 Info: Elaborating entity "btn_reg" for hierarchy "btn_reg:inst4"
@@ -4702,10 +4925,10 @@ Warning: Latch controller:inst1|diff_btn_vec[6] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal controller:inst1|diff_btn_vec~5
 Warning: Latch controller:inst1|diff_btn_vec[1] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal btn_reg:inst4|btn_reg[1]
-Warning: Latch controller:inst1|diff_btn_vec[5] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal btn_reg:inst4|btn_reg[5]
 Warning: Latch controller:inst1|diff_btn_vec[3] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal btn_reg:inst4|btn_reg[3]
+Warning: Latch controller:inst1|diff_btn_vec[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal btn_reg:inst4|btn_reg[5]
 Warning: Latch controller:inst1|diff_btn_vec[4] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal btn_reg:inst4|btn_reg[4]
 Warning: Latch controller:inst1|diff_btn_vec[2] has unsafe behavior
@@ -4719,17 +4942,17 @@ Warning: Output pins are stuck at VCC or GND
 Critical Warning: Ignored Power-Up Level option on the following registers
     Critical Warning: Register controller:inst1|octave[0] will power up to High
     Critical Warning: Register controller:inst1|ch3offset2[0] will power up to High
+    Critical Warning: Register controller:inst1|ch2offset2[0] will power up to High
+    Critical Warning: Register controller:inst1|ch2offset2[1] will power up to High
     Critical Warning: Register controller:inst1|ch3offset2[3] will power up to High
     Critical Warning: Register controller:inst1|ch3offset2[1] will power up to High
     Critical Warning: Register controller:inst1|ch1offset2[2] will power up to High
-    Critical Warning: Register controller:inst1|ch2offset2[0] will power up to High
-    Critical Warning: Register controller:inst1|ch2offset2[1] will power up to High
-    Critical Warning: Register controller:inst1|ch3offset3[4] will power up to High
-    Critical Warning: Register controller:inst1|ch1offset3[3] will power up to High
-    Critical Warning: Register controller:inst1|ch1offset3[1] will power up to High
     Critical Warning: Register controller:inst1|ch2offset3[0] will power up to High
     Critical Warning: Register controller:inst1|ch2offset3[2] will power up to High
     Critical Warning: Register controller:inst1|ch2offset3[1] will power up to High
+    Critical Warning: Register controller:inst1|ch3offset3[4] will power up to High
+    Critical Warning: Register controller:inst1|ch1offset3[1] will power up to High
+    Critical Warning: Register controller:inst1|ch1offset3[3] will power up to High
 Info: 8 registers lost all their fanouts during netlist optimizations. The first 8 are displayed below.
     Info: Register "modulator:inst3|volume[0]" lost all its fanouts during netlist optimizations.
     Info: Register "modulator:inst3|volume[1]" lost all its fanouts during netlist optimizations.
@@ -4749,16 +4972,16 @@ Warning: Design contains 9 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "data_in[0]"
     Warning (15610): No output dependent on input pin "waveform_rot7[1]"
     Warning (15610): No output dependent on input pin "waveform_rot7[0]"
-Info: Implemented 6053 device resources after synthesis - the final resource count might be different
+Info: Implemented 5840 device resources after synthesis - the final resource count might be different
     Info: Implemented 34 input pins
     Info: Implemented 28 output pins
-    Info: Implemented 5761 logic cells
-    Info: Implemented 207 RAM segments
+    Info: Implemented 5532 logic cells
+    Info: Implemented 223 RAM segments
     Info: Implemented 22 DSP elements
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 101 warnings
-    Info: Peak virtual memory: 221 megabytes
-    Info: Processing ended: Fri Apr 09 00:16:37 2010
-    Info: Elapsed time: 00:00:38
-    Info: Total CPU time (on all processors): 00:00:37
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 107 warnings
+    Info: Peak virtual memory: 219 megabytes
+    Info: Processing ended: Fri Apr 09 22:14:46 2010
+    Info: Elapsed time: 00:00:30
+    Info: Total CPU time (on all processors): 00:00:29
 
 

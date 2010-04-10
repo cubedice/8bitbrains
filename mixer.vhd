@@ -75,5 +75,6 @@ begin
 					('0' & wave123prod(23 downto 12)),
 					wave123 );
 					
-	waveout <= wave123(11 downto 0);
+	waveout <= wave123(11 downto 0) when (wave123(11 downto 0) < "111111110000") else
+				"111111110000";
 end arch;

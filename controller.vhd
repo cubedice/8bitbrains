@@ -180,6 +180,25 @@ component maj7 IS
 	);
 END component;
 
+component pow IS
+	PORT
+	(
+		address		: IN STD_LOGIC_VECTOR (6 DOWNTO 0);
+		clock		: IN STD_LOGIC  := '1';
+		q		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
+	);
+END component;
+
+component dom7 IS
+	PORT
+	(
+		address		: IN STD_LOGIC_VECTOR (6 DOWNTO 0);
+		clock		: IN STD_LOGIC  := '1';
+		q		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
+	);
+END component;
+
+
 	-- button aliases
 alias btn11 is btn_vec(6);
 alias btn12 is btn_vec(5);
@@ -266,6 +285,12 @@ begin
 	--sequencer
 	seq1 : maj7 port map(
 		seq_index,clk,seq_offset1);
+		
+	seq2 : dom7 port map(
+		seq_index,clk,seq_offset2);
+		
+	seq3 : pow port map(
+		seq_index,clk,seq_offset3);
 	
 	-- tempo ctr
 	process( gate1, gate2, gate3 )
@@ -278,8 +303,18 @@ begin
 					tempo_ctr <= tempo_ctr + 1;
 				end if;
 				
-				if seq_offset1 = "11111111" then
-					seq_index <= "0000000";
+				if ((playch1 = '1' and trig12 = '1') or
+					(playch2 = '1' and trig22 = '1') or
+					(playch3 = '1' and trig32 = '1')) and seq_offset1 = "11111111" then
+						seq_index <= "0000000";
+				elsif ((playch1 = '1' and trig22 = '1') or
+					(playch2 = '1' and trig32 = '1') or
+					(playch3 = '1' and trig12 = '1')) and seq_offset2 = "11111111" then
+						seq_index <= "0000000";
+				elsif ((playch1 = '1' and trig32 = '1') or
+					(playch2 = '1' and trig12 = '1') or
+					(playch3 = '1' and trig22 = '1')) and seq_offset3 = "11111111" then
+						seq_index <= "0000000";
 				elsif tempo_ctr = 0 then
 					seq_index <= seq_index + 1;
 				end if;
@@ -576,339 +611,214 @@ begin
 			freq1 <= freq1_i;
 			freq2 <= freq2_i;
 			freq3 <= freq3_i;
-			-- pitch bend/hammeron/pulloff ?
-			if diff_trig_vec(6 downto 1) = "000000" and diff_play_vec = "000000" and play_vec /= "000000" then
-				if arpmode = '1' and play_vec(5 downto 3) /= "000" then
-					if playch1 = '1' then
-						key1 <= std_logic_vector( unsigned(key1bb) + unsigned(seq_offset1(6 downto 0)) );
-					elsif playch2 = '1' then
-						key2 <= std_logic_vector( unsigned(key2bb) + unsigned(seq_offset1(6 downto 0)) );
-					elsif playch3 = '1' then
-						key3 <= std_logic_vector( unsigned(key3bb) + unsigned(seq_offset1(6 downto 0)) );
-					end if;
-				elsif not( p_bend_1 = '1' or p_bend_2 = '1' or p_bend_3 = '1' ) then
-				-- hammer/pull ?
-					if playch1 = '1' or playstr1 = '1' then 
-						if abs( to_integer( unsigned(str_1) ) - to_integer( unsigned(prev_str_1) ) ) > 7  then
-							prev_str_1 <= str_1;
-							key1 <= key1bb;
-							if playch1 = '1' then 
-								if trig12 = '1' then
-									if ch1offset2 /= 0 then						
-										key2 <= std_logic_vector( unsigned(key1bb) + to_unsigned(ch1offset2, 7) );
-									end if;
-									if ch1offset3 /=0 then
-										key3 <= std_logic_vector( unsigned(key1bb) + to_unsigned(ch1offset3, 7) );
-									end if;
-								end if;
-								if trig22 = '1' then
-									if ch2offset2 /= 0 then						
-										key2 <= std_logic_vector( unsigned(key1bb) + to_unsigned(ch2offset2, 7) );
-									end if;
-									if ch2offset3 /=0 then
-										key3 <= std_logic_vector( unsigned(key1bb) + to_unsigned(ch2offset3, 7) );
-									end if;
-								end if;
-								if trig32 = '1' then
-									if ch3offset2 /= 0 then						
-										key2 <= std_logic_vector( unsigned(key1bb) + to_unsigned(ch3offset2, 7) );
-									end if;
-									if ch3offset3 /=0 then
-										key3 <= std_logic_vector( unsigned(key1bb) + to_unsigned(ch3offset3, 7) );
-									end if;
-								end if;
-							end if;
-						-- pitch bend
-						elsif abs( to_integer( unsigned(str_1) ) - to_integer( unsigned(prev_str_1) ) ) > 2 then
-							p_bend_1 <= '1';
-						end if;
-					end if;
-					if playch2 = '1' or playstr2 = '1' then 
-						if abs( to_integer( unsigned(str_2) ) - to_integer( unsigned(prev_str_2) ) ) > 7  then
-							prev_str_2 <= str_2;
-							key2 <= key2bb;
-							if playch2 = '1' then 
-								if trig22 = '1' then
-									if ch1offset2 /= 0 then						
-										key2 <= std_logic_vector( unsigned(key2bb) + to_unsigned(ch1offset2, 7) );
-									end if;
-									if ch1offset3 /=0 then
-										key3 <= std_logic_vector( unsigned(key2bb) + to_unsigned(ch1offset3, 7) );
-									end if;
-								end if;
-								if trig32 = '1' then
-									if ch2offset2 /= 0 then						
-										key2 <= std_logic_vector( unsigned(key2bb) + to_unsigned(ch2offset2, 7) );
-									end if;
-									if ch2offset3 /=0 then
-										key3 <= std_logic_vector( unsigned(key2bb) + to_unsigned(ch2offset3, 7) );
-									end if;
-								end if;
-								if trig12 = '1' then
-									if ch3offset2 /= 0 then						
-										key2 <= std_logic_vector( unsigned(key2bb) + to_unsigned(ch3offset2, 7) );
-									end if;
-									if ch3offset3 /=0 then
-										key3 <= std_logic_vector( unsigned(key3bb) + to_unsigned(ch3offset3, 7) );
-									end if;
-								end if;
-							end if;						
-						-- pitch bend
-						elsif abs( to_integer( unsigned(str_2) ) - to_integer( unsigned(prev_str_2) ) ) > 2 then
-							p_bend_2 <= '1';
-						end if;
-					end if;
-					if playch3 = '1' or playstr3 = '1' then 
-						if abs( to_integer( unsigned(str_3) ) - to_integer( unsigned(prev_str_3) ) ) > 7  then
-							prev_str_3 <= str_3;
-							key1 <= key3bb;
-							if playch3 = '1' then 
-								if trig32 = '1' then
-									if ch1offset2 /= 0 then						
-										key2 <= std_logic_vector( unsigned(key3bb) + to_unsigned(ch1offset2, 7) );
-									end if;
-									if ch1offset3 /=0 then
-										key3 <= std_logic_vector( unsigned(key3bb) + to_unsigned(ch1offset3, 7) );
-									end if;
-								end if;
-								if trig12 = '1' then
-									if ch2offset2 /= 0 then						
-										key2 <= std_logic_vector( unsigned(key3bb) + to_unsigned(ch2offset2, 7) );
-									end if;
-									if ch2offset3 /=0 then
-										key3 <= std_logic_vector( unsigned(key3bb) + to_unsigned(ch2offset3, 7));
-									end if;
-								end if;
-								if trig22 = '1' then
-									if ch3offset2 /= 0 then						
-										key2 <= std_logic_vector( unsigned(key3bb) + to_unsigned(ch3offset2, 7) );
-									end if;
-									if ch3offset3 /=0 then
-										key3 <= std_logic_vector( unsigned(key3bb) + to_unsigned(ch3offset3, 7) );
-									end if;
-								end if;
-							end if;									
-						-- pitch bend
-						elsif abs( to_integer( unsigned(str_3) ) - to_integer( unsigned(prev_str_3) ) ) > 2 then
-							p_bend_3 <= '1';
-						end if;
-					end if;
-				end if;
 
 				
-				if p_bend_1 = '1' then
-					 --how far to bend?
-					if (to_integer( unsigned(str_1) ) - to_integer( unsigned(prev_str_1) )) > 5 then  
-						freq1 <= freq1_i + "0000000001111";
-					elsif (to_integer( unsigned(str_1) ) - to_integer( unsigned(prev_str_1) )) < -5 then  
-						freq1 <= freq1_i - "0000000001111";
-					end if;
-				end if;
-			-- start/stop a note ?	
-			else
-				p_bend_1 <= '0';
-				p_bend_2 <= '0';
-				p_bend_3 <= '0';
-				
-				-- playing a chord?
-				if playch1 = '1' then 
-					-- lock in str1
-					--if diff_trig_vec /= "000000X" then
-					if trig11 = '1' then 
-						key1 <= key1bb;
-						if trig12 = '1' then
-							if ch1offset2 /= 0 then						
-								key2 <= std_logic_vector( unsigned(key1bb) + to_unsigned(ch1offset2, 7) );
-							end if;
-							if ch1offset3 /=0 then
-								key3 <= std_logic_vector( unsigned(key1bb) + to_unsigned(ch1offset3, 7) );
-							end if;
-						end if;
-						if trig22 = '1' then
-							if ch2offset2 /= 0 then						
-								key2 <= std_logic_vector( unsigned(key1bb) + to_unsigned(ch2offset2, 7) );
-							end if;
-							if ch2offset3 /=0 then
-								key3 <= std_logic_vector( unsigned(key1bb) + to_unsigned(ch2offset3, 7) );
-							end if;
-						end if;
-						if trig32 = '1' then
-							if ch3offset2 /= 0 then						
-								key2 <= std_logic_vector( unsigned(key1bb) + to_unsigned(ch3offset2, 7) );
-							end if;
-							if ch3offset3 /=0 then
-								key3 <= std_logic_vector( unsigned(key1bb) + to_unsigned(ch3offset3, 7) );
-							end if;
-						end if;
-						if diffplaych1 = '1' and arpmode = '0' then
-							gate1 <= '1';
-							gate2 <= '1';
-							gate3 <= '1';
-						elsif diffplaych1 = '1' and arpmode = '1' then
-							gate1 <= '1';
-						end if;
-					end if;	
-				elsif playch2 = '1' then -- playing chord 2
-					-- lock in str2
-					if trig21 = '1' then
-						key1 <= key2bb;
-						if trig22 = '1' then
-							if ch1offset2 /= 0 then						
-								key2 <= std_logic_vector( unsigned(key2bb) + to_unsigned(ch1offset2, 7) );
-							end if;
-							if ch1offset3 /=0 then
-								key3 <= std_logic_vector( unsigned(key2bb) + to_unsigned(ch1offset3, 7) );
-							end if;
-						end if;
-						if trig32 = '1' then
-							if ch2offset2 /= 0 then						
-								key2 <= std_logic_vector( unsigned(key2bb) + to_unsigned(ch2offset2, 7) );
-							end if;
-							if ch2offset3 /=0 then
-								key3 <= std_logic_vector( unsigned(key2bb) + to_unsigned(ch2offset3, 7) );
-							end if;
-						end if;
-						if trig12 = '1' then
-							if ch3offset2 /= 0 then						
-								key2 <= std_logic_vector( unsigned(key2bb) + to_unsigned(ch3offset2, 7));
-							end if;
-							if ch3offset3 /=0 then
-								key3 <= std_logic_vector( unsigned(key2bb) + to_unsigned(ch3offset3, 7) );
-							end if;
-						end if;
-						if diffplaych2 = '1' and arpmode = '0' then
-							gate1 <= '1';
-							gate2 <= '1';
-							gate3 <= '1';
-						elsif diffplaych2 = '1' and arpmode = '1' then
-							gate2 <= '1';
-						end if;
-					end if;	
-				elsif playch3 = '1' then -- playing chord 3
-					-- lock in str3
-					if trig31 = '1' then
-						key1 <= key3bb;
-						if trig32 = '1' then
-							if ch1offset2 /= 0 then						
-								key2 <= std_logic_vector( unsigned(key3bb) + to_unsigned(ch1offset2, 7) );
-							end if;
-							if ch1offset3 /=0 then
-								key3 <= std_logic_vector( unsigned(key3bb) + to_unsigned(ch1offset3, 7) );
-							end if;
-						end if;
-						if trig12 = '1' then
-							if ch2offset2 /= 0 then						
-								key2 <= std_logic_vector( unsigned(key3bb) + to_unsigned(ch2offset2, 7) );
-							end if;
-							if ch2offset3 /=0 then
-								key3 <= std_logic_vector( unsigned(key3bb) + to_unsigned(ch2offset3, 7) );
-							end if;
-						end if;
-						if trig22 = '1' then
-							if ch3offset2 /= 0 then						
-								key2 <= std_logic_vector( unsigned(key3bb) + to_unsigned(ch3offset2, 7) );
-							end if;
-							if ch3offset3 /=0 then
-								key3 <= std_logic_vector( unsigned(key3bb) + to_unsigned(ch3offset3, 7) );
-							end if;
-						end if;
-						if diffplaych3 = '1' and arpmode = '0' then
-							gate1 <= '1';
-							gate2 <= '1';
-							gate3 <= '1';
-						elsif diffplaych3 = '1' and arpmode = '1' then
-							gate3 <= '1';
-						end if;
-					end if;	
-				else -- we aren't playing a chord
-				
-					-- playing str 1 ?
-					if playstr1 = '1' then
-						if diff_trig_vec(6 downto 5) = "11" and gateblip1 = '0' then
-							-- blip string
-							gate1 <= '0';
-							gateblip1 <= '1';
-						elsif gateblip1 = '1' then
-							-- blip string
-							gate1 <= '1';
-							key1 <= key1bb;
-							prev_str_1 <= str_1;
-							gateblip1 <= '0';
-						end if;	
-						if diffplaystr1 = '1' then 
-							key1 <= key1bb;
-							prev_str_1 <= str_1;
-							gate1 <= '1';
-						end if;
+			-- playing a chord?
+			if arpmode = '1' and play_vec(5 downto 3) /= "000" then
+				if playch1 = '1' then
+					
+					if trig12 = '1' then
+						key1 <= std_logic_vector( unsigned(key1bb) + unsigned(seq_offset1(6 downto 0)) );
+					elsif trig22 = '1' then
+						key1 <= std_logic_vector( unsigned(key1bb) + unsigned(seq_offset2(6 downto 0)) );
+					elsif trig32 = '1' then
+						key1 <= std_logic_vector( unsigned(key1bb) + unsigned(seq_offset3(6 downto 0)) );
 					end if;
 					
-					-- playing str 2 ?
-					if playstr2 = '1' then
-						if diff_trig_vec(4 downto 3) = "11" and gateblip2 = '0' then
-							-- blip string
-							gate2 <= '0';
-							gateblip2 <= '1';
-						elsif gateblip2 = '1' then
-							-- blip string
-							gate2 <= '1';
-							key2 <= key2bb;
-							prev_str_2 <= str_2;
-							gateblip2 <= '0';
-						end if;	
-						if diffplaystr2 = '1' then -- now playing str 2
-							-- lock in str2
-							key2 <= key2bb;
-							prev_str_2 <= str_2;
-							gate2 <= '1';
-						end if;
+					gate1 <= '1';
+					
+				elsif playch2 = '1' then
+					
+					if trig22 = '1' then
+						key2 <= std_logic_vector( unsigned(key2bb) + unsigned(seq_offset1(6 downto 0)) );
+					elsif trig32 = '1' then
+						key2 <= std_logic_vector( unsigned(key2bb) + unsigned(seq_offset2(6 downto 0)) );
+					elsif trig12 = '1' then
+						key2 <= std_logic_vector( unsigned(key2bb) + unsigned(seq_offset3(6 downto 0)) );
 					end if;
-									
-					-- playing str 3 ?
-					if playstr3 = '1' then
-						if diff_trig_vec(2 downto 1) = "11" and gateblip3 = '0' then
-							-- blip string
-							gate3 <= '0';
-							gateblip3 <= '1';
-						elsif gateblip3 = '1' then
-							-- blip string
-							gate3 <= '1';
-							key3 <= key3bb;
-							prev_str_3 <= str_3;
-							gateblip3 <= '0';
-						end if;	
-						if diffplaystr3 = '1' then -- now playing str 3
-							-- lock in str3
-							key3 <= key3bb;
-							prev_str_3 <= str_3;
-							gate3 <= '1';
-						end if;
+					
+					gate2 <= '1';
+					
+				elsif playch3 = '1' then
+				
+					if trig32 = '1' then
+						key3 <= std_logic_vector( unsigned(key3bb) + unsigned(seq_offset1(6 downto 0)) );
+					elsif trig12 = '1' then
+						key3 <= std_logic_vector( unsigned(key3bb) + unsigned(seq_offset2(6 downto 0)) );
+					elsif trig22 = '1' then
+						key3 <= std_logic_vector( unsigned(key3bb) + unsigned(seq_offset3(6 downto 0)) );
 					end if;
+					
+					gate3 <= '1';
+					
+				end if;
+			elsif playch1 = '1' then 
+				-- lock in str1
+				key1 <= key1bb;
+				if trig12 = '1' then
+					if ch1offset2 /= 0 then						
+						key2 <= std_logic_vector( unsigned(key1bb) + to_unsigned(ch1offset2, 7) );
+					end if;
+					if ch1offset3 /=0 then
+						key3 <= std_logic_vector( unsigned(key1bb) + to_unsigned(ch1offset3, 7) );
+					end if;
+				end if;
+				if trig22 = '1' then
+					if ch2offset2 /= 0 then						
+						key2 <= std_logic_vector( unsigned(key1bb) + to_unsigned(ch2offset2, 7) );
+					end if;
+					if ch2offset3 /=0 then
+						key3 <= std_logic_vector( unsigned(key1bb) + to_unsigned(ch2offset3, 7) );
+					end if;
+				end if;
+				if trig32 = '1' then
+					if ch3offset2 /= 0 then						
+						key2 <= std_logic_vector( unsigned(key1bb) + to_unsigned(ch3offset2, 7) );
+					end if;
+					if ch3offset3 /=0 then
+						key3 <= std_logic_vector( unsigned(key1bb) + to_unsigned(ch3offset3, 7) );
+					end if;
+				end if;
+				if diffplaych1 = '1' then
+					gate1 <= '1';
+					gate2 <= '1';
+					gate3 <= '1';
+				end if;
+			elsif playch2 = '1' then -- playing chord from str2
+				-- lock in str2
+				key1 <= key2bb;
+				if trig22 = '1' then
+					if ch1offset2 /= 0 then						
+						key2 <= std_logic_vector( unsigned(key2bb) + to_unsigned(ch1offset2, 7) );
+					end if;
+					if ch1offset3 /=0 then
+						key3 <= std_logic_vector( unsigned(key2bb) + to_unsigned(ch1offset3, 7) );
+					end if;
+				end if;
+				if trig32 = '1' then
+					if ch2offset2 /= 0 then						
+						key2 <= std_logic_vector( unsigned(key2bb) + to_unsigned(ch2offset2, 7) );
+					end if;
+					if ch2offset3 /=0 then
+						key3 <= std_logic_vector( unsigned(key2bb) + to_unsigned(ch2offset3, 7) );
+					end if;
+				end if;
+				if trig12 = '1' then
+					if ch3offset2 /= 0 then						
+						key2 <= std_logic_vector( unsigned(key2bb) + to_unsigned(ch3offset2, 7));
+					end if;
+					if ch3offset3 /=0 then
+						key3 <= std_logic_vector( unsigned(key2bb) + to_unsigned(ch3offset3, 7) );
+					end if;
+				end if;
+				if diffplaych2 = '1' then
+					gate1 <= '1';
+					gate2 <= '1';
+					gate3 <= '1';
+				end if;
+			elsif playch3 = '1' then -- playing chord from str3
+				-- lock in str3
+				key1 <= key3bb;
+				if trig32 = '1' then
+					if ch1offset2 /= 0 then						
+						key2 <= std_logic_vector( unsigned(key3bb) + to_unsigned(ch1offset2, 7) );
+					end if;
+					if ch1offset3 /=0 then
+						key3 <= std_logic_vector( unsigned(key3bb) + to_unsigned(ch1offset3, 7) );
+					end if;
+				end if;
+				if trig12 = '1' then
+					if ch2offset2 /= 0 then						
+						key2 <= std_logic_vector( unsigned(key3bb) + to_unsigned(ch2offset2, 7) );
+					end if;
+					if ch2offset3 /=0 then
+						key3 <= std_logic_vector( unsigned(key3bb) + to_unsigned(ch2offset3, 7) );
+					end if;
+				end if;
+				if trig22 = '1' then
+					if ch3offset2 /= 0 then						
+						key2 <= std_logic_vector( unsigned(key3bb) + to_unsigned(ch3offset2, 7) );
+					end if;
+					if ch3offset3 /=0 then
+						key3 <= std_logic_vector( unsigned(key3bb) + to_unsigned(ch3offset3, 7) );
+					end if;
+				end if;
+				if diffplaych3 = '1' then
+					gate1 <= '1';
+					gate2 <= '1';
+					gate3 <= '1';
+				end if;
+			else -- we aren't playing a chord
+			
+				-- playing str 1 ?
+				if playstr1 = '1' then
+					if diff_trig_vec(6 downto 5) = "11" and gateblip1 = '0' then
+						-- blip string
+						gate1 <= '0';
+						gateblip1 <= '1';
+					end if;
+					if diffplaystr1 = '1' or gateblip1 = '1' then 
+						gateblip1 <= '0';
+						gate1 <= '1';
+					end if;
+					key1 <= key1bb;
+					prev_str_1 <= str_1;
 				end if;
 				
+				-- playing str 2 ?
+				if playstr2 = '1' then
+					if diff_trig_vec(4 downto 3) = "11" and gateblip2 = '0' then
+						-- blip string
+						gate2 <= '0';
+						gateblip2 <= '1';
+					end if;
+					if diffplaystr2 = '1' or gateblip2 = '1' then 
+						gateblip2 <= '0';
+						gate2 <= '1';
+					end if;
+					key2 <= key2bb;
+					prev_str_2 <= str_2;
+				end if;
+								
+				-- playing str 3 ?
+				if playstr3 = '1' then
+					if diff_trig_vec(2 downto 1) = "11" and gateblip3 = '0' then
+						-- blip string
+						gate3 <= '0';
+						gateblip3 <= '1';
+					end if;
+					if diffplaystr3 = '1' or gateblip3 = '1' then 
+						gateblip3 <= '0';
+						gate3 <= '1';
+					end if;
+					key3 <= key3bb;
+					prev_str_3 <= str_3;
+				end if;
+			end if;
+			
 
-				-- will we stop playing a chord/string ?
-				if diffplaych1 = '1' and playch1 = '0' then
-					gate1 <= '0';
-					gate2 <= '0';
-					gate3 <= '0';
-				elsif diffplaych2 = '1' and playch2 = '0' then
-					gate1 <= '0';
-					gate2 <= '0';
-					gate3 <= '0';
-				elsif diffplaych3 = '1' and playch3 = '0' then
-					gate1 <= '0';
-					gate2 <= '0';
-					gate3 <= '0';
-				end if;
-				if diffplaystr1 = '1' and playstr1 = '0' then
-					gate1 <= '0';
-				end if;
-				if diffplaystr2 = '1' and playstr2 = '0' then
-					gate2 <= '0';
-				end if;
-				if diffplaystr3 = '1' and playstr3 = '0' then
-					gate3 <= '0';
-				end if;
+			-- will we stop playing a chord/string ?
+			if diffplaych1 = '1' and playch1 = '0' then
+				gate1 <= '0';
+				gate2 <= '0';
+				gate3 <= '0';
+			elsif diffplaych2 = '1' and playch2 = '0' then
+				gate1 <= '0';
+				gate2 <= '0';
+				gate3 <= '0';
+			elsif diffplaych3 = '1' and playch3 = '0' then
+				gate1 <= '0';
+				gate2 <= '0';
+				gate3 <= '0';
+			end if;
+			if diffplaystr1 = '1' and playstr1 = '0' then
+				gate1 <= '0';
+			end if;
+			if diffplaystr2 = '1' and playstr2 = '0' then
+				gate2 <= '0';
+			end if;
+			if diffplaystr3 = '1' and playstr3 = '0' then
+				gate3 <= '0';
 			end if;
 		end if;		
 	end process;
