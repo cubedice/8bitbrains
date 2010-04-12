@@ -12,13 +12,16 @@ entity controller_save_bank is
 		octave_in	: in integer range 0 to 5;
 		mode_in		: in std_logic;
 		ch1offset2_in,ch1offset3_in,ch2offset2_in,ch2offset3_in, ch3offset2_in,ch3offset3_in: in integer range 0 to 44;
+		tempo_ctr_in : in integer range 0 to 10000000;
 		octave		: buffer integer range 0 to 5;
 		mode		: buffer std_logic;
 		ch1offset2,ch1offset3,ch2offset2,ch2offset3, ch3offset2,ch3offset3: buffer integer range 0 to 44;
+		tempo_ctr	: buffer integer range 0 to 10000000;
 		save_mode_out : out std_logic);
 end controller_save_bank;
 architecture arch of controller_save_bank is
 	signal ch1offset2_t,ch1offset3_t,ch2offset2_t,ch2offset3_t, ch3offset2_t,ch3offset3_t,octave_t,mode_t: std_logic_vector(5 downto 0);
+	signal tempo_ctr_t : std_logic_vector(23 downto 0);
 	signal save_mode,wren,prev_save : std_logic;
 	component int_bank IS
 		PORT
@@ -31,6 +34,18 @@ architecture arch of controller_save_bank is
 		);
 	END component;
 
+	component threebytebank IS
+		PORT
+		(
+			address		: IN STD_LOGIC_VECTOR (2 DOWNTO 0);
+			clock		: IN STD_LOGIC  := '1';
+			data		: IN STD_LOGIC_VECTOR (23 DOWNTO 0);
+			wren		: IN STD_LOGIC  := '0';
+			q		: OUT STD_LOGIC_VECTOR (23 DOWNTO 0)
+		);
+	END component;
+
+
 begin
 	save_mode_out <= save_mode;
 	ch1offset2 <= to_integer( unsigned(ch1offset2_t));
@@ -40,6 +55,7 @@ begin
 	ch3offset2 <= to_integer( unsigned(ch3offset2_t));
 	ch3offset3 <= to_integer( unsigned(ch3offset3_t));
 	octave <= to_integer( unsigned(octave_t));
+	tempo_ctr <= to_integer( unsigned(tempo_ctr_t));
 	mode <= mode_t(0);
 	ch1_offset2_bank : int_bank port map(
 		bank_in,clk,std_logic_vector( to_unsigned(ch1offset2_in,6)),wren,ch1offset2_t );
@@ -64,6 +80,9 @@ begin
 	
 	mode_bank : int_bank port map(
 		bank_in,clk, "00000"&mode_in,wren,mode_t );
+
+	tempo_bank : threebytebank port map(
+		bank_in,clk,std_logic_vector( to_unsigned(tempo_ctr_in,24)),wren,tempo_ctr_t);
 
 	process
 	begin
@@ -96,7 +115,7 @@ use work.brain_pkg.all;
 entity controller is
 	port (
 		clk												: in std_logic;
-		str_1, str_2, str_3, VASDRin					: in std_logic_vector(7 downto 0);
+		str_1, str_2, str_3, toggle_x,toggle_y			: in std_logic_vector(7 downto 0);
 		btn_vec											: in std_logic_vector(6 downto 0); -- btn_11, btn_12 ... btn_drm
 		edit_select_rot,edit_change_rot, waveform_rot	: in std_logic_vector(1 downto 0);
 		wave_bank_rot 									: in std_logic_vector(1 downto 0);
@@ -104,154 +123,162 @@ entity controller is
 		save_to_bank									: in std_logic;
 		gate1o,gate2o,gate3o							: out std_logic;
 		freq1,freq2,freq3								: out std_logic_vector(12 downto 0);
-		arp_mode										: buffer std_logic;
-		arp_style										: out std_logic_vector(2 downto 0);
-		octave_out										: out std_logic_vector(1 downto 0);
 		save_bank										: out std_logic_vector(2 downto 0);
 		save_mode										: buffer std_logic;
 		param											: buffer std_logic_vector(5 downto 0);
-		modifier										: out std_logic_vector(1 downto 0)
+		modifier										: buffer std_logic_vector(1 downto 0);
+		lfo1,lfo2										: out std_logic_vector(7 downto 0);
+		drum_mode										: buffer std_logic
 		);	
 end controller;
 architecture arch of controller is
-signal		gate1,gate2,gate3, wait_cycle													: std_logic;
-signal		seq_offset1,seq_offset2,seq_offset3												: std_logic_vector(7 downto 0);
-signal		key1b,key1,key1bb,key2b,key2bb,key2,key3b,key3bb,key3,seq_index					: std_logic_vector(6 downto 0);
-signal 		freq1_i,freq2_i,freq3_i															: std_logic_vector(12 downto 0);
-signal		save_bank_t,prev_save_bank_t													: std_logic_vector(2 downto 0);
-signal 		ch1offset2,ch1offset3,ch2offset2,ch2offset3, ch3offset2,ch3offset3				: integer range 0 to 44;
-signal 		ch1offset2_t,ch1offset3_t,ch2offset2_t,ch2offset3_t, ch3offset2_t,ch3offset3_t	: integer range 0 to 44;
-signal		prev_str_1, prev_str_2, prev_str_3												: std_logic_vector(7 downto 0);
-signal 		octave,octave_t																	: integer range 0 to 5;
-signal		p_bend_1, p_bend_2, p_bend_3													: std_logic;
-signal		gateblip1,gateblip2,gateblip3													: std_logic;
-signal 		arpmode,arpmode_t,prev_arp_mode_in												: std_logic;
-signal 		curbtns   																		: std_logic_vector(6 downto 0);
-signal 		prev_trig_vec,trig_vec,diff_trig_vec,diff_btn_vec			  					: std_logic_vector(6 downto 0);
-signal	 	prev_play_vec,play_vec,diff_play_vec 											: std_logic_vector(5 downto 0);
-signal 		tempo_ctr, tempo_end, rot_ctr													: integer range 0 to 10000000;
-signal		prev_wave_bank_rot, prev_edit_sel_rot, prev_edit_change_rot						: std_logic_vector(1 downto 0);
-constant 	STRING1																			: std_logic_vector (1 DOWNTO 0):= "00";
-constant 	STRING2																			: std_logic_vector (1 DOWNTO 0):= "01";
-constant 	STRING3																			: std_logic_vector (1 DOWNTO 0):= "10";
-constant 	GUITARMODE																		: integer:= 1;
-constant	BASSMODE																		: integer:= 0;
-constant	HIGHMODE																		: integer:= 2;
+	signal		ch_sel_state																	: std_logic_vector(3 downto 0);
+	signal		gate1,gate2,gate3, wait_cycle, arp_mode											: std_logic;
+	signal		seq_offset1,seq_offset2,seq_offset3												: std_logic_vector(7 downto 0);
+	signal		x_amt,y_amt																		: std_logic_vector(7 downto 0);
+	signal		key1b,key1,key1bb,key2b,key2bb,key2,key3b,key3bb,key3,seq_index					: std_logic_vector(6 downto 0);
+	signal 		freq1_i,freq2_i,freq3_i															: std_logic_vector(12 downto 0);
+	signal		save_bank_t,prev_save_bank_t													: std_logic_vector(2 downto 0);
+	signal 		ch1offset2,ch1offset3,ch2offset2,ch2offset3, ch3offset2,ch3offset3				: integer range 0 to 44;
+	signal 		ch1offset2_t,ch1offset3_t,ch2offset2_t,ch2offset3_t, ch3offset2_t,ch3offset3_t	: integer range 0 to 44;
+	signal		prev_str_1, prev_str_2, prev_str_3												: std_logic_vector(7 downto 0);
+	signal 		octave,octave_t																	: integer range 0 to 5;
+	signal		gateblip1,gateblip2,gateblip3													: std_logic;
+	signal 		arpmode,arpmode_t,prev_arp_mode_in												: std_logic;
+	signal 		curbtns   																		: std_logic_vector(6 downto 0);
+	signal 		prev_trig_vec,trig_vec,diff_trig_vec,diff_btn_vec			  					: std_logic_vector(6 downto 0);
+	signal	 	prev_play_vec,play_vec,diff_play_vec ,prev_param								: std_logic_vector(5 downto 0);
+	signal 		tempo_ctr, tempo_end, tempo_end_t, rot_ctr										: integer range 0 to 10000000;
+	signal		prev_wave_bank_rot, prev_edit_sel_rot, prev_edit_change_rot						: std_logic_vector(1 downto 0);
+	constant 	STRING1																			: std_logic_vector (1 DOWNTO 0):= "00";
+	constant 	STRING2																			: std_logic_vector (1 DOWNTO 0):= "01";
+	constant 	STRING3																			: std_logic_vector (1 DOWNTO 0):= "10";
+	constant 	GUITARMODE																		: integer:= 1;
+	constant	BASSMODE																		: integer:= 0;
+	constant	HIGHMODE																		: integer:= 2;
 
-component lpm_rom0 IS
-	PORT
-	(
-		address		: IN STD_LOGIC_VECTOR (6 DOWNTO 0);
-		clock		: IN STD_LOGIC  := '1';
-		q		: OUT STD_LOGIC_VECTOR (12 DOWNTO 0)
-	);
-END component;
+	component lpm_rom0 IS
+		PORT
+		(
+			address		: IN STD_LOGIC_VECTOR (6 DOWNTO 0);
+			clock		: IN STD_LOGIC  := '1';
+			q		: OUT STD_LOGIC_VECTOR (12 DOWNTO 0)
+		);
+	END component;
 
-component keyrom IS
-	PORT
-	(
-		address		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-		clock		: IN STD_LOGIC  := '1';
-		q		: OUT STD_LOGIC_VECTOR (6 DOWNTO 0)
-	);
-END component;
+	component keyrom IS
+		PORT
+		(
+			address		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+			clock		: IN STD_LOGIC  := '1';
+			q		: OUT STD_LOGIC_VECTOR (6 DOWNTO 0)
+		);
+	END component;
 
-component controller_save_bank IS
-	port (
-		clk			: in std_logic;
-		bank_in		: in std_logic_vector(2 downto 0);
-		save		: in std_logic;
-		octave_in	: in integer range 0 to 5;
-		mode_in		: in std_logic;
-		ch1offset2_in,ch1offset3_in,ch2offset2_in,ch2offset3_in, ch3offset2_in,ch3offset3_in: in integer range 0 to 44;
-		octave		: buffer integer range 0 to 5;
-		mode		: buffer std_logic;
-		ch1offset2,ch1offset3,ch2offset2,ch2offset3, ch3offset2,ch3offset3: buffer integer range 0 to 44;
-		save_mode_out : out std_logic);
-end component;
-	
+	component controller_save_bank IS
+		port (
+			clk			: in std_logic;
+			bank_in		: in std_logic_vector(2 downto 0);
+			save		: in std_logic;
+			octave_in	: in integer range 0 to 5;
+			mode_in		: in std_logic;
+			ch1offset2_in,ch1offset3_in,ch2offset2_in,ch2offset3_in, ch3offset2_in,ch3offset3_in: in integer range 0 to 44;
+			tempo_ctr_in : in integer range 0 to 10000000;
+			octave		: buffer integer range 0 to 5;
+			mode		: buffer std_logic;
+			ch1offset2,ch1offset3,ch2offset2,ch2offset3, ch3offset2,ch3offset3: buffer integer range 0 to 44;
+			tempo_ctr	: buffer integer range 0 to 10000000;
+			save_mode_out : out std_logic);
+	end component;
+		
 
-component maj7 IS
-	PORT
-	(
-		address		: IN STD_LOGIC_VECTOR (6 DOWNTO 0);
-		clock		: IN STD_LOGIC  := '1';
-		q		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
-	);
-END component;
+	component maj7 IS
+		PORT
+		(
+			address		: IN STD_LOGIC_VECTOR (6 DOWNTO 0);
+			clock		: IN STD_LOGIC  := '1';
+			q		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
+		);
+	END component;
 
-component pow IS
-	PORT
-	(
-		address		: IN STD_LOGIC_VECTOR (6 DOWNTO 0);
-		clock		: IN STD_LOGIC  := '1';
-		q		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
-	);
-END component;
+	component pow IS
+		PORT
+		(
+			address		: IN STD_LOGIC_VECTOR (6 DOWNTO 0);
+			clock		: IN STD_LOGIC  := '1';
+			q		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
+		);
+	END component;
 
-component dom7 IS
-	PORT
-	(
-		address		: IN STD_LOGIC_VECTOR (6 DOWNTO 0);
-		clock		: IN STD_LOGIC  := '1';
-		q		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
-	);
-END component;
+	component dom7 IS
+		PORT
+		(
+			address		: IN STD_LOGIC_VECTOR (6 DOWNTO 0);
+			clock		: IN STD_LOGIC  := '1';
+			q		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
+		);
+	END component;
 
 
-	-- button aliases
-alias btn11 is btn_vec(6);
-alias btn12 is btn_vec(5);
-alias btn21 is btn_vec(4);
-alias btn22 is btn_vec(3);
-alias btn31 is btn_vec(2);
-alias btn32 is btn_vec(1);
+		-- button aliases
+	alias btn11 is btn_vec(6);
+	alias btn12 is btn_vec(5);
+	alias btn21 is btn_vec(4);
+	alias btn22 is btn_vec(3);
+	alias btn31 is btn_vec(2);
+	alias btn32 is btn_vec(1);
+	alias btndrm is btn_vec(0);
+		-- diff button aliases
+	alias diffbtn11:std_logic is diff_btn_vec(6);
+	alias diffbtn12 is diff_btn_vec(5);
+	alias diffbtn21 is diff_btn_vec(4);
+	alias diffbtn22 is diff_btn_vec(3);
+	alias diffbtn31 is diff_btn_vec(2);
+	alias diffbtn32 is diff_btn_vec(1);
+	alias diffbtndrm is diff_btn_vec(0);	
+		-- trigger aliases
+	alias trig11:std_logic is trig_vec(6);
+	alias trig12 is trig_vec(5);
+	alias trig21 is trig_vec(4);
+	alias trig22 is trig_vec(3);
+	alias trig31 is trig_vec(2);
+	alias trig32 is trig_vec(1);
 
-	-- diff button aliases
-alias diffbtn11:std_logic is diff_btn_vec(6);
-alias diffbtn12 is diff_btn_vec(5);
-alias diffbtn21 is diff_btn_vec(4);
-alias diffbtn22 is diff_btn_vec(3);
-alias diffbtn31 is diff_btn_vec(2);
-alias diffbtn32 is diff_btn_vec(1);
-	
-	-- trigger aliases
-alias trig11:std_logic is trig_vec(6);
-alias trig12 is trig_vec(5);
-alias trig21 is trig_vec(4);
-alias trig22 is trig_vec(3);
-alias trig31 is trig_vec(2);
-alias trig32 is trig_vec(1);
+		-- diff trigger aliases
+	alias diff_trig11:std_logic is diff_trig_vec(6);
+	alias diff_trig12 is diff_trig_vec(5);
+	alias diff_trig21 is diff_trig_vec(4);
+	alias diff_trig22 is diff_trig_vec(3);
+	alias diff_trig31 is diff_trig_vec(2);
+	alias diff_trig32 is diff_trig_vec(1);
+		
+		-- play aliases
+	alias playch1 is play_vec(5);
+	alias playch2 is play_vec(4);
+	alias playch3 is play_vec(3);
+	alias playstr1 is play_vec(2);
+	alias playstr2 is play_vec(1);
+	alias playstr3 is play_vec(0);
 
-	-- diff trigger aliases
-alias diff_trig11:std_logic is diff_trig_vec(6);
-alias diff_trig12 is diff_trig_vec(5);
-alias diff_trig21 is diff_trig_vec(4);
-alias diff_trig22 is diff_trig_vec(3);
-alias diff_trig31 is diff_trig_vec(2);
-alias diff_trig32 is diff_trig_vec(1);
-	
-	-- play aliases
-alias playch1 is play_vec(5);
-alias playch2 is play_vec(4);
-alias playch3 is play_vec(3);
-alias playstr1 is play_vec(2);
-alias playstr2 is play_vec(1);
-alias playstr3 is play_vec(0);
-
-	-- diff play aliases
-alias diffplaych1 is diff_play_vec(5);
-alias diffplaych2 is diff_play_vec(4);
-alias diffplaych3 is diff_play_vec(3);
-alias diffplaystr1 is diff_play_vec(2);
-alias diffplaystr2 is diff_play_vec(1);
-alias diffplaystr3 is diff_play_vec(0);	
-	
+		-- diff play aliases
+	alias diffplaych1 is diff_play_vec(5);
+	alias diffplaych2 is diff_play_vec(4);
+	alias diffplaych3 is diff_play_vec(3);
+	alias diffplaystr1 is diff_play_vec(2);
+	alias diffplaystr2 is diff_play_vec(1);
+	alias diffplaystr3 is diff_play_vec(0);	
+		
 
 begin
 	gate1o <= gate1;
 	gate2o <= gate2;
 	gate3o <= gate3;
+	x_amt <= std_logic_vector( unsigned(toggle_x) - 157 ) when toggle_x > "10011101" else
+			 "00000000";
+	y_amt <= std_logic_vector( unsigned(toggle_y) - 167 ) when toggle_y > "10100111" else
+			 "00000000";
+	lfo1 <= x_amt;
+	lfo2 <= y_amt;
 	
 	kr1 : keyrom port map(
 		str_1,clk,key1b);
@@ -274,11 +301,12 @@ begin
 	f3 : lpm_rom0 port map(
 		key3,clk,freq3_i);
 
+	
 	save_bank <= save_bank_t;
 	sv_bnk : controller_save_bank port map(
 		clk,save_bank_t,save_to_bank,
-		octave,arpmode,ch1offset2,ch1offset3,ch2offset2,ch2offset3,ch3offset2,ch3offset3,
-		octave_t,arpmode_t,ch1offset2_t,ch1offset3_t,ch2offset2_t,ch2offset3_t,ch3offset2_t,ch3offset3_t, 
+		octave,arpmode,ch1offset2,ch1offset3,ch2offset2,ch2offset3,ch3offset2,ch3offset3,tempo_end,
+		octave_t,arpmode_t,ch1offset2_t,ch1offset3_t,ch2offset2_t,ch2offset3_t,ch3offset2_t,ch3offset3_t,tempo_end_t,
 		save_mode);
 		
 		
@@ -341,7 +369,95 @@ begin
 			save_bank_t <= "000";
 			prev_save_bank_t <= "000";
 			arpmode <= '1';
+			ch_sel_state <= "0000";
 		elsif clk'event and clk = '1' then
+		
+			-- chord selection
+			if prev_param /= param and param = "000111" then
+				ch_sel_state <= "1000";
+			end if;
+			
+			if ch_sel_state /= "0000" then
+				if diffbtn32 = '1' and btn32 = '0' then
+					ch_sel_state <= "0000";
+				elsif ch_sel_state = "1000" then
+					if diffbtn11 = '1' and btn11 = '0' then
+						ch_sel_state <= "0010";
+					elsif diffbtn21 = '1' and btn21 = '0' then
+						ch_sel_state <= "0100";
+					elsif diffbtn21 = '1' and btn21 = '0'then
+						ch_sel_state <= "0110";
+					end if;
+				elsif ch_sel_state(3 downto 1) = "001" or ch_sel_state(3 downto 1) = "010" or ch_sel_state(3 downto 1) = "011" then
+					if diffbtn11 = '1' and btn11 = '0' then
+						if ch_sel_state(0) = '0' then
+							-- get key num
+							if ch_sel_state(3 downto 1) = "001" then 
+								ch1offset2 <= to_integer(unsigned(key1b)) - 8;
+							elsif ch_sel_state(3 downto 1) = "010" then 
+								ch2offset2 <= to_integer(unsigned(key1b)) - 8;
+							elsif ch_sel_state(3 downto 1) = "011" then 
+								ch3offset2 <= to_integer(unsigned(key1b)) - 8;
+							end if;
+							ch_sel_state(0) <= '1';
+						else
+							-- get key num
+							if ch_sel_state(3 downto 1) = "001" then 
+								ch1offset3 <= to_integer(unsigned(key1b)) - 8;
+							elsif ch_sel_state(3 downto 1) = "010" then 
+								ch2offset3 <= to_integer(unsigned(key1b)) - 8;
+							elsif ch_sel_state(3 downto 1) = "011" then 
+								ch3offset3 <= to_integer(unsigned(key1b)) - 8;
+							end if;
+							ch_sel_state <= "0000";
+						end if;
+					elsif diffbtn21 = '1' and btn21 = '0' then
+						if ch_sel_state(0) = '0' then
+							-- get key num
+							if ch_sel_state(3 downto 1) = "001" then 
+								ch1offset2 <= to_integer(unsigned(key2b)) - 3;
+							elsif ch_sel_state(3 downto 1) = "010" then 
+								ch2offset2 <= to_integer(unsigned(key2b)) - 3;
+							elsif ch_sel_state(3 downto 1) = "011" then 
+								ch3offset2 <= to_integer(unsigned(key2b)) - 3;
+							end if;
+							ch_sel_state(0) <= '1';
+						else
+							-- get key num
+							if ch_sel_state(3 downto 1) = "001" then 
+								ch1offset3 <= to_integer(unsigned(key2b)) - 3;
+							elsif ch_sel_state(3 downto 1) = "010" then 
+								ch2offset3 <= to_integer(unsigned(key2b)) - 3;
+							elsif ch_sel_state(3 downto 1) = "011" then 
+								ch3offset3 <= to_integer(unsigned(key2b)) - 3;
+							end if;
+							ch_sel_state <= "0000";
+						end if;
+					elsif diffbtn31 = '1' and btn31 = '0'then
+						if ch_sel_state(0) = '0' then
+							-- get key num
+							if ch_sel_state(3 downto 1) = "001" then 
+								ch1offset2 <= to_integer(unsigned(key3b)) + 2;
+							elsif ch_sel_state(3 downto 1) = "010" then 
+								ch2offset2 <= to_integer(unsigned(key3b)) + 2;
+							elsif ch_sel_state(3 downto 1) = "011" then 
+								ch3offset2 <= to_integer(unsigned(key3b)) + 2;
+							end if;
+							ch_sel_state(0) <= '1';
+						else
+							-- get key num
+							if ch_sel_state(3 downto 1) = "001" then 
+								ch1offset3 <= to_integer(unsigned(key3b)) + 2;
+							elsif ch_sel_state(3 downto 1) = "010" then 
+								ch2offset3 <= to_integer(unsigned(key3b)) + 2;
+							elsif ch_sel_state(3 downto 1) = "011" then 
+								ch3offset3 <= to_integer(unsigned(key3b)) + 2;
+							end if;
+							ch_sel_state <= "0000";
+						end if;
+					end if;
+				end if;
+			end if;
 		
 			
 			if prev_wave_bank_rot(0) /= wave_bank_rot(0) then
@@ -366,6 +482,7 @@ begin
 					ch3offset2 <= ch3offset2_t; 
 					ch3offset3 <= ch3offset3_t; 
 					arpmode <= arpmode_t;
+					tempo_end <= tempo_end_t;
 					wait_cycle <= '0';
 					prev_save_bank_t <= save_bank_t;
 				else
@@ -377,7 +494,6 @@ begin
 				arpmode <= not arpmode;
 			end if;
 			prev_arp_mode_in <= arp_mode_in;
-			
 			
 			
 			if prev_edit_sel_rot(0) /= edit_select_rot(0) then
@@ -397,6 +513,7 @@ begin
 					end if;
 				end if;
 			end if;
+			prev_param <= param;
 			prev_edit_sel_rot <= edit_select_rot;
 			
 			if prev_edit_change_rot(0) /= edit_change_rot(0) then
@@ -411,11 +528,70 @@ begin
 				modifier <= "00";
 			end if;
 			prev_edit_change_rot <= edit_change_rot;
+
+			-- modified by user?
+			if modifier(1) = '1' then
+				if modifier(0) = '1' then
+					case param is
+--						when "000000" =>
+--							attack <= attack + 32;
+--						when "000001" =>
+--							decay <= decay + 32;
+--						when "000010" =>
+--							sustain <= sustain + 32;
+--						when "000011" =>
+--							release <= release + 32;
+--						when "000100" =>
+--							volume <= volume + 32;
+						when "000101" =>
+							octave <= octave + 1;
+						when "000110" =>
+							if tempo_end > 1000000 then
+								tempo_end <= tempo_end + 1000000;
+							elsif tempo_end > 100000 then
+								tempo_end <= tempo_end + 100000;
+							elsif tempo_end > 10000 then
+								tempo_end <= tempo_end + 10000;
+							else
+								tempo_end <= tempo_end + 1000;
+							end if;
+						when others =>
+					end case;
+				else
+					case param is
+--						when "000000" =>
+--							attack <= attack - 32;
+--						when "000001" =>
+--							decay <= decay - 32;
+--						when "000010" =>
+--							sustain <= sustain - 32;
+--						when "000011" =>
+--							release <= release - 32;
+--						when "000100" =>
+--							volume <= volume - 32;
+						when "000101" =>
+							octave <= octave - 1;
+						when "000110" =>
+							if tempo_end > 1000000 then
+								tempo_end <= tempo_end - 1000000;
+							elsif tempo_end > 100000 then
+								tempo_end <= tempo_end - 100000;
+							elsif tempo_end > 10000 then
+								tempo_end <= tempo_end - 10000;
+							else
+								tempo_end <= tempo_end - 1000;
+							end if;
+						when "000111" =>
+							
+						when others =>
+					end case;
+				end if;
+			end if;
+		
+			
 		end if;
 	end process;
 
-	octave_out <= std_logic_vector( to_unsigned(octave, 2) );
-	
 	-- button press detection
 	process(clk,reset,btn_vec)
 	begin
@@ -429,9 +605,13 @@ begin
 			prev_play_vec <= "000000";
 			
 		elsif clk'event and clk = '1' then
-				
-			-- we were not playing a chord
-			if play_vec(5 downto 3) = "000" then
+			if diffbtndrm = '1' and btndrm = '0' then
+				drum_mode <= not drum_mode;
+			end if;
+			
+			if drum_mode = '1' then
+				-- TODO: gates act differently in drum mode
+			elsif play_vec(5 downto 3) = "000" then -- we were not playing a chord
 			
 				-- are we playing anything now?
 				
@@ -521,17 +701,14 @@ begin
 			-- we were playing a chord
 			elsif playch1 = '1' then
 				if btn11 = '1' then
-					if btn12 = '1' then
-						-- TODO: recalc waves for chord11							
+					if btn12 = '1' then							
 						trig_vec(4 downto 0) <= "00000";
 						trig12 <= '1';
-					elsif btn22 = '1' then
-						-- TODO: recalc waves for chord12							
+					elsif btn22 = '1' then						
 						trig_vec(5 downto 4) <= "00";
 						trig_vec(2 downto 0) <= "000";
 						trig22 <= '1';
 					elsif btn32 = '1' then
-						-- TODO: recalc waves for chord13
 						trig_vec(5 downto 2) <= "0000";
 						trig_vec(0) <= '0';
 						trig32 <= '1';
@@ -542,17 +719,13 @@ begin
 			elsif playch2 = '1' then
 				if btn21 = '1' then
 					if btn22 = '1' then
-						-- TODO: recalc waves for chord21
 						trig_vec(5 downto 4) <= "00";
 						trig_vec(2 downto 0) <= "000";
 						trig22 <= '1';
 					elsif btn12 = '1' then
-						-- TODO: recalc waves for chord22
 						trig_vec(4 downto 0) <= "00000";
 						trig12 <= '1';
 					elsif btn32 = '1' then
-						-- TODO: recalc waves for chord23
-						
 						trig_vec(5 downto 2) <= "0000";
 						trig_vec(0) <= '0';
 						trig32 <= '1';
@@ -562,17 +735,14 @@ begin
 				end if;
 			elsif playch3 = '1' then
 				if btn31 = '1' then
-					if btn32 = '1' then							
-						-- TODO: recalc waves for chord31
+					if btn32 = '1' then						
 						trig_vec(5 downto 2) <= "0000";
 						trig_vec(0) <= '0';
 						trig32 <= '1';
-					elsif btn12 = '1' then
-						-- TODO: recalc waves for chord32							
+					elsif btn12 = '1' then						
 						trig_vec(4 downto 0) <= "00000";
 						trig12 <= '1';
 					elsif btn22 = '1' then
-						-- TODO: recalc waves for chord33
 						trig_vec(5 downto 4) <= "00";
 						trig_vec(2 downto 0) <= "000";
 						trig22 <= '1';
@@ -604,14 +774,11 @@ begin
 			key1 <= "0000000";
 			key2 <= "0000000";
 			key3 <= "0000000";
-			p_bend_1 <= '0';
-			p_bend_2 <= '0';
-			p_bend_3 <= '0';
 		elsif clk'event and clk = '1' then
+
 			freq1 <= freq1_i;
 			freq2 <= freq2_i;
 			freq3 <= freq3_i;
-
 				
 			-- playing a chord?
 			if arpmode = '1' and play_vec(5 downto 3) /= "000" then

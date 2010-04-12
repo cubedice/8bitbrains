@@ -1,15 +1,26 @@
-DEPTH = 128; % Memory depth and width are required %
-% DEPTH is the number of addresses %
+-- Copyright (C) 1991-2009 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
 
-WIDTH = 12; % WIDTH is the number of bits of data per word %
-% DEPTH and WIDTH should be entered as decimal numbers %
+-- Quartus II generated Memory Initialization File (.mif)
 
-ADDRESS_RADIX = DEC; % Address and value radixes are required %
-DATA_RADIX = HEX; % Enter BIN, DEC, HEX, OCT, or UNS; unless %
-% otherwise specified, radixes = HEX %
--- Specify values for addresses, which can be single address or range
-CONTENT
-BEGIN
-	[0..64]: 0; % Range--Every address from 0 to F = 3FFF %
-	[65..127] : EFF; % Single address--Address 6 = F %
+WIDTH=12;
+DEPTH=128;
+
+ADDRESS_RADIX=DEC;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	[0..64]  :   000000000000;
+	[65..127]  :   000111111111;
 END;

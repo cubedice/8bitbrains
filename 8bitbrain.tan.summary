@@ -5,7 +5,7 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 11.841 ns
+Actual Time    : 10.203 ns
 From           : reset
 To             : controller:inst1|gate3
 From Clock     : --
@@ -15,7 +15,7 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 17.752 ns
+Actual Time    : 17.826 ns
 From           : p2s:inst5|data_out
 To             : p2s_dout
 From Clock     : clk
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 3.209 ns
+Actual Time    : 3.930 ns
 From           : altera_internal_jtag
-To             : sld_hub:sld_hub_inst|tdo_bypass_reg
+To             : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|bypass_reg_out
 From Clock     : --
 To Clock       : altera_internal_jtag~TCKUTAP
 Failed Paths   : 0
@@ -45,9 +45,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 11.69 MHz ( period = 85.515 ns )
-From           : wavegen:inst6|square:sq3|altsyncram:altsyncram_component|altsyncram_pra1:auto_generated|ram_block1a0~porta_address_reg6
-To             : modulator:inst3|wave3[0]
+Actual Time    : 11.15 MHz ( period = 89.716 ns )
+From           : wavegen:inst6|sin:sn2|altsyncram:altsyncram_component|altsyncram_ld91:auto_generated|ram_block1a0~porta_address_reg6
+To             : modulator:inst3|wave2[8]
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0
@@ -55,8 +55,8 @@ Failed Paths   : 0
 Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 127.26 MHz ( period = 7.858 ns )
-From           : sld_hub:sld_hub_inst|irf_reg[1][2]
+Actual Time    : 74.53 MHz ( period = 13.418 ns )
+From           : sld_hub:sld_hub_inst|irf_reg[2][6]
 To             : sld_hub:sld_hub_inst|tdo
 From Clock     : altera_internal_jtag~TCKUTAP
 To Clock       : altera_internal_jtag~TCKUTAP
@@ -66,11 +66,11 @@ Type           : Clock Hold: 'clk'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : controller:inst1|curbtns[1]
-To             : controller:inst1|diff_btn_vec[1]
+From           : controller:inst1|curbtns[6]
+To             : controller:inst1|diff_btn_vec[6]
 From Clock     : clk
 To Clock       : clk
-Failed Paths   : 194
+Failed Paths   : 182
 
 Type           : Total number of failed paths
 Slack          : 
@@ -80,7 +80,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 194
+Failed Paths   : 182
 
 --------------------------------------------------------------------------------------
 

@@ -4,10 +4,10 @@ use ieee.numeric_std.all;
 
 entity s2p is
 	port (
-		clk				: in std_logic;
-		data_in 		: in std_logic_vector(9 downto 0);
-		cs, ioclk 		: out std_logic;
-		s1,s2,s3		: out std_logic_vector(7 downto 0) ); --b11,b12,b21,b22,b31,b32,bd,
+		clk							: in std_logic;
+		data_in 					: in std_logic_vector(9 downto 0);
+		cs, ioclk 					: out std_logic;
+		s1,s2,s3,xaxis,yaxis		: out std_logic_vector(7 downto 0) ); --b11,b12,b21,b22,b31,b32,bd,
 end s2p;
 architecture arch of s2p is
 signal i_ioclk 		: std_logic;
@@ -59,8 +59,8 @@ begin
 			--b21 <= tmp_data(2);
 			--b22 <= tmp_data(3);
 			--b31 <= tmp_data(4);
-			--b32 <= tmp_data(5);
-			--bd <= tmp_data(6);
+			yaxis <= tmp_data(5);
+			xaxis <= tmp_data(6);
 			s1 <= tmp_data(7);
 			s2 <= tmp_data(8);
 			s3 <= tmp_data(9);

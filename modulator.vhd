@@ -14,7 +14,7 @@ entity modulator_save_bank is
 		save_mode_out : out std_logic);
 end modulator_save_bank;
 architecture arch of modulator_save_bank is
-	signal save_mode,wren,prev_save : std_logic;
+	signal save_mode,wren,prev_save,wait_cycle : std_logic;
 	signal wave_sel_out_t : std_logic_vector(5 downto 0);
 	component bytebank IS
 		PORT
@@ -44,11 +44,16 @@ begin
 	begin
 		wait until clk'event and clk='1';
 		if save /= prev_save and save = '0' then
+			wait_cycle <= '1';
+		end if;
+		prev_save <= save;
+		
+		if wait_cycle = '1' then
 			wren <= '1';
+			wait_cycle <= '0';
 		else
 			wren <= '0';
 		end if;
-		prev_save <= save;
 	end process;
 
 end arch;
@@ -56,15 +61,16 @@ end arch;
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
 use work.brain_pkg.attack_wave;
 use work.brain_pkg.decay_wave;
 use work.brain_pkg.release_wave;
 
 entity modulator is
 	port (
-		clk,Gate1,Gate2,Gate3	: in std_logic;
+		clk,Gate1,Gate2,Gate3			: in std_logic;
 		Wave1in,Wave2in,Wave3in			: in std_logic_vector(11 downto 0);
-		save_bank				: in std_logic_vector(2 downto 0);
+		save_bank						: in std_logic_vector(2 downto 0);
 		save_mode						: in std_logic;
 		param							: in std_logic_vector(5 downto 0);
 		modifier						: in std_logic_vector(1 downto 0);
@@ -92,7 +98,6 @@ architecture arch of modulator is
 	signal volume_ctr3, attack_ctr3, decay_ctr3, sustain_ctr3, release_ctr3 : std_logic_vector(7 downto 0);
 	signal ctr_ctr : std_logic_vector(17 downto 0);
 	signal wait_cycle, IGNORE : std_logic;
-	
 begin
 	--wave1 <= volume_ize(volume, Wave1in);
 --	attack <= "00000011";
@@ -102,6 +107,8 @@ begin
 	md_sv_bnk : modulator_save_bank port map(
 		clk, save_bank, save_mode, volume, attack, decay, sustain, release,
 		vol_t, att_t,dec_t, sus_t, rel_t, IGNORE );
+		
+
 	
 	process( save_bank, modifier, clk )
 	begin
@@ -138,18 +145,17 @@ begin
 				end if;
 			end if;
 			if prev_save_bank /= save_bank and save_mode = '0' then
-				if wait_cycle = '1' then
-					attack <= att_t;
-					decay <= dec_t;
-					volume <= vol_t;
-					sustain <= sus_t;
-					release <= rel_t;
-					prev_save_bank <= save_bank;
-				else
-					wait_cycle <= '1';
-				end if;
+				wait_cycle <= '1';
 			end if;
-			
+			if wait_cycle = '1' then
+				attack <= att_t;
+				decay <= dec_t;
+				volume <= vol_t;
+				sustain <= sus_t;
+				release <= rel_t;
+				wait_cycle <= '0';
+			end if;
+			prev_save_bank <= save_bank;
 		end if;
 	end process;
 	
@@ -166,6 +172,7 @@ begin
 	process( Wave1in, Gate1, clk )
 	begin
 		if clk'event and clk = '1' then
+			
 			if Gate1 = '1' then
 				release_ctr1 <= release;
 				if attack_ctr1 /= attack then
@@ -179,7 +186,7 @@ begin
 					end if;
 					wave1 <= decay_wave( decay_ctr1, decay, Wave1in );
 				else
-					wave1 <= '0' & Wave1in(11 downto 1);
+					wave1 <= Wave1in;
 				end if;
 			else
 				attack_ctr1 <= (attack_ctr1'range => '0');
@@ -197,6 +204,7 @@ begin
 	process( Wave2in, Gate2, clk )
 	begin
 		if clk'event and clk = '1' then
+			
 			if Gate2 = '1' then
 				release_ctr2 <= release;
 				if attack_ctr2 /= attack then
@@ -210,7 +218,7 @@ begin
 					end if;
 					wave2 <= decay_wave( decay_ctr2, decay, Wave2in );
 				else
-					wave2 <= '0' & Wave2in(11 downto 1);
+					wave2 <= Wave2in;
 				end if;
 			else
 				attack_ctr2 <= (attack_ctr2'range => '0');
@@ -228,6 +236,7 @@ begin
 	process( Wave3in, Gate3, clk )
 	begin
 		if clk'event and clk = '1' then
+			
 			if Gate3 = '1' then
 				release_ctr3 <= release;
 				if attack_ctr3 /= attack then
@@ -241,7 +250,7 @@ begin
 					end if;
 					wave3 <= decay_wave( decay_ctr3, decay, Wave3in );
 				else
-					wave3 <= '0' & Wave3in(11 downto 1);
+					wave3 <= Wave3in;
 				end if;
 			else
 				attack_ctr3 <= (attack_ctr3'range => '0');

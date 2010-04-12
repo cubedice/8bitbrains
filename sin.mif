@@ -1,0 +1,152 @@
+-- Copyright (C) 1991-2009 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+
+-- Quartus II generated Memory Initialization File (.mif)
+
+WIDTH=12;
+DEPTH=128;
+
+ADDRESS_RADIX=DEC;
+DATA_RADIX=UNS;
+
+CONTENT BEGIN
+0	:	2048;
+1	:	2148;
+2	:	2248;
+3	:	2348;
+4	:	2447;
+5	:	2545;
+6	:	2642;
+7	:	2737;
+8	:	2831;
+9	:	2923;
+10	:	3013;
+11	:	3100;
+12	:	3185;
+13	:	3267;
+14	:	3347;
+15	:	3423;
+16	:	3496;
+17	:	3565;
+18	:	3631;
+19	:	3692;
+20	:	3750;
+21	:	3804;
+22	:	3854;
+23	:	3899;
+24	:	3940;
+25	:	3976;
+26	:	4007;
+27	:	4034;
+28	:	4056;
+29	:	4073;
+30	:	4086;
+31	:	4093;
+32	:	4095;
+33	:	4093;
+34	:	4086;
+35	:	4073;
+36	:	4056;
+37	:	4034;
+38	:	4007;
+39	:	3976;
+40	:	3940;
+41	:	3899;
+42	:	3854;
+43	:	3804;
+44	:	3750;
+45	:	3692;
+46	:	3631;
+47	:	3565;
+48	:	3496;
+49	:	3423;
+50	:	3347;
+51	:	3267;
+52	:	3185;
+53	:	3100;
+54	:	3013;
+55	:	2923;
+56	:	2831;
+57	:	2737;
+58	:	2642;
+59	:	2545;
+60	:	2447;
+61	:	2348;
+62	:	2248;
+63	:	2148;
+64	:	2048;
+65	:	1947;
+66	:	1847;
+67	:	1747;
+68	:	1648;
+69	:	1550;
+70	:	1453;
+71	:	1358;
+72	:	1264;
+73	:	1172;
+74	:	1082;
+75	:	 995;
+76	:	 910;
+77	:	 828;
+78	:	 748;
+79	:	 672;
+80	:	 599;
+81	:	 530;
+82	:	 464;
+83	:	 403;
+84	:	 345;
+85	:	 291;
+86	:	 241;
+87	:	 196;
+88	:	 155;
+89	:	 119;
+90	:	  88;
+91	:	  61;
+92	:	  39;
+93	:	  22;
+94	:	   9;
+95	:	   2;
+96	:	   0;
+97	:	   2;
+98	:	   9;
+99	:	  22;
+100	:	  39;
+101	:	  61;
+102	:	  88;
+103	:	 119;
+104	:	 155;
+105	:	 196;
+106	:	 241;
+107	:	 291;
+108	:	 345;
+109	:	 403;
+110	:	 464;
+111	:	 530;
+112	:	 599;
+113	:	 672;
+114	:	 748;
+115	:	 828;
+116	:	 910;
+117	:	 995;
+118	:	1082;
+119	:	1172;
+120	:	1264;
+121	:	1358;
+122	:	1453;
+123	:	1550;
+124	:	1648;
+125	:	1747;
+126	:	1847;
+127	:	1947;
+END;
