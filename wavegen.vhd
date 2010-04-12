@@ -60,6 +60,7 @@ end arch;
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
+use ieee.math_real.all;
 use ieee.numeric_std.all;
 --my_slv <= std_logic_vector(to_unsigned(my_integer, my_slv'length));
 
@@ -73,6 +74,7 @@ entity wavegen is
 		lfo1,lfo2	: in std_logic_vector(7 downto 0);
 		btn_vec		: in std_logic_vector(6 downto 0);
 		drum_mode 	: in std_logic;
+        reset       : in std_logic;
 		wave1, wave2, wave3,lfo1_o,lfo2_o : out std_logic_vector(11 downto 0)
 		);
 end wavegen;
@@ -144,10 +146,12 @@ architecture arch of wavegen is
 	end component;
 	signal wave_sel, wave_sel_t : std_logic_vector(2 downto 0);
 	signal addr1, addr2, addr3 : std_logic_vector(6 downto 0);
-	signal tr1_o,tr2_o,tr3_o,sq1_o,sq2_o,sq3_o,sn1_o,sn2_o,sn3_o,addrlfo1,addrlfo2,lfo1t, lfo2t : std_logic_vector(11 downto 0);
+	signal tr1_o,tr2_o,tr3_o,sq1_o,sq2_o,sq3_o,sn1_o,sn2_o,sn3_o,addrlfo1,addrlfo2,lfo1t, lfo2t,rn1_o,rn2_o,rn3_o : std_logic_vector(11 downto 0);
 	signal prev_wave_form_rot : std_logic_vector(1 downto 0);
 	signal prev_save_bank : std_logic_vector(2 downto 0);
 	signal wait_cycle, IGNORE: std_logic;
+    signal rnd : real;
+    variable seed1,seed2 : positive;
 begin
 	waveselect_bank : wavegen_save_bank port map(
 		clk, save_bank, save_mode, wave_sel, wave_sel_t, IGNORE );
@@ -191,6 +195,38 @@ begin
 	lfo1_o <= lfo1t;
 	lfo2_o <= lfo2t;
 		
+    process( reset )
+    begin
+        if reset = '1' then
+            seed1 <= 0.3;
+            seed2 <= 0.75;
+        end if;
+    end process;
+    
+    process( addr1 )
+    begin
+        if clk'event and clk = '1' then
+            uniform(seed1,seed2,rnd);
+            rn1_o <= std_logic_vector(to_unsigned(integer(trunc(4096*rnd)), rn1_o'length));
+        end if;
+    end process;
+
+    process( addr2 )
+    begin
+        if clk'event and clk = '1' then
+            uniform(seed1,seed2,rnd);
+            rn2_o <= std_logic_vector(to_unsigned(integer(trunc(4096*rnd)), rn2_o'length));
+        end if;
+    end process;
+
+    process( addr3 )
+    begin
+        if clk'event and clk = '1' then
+            uniform(seed1,seed2,rnd);
+            rn3_o <= std_logic_vector(to_unsigned(integer(trunc(4096*rnd)), rn3_o'length));
+        end if;
+    end process;
+    
 	process( save_bank, clk )
 	begin
 		if clk'event and clk = '1' then
@@ -232,6 +268,10 @@ begin
 					wave1 <= sn1_o;
 					wave2 <= sn2_o;
 					wave3 <= sn3_o;
+                when "011" =>
+                    wave1 <= rn1_o;
+                    wave2 <= rn2_o;
+                    wave3 <= rn3_o;
 				when others =>
 					wave1 <= tr1_o;
 					wave2 <= tr2_o;

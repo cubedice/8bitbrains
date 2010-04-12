@@ -136,6 +136,7 @@ architecture arch of controller is
 	signal		gate1,gate2,gate3, wait_cycle, arp_mode											: std_logic;
 	signal		seq_offset1,seq_offset2,seq_offset3												: std_logic_vector(7 downto 0);
 	signal		x_amt,y_amt																		: std_logic_vector(7 downto 0);
+    signal      accumulator                                                                     : std_logic_vector(11 downto 0);
 	signal		key1b,key1,key1bb,key2b,key2bb,key2,key3b,key3bb,key3,seq_index					: std_logic_vector(6 downto 0);
 	signal 		freq1_i,freq2_i,freq3_i															: std_logic_vector(12 downto 0);
 	signal		save_bank_t,prev_save_bank_t													: std_logic_vector(2 downto 0);
@@ -148,7 +149,7 @@ architecture arch of controller is
 	signal 		curbtns   																		: std_logic_vector(6 downto 0);
 	signal 		prev_trig_vec,trig_vec,diff_trig_vec,diff_btn_vec			  					: std_logic_vector(6 downto 0);
 	signal	 	prev_play_vec,play_vec,diff_play_vec ,prev_param								: std_logic_vector(5 downto 0);
-	signal 		tempo_ctr, tempo_end, tempo_end_t, rot_ctr										: integer range 0 to 10000000;
+	signal 		tempo_ctr, tempo_end, tempo_end_t, rot_ctr, accumulator_ctr, accumulator_ctr_end: integer range 0 to 26000000;
 	signal		prev_wave_bank_rot, prev_edit_sel_rot, prev_edit_change_rot						: std_logic_vector(1 downto 0);
 	constant 	STRING1																			: std_logic_vector (1 DOWNTO 0):= "00";
 	constant 	STRING2																			: std_logic_vector (1 DOWNTO 0):= "01";
@@ -775,10 +776,42 @@ begin
 			key2 <= "0000000";
 			key3 <= "0000000";
 		elsif clk'event and clk = '1' then
+            case x_amt is
+                when "00000010" =>
+                    accumulator_ctr_end <= 25175000;
+                when "00000011" =>
+                    accumulator_ctr_end <= 12175000;
+                when "00000100" =>
+                    accumulator_ctr_end <= 6175000;
+                when "00000101" =>
+                    accumulator_ctr_end <= 3175000;
+                when "00000110" =>
+                    accumulator_ctr_end <= 1775000;
+                when "00000111" =>
+                    accumulator_ctr_end <= 975000;
+                when "00001000" =>
+                    accumulator_ctr_end <= 475000;
+                when "00001001" =>
+                    accumulator_ctr_end <= 235000;
+                when others =>
+                    accumulator_ctr_end <= 235000;
+            end case;
 
-			freq1 <= freq1_i;
-			freq2 <= freq2_i;
-			freq3 <= freq3_i;
+            if play_vec = ( play_vec'range => '0' ) or x_amt = ( x_amt'range => '0' ) then
+                accumulator <= ( accumulator'range => '0' );
+                accumulator_ctr <= 0;
+            else
+                accumulator_ctr <= accumulator_ctr + 1;
+            end if;
+
+            if accumulator_ctr > accumulator_ctr_end then
+                accumulator_ctr <= 0;
+                accumulator <= std_logic_vector( unsigned(accumulator) + 1 );
+            end if;
+            
+			freq1 <= std_logic_vector( unsigned(accumulator) + unsigned(freq1_i) );
+			freq2 <= std_logic_vector( unsigned(accumulator) + unsigned(freq2_i) );
+			freq3 <= std_logic_vector( unsigned(accumulator) + unsigned(freq3_i) );
 				
 			-- playing a chord?
 			if arpmode = '1' and play_vec(5 downto 3) /= "000" then
