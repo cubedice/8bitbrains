@@ -2276,18 +2276,6 @@ applicable agreement for further details.
 	(pt 736 296)
 )
 (connector
-	(text "btn_vec[6..0]" (rect 19 152 85 164)(font "Arial" ))
-	(pt -80 168)
-	(pt 192 168)
-	(bus)
-)
-(connector
-	(text "btn_vec[6..0]" (rect 632 264 698 276)(font "Arial" ))
-	(pt 736 280)
-	(pt 656 280)
-	(bus)
-)
-(connector
 	(text "g1" (rect 465 56 476 68)(font "Arial" ))
 	(pt 432 72)
 	(pt 536 72)
@@ -2380,4 +2368,16 @@ applicable agreement for further details.
 	(text "save_bank[3]" (rect 352 527 364 594)(font "Arial" )(vertical))
 	(pt 368 600)
 	(pt 368 576)
+)
+(connector
+	(text "btn_vec_o[6..0]" (rect 19 152 96 164)(font "Arial" ))
+	(pt -80 168)
+	(pt 192 168)
+	(bus)
+)
+(connector
+	(text "btn_vec_o[6..0]" (rect 632 264 709 276)(font "Arial" ))
+	(pt 736 280)
+	(pt 656 280)
+	(bus)
 )

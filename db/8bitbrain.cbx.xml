@@ -14,13 +14,13 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_mult:Mult3" CBX_FILE_NAME="mult_it01.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_bem.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_mult:Mult4" CBX_FILE_NAME="mult_pt01.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram" CBX_FILE_NAME="altsyncram_hps3.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram" CBX_FILE_NAME="altsyncram_nps3.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|controller:inst1|dom7:seq2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_nd91.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|controller:inst1|pow:seq3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_mc91.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_bem.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_mult:Mult5" CBX_FILE_NAME="mult_pt01.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux" CBX_FILE_NAME="mux_aoc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:\adv_point_3_and_more:advance_pointer_counter" CBX_FILE_NAME="cntr_tbi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:\adv_point_3_and_more:advance_pointer_counter" CBX_FILE_NAME="cntr_vbi.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|lfosin:lfo1w|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_qq91.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_bem.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_mult:Mult6" CBX_FILE_NAME="mult_it01.tdf"/>

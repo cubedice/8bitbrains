@@ -1,5 +1,5 @@
 Assembler report for 8bitbrain
-Sun Apr 11 20:11:43 2010
+Mon Apr 12 21:49:07 2010
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Apr 11 20:11:43 2010 ;
+; Assembler Status      ; Successful - Mon Apr 12 21:49:07 2010 ;
 ; Revision Name         ; 8bitbrain                             ;
 ; Top-level Entity Name ; 8bitbrain                             ;
 ; Family                ; Cyclone II                            ;
@@ -93,7 +93,7 @@ applicable agreement for further details.
 +----------------+-----------------------------------------------+
 ; Device         ; EP2C8T144C8                                   ;
 ; JTAG usercode  ; 0xFFFFFFFF                                    ;
-; Checksum       ; 0x00602DA7                                    ;
+; Checksum       ; 0x00627C68                                    ;
 +----------------+-----------------------------------------------+
 
 
@@ -104,7 +104,7 @@ applicable agreement for further details.
 +--------------------+-------------------------------------------+
 ; Device             ; EPCS4                                     ;
 ; JTAG usercode      ; 0x00000000                                ;
-; Checksum           ; 0x06844906                                ;
+; Checksum           ; 0x0683A168                                ;
 ; Compression Ratio  ; 1                                         ;
 +--------------------+-------------------------------------------+
 
@@ -115,15 +115,15 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sun Apr 11 20:11:41 2010
+    Info: Processing started: Mon Apr 12 21:49:04 2010
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off 8bitbrain -c 8bitbrain
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: The Active Serial/Parallel mode CONF_DONE pin error check is disabled
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 178 megabytes
-    Info: Processing ended: Sun Apr 11 20:11:43 2010
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Mon Apr 12 21:49:07 2010
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 

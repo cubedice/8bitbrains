@@ -26,7 +26,7 @@ begin
 	process
 	begin
 		wait until clk'event and clk = '1';
-		if lfo1f /= (lfo1f'range => '0') and lfo1cnt /= 131071 then
+		if (lfo1f < X"48" or lfo1f > X"50" ) and lfo1cnt /= 131071 then
 			lfo1cnt <= lfo1cnt + 1;
 		elsif lfo1f = (lfo1f'range => '0') then
 			lfo1cnt <= 0;
@@ -36,9 +36,9 @@ begin
 			lfo1i <= lfo1;
 		end if;
 		
-		if lfo2f /= (lfo2f'range => '0') and lfo2cnt /= 131071 then
+		if (lfo1f > X"48" or lfo1f < X"50" ) and lfo2cnt /= 131071 then
 			lfo2cnt <= lfo2cnt + 1;
-		elsif lfo2f = (lfo2f'range => '0') then
+		elsif (lfo1f < X"48" and lfo1f > X"50" ) then
 			lfo2cnt <= 0;
 		end if;
 		

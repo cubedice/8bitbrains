@@ -138,7 +138,7 @@ architecture arch of controller is
 	signal		x_amt,y_amt																		: std_logic_vector(7 downto 0);
     signal      accumulator                                                                     : std_logic_vector(11 downto 0);
 	signal		key1b,key1,key1bb,key2b,key2bb,key2,key3b,key3bb,key3,seq_index					: std_logic_vector(6 downto 0);
-	signal 		freq1_i,freq2_i,freq3_i															: std_logic_vector(12 downto 0);
+	signal 		freq1_i,freq2_i,freq3_i,f1t,f2t,f3t												: std_logic_vector(12 downto 0);
 	signal		save_bank_t,prev_save_bank_t													: std_logic_vector(2 downto 0);
 	signal 		ch1offset2,ch1offset3,ch2offset2,ch2offset3, ch3offset2,ch3offset3				: integer range 0 to 44;
 	signal 		ch1offset2_t,ch1offset3_t,ch2offset2_t,ch2offset3_t, ch3offset2_t,ch3offset3_t	: integer range 0 to 44;
@@ -274,10 +274,8 @@ begin
 	gate1o <= gate1;
 	gate2o <= gate2;
 	gate3o <= gate3;
-	x_amt <= std_logic_vector( unsigned(toggle_x) - 157 ) when toggle_x > "10011101" else
-			 "00000000";
-	y_amt <= std_logic_vector( unsigned(toggle_y) - 167 ) when toggle_y > "10100111" else
-			 "00000000";
+	x_amt <= toggle_x;
+	y_amt <= toggle_y;
 	lfo1 <= x_amt;
 	lfo2 <= y_amt;
 	
@@ -776,28 +774,45 @@ begin
 			key2 <= "0000000";
 			key3 <= "0000000";
 		elsif clk'event and clk = '1' then
-            case x_amt is
-                when "00000010" =>
-                    accumulator_ctr_end <= 25175000;
-                when "00000011" =>
-                    accumulator_ctr_end <= 12175000;
-                when "00000100" =>
-                    accumulator_ctr_end <= 6175000;
-                when "00000101" =>
-                    accumulator_ctr_end <= 3175000;
-                when "00000110" =>
-                    accumulator_ctr_end <= 1775000;
-                when "00000111" =>
-                    accumulator_ctr_end <= 975000;
-                when "00001000" =>
-                    accumulator_ctr_end <= 475000;
-                when "00001001" =>
-                    accumulator_ctr_end <= 235000;
-                when others =>
-                    accumulator_ctr_end <= 235000;
-            end case;
-
-            if play_vec = ( play_vec'range => '0' ) or x_amt = ( x_amt'range => '0' ) then
+            if x_amt > X"85" then
+				accumulator_ctr_end <= 10000;
+            elsif x_amt > X"80" then
+				accumulator_ctr_end <= 25000;
+			elsif x_amt > X"7A" then
+				accumulator_ctr_end <= 50000;
+			elsif x_amt > X"75" then	
+				accumulator_ctr_end <= 75000;
+			elsif x_amt > X"70" then	
+				accumulator_ctr_end <= 100000;
+			elsif x_amt > X"6A" then	
+				accumulator_ctr_end <= 250000;
+			elsif x_amt > X"65" then	
+				accumulator_ctr_end <= 500000;
+			elsif x_amt > X"60" then	
+				accumulator_ctr_end <= 750000;
+			elsif x_amt > X"5A" then	
+				accumulator_ctr_end <= 1000000;
+			elsif x_amt > X"55" then	
+				accumulator_ctr_end <= 10000000;
+			elsif x_amt > X"50" then	
+				accumulator_ctr_end <= 25175000;
+			elsif x_amt > X"45" then	
+				accumulator_ctr_end <= 20000000;
+			elsif x_amt > X"40" then	
+				accumulator_ctr_end <= 12000000;
+			elsif x_amt > X"3A" then	
+				accumulator_ctr_end <= 7000000;
+			elsif x_amt > X"35" then	
+				accumulator_ctr_end <= 2000000;
+			elsif x_amt > X"30" then	
+				accumulator_ctr_end <= 700000;
+			elsif x_amt > X"2A" then	
+				accumulator_ctr_end <= 200000;
+			else	
+				accumulator_ctr_end <= 70000;
+			end if;
+			
+            if play_vec = ( play_vec'range => '0' ) or ( x_amt > X"48" and x_amt < X"50" ) then
                 accumulator <= ( accumulator'range => '0' );
                 accumulator_ctr <= 0;
             else
@@ -806,12 +821,16 @@ begin
 
             if accumulator_ctr > accumulator_ctr_end then
                 accumulator_ctr <= 0;
-                accumulator <= std_logic_vector( unsigned(accumulator) + 1 );
+                if x_amt > X"50" then
+					accumulator <= std_logic_vector( signed(accumulator) + 1 );
+				else
+					accumulator <= std_logic_vector( signed(accumulator) - 1 );
+				end if;
             end if;
             
-			freq1 <= std_logic_vector( unsigned(accumulator) + unsigned(freq1_i) );
-			freq2 <= std_logic_vector( unsigned(accumulator) + unsigned(freq2_i) );
-			freq3 <= std_logic_vector( unsigned(accumulator) + unsigned(freq3_i) );
+			freq1 <= std_logic_vector( signed(accumulator) + signed('0'&freq1_i) )(12 downto 0);
+			freq2 <= std_logic_vector( signed(accumulator) + signed('0'&freq2_i) )(12 downto 0);
+			freq3 <= std_logic_vector( signed(accumulator) + signed('0'&freq3_i) )(12 downto 0);
 				
 			-- playing a chord?
 			if arpmode = '1' and play_vec(5 downto 3) /= "000" then

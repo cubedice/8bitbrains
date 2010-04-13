@@ -1,3 +1,29 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity random is
+    generic ( swidth : integer :=  12 ); 
+port (
+      clk : in std_logic;
+      random_num : out std_logic_vector (swidth-1 downto 0)   --output vector            
+    );
+end random;
+
+architecture arch of random is
+begin
+	process(clk)
+	variable rand_temp : std_logic_vector(swidth-1 downto 0):=(swidth-1 => '1',others => '0');
+	variable temp : std_logic := '0';
+	begin
+		if(rising_edge(clk)) then
+			temp := rand_temp(swidth-1) xor rand_temp(swidth-2);
+			rand_temp(swidth-1 downto 1) := rand_temp(swidth-2 downto 0);
+			rand_temp(0) := temp;
+		end if;
+		random_num <= rand_temp;
+	end process;
+end arch;
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
@@ -144,14 +170,22 @@ architecture arch of wavegen is
 		save_mode_out : out std_logic
 		);
 	end component;
+	
+	component random is
+    generic ( swidth : integer :=  12 );
+	port (
+      clk : in std_logic;
+      random_num : out std_logic_vector (swidth-1 downto 0)   --output vector            
+    );
+	end component;
+	
 	signal wave_sel, wave_sel_t : std_logic_vector(2 downto 0);
 	signal addr1, addr2, addr3 : std_logic_vector(6 downto 0);
-	signal tr1_o,tr2_o,tr3_o,sq1_o,sq2_o,sq3_o,sn1_o,sn2_o,sn3_o,addrlfo1,addrlfo2,lfo1t, lfo2t,rn1_o,rn2_o,rn3_o : std_logic_vector(11 downto 0);
+	signal tr1_o,tr2_o,tr3_o,sq1_o,sq2_o,sq3_o,sn1_o,sn2_o,sn3_o,addrlfo1,addrlfo2,lfo1t, lfo2t,rn1,rn2,rn3,rn1_o,rn2_o,rn3_o : std_logic_vector(11 downto 0);
 	signal prev_wave_form_rot : std_logic_vector(1 downto 0);
 	signal prev_save_bank : std_logic_vector(2 downto 0);
 	signal wait_cycle, IGNORE: std_logic;
-    signal rnd : real;
-    variable seed1,seed2 : positive;
+	signal lfo1v,lfo2v	: std_logic_vector(7 downto 0);
 begin
 	waveselect_bank : wavegen_save_bank port map(
 		clk, save_bank, save_mode, wave_sel, wave_sel_t, IGNORE );
@@ -163,9 +197,9 @@ begin
 	addr_gen3 : addrgen port map(
 		clk, freq3, addr3 );
 	addr_genlfo1 : lfoaddrgen port map(
-		clk, lfo1, addrlfo1 );
+		clk, lfo1v, addrlfo1 );
 	addr_genlfo2 : lfoaddrgen port map(
-		clk, lfo2, addrlfo2 );
+		clk, lfo2v, addrlfo2 );
 	
 	tri1 : triangle port map(
 		addr1, clk, tr1_o );
@@ -195,35 +229,64 @@ begin
 	lfo1_o <= lfo1t;
 	lfo2_o <= lfo2t;
 		
-    process( reset )
-    begin
-        if reset = '1' then
-            seed1 <= 0.3;
-            seed2 <= 0.75;
-        end if;
-    end process;
+	rand1 : random port map(
+		clk, rn1 );
+    rand2 : random port map(
+		clk, rn2 );
+    rand3 : random port map(
+		clk, rn3 );
+    
+    process( lfo1 )
+	begin
+		if rising_edge(clk) then
+			if lfo1 < X"44" then
+				lfo1v <= '0'&std_logic_vector( unsigned( X"44" - lfo1 ))(7 downto 1);
+			elsif lfo1 > X"55" then
+				lfo1v <= '0'&std_logic_vector( unsigned( lfo1 - X"55" ))(7 downto 1);
+			else
+				lfo1v <= "00000000";
+			end if;
+		end if;
+	end process;
+	
+	process( lfo2 )
+	begin
+		if rising_edge(clk)  then
+			if lfo2 < X"44" then
+				lfo2v <= '0'&std_logic_vector( unsigned( X"44" - lfo2 ) )(7 downto 1);
+			elsif lfo2 > X"55" then
+				lfo2v <= '0'&std_logic_vector( unsigned( lfo2 - X"55" ) )(7 downto 1);
+			else
+				lfo2v <= "00000000";
+			end if;
+		end if;
+	end process;
+    
     
     process( addr1 )
     begin
         if clk'event and clk = '1' then
-            uniform(seed1,seed2,rnd);
-            rn1_o <= std_logic_vector(to_unsigned(integer(trunc(4096*rnd)), rn1_o'length));
+			if addr1 = (addr1'length => '0') then
+				rn1_o <= rn1;
+			end if;
         end if;
     end process;
 
     process( addr2 )
     begin
         if clk'event and clk = '1' then
-            uniform(seed1,seed2,rnd);
-            rn2_o <= std_logic_vector(to_unsigned(integer(trunc(4096*rnd)), rn2_o'length));
+            if addr2 = (addr2'length => '0') then
+				rn2_o <= rn2;
+			end if;
         end if;
     end process;
 
     process( addr3 )
     begin
         if clk'event and clk = '1' then
-            uniform(seed1,seed2,rnd);
-            rn3_o <= std_logic_vector(to_unsigned(integer(trunc(4096*rnd)), rn3_o'length));
+            if addr3 = (addr3'length => '0') then
+				rn3_o <= rn3;
+			end if;
         end if;
     end process;
     
