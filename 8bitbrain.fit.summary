@@ -1,16 +1,16 @@
-Fitter Status : Successful - Mon Apr 12 21:49:02 2010
+Fitter Status : Successful - Thu Apr 15 19:01:01 2010
 Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
 Revision Name : 8bitbrain
 Top-level Entity Name : 8bitbrain
 Family : Cyclone II
 Device : EP2C8T144C8
 Timing Models : Final
-Total logic elements : 6,891 / 8,256 ( 83 % )
-    Total combinational functions : 6,516 / 8,256 ( 79 % )
-    Dedicated logic registers : 1,505 / 8,256 ( 18 % )
-Total registers : 1505
-Total pins : 58 / 85 ( 68 % )
+Total logic elements : 6,696 / 8,256 ( 81 % )
+    Total combinational functions : 6,433 / 8,256 ( 78 % )
+    Dedicated logic registers : 1,320 / 8,256 ( 16 % )
+Total registers : 1320
+Total pins : 56 / 85 ( 66 % )
 Total virtual pins : 0
-Total memory bits : 73,703 / 165,888 ( 44 % )
+Total memory bits : 63,943 / 165,888 ( 39 % )
 Embedded Multiplier 9-bit elements : 24 / 36 ( 67 % )
 Total PLLs : 0 / 2 ( 0 % )

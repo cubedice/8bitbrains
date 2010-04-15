@@ -127,7 +127,7 @@ entity controller is
 		save_mode										: buffer std_logic;
 		param											: buffer std_logic_vector(5 downto 0);
 		modifier										: buffer std_logic_vector(1 downto 0);
-		lfo1,lfo2										: out std_logic_vector(7 downto 0);
+		lfo2											: out std_logic_vector(7 downto 0);
 		drum_mode										: buffer std_logic
 		);	
 end controller;
@@ -276,7 +276,6 @@ begin
 	gate3o <= gate3;
 	x_amt <= toggle_x;
 	y_amt <= toggle_y;
-	lfo1 <= x_amt;
 	lfo2 <= y_amt;
 	
 	kr1 : keyrom port map(
@@ -372,8 +371,12 @@ begin
 		elsif clk'event and clk = '1' then
 		
 			-- chord selection
-			if prev_param /= param and param = "000111" then
-				ch_sel_state <= "1000";
+			if prev_param /= param then
+				if param = "000111" then
+					ch_sel_state <= "1000";
+				else
+					ch_sel_state <= "1000";
+				end if;
 			end if;
 			
 			if ch_sel_state /= "0000" then
@@ -554,6 +557,10 @@ begin
 							else
 								tempo_end <= tempo_end + 1000;
 							end if;
+--						when "000111" =>
+--						-- chord manip
+--						when "001000" =>
+--						-- TODO: arp manip
 						when others =>
 					end case;
 				else
@@ -812,14 +819,15 @@ begin
 				accumulator_ctr_end <= 70000;
 			end if;
 			
-            if play_vec = ( play_vec'range => '0' ) or ( x_amt > X"48" and x_amt < X"50" ) then
-                accumulator <= ( accumulator'range => '0' );
+            if play_vec = ( play_vec'range => '0' ) or ( x_amt > X"40" and x_amt < X"5F" ) then
                 accumulator_ctr <= 0;
             else
                 accumulator_ctr <= accumulator_ctr + 1;
             end if;
-
-            if accumulator_ctr > accumulator_ctr_end then
+			
+			if gate1 = '0' and gate2 = '0' and gate3 = '0' then
+				accumulator <= (accumulator'range => '0');
+            elsif accumulator_ctr > accumulator_ctr_end then
                 accumulator_ctr <= 0;
                 if x_amt > X"50" then
 					accumulator <= std_logic_vector( signed(accumulator) + 1 );

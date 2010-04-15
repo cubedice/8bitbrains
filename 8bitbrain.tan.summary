@@ -5,7 +5,7 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 10.261 ns
+Actual Time    : 10.424 ns
 From           : reset
 To             : controller:inst1|gate2
 From Clock     : --
@@ -15,7 +15,7 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 17.781 ns
+Actual Time    : 17.843 ns
 From           : p2s:inst5|data_out
 To             : p2s_dout
 From Clock     : clk
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 3.373 ns
-From           : altera_internal_jtag~TMSUTAP
-To             : sld_hub:sld_hub_inst|sld_shadow_jsm:shadow_jsm|state[9]
+Actual Time    : 2.750 ns
+From           : altera_internal_jtag
+To             : sld_hub:sld_hub_inst|jtag_ir_reg[9]
 From Clock     : --
 To Clock       : altera_internal_jtag~TCKUTAP
 Failed Paths   : 0
@@ -45,8 +45,8 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 10.96 MHz ( period = 91.242 ns )
-From           : wavegen:inst6|wave3[2]
+Actual Time    : 12.21 MHz ( period = 81.900 ns )
+From           : modulator:inst3|decay_ctr3[2]
 To             : modulator:inst3|wave3[2]
 From Clock     : clk
 To Clock       : clk
@@ -55,8 +55,8 @@ Failed Paths   : 0
 Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 70.37 MHz ( period = 14.210 ns )
-From           : sld_hub:sld_hub_inst|sld_shadow_jsm:shadow_jsm|state[4]
+Actual Time    : 127.39 MHz ( period = 7.850 ns )
+From           : sld_hub:sld_hub_inst|irsr_reg[0]
 To             : sld_hub:sld_hub_inst|tdo
 From Clock     : altera_internal_jtag~TCKUTAP
 To Clock       : altera_internal_jtag~TCKUTAP
@@ -66,11 +66,11 @@ Type           : Clock Hold: 'clk'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : controller:inst1|curbtns[3]
-To             : controller:inst1|diff_btn_vec[3]
+From           : controller:inst1|curbtns[4]
+To             : controller:inst1|diff_btn_vec[4]
 From Clock     : clk
 To Clock       : clk
-Failed Paths   : 157
+Failed Paths   : 179
 
 Type           : Total number of failed paths
 Slack          : 
@@ -80,7 +80,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 157
+Failed Paths   : 179
 
 --------------------------------------------------------------------------------------
 

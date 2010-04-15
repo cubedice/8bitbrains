@@ -8,38 +8,36 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|wavegen_save_bank:waveselect_bank|int_bank:mode_bank|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_sjc1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|controller:inst1|lpm_rom0:f3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_bj91.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_mult:Mult2" CBX_FILE_NAME="mult_pt01.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder" CBX_FILE_NAME="decode_rqf.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:status_read_pointer_counter" CBX_FILE_NAME="cntr_gui.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|addrgen:addr_gen3|lpm_divide0:div1|lpm_divide:lpm_divide_component" CBX_FILE_NAME="lpm_divide_bft.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|addrgen:addr_gen3|lpm_divide0:div1|lpm_divide:lpm_divide_component" CBX_FILE_NAME="lpm_divide_cft.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_mult:Mult3" CBX_FILE_NAME="mult_it01.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_bem.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_mult:Mult4" CBX_FILE_NAME="mult_pt01.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram" CBX_FILE_NAME="altsyncram_nps3.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|controller:inst1|dom7:seq2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_nd91.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|controller:inst1|pow:seq3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_mc91.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_bem.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_mult:Mult5" CBX_FILE_NAME="mult_pt01.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux" CBX_FILE_NAME="mux_aoc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:\adv_point_3_and_more:advance_pointer_counter" CBX_FILE_NAME="cntr_vbi.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|lfosin:lfo1w|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_qq91.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_bem.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_mult:Mult6" CBX_FILE_NAME="mult_it01.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:attbank|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ujc1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|lfosin:lfo2w|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_qq91.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_divide:Div3" CBX_FILE_NAME="lpm_divide_bem.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_mult:Mult7" CBX_FILE_NAME="mult_pt01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|saw:sw1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_md91.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|square:sq1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_pra1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|triangle:tri1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_mtc1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|wavegen_save_bank:waveselect_bank|bytebank:lfo_bank|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ujc1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|controller:inst1|keyrom:kr1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_6k71.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_divide:Div4" CBX_FILE_NAME="lpm_divide_bem.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_mult:Mult8" CBX_FILE_NAME="mult_pt01.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:susbank|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ujc1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:status_advance_pointer_counter" CBX_FILE_NAME="cntr_sbi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|saw:sw2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_md91.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|square:sq2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_pra1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|triangle:tri2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_mtc1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|controller:inst1|keyrom:kr2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_6k71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|mixer:inst2|mixer_save_bank:the_save_bank|int_bank:depth_bank|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_sjc1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_divide:Div5" CBX_FILE_NAME="lpm_divide_bem.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:decbank|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ujc1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|saw:sw3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_md91.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|square:sq3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_pra1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|triangle:tri3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_mtc1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|controller:inst1|keyrom:kr3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_6k71.tdf"/>
@@ -48,25 +46,25 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|controller:inst1|controller_save_bank:sv_bnk|int_bank:octave_bank|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_sjc1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|controller:inst1|maj7:seq1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_pec1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_divide:Div8" CBX_FILE_NAME="lpm_divide_bem.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|mixer:inst2|lpm_mult:Mult0" CBX_FILE_NAME="mult_tu01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|mixer:inst2|lpm_mult:Mult0" CBX_FILE_NAME="mult_4s01.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|sin:sn1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ld91.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|controller:inst1|controller_save_bank:sv_bnk|int_bank:ch1_offset2_bank|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_sjc1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|mixer:inst2|lpm_mult:Mult1" CBX_FILE_NAME="mult_vu01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|mixer:inst2|lpm_mult:Mult1" CBX_FILE_NAME="mult_tu01.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:volbank|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ujc1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|sin:sn2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ld91.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|controller:inst1|controller_save_bank:sv_bnk|int_bank:ch1_offset3_bank|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_sjc1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|controller:inst1|controller_save_bank:sv_bnk|int_bank:ch2_offset2_bank|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_sjc1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|controller:inst1|controller_save_bank:sv_bnk|int_bank:mode_bank|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_sjc1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|mixer:inst2|lpm_mult:Mult2" CBX_FILE_NAME="mult_vu01.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:read_pointer_counter" CBX_FILE_NAME="cntr_02j.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|sin:sn3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ld91.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|controller:inst1|controller_save_bank:sv_bnk|int_bank:ch2_offset3_bank|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_sjc1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|controller:inst1|controller_save_bank:sv_bnk|int_bank:ch3_offset2_bank|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_sjc1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|controller:inst1|lpm_rom0:f1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_bj91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|mixer:inst2|lpm_mult:Mult3" CBX_FILE_NAME="mult_1v01.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|lpm_mult:Mult0" CBX_FILE_NAME="mult_it01.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|modulator:inst3|modulator_save_bank:md_sv_bnk|bytebank:relbank|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ujc1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|addrgen:addr_gen1|lpm_divide0:div1|lpm_divide:lpm_divide_component" CBX_FILE_NAME="lpm_divide_bft.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|addrgen:addr_gen1|lpm_divide0:div1|lpm_divide:lpm_divide_component" CBX_FILE_NAME="lpm_divide_cft.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|lfoaddrgen:addr_genlfo2|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_dem.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|addrgen:addr_gen2|lpm_divide0:div1|lpm_divide:lpm_divide_component" CBX_FILE_NAME="lpm_divide_bft.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bitbrain|wavegen:inst6|addrgen:addr_gen2|lpm_divide0:div1|lpm_divide:lpm_divide_component" CBX_FILE_NAME="lpm_divide_cft.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

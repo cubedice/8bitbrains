@@ -17,10 +17,10 @@ FUNCTION lpm_divide0
 (
 	clock,
 	denom[12..0],
-	numer[17..0]
+	numer[18..0]
 )
 
 RETURNS (
-	quotient[17..0],
+	quotient[18..0],
 	remain[12..0]
 );

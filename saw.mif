@@ -1,0 +1,153 @@
+-- Copyright (C) 1991-2009 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+
+-- Quartus II generated Memory Initialization File (.mif)
+
+WIDTH=12;
+DEPTH=128;
+
+ADDRESS_RADIX=DEC;
+DATA_RADIX=DEC;
+
+CONTENT BEGIN
+	
+0	:	   0;
+1	:	   7;
+2	:	  15;
+3	:	  23;
+4	:	  31;
+5	:	  39;
+6	:	  46;
+7	:	  54;
+8	:	  62;
+9	:	  70;
+10	:	  78;
+11	:	  85;
+12	:	  93;
+13	:	 101;
+14	:	 109;
+15	:	 117;
+16	:	 125;
+17	:	 132;
+18	:	 140;
+19	:	 148;
+20	:	 156;
+21	:	 164;
+22	:	 171;
+23	:	 179;
+24	:	 187;
+25	:	 195;
+26	:	 203;
+27	:	 210;
+28	:	 218;
+29	:	 226;
+30	:	 234;
+31	:	 242;
+32	:	 250;
+33	:	 257;
+34	:	 265;
+35	:	 273;
+36	:	 281;
+37	:	 289;
+38	:	 296;
+39	:	 304;
+40	:	 312;
+41	:	 320;
+42	:	 328;
+43	:	 335;
+44	:	 343;
+45	:	 351;
+46	:	 359;
+47	:	 367;
+48	:	 375;
+49	:	 382;
+50	:	 390;
+51	:	 398;
+52	:	 406;
+53	:	 414;
+54	:	 421;
+55	:	 429;
+56	:	 437;
+57	:	 445;
+58	:	 453;
+59	:	 460;
+60	:	 468;
+61	:	 476;
+62	:	 484;
+63	:	 492;
+64	:	 500;
+65	:	 507;
+66	:	 515;
+67	:	 523;
+68	:	 531;
+69	:	 539;
+70	:	 546;
+71	:	 554;
+72	:	 562;
+73	:	 570;
+74	:	 578;
+75	:	 585;
+76	:	 593;
+77	:	 601;
+78	:	 609;
+79	:	 617;
+80	:	 625;
+81	:	 632;
+82	:	 640;
+83	:	 648;
+84	:	 656;
+85	:	 664;
+86	:	 671;
+87	:	 679;
+88	:	 687;
+89	:	 695;
+90	:	 703;
+91	:	 710;
+92	:	 718;
+93	:	 726;
+94	:	 734;
+95	:	 742;
+96	:	 750;
+97	:	 757;
+98	:	 765;
+99	:	 773;
+100	:	 781;
+101	:	 789;
+102	:	 796;
+103	:	 804;
+104	:	 812;
+105	:	 820;
+106	:	 828;
+107	:	 835;
+108	:	 843;
+109	:	 851;
+110	:	 859;
+111	:	 867;
+112	:	 875;
+113	:	 882;
+114	:	 890;
+115	:	 898;
+116	:	 906;
+117	:	 914;
+118	:	 921;
+119	:	 929;
+120	:	 937;
+121	:	 945;
+122	:	 953;
+123	:	 960;
+124	:	 968;
+125	:	 976;
+126	:	 984;
+127	:	 992;
+END;

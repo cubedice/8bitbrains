@@ -4,132 +4,404 @@
   </display_tree>
   <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
     <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
-    <signal_set global_temp="1" is_expanded="true" name="signal_set: 2010/04/12 18:03:30  #0">
+    <position_info>
+      <single attribute="active tab" value="0"/>
+      <single attribute="data horizontal scroll position" value="0"/>
+      <single attribute="data vertical scroll position" value="0"/>
+      <single attribute="zoom level denominator" value="1"/>
+      <single attribute="zoom level numerator" value="4"/>
+      <single attribute="zoom offset denominator" value="4"/>
+      <single attribute="zoom offset numerator" value="130945"/>
+      <single attribute="setup vertical scroll position" value="0"/>
+      <single attribute="setup horizontal scroll position" value="0"/>
+    </position_info>
+    <signal_set global_temp="1" name="signal_set: 2010/04/15 16:52:55  #0">
       <clock name="clk" polarity="posedge" tap_mode="classic"/>
       <config ram_type="M4K" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="128" trigger_in_enable="no" trigger_out_enable="no"/>
       <top_entity/>
       <signal_vec>
         <trigger_input_vec>
+          <wire name="btn_vec_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="btn_vec_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="btn_vec_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="btn_vec_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="btn_vec_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="btn_vec_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="btn_vec_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="mixer:inst2|lfo2i[0]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[10]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[11]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[1]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[2]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[3]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[4]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[5]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[6]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[7]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[8]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[9]" tap_mode="classic" type="register"/>
+          <wire name="modifier[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="modifier[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="param[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="param[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="param[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="param[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="param[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="param[5]" tap_mode="classic" type="combinatorial"/>
           <wire name="s2p_cs" tap_mode="classic" type="output pin"/>
-          <wire name="toggle_x[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_x[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_x[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_x[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_x[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_x[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_x[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_x[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_preset[0]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|lfo2_preset[1]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|lfo2_preset[2]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|lfo2_preset[3]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|lfo2_preset[4]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|lfo2_preset[5]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|lfo2_preset[6]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|lfo2_preset[7]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|prev_btn_11" tap_mode="classic" type="register"/>
         </trigger_input_vec>
         <data_input_vec>
+          <wire name="btn_vec_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="btn_vec_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="btn_vec_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="btn_vec_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="btn_vec_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="btn_vec_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="btn_vec_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="mixer:inst2|lfo2i[0]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[10]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[11]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[1]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[2]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[3]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[4]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[5]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[6]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[7]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[8]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[9]" tap_mode="classic" type="register"/>
+          <wire name="modifier[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="modifier[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="param[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="param[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="param[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="param[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="param[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="param[5]" tap_mode="classic" type="combinatorial"/>
           <wire name="s2p_cs" tap_mode="classic" type="output pin"/>
-          <wire name="toggle_x[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_x[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_x[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_x[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_x[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_x[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_x[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_x[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_preset[0]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|lfo2_preset[1]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|lfo2_preset[2]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|lfo2_preset[3]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|lfo2_preset[4]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|lfo2_preset[5]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|lfo2_preset[6]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|lfo2_preset[7]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|prev_btn_11" tap_mode="classic" type="register"/>
         </data_input_vec>
         <storage_qualifier_input_vec>
+          <wire name="btn_vec_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="btn_vec_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="btn_vec_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="btn_vec_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="btn_vec_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="btn_vec_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="btn_vec_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2f[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="lfo2o[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="mixer:inst2|lfo2i[0]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[10]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[11]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[1]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[2]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[3]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[4]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[5]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[6]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[7]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[8]" tap_mode="classic" type="register"/>
+          <wire name="mixer:inst2|lfo2i[9]" tap_mode="classic" type="register"/>
+          <wire name="modifier[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="modifier[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="param[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="param[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="param[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="param[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="param[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="param[5]" tap_mode="classic" type="combinatorial"/>
           <wire name="s2p_cs" tap_mode="classic" type="output pin"/>
-          <wire name="toggle_x[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_x[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_x[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_x[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_x[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_x[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_x[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_x[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="toggle_y[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="wavegen:inst6|lfo2_preset[0]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|lfo2_preset[1]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|lfo2_preset[2]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|lfo2_preset[3]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|lfo2_preset[4]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|lfo2_preset[5]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|lfo2_preset[6]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|lfo2_preset[7]" tap_mode="classic" type="register"/>
+          <wire name="wavegen:inst6|prev_btn_11" tap_mode="classic" type="register"/>
         </storage_qualifier_input_vec>
       </signal_vec>
       <presentation>
         <data_view>
           <net is_signal_inverted="no" name="s2p_cs"/>
-          <bus is_signal_inverted="no" link="all" name="toggle_x" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="toggle_x[0]"/>
-            <net is_signal_inverted="no" name="toggle_x[1]"/>
-            <net is_signal_inverted="no" name="toggle_x[2]"/>
-            <net is_signal_inverted="no" name="toggle_x[3]"/>
-            <net is_signal_inverted="no" name="toggle_x[4]"/>
-            <net is_signal_inverted="no" name="toggle_x[5]"/>
-            <net is_signal_inverted="no" name="toggle_x[6]"/>
-            <net is_signal_inverted="no" name="toggle_x[7]"/>
+          <bus is_signal_inverted="no" link="all" name="modifier" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="modifier[0]"/>
+            <net is_signal_inverted="no" name="modifier[1]"/>
           </bus>
-          <bus is_signal_inverted="no" link="all" name="toggle_y" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="toggle_y[0]"/>
-            <net is_signal_inverted="no" name="toggle_y[1]"/>
-            <net is_signal_inverted="no" name="toggle_y[2]"/>
-            <net is_signal_inverted="no" name="toggle_y[3]"/>
-            <net is_signal_inverted="no" name="toggle_y[4]"/>
-            <net is_signal_inverted="no" name="toggle_y[5]"/>
-            <net is_signal_inverted="no" name="toggle_y[6]"/>
-            <net is_signal_inverted="no" name="toggle_y[7]"/>
+          <bus is_signal_inverted="no" link="all" name="param" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="param[0]"/>
+            <net is_signal_inverted="no" name="param[1]"/>
+            <net is_signal_inverted="no" name="param[2]"/>
+            <net is_signal_inverted="no" name="param[3]"/>
+            <net is_signal_inverted="no" name="param[4]"/>
+            <net is_signal_inverted="no" name="param[5]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="wavegen:inst6|lfo2_preset" order="lsb_to_msb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_preset[0]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_preset[1]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_preset[2]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_preset[3]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_preset[4]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_preset[5]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_preset[6]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_preset[7]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="btn_vec_o" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="btn_vec_o[0]"/>
+            <net is_signal_inverted="no" name="btn_vec_o[1]"/>
+            <net is_signal_inverted="no" name="btn_vec_o[2]"/>
+            <net is_signal_inverted="no" name="btn_vec_o[3]"/>
+            <net is_signal_inverted="no" name="btn_vec_o[4]"/>
+            <net is_signal_inverted="no" name="btn_vec_o[5]"/>
+            <net is_signal_inverted="no" name="btn_vec_o[6]"/>
+          </bus>
+          <net is_signal_inverted="no" name="wavegen:inst6|prev_btn_11"/>
+          <bus is_signal_inverted="no" link="all" name="wavegen:inst6|lfo2_in" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_in[0]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_in[1]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_in[2]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_in[3]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_in[4]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_in[5]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_in[6]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_in[7]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="lfo2f" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="lfo2f[0]"/>
+            <net is_signal_inverted="no" name="lfo2f[1]"/>
+            <net is_signal_inverted="no" name="lfo2f[2]"/>
+            <net is_signal_inverted="no" name="lfo2f[3]"/>
+            <net is_signal_inverted="no" name="lfo2f[4]"/>
+            <net is_signal_inverted="no" name="lfo2f[5]"/>
+            <net is_signal_inverted="no" name="lfo2f[6]"/>
+            <net is_signal_inverted="no" name="lfo2f[7]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="lfo2o" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="lfo2o[0]"/>
+            <net is_signal_inverted="no" name="lfo2o[1]"/>
+            <net is_signal_inverted="no" name="lfo2o[2]"/>
+            <net is_signal_inverted="no" name="lfo2o[3]"/>
+            <net is_signal_inverted="no" name="lfo2o[4]"/>
+            <net is_signal_inverted="no" name="lfo2o[5]"/>
+            <net is_signal_inverted="no" name="lfo2o[6]"/>
+            <net is_signal_inverted="no" name="lfo2o[7]"/>
+            <net is_signal_inverted="no" name="lfo2o[8]"/>
+            <net is_signal_inverted="no" name="lfo2o[9]"/>
+            <net is_signal_inverted="no" name="lfo2o[10]"/>
+            <net is_signal_inverted="no" name="lfo2o[11]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="mixer:inst2|lfo2i" order="lsb_to_msb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[0]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[1]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[2]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[3]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[4]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[5]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[6]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[7]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[8]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[9]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[10]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[11]"/>
           </bus>
         </data_view>
         <setup_view>
           <net is_signal_inverted="no" name="s2p_cs"/>
-          <bus is_signal_inverted="no" link="all" name="toggle_x" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="toggle_x[0]"/>
-            <net is_signal_inverted="no" name="toggle_x[1]"/>
-            <net is_signal_inverted="no" name="toggle_x[2]"/>
-            <net is_signal_inverted="no" name="toggle_x[3]"/>
-            <net is_signal_inverted="no" name="toggle_x[4]"/>
-            <net is_signal_inverted="no" name="toggle_x[5]"/>
-            <net is_signal_inverted="no" name="toggle_x[6]"/>
-            <net is_signal_inverted="no" name="toggle_x[7]"/>
+          <bus is_signal_inverted="no" link="all" name="modifier" order="lsb_to_msb" radix="hex" state="expand" type="combinatorial">
+            <net is_signal_inverted="no" name="modifier[0]"/>
+            <net is_signal_inverted="no" name="modifier[1]"/>
           </bus>
-          <bus is_signal_inverted="no" link="all" name="toggle_y" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="toggle_y[0]"/>
-            <net is_signal_inverted="no" name="toggle_y[1]"/>
-            <net is_signal_inverted="no" name="toggle_y[2]"/>
-            <net is_signal_inverted="no" name="toggle_y[3]"/>
-            <net is_signal_inverted="no" name="toggle_y[4]"/>
-            <net is_signal_inverted="no" name="toggle_y[5]"/>
-            <net is_signal_inverted="no" name="toggle_y[6]"/>
-            <net is_signal_inverted="no" name="toggle_y[7]"/>
+          <bus is_signal_inverted="no" link="all" name="param" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="param[0]"/>
+            <net is_signal_inverted="no" name="param[1]"/>
+            <net is_signal_inverted="no" name="param[2]"/>
+            <net is_signal_inverted="no" name="param[3]"/>
+            <net is_signal_inverted="no" name="param[4]"/>
+            <net is_signal_inverted="no" name="param[5]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="wavegen:inst6|lfo2_preset" order="lsb_to_msb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_preset[0]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_preset[1]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_preset[2]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_preset[3]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_preset[4]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_preset[5]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_preset[6]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_preset[7]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="btn_vec_o" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="btn_vec_o[0]"/>
+            <net is_signal_inverted="no" name="btn_vec_o[1]"/>
+            <net is_signal_inverted="no" name="btn_vec_o[2]"/>
+            <net is_signal_inverted="no" name="btn_vec_o[3]"/>
+            <net is_signal_inverted="no" name="btn_vec_o[4]"/>
+            <net is_signal_inverted="no" name="btn_vec_o[5]"/>
+            <net is_signal_inverted="no" name="btn_vec_o[6]"/>
+          </bus>
+          <net is_signal_inverted="no" name="wavegen:inst6|prev_btn_11"/>
+          <bus is_signal_inverted="no" link="all" name="wavegen:inst6|lfo2_in" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_in[0]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_in[1]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_in[2]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_in[3]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_in[4]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_in[5]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_in[6]"/>
+            <net is_signal_inverted="no" name="wavegen:inst6|lfo2_in[7]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="lfo2f" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="lfo2f[0]"/>
+            <net is_signal_inverted="no" name="lfo2f[1]"/>
+            <net is_signal_inverted="no" name="lfo2f[2]"/>
+            <net is_signal_inverted="no" name="lfo2f[3]"/>
+            <net is_signal_inverted="no" name="lfo2f[4]"/>
+            <net is_signal_inverted="no" name="lfo2f[5]"/>
+            <net is_signal_inverted="no" name="lfo2f[6]"/>
+            <net is_signal_inverted="no" name="lfo2f[7]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="lfo2o" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="lfo2o[0]"/>
+            <net is_signal_inverted="no" name="lfo2o[1]"/>
+            <net is_signal_inverted="no" name="lfo2o[2]"/>
+            <net is_signal_inverted="no" name="lfo2o[3]"/>
+            <net is_signal_inverted="no" name="lfo2o[4]"/>
+            <net is_signal_inverted="no" name="lfo2o[5]"/>
+            <net is_signal_inverted="no" name="lfo2o[6]"/>
+            <net is_signal_inverted="no" name="lfo2o[7]"/>
+            <net is_signal_inverted="no" name="lfo2o[8]"/>
+            <net is_signal_inverted="no" name="lfo2o[9]"/>
+            <net is_signal_inverted="no" name="lfo2o[10]"/>
+            <net is_signal_inverted="no" name="lfo2o[11]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="mixer:inst2|lfo2i" order="lsb_to_msb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[0]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[1]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[2]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[3]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[4]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[5]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[6]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[7]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[8]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[9]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[10]"/>
+            <net is_signal_inverted="no" name="mixer:inst2|lfo2i[11]"/>
           </bus>
         </setup_view>
       </presentation>
-      <trigger CRC="FDC0C710" attribute_mem_mode="false" gap_record="true" global_temp="1" is_expanded="true" name="trigger: 2010/04/12 18:03:30  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="1" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
+      <trigger CRC="28F2243A" attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2010/04/15 16:52:55  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="1" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
         <power_up_trigger position="pre" storage_qualifier_disabled="no" trigger_in="dont_care" trigger_out="active high"/>
         <events use_custom_flow_control="no">
           <level enabled="yes" name="condition1" type="basic">'s2p_cs' == rising edge
-            
             <power_up enabled="yes">
             </power_up>
             <op_node/>
           </level>
         </events>
         <storage_qualifier_events>
-          <transitional>00000000000000000
-            
-            <pwr_up_transitional>00000000000000000
-            
+          <transitional>00000000000000000000000000000000000000000000000000000000000000000
+            <pwr_up_transitional>00000000000000000000000000000000000000000000000000000000000000000
             </pwr_up_transitional>
           </transitional>
           <storage_qualifier_level type="basic">
@@ -149,20 +421,11 @@
           </storage_qualifier_level>
         </storage_qualifier_events>
         <log>
-          <data global_temp="1" name="log: 2010/04/12 21:45:57  #0" power_up_mode="false" sample_depth="128" trigger_position="16">0110000101111101001100001011111010011000010111110100110000101111101001100001011111010011000010111110100110000101111101001100001011111010011000010111110100110000101111101001100001011111010011000010111110100110000101111101001100001011111010011000010111110100110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010111000010111110101110000101111101011100001011111010</data>
+          <data global_temp="1" name="log: 2010/04/15 17:02:45  #0" power_up_mode="false" sample_depth="128" trigger_position="16">0000000010000001010110001110000010100010000000001100011000000000000000000100000010101100011100000101000100000000011000110000000000000000001000000101011000111000001010001000000000110001100000000000000000010000001010110001110000010100010000000001100011000000000000000000100000010101100011100000101000100000000011000110000000000000000001000000101011000111000001010001000000000110001100000000000000000010000001010110001110000010100010000000001100011000000000000000000100000010101100011100000101000100000000011000110000000000000000001000000101011000111000001010001000000000110001100000000000000000010000001010110001110000010100010000000001100011000000000000000000100000010101100011100000101000100000000011000110000000000000000001000000101011000111000001010001000000000110001100000000000000000010000001010110001110000010100010000000001100011000000000000000000100000010101100011100000101000100000000011000110000000000000000001000000101011000111000001010001000000000110001100000000000000000010000001010110001110000010100010000000001100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000000000001000000101011000111000001010001000000001110001100000000000000000010000001010110001110000010100010000000011100011000000000000000000100000010101100011100000101000100000000111000110000000000</data>
           <extradata>1111111111111111T111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</extradata>
         </log>
       </trigger>
     </signal_set>
-    <position_info>
-      <single attribute="active tab" value="0"/>
-      <single attribute="data horizontal scroll position" value="0"/>
-      <single attribute="data vertical scroll position" value="0"/>
-      <single attribute="zoom level denominator" value="1"/>
-      <single attribute="zoom level numerator" value="1"/>
-      <single attribute="zoom offset denominator" value="1"/>
-      <single attribute="zoom offset numerator" value="130945"/>
-    </position_info>
   </instance>
   <mnemonics/>
   <static_plugin_mnemonics/>

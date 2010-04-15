@@ -44,8 +44,8 @@ ENTITY lpm_divide0 IS
 	(
 		clock		: IN STD_LOGIC ;
 		denom		: IN STD_LOGIC_VECTOR (12 DOWNTO 0);
-		numer		: IN STD_LOGIC_VECTOR (17 DOWNTO 0);
-		quotient		: OUT STD_LOGIC_VECTOR (17 DOWNTO 0);
+		numer		: IN STD_LOGIC_VECTOR (18 DOWNTO 0);
+		quotient		: OUT STD_LOGIC_VECTOR (18 DOWNTO 0);
 		remain		: OUT STD_LOGIC_VECTOR (12 DOWNTO 0)
 	);
 END lpm_divide0;
@@ -53,7 +53,7 @@ END lpm_divide0;
 
 ARCHITECTURE SYN OF lpm_divide0 IS
 
-	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (17 DOWNTO 0);
+	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (18 DOWNTO 0);
 	SIGNAL sub_wire1	: STD_LOGIC_VECTOR (12 DOWNTO 0);
 
 
@@ -71,14 +71,14 @@ ARCHITECTURE SYN OF lpm_divide0 IS
 	PORT (
 			denom	: IN STD_LOGIC_VECTOR (12 DOWNTO 0);
 			clock	: IN STD_LOGIC ;
-			quotient	: OUT STD_LOGIC_VECTOR (17 DOWNTO 0);
+			quotient	: OUT STD_LOGIC_VECTOR (18 DOWNTO 0);
 			remain	: OUT STD_LOGIC_VECTOR (12 DOWNTO 0);
-			numer	: IN STD_LOGIC_VECTOR (17 DOWNTO 0)
+			numer	: IN STD_LOGIC_VECTOR (18 DOWNTO 0)
 	);
 	END COMPONENT;
 
 BEGIN
-	quotient    <= sub_wire0(17 DOWNTO 0);
+	quotient    <= sub_wire0(18 DOWNTO 0);
 	remain    <= sub_wire1(12 DOWNTO 0);
 
 	lpm_divide_component : lpm_divide
@@ -89,7 +89,7 @@ BEGIN
 		lpm_pipeline => 1,
 		lpm_type => "LPM_DIVIDE",
 		lpm_widthd => 13,
-		lpm_widthn => 18
+		lpm_widthn => 19
 	)
 	PORT MAP (
 		denom => denom,
@@ -118,15 +118,15 @@ END SYN;
 -- Retrieval info: CONSTANT: LPM_PIPELINE NUMERIC "1"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_DIVIDE"
 -- Retrieval info: CONSTANT: LPM_WIDTHD NUMERIC "13"
--- Retrieval info: CONSTANT: LPM_WIDTHN NUMERIC "18"
+-- Retrieval info: CONSTANT: LPM_WIDTHN NUMERIC "19"
 -- Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL clock
 -- Retrieval info: USED_PORT: denom 0 0 13 0 INPUT NODEFVAL denom[12..0]
--- Retrieval info: USED_PORT: numer 0 0 18 0 INPUT NODEFVAL numer[17..0]
--- Retrieval info: USED_PORT: quotient 0 0 18 0 OUTPUT NODEFVAL quotient[17..0]
+-- Retrieval info: USED_PORT: numer 0 0 19 0 INPUT NODEFVAL numer[18..0]
+-- Retrieval info: USED_PORT: quotient 0 0 19 0 OUTPUT NODEFVAL quotient[18..0]
 -- Retrieval info: USED_PORT: remain 0 0 13 0 OUTPUT NODEFVAL remain[12..0]
--- Retrieval info: CONNECT: @numer 0 0 18 0 numer 0 0 18 0
+-- Retrieval info: CONNECT: @numer 0 0 19 0 numer 0 0 19 0
 -- Retrieval info: CONNECT: @denom 0 0 13 0 denom 0 0 13 0
--- Retrieval info: CONNECT: quotient 0 0 18 0 @quotient 0 0 18 0
+-- Retrieval info: CONNECT: quotient 0 0 19 0 @quotient 0 0 19 0
 -- Retrieval info: CONNECT: remain 0 0 13 0 @remain 0 0 13 0
 -- Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
 -- Retrieval info: LIBRARY: lpm lpm.lpm_components.all

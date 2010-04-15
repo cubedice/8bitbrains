@@ -14,31 +14,40 @@ entity addrgen is
 end addrgen;
 architecture arch of addrgen is
 	signal tmp_addr : std_logic_vector(6 downto 0);
-	signal count : std_logic_vector(17 downto 0);
-	signal count_end	: std_logic_vector(17 downto 0);
-	signal none : std_logic_vector(12 downto 0);
-	constant numer : std_logic_vector(17 downto 0) := "110000000001001000";
-	component lpm_divide0 is
-		PORT
-		(
-			clock		: IN STD_LOGIC ;
-			denom		: IN STD_LOGIC_VECTOR (12 DOWNTO 0);
-			numer		: IN STD_LOGIC_VECTOR (17 DOWNTO 0);
-			quotient	: OUT STD_LOGIC_VECTOR (17 DOWNTO 0);
-			remain		: OUT STD_LOGIC_VECTOR (12 DOWNTO 0)
-		);
-	end component;
+	signal count : std_logic_vector(18 downto 0);
+	signal count_end,count_end_t	: std_logic_vector(18 downto 0);
+	signal remain : std_logic_vector(12 downto 0);
+	signal flip		: std_logic;
+	constant numer : std_logic_vector(18 downto 0) := std_logic_vector(to_unsigned(196680,19));
+	component lpm_divide0 IS
+	PORT
+	(
+		clock		: IN STD_LOGIC ;
+		denom		: IN STD_LOGIC_VECTOR (12 DOWNTO 0);
+		numer		: IN STD_LOGIC_VECTOR (18 DOWNTO 0);
+		quotient	: OUT STD_LOGIC_VECTOR (18 DOWNTO 0);
+		remain		: OUT STD_LOGIC_VECTOR (12 DOWNTO 0)
+	);
+	END component;
 begin
-	div1 : lpm_divide0 port map( clk, freq, numer, count_end, none);
+	div1 : lpm_divide0 port map( clk, freq, numer, count_end, remain);
 	process(clk, freq)
 	begin
-		if clk'event and clk = '1' then
+		if rising_edge(clk) then
+			if flip = '1' and remain > 129808 then
+				count_end_t <= std_logic_vector(unsigned(count_end) + 2);
+			elsif flip = '1' and remain > 64904 then
+				count_end_t <= std_logic_vector(unsigned(count_end) + 1);
+			else
+				count_end_t <= count_end;
+			end if;
 			if freq /= (freq'range => '0') then
 				count <= count + 1;
-				if count >= count_end then
+				if count >= count_end_t then
 					count <= (count'range => '0');
 					tmp_addr <= tmp_addr + 1;
 					addr <= tmp_addr;
+					flip <= not flip;
 				end if;
 			else
 				addr <= "0000000";
